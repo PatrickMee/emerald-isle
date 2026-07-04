@@ -31,6 +31,7 @@ amending the higher-authority one.
 - `art/`: visual direction and asset pipeline
 - `engineering/`: code, XML, asset, and localization conventions
 - `research/`: historical and cultural research practice
+- `research/version-0.1-research-sprint.md`: active structured research program
 - `qa/`: automated, integration, and playtest strategy
 - `release/`: packaging, compatibility, and release process
 - `workflow/`: feature lifecycle, Git, versioning, and AI collaboration

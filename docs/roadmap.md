@@ -9,6 +9,8 @@ justify speculative frameworks, unused APIs, or premature content.
 
 ## Milestone 0: Build the Studio
 
+**Status:** Complete in v0.0.0.  
+
 **Vision:** A professional, inspectable operating system for a multi-year mod.  
 **Goals:** Establish governance, discipline guides, contribution rules, Spec Kit
 adaptation, repository boundaries, quality gates, and reusable templates.  
@@ -26,6 +28,8 @@ policy recorded; maintainers/review authority assigned; baseline committed.
 **Dependencies:** Project owner decisions and repository hosting.
 
 ## Milestone 0.5: Create the Design Bible
+
+**Status:** Complete in v0.0.0.  
 
 **Vision:** One canonical identity reference keeps every human and AI contribution
 recognizably Emerald Isle.  
@@ -48,6 +52,8 @@ identity drift through undocumented exceptions.
 **Dependencies:** Milestone 0 documents and qualified review for sensitive guidance.
 
 ## Version 0.1: Foundations
+
+**Status:** Research and planning; implementation not authorized.  
 
 **Vision:** Prove the entire production pipeline with the smallest coherent,
 vanilla-friendly Emerald Isle slice.  

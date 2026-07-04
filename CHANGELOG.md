@@ -6,7 +6,9 @@ All notable project changes are documented here.
 
 ### Planning
 
-- Version 0.1 research and feature planning begins after the foundation tag.
+- Added the Version 0.1 structured Research Sprint.
+- Added a provisional ranked plan for the first five implementation candidates.
+- Gameplay implementation remains blocked pending executed research and review.
 
 ## [0.0.0] - 2026-07-04
 
