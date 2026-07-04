@@ -1,0 +1,35 @@
+name: Feature proposal
+description: Propose a researched, milestone-aligned player feature
+title: "[Proposal]: "
+labels: [proposal, triage]
+body:
+  - type: input
+    id: milestone
+    attributes:
+      label: Target milestone
+    validations:
+      required: true
+  - type: textarea
+    id: player_value
+    attributes:
+      label: Player decision or story created
+    validations:
+      required: true
+  - type: textarea
+    id: inspiration
+    attributes:
+      label: Specific Irish inspiration and initial sources
+    validations:
+      required: true
+  - type: textarea
+    id: vanilla
+    attributes:
+      label: Vanilla comparison and meaningful tradeoff
+    validations:
+      required: true
+  - type: textarea
+    id: scope
+    attributes:
+      label: Smallest coherent scope and explicit exclusions
+    validations:
+      required: true

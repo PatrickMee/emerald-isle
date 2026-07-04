@@ -1,0 +1,25 @@
+# OS and editors
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# .NET and build outputs
+bin/
+obj/
+Build/
+Dist/
+TestResults/
+*.user
+
+# RimWorld local development
+*.log
+*.rws
+LocalCopies/
+
+# Art and audio editor temporary files
+*.autosave
+*~
+
+# Local-only agent data
+.agents/private/
