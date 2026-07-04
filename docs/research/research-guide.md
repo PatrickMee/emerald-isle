@@ -21,6 +21,28 @@ uncertainties, contested interpretations, sensitivities, common misconceptions,
 gameplay opportunities, transformations required for the Rim, and claims the
 feature must not make.
 
+Every brief MUST answer two independent questions with equal weight:
+
+1. Is the feature historically well supported?
+2. Does the feature improve RimWorld gameplay?
+
+Historical support cannot substitute for player value. A historically accurate
+feature that adds compulsory labor, redundant content, or avoidable complexity MUST
+be rejected or conditioned until it creates a meaningful decision, story, or
+strategic role. The gameplay assessment MUST compare the feature against the simpler
+option of omitting it.
+
+## Independent Review Gates
+
+- **Historical gate:** Reviews evidence quality, context, uncertainty, chronology,
+  geography, terminology, and cultural claims.
+- **Gameplay gate:** Reviews the player decision, problem solved, stories enabled,
+  tradeoffs, click/labor burden, simpler alternatives, and complexity cost.
+
+Both gates require explicit human review. Gameplay concludes with `Recommended`,
+`Recommended with Conditions`, or `Not Recommended`. A conditional recommendation
+must name the evidence or downstream decision required to keep the feature.
+
 ## Cultural Review
 
 Review asks whether the work collapses periods or regions, presents stereotype as

@@ -9,8 +9,9 @@
 - [x] T004B1 Complete RSC-003 dry-stone-wall research after T004A
 - [x] T004B2 Review and approve RSC-003 dry-stone-wall research
 - [x] T004C1 Complete RSC-004 hand-quern research after T004B
-- [ ] T004C2 Review and approve RSC-004 hand-quern research
-- [ ] T004D Complete and review milled-oats research after T004C
+- [x] T004C2 Review and approve RSC-004 hand-quern research with gameplay conditions
+- [x] T004D1 Complete RSC-005 milled-oats research after T004C
+- [ ] T004D2 Review and approve RSC-005 milled-oats research
 - [ ] T004E Complete and review oat-food research after T004D
 - [ ] T005 Complete candidate DLC/save/compatibility matrices
 - [ ] T006 Complete cultural, gameplay, balance, architecture, art, and QA reviews

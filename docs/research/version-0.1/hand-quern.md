@@ -4,9 +4,13 @@
 **Feature:** PR-01 Hand Quern
 **Release:** Version 0.1 - The First Holding
 **Researcher:** Codex
-**Reviewer:** Project maintainer (required)
-**Status:** Review
+**Reviewer:** Patrick Mee
+**Status:** Approved
 **Date:** 2026-07-05
+**Approved:** 2026-07-05
+**Historical review:** Approved
+**Gameplay review:** Approved with conditions
+**Research Definition of Ready:** Passed with conditions
 **Approved scope:** `docs/product/version-0.1-approved-scope.md`
 **Implementation authorized:** No
 
@@ -327,6 +331,82 @@ when broad food and medieval overhauls interact. These reports are discovery evi
 not proof of a specific defect. Before release, the project should inspect current
 package IDs and Defs for a small supported compatibility sample.
 
+## Gameplay Validation
+
+This assessment is independent of the strong historical evidence.
+
+### What Meaningful Player Decision Does the Hand Quern Create?
+
+Potentially: “Do I retain oats as flexible raw grain, or commit pawn labor and
+hauling to create a processed ingredient that enables a stronger food plan?” The
+decision exists only if both paths remain useful. If every valuable oat use requires
+milling, operating the quern is compulsory labor rather than strategy.
+
+### What Gameplay Problem Does It Solve?
+
+It can provide an early, unpowered way to transform a storable crop into specialized
+food inputs without requiring electricity, fuel, or a large production bench. It
+also makes the agricultural chain legible through normal RimWorld bills. It does not
+solve a Core deficiency by itself because direct cooking recipes could process oats
+without a separate building.
+
+### What New Stories Does It Enable?
+
+- A labor-poor holding chooses immediate raw-grain use over better processed food.
+- A harvest surplus becomes a winter milling project when pawn time is available.
+- An outage or low-technology colony can continue small-scale food processing.
+- A damaged or overcommitted production chain forces prioritization between food now
+  and food with a later payoff.
+
+These stories depend on actual scarcity, timing, and alternative uses; the existence
+of an extra bill alone does not create them.
+
+### What Would Players Lose If It Did Not Exist?
+
+Players would lose a visible household-processing step, an unpowered production
+object, and the raw-versus-processed scheduling decision. They would not lose access
+to oat foods if recipes simply incorporated equivalent milling labor at a stove.
+Therefore the mechanical loss is moderate and conditional, not foundational.
+
+### Strategy or Additional Clicks?
+
+The bill system can automate repeated work, so the primary cost is pawn labor,
+hauling, storage, and another production object rather than continuous manual clicks.
+Even so, it becomes inventory churn if players always issue the same bill and always
+process every oat. The downstream briefs must prove a reason to vary that behavior.
+
+### Meaningful Tradeoff or Compulsory Labor?
+
+The intended tradeoff is low capital and no power in exchange for slow manual
+throughput, plus the opportunity cost of converting flexible raw oats. It becomes
+compulsory labor if raw oats have no useful destination or milled oats are required
+for all competitive food. Both states must remain viable.
+
+### Could the Same Gameplay Be Achieved More Simply?
+
+Yes. A direct oat-food recipe could include additional cooking work and remove the
+quern, milled-oats item, separate bills, hauling, storage, art, and compatibility
+surface. That is the default simpler alternative. The separate quern earns its place
+only if staging, scheduling, low-tech processing, or multiple downstream uses create
+a decision that a longer cooking recipe cannot reproduce.
+
+### Does the Added Complexity Justify Itself?
+
+Not yet unconditionally. The XML and performance costs are low, but player concepts,
+art, storage, hauling, recipe filters, save contracts, and mod compatibility are real.
+The next two research briefs must establish at least one clear processed-oat benefit,
+one useful raw-oat path, nutrition-safe conversion, and manageable labor/hauling.
+
+**Gameplay recommendation: Recommended with Conditions**
+
+Conditions:
+
+- Raw oats retain at least one useful non-milling path.
+- Milled oats unlock a clear, bounded benefit rather than a cosmetic rename.
+- Milling conserves nutrition and does not create an automatic dominant strategy.
+- Total labor, hauling, storage, and bill overhead remain proportionate to the payoff.
+- Direct cooking is reconsidered if it provides equivalent gameplay more simply.
+
 ## Gameplay Opportunities
 
 ### Strong Opportunities
@@ -546,16 +626,17 @@ No texture has been created or authorized during research.
 7. How does `do until you have X` count milled oats across storage and caravans?
 8. Which current grain/flour mods form the supported compatibility sample?
 
-### Questions Requiring Human Review
+### Human Review Resolutions
 
-1. Is the evidence sufficient to approve a rotary domestic hand quern as the
-   historical form?
-2. Approve `hand quern` as the player-facing English name, with `bró` retained only
-   as a reviewed research term?
-3. Approve XML-only feasibility using a compact vanilla worktable and bill pattern?
-4. Approve the low-capital, unpowered, labor-intensive production niche?
-5. Approve keeping the feature conditional until milled-oats and oat-food research
-   proves that processing creates a meaningful choice?
+- The evidence is sufficient for a domestic rotary hand quern.
+- `hand quern` remains the clear English working name; `bró` remains a research term
+  pending qualified language review.
+- XML-only feasibility through a compact vanilla worktable and bill pattern is
+  accepted for later specification review.
+- The low-capital, unpowered, labor-intensive niche is approved for downstream
+  validation, not yet implementation.
+- Feature inclusion remains conditional until milled-oats and oat-food research
+  proves that processing creates a meaningful choice.
 
 ## ADR Assessment
 
@@ -605,10 +686,22 @@ thematic labor.
 
 ### Human Review Decision
 
-**Decision:** Pending
-**Reviewer/date:** Pending
-**Corrections:** Pending
-**Approved uses:** Pending
+#### Historical Review Gate
+
+**Decision:** Approved
+**Reviewer/date:** Patrick Mee, 2026-07-05
+**Corrections:** None. The domestic rotary hand quern is accepted as the historically
+accurate Version 0.1 direction.
+**Approved uses:** Historical foundation for PR-01 research and future specification.
+
+#### Gameplay Review Gate
+
+**Decision:** Approved with conditions
+**Reviewer/date:** Patrick Mee, 2026-07-05
+**Corrections:** Add an explicit gameplay validation independent of historical support.
+**Approved gameplay direction:** Proceed through research only while the recommendation
+remains `Recommended with Conditions`; downstream research must satisfy the stated
+conditions.
 
 ### Research Definition of Ready Checklist
 
@@ -620,7 +713,7 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Intended player decision and failure condition are stated.
 - [x] Constitution, Design Bible, and canonical Version 0.1 scope are applied.
 - [x] Explicit exclusions prevent system and content expansion.
-- [ ] Human reviewer approves the conditional gameplay direction.
+- [x] Human reviewer approves the conditional gameplay direction.
 
 #### Evidence and Design
 
@@ -630,7 +723,16 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Uncertainty, variation, anachronism, and cultural risks are recorded.
 - [x] Watermill coexistence prevents a false technological claim.
 - [x] Vanilla and existing-mod comparisons identify measurable design questions.
-- [ ] Human reviewer confirms that the evidence is sufficient.
+- [x] Human reviewer confirms that the evidence is sufficient.
+
+#### Gameplay Validation
+
+- [x] Meaningful player decision and gameplay problem are explicit.
+- [x] Stories, omission cost, and click/labor burden are evaluated.
+- [x] Tradeoff and compulsory-labor failure state are distinguished.
+- [x] The simpler direct-cooking alternative is evaluated.
+- [x] Complexity costs and measurable retention conditions are recorded.
+- [x] Gameplay review is approved with conditions by the human reviewer.
 
 #### Engineering
 
@@ -645,9 +747,9 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Art, localization, testing, and source-rights requirements are bounded.
 - [x] Downstream milled-oats and food dependencies are explicit.
 - [x] Specification and implementation remain prohibited.
-- [ ] Human questions are resolved and approval recorded.
+- [x] Human questions are resolved and approval recorded.
 
-**Research decision:** Review required
+**Research decision:** Passed with conditions
 **Project Definition of Ready:** Not evaluated. Milled-oats and oat-food research,
 specification, planning, and authorization remain outstanding.
 

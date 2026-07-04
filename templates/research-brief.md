@@ -3,6 +3,9 @@
 **Feature:** [link]  
 **Researcher/reviewer:** [names]  
 **Status:** Draft | Reviewed | Superseded  
+**Historical review:** Pending | Approved | Rejected
+
+**Gameplay review:** Pending | Approved | Approved with conditions | Rejected
 **Date:** [YYYY-MM-DD]
 
 ## Question and Design Need
@@ -28,8 +31,56 @@
 ## Rim Transformation
 [Retained inspiration, deliberate changes, and original setting fiction.]
 
+## Gameplay Validation
+
+Evaluate gameplay independently from historical support.
+
+- **Meaningful player decision:** [What choice does this create?]
+- **Gameplay problem solved:** [What problem does this solve?]
+- **Stories enabled:** [What new colony stories can emerge?]
+- **Loss if omitted:** [What meaningful play disappears without it?]
+- **Strategy or clicks:** [Does it add strategy or only actions/inventory?]
+- **Tradeoff or compulsory labor:** [What advantage justifies its cost?]
+- **Simpler alternative:** [Could existing systems achieve the same value?]
+- **Complexity justification:** [Do concepts, UI, work, code, art, compatibility,
+  and maintenance costs earn their place?]
+
+**Gameplay recommendation:** Recommended | Recommended with Conditions | Not Recommended
+
+**Conditions, if any:** [Measurable conditions that must be satisfied.]
+
 ## Sources
 [Full citations, access dates, media licenses, and archive links.]
 
 ## Review
-[Reviewer conclusion, corrections, unresolved issues, approved uses.]
+
+### Historical Review Gate
+
+**Decision:** Pending | Approved | Rejected
+
+**Reviewer/date:** [name/date]
+
+**Corrections or conditions:** [items]
+
+**Approved claims and uses:** [scope]
+
+### Gameplay Review Gate
+
+**Decision:** Pending | Approved | Approved with conditions | Rejected
+
+**Reviewer/date:** [name/date]
+
+**Corrections or conditions:** [items]
+
+**Approved gameplay direction:** [scope]
+
+## Research Definition of Ready
+
+- [ ] Historical gate is approved.
+- [ ] Gameplay gate is approved or approved with explicit conditions.
+- [ ] Sources, uncertainty, sensitivity, and prohibited claims are recorded.
+- [ ] Player decision, tradeoff, simpler alternative, and complexity cost are explicit.
+- [ ] Dependencies and unresolved downstream questions are assigned.
+- [ ] Specification and implementation remain unauthorized until their later gates.
+
+**Research decision:** Pending | Passed | Passed with conditions | Rejected
