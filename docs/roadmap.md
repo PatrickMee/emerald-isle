@@ -61,6 +61,10 @@ vanilla-friendly Emerald Isle slice.
 localization practice, art pipeline, and one bounded feature vertical slice.  
 **Scope:** Exact content chosen through research and feature acceptance; favor a
 low-code, low-compatibility-risk feature that demonstrates identity and tradeoffs.  
+**Current recommendation:** **The First Holding**, comprising PL-01 oats, one BL-01
+dry-stone wall, conditional XML-only PR-01 milling, and FO-01 oat foods. Scope is
+not frozen until Priority 1 research and human review pass.
+
 **Success criteria:** Clean install/load, complete player path, save/load,
 localization readiness, in-game art validation, balanced playtest, clean package.  
 **Technical constraints:** XML-first; one core assembly only if proven necessary;

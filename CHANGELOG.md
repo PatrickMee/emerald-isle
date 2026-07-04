@@ -8,6 +8,8 @@ All notable project changes are documented here.
 
 - Added the Version 0.1 structured Research Sprint.
 - Added a provisional ranked plan for the first five implementation candidates.
+- Replaced the loose five-candidate list with the cohesive four-feature
+  **First Holding** scope recommendation after reviewing installed RimWorld 1.6 data.
 - Gameplay implementation remains blocked pending executed research and review.
 
 ## [0.0.0] - 2026-07-04

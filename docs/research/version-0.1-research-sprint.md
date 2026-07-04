@@ -11,7 +11,7 @@ evidence to select and specify the first implementation slice with low uncertain
 - Reviewed research briefs for every Priority 1 topic and scoped findings for Priority 2.
 - Current RimWorld 1.6 vanilla/DLC comparison data captured from the installed game.
 - Source, uncertainty, sensitivity, terminology, and asset-rights records completed.
-- XML/C#/Harmony feasibility and save/DLC behavior documented for the five candidates.
+- XML/C#/Harmony feasibility and save/DLC behavior documented for the four recommended features.
 - Candidate ranking confirmed or revised through product governance.
 - Version 0.1 implementation plan revised, reviewed, and passed through Definition of Ready.
 
@@ -129,7 +129,7 @@ pages alone do not substantiate a historical claim.
 ## Sprint Sequence
 
 1. **Foundation week:** T-01 through T-05, L-01/L-02, and vanilla baseline capture.
-2. **Candidate research:** P-01, B-01, F-01, R-01, U-03.
+2. **Candidate research:** P-01, B-01, F-01, R-01, and U-03 for the four-feature scope.
 3. **Context expansion:** Priority 2 topics needed to challenge candidate assumptions.
 4. **Review:** cultural, gameplay, balance, architecture, art, QA, and licensing review.
 5. **Decision:** revise the candidate ranking and Version 0.1 plan; do not implement.
@@ -137,7 +137,7 @@ pages alone do not substantiate a historical claim.
 ## Exit Criteria
 
 - All P1 briefs are approved or explicitly reject/defer their candidate.
-- Every top-five candidate has verified vanilla data and a DLC/save behavior matrix.
+- Every recommended feature has verified vanilla data and a DLC/save behavior matrix.
 - Historical claims have exact citations, confidence, and transformation notes.
 - XML feasibility is demonstrated; any C#/Harmony need is named and justified.
 - Art and localization needs are estimated from in-game constraints.

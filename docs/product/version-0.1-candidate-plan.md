@@ -1,110 +1,316 @@
-# Version 0.1 Candidate Implementation Plan
+# Version 0.1 Scope Review and Recommended Plan
 
-**Status:** Provisional, pending Research Sprint findings and human review  
+**Status:** Recommended; pending Research Sprint execution and human scope freeze
+
+**Release concept:** The First Holding
+
 **Implementation authorized:** No
 
-## Ranking Method
+## Executive Verdict
 
-Candidates were ranked by gameplay value, implementation risk, XML-only
-probability, art burden, reusable patterns, workflow coverage, and visible player
-value. This is a research queue, not final scope.
+The previous five-candidate plan was not optimal. It contained two related food
+features, two loosely related stone features, and a milling feature whose value was
+conditional. It risked becoming a checklist of implementation patterns rather than
+a coherent player experience.
 
-## 1. PL-01: Oat-Like Cool-Climate Grain
+Version 0.1 should be a small settlement-foundation slice: cultivate a hardy grain,
+process it, turn it into useful food, and establish a recognizable dry-stone-built
+holding. The release is intentionally narrow and Core-first. It demonstrates crop,
+resource, production, recipe, food, building, construction, art, localization,
+testing, compatibility, documentation, and release workflows without custom C#.
 
-**Why selected:** A crop is immediately visible, interacts with a mature vanilla
-system, and is likely definable in XML. It can demonstrate research, balance,
-localization, plant art states, Def naming, DLC testing, and in-game evidence in a
-small surface area.
+The recommended scope contains four gameplay features, not five. Fewer features
+produce a more complete and testable vertical slice.
 
-**Why Version 0.1:** It establishes the first complete content pipeline without
-requiring custom UI, save state, Harmony, or complex AI.
+## Evidence Used in This Review
 
-**Why before others:** It supplies the raw input needed to evaluate oat foods and
-milling. Starting downstream would force placeholder ingredients or rework.
+- Canonical Constitution, Design Bible, Vision, roadmap, Feature Catalog, and
+  Version 0.1 Research Sprint
+- Installed RimWorld `1.6.4871 rev595` Core and all supported DLC data
+- Core crop definitions in `Data/Core/Defs/ThingDefs_Plants/Plants_Cultivated_Farm.xml`
+- Core wall definition in `Data/Core/Defs/ThingDefs_Buildings/Buildings_Structure.xml`
+- Core recipes and production buildings in `Data/Core/Defs/RecipeDefs/` and
+  `Data/Core/Defs/ThingDefs_Buildings/Buildings_Production.xml`
 
-**Enables:** FO-01 foods, PR-01 milling, agriculture balance patterns, future crop
-and animal-feed research, plant asset conventions.
+The installed Core already has five stone block families, a Stonecutting research
+project, stone-block recipes, and a stonecutter's table. That makes a new generic
+"worked local stone" resource redundant unless research later identifies a distinct
+gameplay role. Core has no dedicated bread, porridge, oat, grain-processing, or
+milling definitions, so the oat chain occupies clearer design space.
 
-## 2. BL-01: Dry-Stone Wall Family
+## Review of the Previous Recommendations
 
-**Why selected:** It creates strong visual identity and a clear construction choice
-using established building systems. XML is likely sufficient; art is bounded to a
-small modular set.
+### PL-01 Oat-Like Cool-Climate Grain: Retain, Promote to Walking Skeleton
 
-**Why Version 0.1:** It proves architecture can be recognizable, balanced, and
-vanilla-readable without a large settlement system.
+The candidate has the best combination of visible value, XML feasibility, bounded
+art, vanilla comparison, and complete player lifecycle. The previous plan correctly
+ranked it highly but understated its value as the first end-to-end workflow test.
 
-**Why before others:** It validates wall, material, cover, pathing, damage-state,
-blueprint, and compatibility conventions required by every later building set.
+### BL-01 Dry-Stone Wall Family: Retain, Narrow
 
-**Enables:** RS-02 stone decisions, ringfort modules, monastic architecture,
-settlement kits, future architecture art standards.
+Retain one initial dry-stone wall variant, not a family. The vanilla wall uses Stuff,
+linked graphics, appearance handling, heavy terrain, roof support, and construction
+rules; duplicating all behavior and art variants immediately is unnecessary risk.
+Version 0.1 should prove one balanced, visually distinct construction choice using
+vanilla stone blocks. Expansion into fences, gates, corners, ringfort sets, or
+material families waits for evidence.
 
-## 3. FO-01: Oat Bread and Porridge Chain
+### FO-01 Oat Bread and Porridge Chain: Retain, Bound to Two Foods Maximum
 
-**Why selected:** It turns the first crop into player-visible decisions around
-labor, nutrition, mood, storage, and cooking while remaining likely XML-only.
+Retain as the payoff for the crop/processing loop. Scope should remain one everyday
+food and one differentiated prepared food at most. Research must prove each has a
+distinct role; otherwise ship only one. Do not create a parallel meal taxonomy.
 
-**Why Version 0.1:** A crop plus food demonstrates a coherent vertical slice rather
-than a disconnected object and tests balance across acquisition and consumption.
+### RS-02 Worked Local Stone Set: Remove from Version 0.1
 
-**Why after PL-01:** Ingredient yield and crop cadence must be understood before
-recipe work, nutrition, and value can be balanced honestly.
+Defer. Core already provides sandstone, granite, limestone, slate, and marble blocks
+through an established Stonecutting workflow. A new stone material would add Defs,
+art, storage, recipes, market balance, and compatibility without a demonstrated
+decision. BL-01 should consume vanilla stone blocks unless research proves a new
+resource creates value beyond theme.
 
-**Enables:** PR-01 milling, hospitality/feast research, dairy preservation, brewing,
-food terminology, production-chain testing.
+### PR-01 Quern and Milling Workflow: Retain Conditionally, XML-Only
 
-## 4. RS-02: Worked Local Stone Set
+Retain because it connects crop to food and proves a reusable production pattern.
+However, it is accepted only if research/playtest planning shows milling creates a
+meaningful labor, storage, portability, or efficiency decision rather than mandatory
+busywork. Implementation must use standard worktable/bill/RecipeDef patterns. If it
+requires custom C#, Harmony, or an unnecessary multi-stage inventory chain, defer it
+and allow direct oat cooking in FO-01.
 
-**Why selected:** It can establish resource, Stuff/ThingDef, texture, market-value,
-and construction-cost conventions with low runtime risk.
+### RE-01, QL-01: Do Not Promote as Gameplay Features
 
-**Why Version 0.1:** Later architecture needs a deliberate answer to whether
-Emerald Isle uses vanilla blocks, a dedicated material, or presentation-only
-variation. Researching and resolving that contract early prevents rework.
+A dedicated Vernacular Masonry research node is low-value gating at this scale; use
+existing Stonecutting or an appropriate vanilla prerequisite if balance requires it.
+A custom Emerald Isle build category for one wall and one worktable would increase
+menu clutter. Categorization is release integration work and should follow actual
+content volume.
 
-**Why after BL-01:** The wall experiment reveals whether a new resource creates a
-real decision or only duplicates vanilla stone. The candidate must be rejected if
-the latter is true.
+## Final Recommended Version 0.1 Scope
 
-**Enables:** broader vernacular buildings, production recipes, terrain/resource
-research, consistent architectural materials.
+### 1. PL-01: Oats
 
-## 5. PR-01: Quern and Milling Workflow
+**Purpose:** Add a hardy cereal crop and harvested raw grain that establishes the
+agricultural base of the first Emerald Isle holding.
 
-**Why selected:** A small worktable/recipe chain exercises production bills,
-facilities, work types, art, localization, and save-safe definitions. It creates a
-meaningful processing decision if research shows the labor step adds value.
+**Gameplay value:** A new crop is justified only through a distinct yield/growth,
+fertility, shelf-life, nutrition, or climate tradeoff against rice, potatoes, corn,
+and haygrass. It becomes the input for the rest of the food slice.
 
-**Why Version 0.1:** It completes the agriculture-to-food pipeline and establishes
-a reusable production pattern for brewing, dairy, textiles, and craft.
+**Dependencies:** P-01 and T-01 through T-04 research; final naming/language review;
+RimWorld 1.6 Core. No DLC required. DLC behavior should remain additive or neutral.
 
-**Why fifth:** Its value depends on findings from PL-01 and FO-01. If it becomes
-busywork or needs disproportionate C#, it should be deferred rather than forced.
+**Implementation:** XML only: plant, harvested item, categories, sowing and harvest
+properties, translations. No C# or Harmony.
 
-**Enables:** brewing/distilling, dairy processing, flax/textile production,
-facility-link patterns, production-building art and QA.
+**Art effort:** Medium: mature and immature plant graphics plus harvested grain icon;
+normal zoom, wind, growth, blight, snow, and harvest readability.
 
-## Candidates Not Selected for the First Five
+**Testing effort:** Medium: sowing, growth, fertility, hydroponics decision, harvest,
+nutrition, rot, stacking, animals, bills, save/load, Core-only and supported-DLC matrix.
 
-- **RE-01 Vernacular masonry research:** low independent player value; include only
-  if progression needs a gate proven by research.
-- **QL-01 category organization:** necessary presentation work may accompany the
-  first content but does not justify an independent gameplay feature.
-- Animals, apparel, rituals, factions, mythology, and world systems carry greater
-  art, code, balance, cultural, or compatibility risk and remain later candidates.
+**Implementation effort:** Small to medium after research.
 
-## Proposed Dependency Order
+**Why Version 0.1:** It is visible, low-risk, system-native, enables the food chain,
+and exercises the complete content pipeline without custom code.
 
-```text
-Technical and historical research
-├── PL-01 Oat grain ──> FO-01 Oat foods ──> PR-01 Milling (conditional)
-└── BL-01 Dry-stone walls ──> RS-02 Worked stone (conditional)
-```
+### 2. BL-01: Dry-Stone Wall
 
-## Planning Gate
+**Purpose:** Add one recognizable vernacular construction choice that makes a colony
+look like an Emerald Isle holding while creating a balanced defensive/material decision.
 
-After the Research Sprint, re-score all five. A candidate advances only when it has
-an approved research brief, feature spec, Feature Acceptance Checklist, DLC/save
-matrix, architecture decision, implementation plan, and Definition of Ready.
-Implementation order may change, and conditional candidates may be rejected.
+**Gameplay value:** A constrained alternative to vanilla walls. The final tradeoff
+must emerge from research and balance, potentially through work, block cost,
+durability, beauty, roof support, cover, or terrain requirements. It cannot be a
+cheaper equal wall.
+
+**Dependencies:** B-01/R-01/T-01/T-02 research; PL-01 only as workflow precedent;
+vanilla stone blocks and construction systems. No new stone resource.
+
+**Implementation:** XML only using supported building, Stuff, linked-graphic, damage,
+designation, and construction behavior. No C# or Harmony.
+
+**Art effort:** Medium to high: one coherent linked wall texture set, menu icon, and
+in-game adjacency/damage validation. Avoid a family of variants in 0.1.
+
+**Testing effort:** Medium: construction materials, replacement, linking, pathing,
+cover, combat damage, fire, roofs, zones, blueprints, deconstruction, save/load,
+and mixed vanilla-wall adjacency.
+
+**Implementation effort:** Medium.
+
+**Why Version 0.1:** It adds immediate visual identity and establishes the building,
+construction, Stuff, linked-art, and combat-validation patterns needed by all later architecture.
+
+### 3. PR-01: Hand Quern and Milled Oats
+
+**Purpose:** Introduce a compact manual production step between harvested oats and
+prepared food, if that step produces a real choice.
+
+**Gameplay value:** Converts raw grain through pawn labor and a small work site,
+potentially trading time and storage complexity for cooking efficiency, shelf life,
+or access to distinct foods. The exact advantage must be evidence-led.
+
+**Dependencies:** PL-01; U-03/F-01/T-01/T-02 research; accepted no-busywork balance
+hypothesis; one stable intermediate item at most.
+
+**Implementation:** XML only through worktable, bills, RecipeDef, ingredients,
+products, work amount, skills, and translations. If standard XML cannot deliver the
+accepted design, defer instead of adding C#.
+
+**Art effort:** Medium: small quern worktable with required rotations/states and one
+milled-oats icon.
+
+**Testing effort:** Medium: bills, ingredient filters, hauling, reservations, work
+skill/speed, bulk decision, storage, cancellation, destruction, save/load, and DLC matrix.
+
+**Implementation effort:** Medium.
+
+**Why Version 0.1:** It establishes the production/manufacturing/recipe pattern that
+future brewing, dairy, flax, textile, and craft features will reuse.
+
+### 4. FO-01: Oat Foods
+
+**Purpose:** Complete the player loop with one or two culturally grounded foods made
+from oats or milled oats.
+
+**Gameplay value:** Provides a visible payoff and a food decision differentiated by
+labor, nutrition, mood, portability, shelf life, or cooking access. It must not be a
+strictly better simple meal or a cosmetic recipe duplicate.
+
+**Dependencies:** PL-01; PR-01 if milling survives its gate; F-01/T-02 research;
+food naming and cultural review; Core cooking facilities.
+
+**Implementation:** XML only using ThingDef and RecipeDef patterns, bills, ingredient
+filters, ingestible properties, thoughts only if existing XML patterns safely support
+the accepted design. No custom food framework.
+
+**Art effort:** Low to medium: one icon per shipped food; reuse normal bill and
+facility presentation.
+
+**Testing effort:** Medium: recipe availability, filters, nutrition, mood, rot,
+caravans, prisoners/animals where relevant, Ideology food interactions, save/load,
+and no-DLC/all-DLC behavior.
+
+**Implementation effort:** Small to medium.
+
+**Why Version 0.1:** It turns separate implementation patterns into a coherent player
+experience and proves end-to-end balance from field through labor to consumption.
+
+## Reusable Implementation Patterns
+
+| Feature | Patterns established | Later consumers |
+|---|---|---|
+| PL-01 Oats | Crop, harvested resource, growth art, raw-food categories, agricultural balance | Flax, forage plants, animal feed, biome crops |
+| BL-01 Dry-Stone Wall | Building, construction, Stuff/material filters, linked graphics, damage/combat testing | Ringforts, monastic buildings, field boundaries, architecture kits |
+| PR-01 Quern | Production building, manufacturing bill, RecipeDef, intermediate resource, work/hauling flow | Brewing, dairy, flax, dyes, craft and preservation |
+| FO-01 Oat Foods | Food item, cooking recipe, ingredient filter, nutrition/rot/mood balance | Dairy foods, feast foods, preserved foods, hospitality systems |
+
+Version 0.1 deliberately does not establish terrain, decoration, custom research,
+animals, apparel, quests, rituals, factions, world generation, or custom C# patterns.
+Creating unused patterns would violate milestone discipline.
+
+## Cohesion Review
+
+The four-feature scope is coherent under **The First Holding**:
+
+1. Plant oats suited to the colony's conditions.
+2. Decide whether manual processing is worth the labor and storage.
+3. Turn the crop into useful food with visible tradeoffs.
+4. Shape the holding with a recognizable dry-stone construction choice.
+
+The food loop supplies mechanical cohesion; the wall supplies spatial and visual
+identity. Both concern the earliest acts of establishing a settlement: feeding
+people and defining/protecting place. No feature requires the later culture,
+mythology, faction, or world systems to make sense.
+
+The release fails cohesion if milling is only a mandatory click tax, oat foods are
+stat clones, or the wall is a cheaper vanilla wall. Those are explicit research and
+Feature Acceptance Checklist failure conditions.
+
+## Implementation Order
+
+### 1. PL-01 Oats — Walking Skeleton
+
+Comes first because it has no gameplay dependency, is likely compact XML, and
+exercises research, specification, naming, art, Defs, balance, save/load, DLC matrix,
+documentation, packaging, and release evidence. It enables every food-chain feature.
+
+### 2. BL-01 Dry-Stone Wall
+
+Comes second because it is independent of the oat chain and validates a different,
+high-value architectural pattern after the first pipeline is proven. It enables
+future structure sets and provides visible identity early.
+
+### 3. PR-01 Hand Quern and Milled Oats
+
+Comes third because it depends on the oat resource and must be evaluated against the
+actual harvested item and labor economy. It enables FO-01 and future production chains.
+
+### 4. FO-01 Oat Foods
+
+Comes last because recipe balance depends on final crop yields and the milling
+decision. It completes the vertical loop and supplies the strongest release-level
+cohesion and player payoff.
+
+### 5. Release Integration — Not a Gameplay Feature
+
+Validate menu placement, terminology, compatibility, attribution, full save path,
+clean package, playtest, and release notes. Create a custom category only if the
+actual content volume demonstrates a navigation problem.
+
+## Walking Skeleton Decision
+
+**PL-01 Oats is the ideal walking skeleton.**
+
+It is smaller than the dry-stone wall after inspecting RimWorld 1.6: the wall's
+Stuff behavior and linked graphic set make it a broader visual/construction test.
+Oats can exercise the complete workflow with a bounded plant Def, harvested item,
+translations, a small asset set, vanilla crop comparisons, observable in-game
+growth/harvest behavior, save/load, DLC absence behavior, documentation, packaging,
+and a test release.
+
+The walking skeleton is complete only after:
+
+`Research -> Specification -> Acceptance -> Plan -> XML implementation -> Static checks -> In-game growth/harvest test -> Save/load/DLC matrix -> Documentation -> Packaged test release -> Lessons learned`
+
+This does not authorize implementation. P-01 and T-01 through T-05 research must be
+executed, PL-01 must pass the Feature Acceptance Checklist, and its implementation
+plan must pass Definition of Ready first.
+
+## Deferred Catalog Review
+
+| Deferred IDs | Reason for postponement |
+|---|---|
+| RS-02 | Duplicates Core stone-block/Stonecutting space without proven gameplay value |
+| RE-01, QL-01 | Low independent player value; add only if real gating/navigation needs emerge |
+| AN-01, AN-02 | High animal art, balance, AI/training, and Biotech interaction burden |
+| PL-02 | Multi-output processing and textile balance expand the first slice |
+| FO-02, PR-02 | Aging/fermentation, addiction, storage, and production complexity belong after the first chain |
+| RS-01 | Extraction, terrain, fuel filters, environmental framing, and likely code risk |
+| BL-02, BL-03 | Large footprints, generation/vertical abstraction, quests, and high art scope |
+| FU-01, FU-02 | Multi-role furniture risks custom behavior and weak standalone value |
+| WP-01, WP-02, AR-01, AR-02 | Combat balance and compatibility require a mature test baseline |
+| AP-01, AP-02 | Body-type/layer art workload and cultural review exceed the first slice |
+| RE-02 | Depends on later knowledge/culture systems |
+| RT-01, RT-02, ID-01, ID-02 | Ideology/ritual/social state and DLC fallback need code and broader design |
+| FA-01, FA-02 | Faction AI, generation, quests, lore, and save state are later architecture |
+| WG-01, WG-02 | World generation and save irreversibility are high-risk Version 2/3 work |
+| QU-01, QU-02, EV-01, EV-02 | Quest/event frameworks and narrative content need mature foundations |
+| ST-01, ST-02 | Storyteller tuning has expansion-wide balance and compatibility impact |
+| MY-01, MY-02 | Reserved for 1.5; cultural, Anomaly, event, art, and code scope is high |
+| EX-01, EX-02 | Site/world/expedition generation depends on later quest and world architecture |
+| QL-02 | Runtime diagnostics require C# and a demonstrated support problem |
+
+## Scope Freeze Gate
+
+This review recommends the scope but does not freeze it. Freeze requires:
+
+- completion and review of Priority 1 Research Sprint briefs
+- confirmed XML-only feasibility for all four features
+- explicit rejection or acceptance of the milling busywork hypothesis
+- verified art estimates and Core-only/all-supported-DLC test design
+- human approval of this plan
+
+After freeze, each feature still advances independently through specification and
+Definition of Ready. Scope freeze does not authorize batch implementation.

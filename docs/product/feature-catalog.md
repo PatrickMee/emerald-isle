@@ -67,3 +67,10 @@ milestone triage, research, Design Bible acceptance, and an approved feature spe
 
 Only one state is current. State changes are recorded in this catalog or an issue
 linked from it. Rejected and retired entries remain visible with rationale.
+
+## Version 0.1 Scope Recommendation
+
+The current recommendation is PL-01, BL-01, PR-01, and FO-01 under **The First
+Holding**. RS-02, RE-01, and QL-01 are deferred despite their earlier 0.1 labels;
+the detailed reasons and freeze gate are in `version-0.1-candidate-plan.md`. Catalog
+version estimates are historical planning metadata until the scope is frozen.

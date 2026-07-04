@@ -2,7 +2,7 @@
 
 - [x] All requested research categories represented
 - [x] Every topic includes importance, sources, gameplay, vanilla, technical, effort, priority
-- [x] Five candidates ranked by the requested criteria
+- [x] Existing five-candidate plan challenged and replaced with a cohesive four-feature scope
 - [x] No implementation authority implied
 - [ ] P1 research executed and reviewed
 - [ ] Candidate ranking reviewed after evidence

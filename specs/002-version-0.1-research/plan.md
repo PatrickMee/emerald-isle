@@ -13,6 +13,12 @@
 5. Re-score candidates and revise the implementation plan.
 6. Human-review the plan; implementation remains blocked until Ready.
 
+## Current Scope Recommendation
+
+`docs/product/version-0.1-candidate-plan.md` recommends PL-01, BL-01, PR-01, and
+FO-01 as **The First Holding**. Research may confirm, narrow, reorder, or reject
+these features before scope freeze.
+
 ## Prohibited Work
 
 No mod package, About.xml, gameplay XML, C#, Harmony, textures, audio, or production
