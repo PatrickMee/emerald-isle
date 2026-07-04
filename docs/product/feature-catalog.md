@@ -19,13 +19,13 @@ milestone triage, research, Design Bible acceptance, and an approved feature spe
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | AN-01 | Animals | Irish wolfhound-inspired working hound | 0.5 | H | H | M | M | N | H | M | L | H |
 | AN-02 | Animals | Small hardy cattle landrace | 0.5 | H | H | Y | N | N | H | M | M | M |
-| PL-01 | Plants | Oat-like cool-climate grain | 0.1 | M | H | Y | N | N | M | L | S | H |
+| PL-01 | Plants | Oats | 0.1 | M | H | Y | N | N | M | L | S | H |
 | PL-02 | Plants | Flax-like fiber and oil crop | 0.5 | H | H | M | M | N | M | M | M | M |
 | FO-01 | Food | Oat bread and porridge chain | 0.1 | M | H | Y | N | N | M | L | S | H |
 | FO-02 | Food | Dairy-preservation foods | 0.5 | H | H | M | M | N | M | M | M | M |
 | RS-01 | Resources | Cut peat-like fuel | 0.5 | H | H | M | M | M | M | H | L | M |
 | RS-02 | Resources | Worked local stone set | 0.1 | M | H | Y | N | N | M | M | S | H |
-| BL-01 | Buildings | Dry-stone wall family | 0.1 | H | H | Y | N | N | M | M | M | H |
+| BL-01 | Buildings | Dry-stone wall | 0.1 | H | H | Y | N | N | M | M | M | H |
 | BL-02 | Buildings | Ringfort settlement kit | 1.0 | H | H | M | M | N | H | H | XL | M |
 | BL-03 | Buildings | Round-tower watch/refuge structure | 1.0 | H | H | M | Y | M | H | H | L | M |
 | FU-01 | Furniture | Central hearth furnishing | 0.5 | H | H | M | M | N | M | M | M | M |
@@ -68,9 +68,8 @@ milestone triage, research, Design Bible acceptance, and an approved feature spe
 Only one state is current. State changes are recorded in this catalog or an issue
 linked from it. Rejected and retired entries remain visible with rationale.
 
-## Version 0.1 Scope Recommendation
+## Version 0.1 Approved Scope
 
-The current recommendation is PL-01, BL-01, PR-01, and FO-01 under **The First
-Holding**. RS-02, RE-01, and QL-01 are deferred despite their earlier 0.1 labels;
-the detailed reasons and freeze gate are in `version-0.1-candidate-plan.md`. Catalog
-version estimates are historical planning metadata until the scope is frozen.
+The authoritative Version 0.1 feature set and constraints are maintained in
+[`version-0.1-approved-scope.md`](version-0.1-approved-scope.md). Catalog version
+estimates remain discovery metadata and do not override that approval record.

@@ -4,7 +4,7 @@
 **Date:** 2026-07-05
 **Decision owners:** Patrick Mee
 **Related:** `docs/research/version-0.1/oats.md`,
-`docs/product/version-0.1-scope-freeze.md`, PL-01
+`docs/product/version-0.1-approved-scope.md`, PL-01
 
 ## Context
 

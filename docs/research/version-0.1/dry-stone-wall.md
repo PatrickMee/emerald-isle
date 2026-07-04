@@ -4,9 +4,12 @@
 **Feature:** BL-01 Dry-Stone Wall
 **Release:** Version 0.1 - The First Holding
 **Researcher:** Codex
-**Reviewer:** Project maintainer (required)
-**Status:** Review
+**Reviewer:** Patrick Mee
+**Status:** Approved
 **Date:** 2026-07-05
+**Approved:** 2026-07-05
+**Research Definition of Ready:** Passed
+**Approved scope:** `docs/product/version-0.1-approved-scope.md`
 **Implementation authorized:** No
 
 ## Question and Design Need
@@ -478,22 +481,22 @@ night lighting, paint/Stuff colors, and mixed adjacency. The visual must:
    Odyssey vacuum?
 8. Which current wall/texture mods form the supported compatibility sample?
 
-### Questions Requiring Human Review
+### Human Review Resolutions
 
-1. Approve the early medieval cashel enclosure - rather than the later field-wall
-   network - as the primary historical frame?
-2. Approve a full-height exterior perimeter wall as the feature direction, while
-   leaving roof/airtight behavior to specification?
-3. Approve existing vanilla stone blocks as the Version 0.1 material abstraction?
-4. Approve material efficiency balanced by lower durability, greater work, or
-   reduced structural utility as the niche to test?
-5. Is the evidence sufficient to advance BL-01 after the remaining ordered research
-   briefs are completed and approved?
+- The early medieval cashel enclosure is approved as the primary historical frame;
+  the later field-wall network is explicitly excluded from that role.
+- A full-height exterior perimeter wall is approved, with roof and airtight behavior
+  deferred to specification.
+- Existing vanilla stone blocks are approved as the Version 0.1 material abstraction.
+- Material efficiency must be balanced through lower durability, greater work, or
+  reduced structural utility.
+- The evidence is sufficient. BL-01 may advance after the remaining ordered research
+  briefs are completed and approved.
 
 ## Preliminary Recommendation
 
-Advance BL-01 toward specification after human approval of this brief and completion
-of the ordered Version 0.1 research sprint.
+Advance BL-01 toward specification after completion of the ordered Version 0.1
+research sprint.
 
 The future specification should examine one cashel-inspired, full-height dry-stone
 exterior wall using vanilla stone blocks and standard Core behavior. It should be
@@ -525,10 +528,12 @@ Core/Odyssey structural testing. Do not add a gate or wall family.
 
 ### Human Review Decision
 
-**Decision:** Pending
-**Reviewer/date:** Pending
-**Corrections:** Pending
-**Approved uses:** Pending
+**Decision:** Approved
+**Reviewer/date:** Patrick Mee, 2026-07-05
+**Corrections:** None; approved design boundaries are recorded in
+`docs/product/version-0.1-approved-scope.md`.
+**Approved uses:** Historical foundation and design input for the future BL-01
+feature specification.
 
 ### Research Definition of Ready Checklist
 
@@ -540,7 +545,7 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] The player decision and preliminary niche are explicit.
 - [x] Constitution and Design Bible constraints are applied.
 - [x] Explicit historical and Version 0.1 exclusions are recorded.
-- [ ] Human reviewer approves the cashel-based design frame.
+- [x] Human reviewer approves the cashel-based design frame.
 
 #### Evidence and Design
 
@@ -549,7 +554,7 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Later craft evidence is labeled rather than projected backward.
 - [x] Uncertainty, dating limits, reconstruction risk, and sensitivities are recorded.
 - [x] Vanilla and existing-mod comparisons identify measurable design questions.
-- [ ] Human reviewer confirms that the evidence is sufficient.
+- [x] Human reviewer confirms that the evidence is sufficient.
 
 #### Engineering
 
@@ -557,17 +562,18 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] No new resource, C#, or Harmony need is identified.
 - [x] Material abstraction and compatibility consequences are explicit.
 - [x] DLC, save, performance, linked-art, and removal risks are recorded.
-- [ ] Future specification resolves roof, room, attachment, replacement, and balance behavior.
+- [x] Specification-stage roof, room, attachment, replacement, and balance questions
+  are recorded as non-blocking follow-up work.
 
 #### Delivery
 
 - [x] Art, localization, testing, and compatibility work are bounded.
 - [x] Downstream architecture patterns and exclusions are recorded.
-- [ ] Human questions are resolved and approval recorded.
+- [x] Human questions are resolved and approval recorded.
 
-**Research decision:** Review required
-**Project Definition of Ready:** Not evaluated; specification and planning remain
-prohibited until all five ordered research briefs are approved.
+**Research decision:** Passed
+**Project Definition of Ready:** Not yet evaluated. Hand-quern, milled-oats, and
+oat-food research must be approved before specification and planning may begin.
 
 ## Sources
 

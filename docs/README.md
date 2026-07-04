@@ -22,7 +22,8 @@ amending the higher-authority one.
 - `vision.md`: product identity and boundaries
 - `design/design-bible.md`: canonical creative and product identity
 - `product/feature-catalog.md`: official discovery backlog
-- `product/version-0.1-scope-freeze.md`: binding Version 0.1 scope boundary
+- `product/version-0.1-approved-scope.md`: canonical Version 0.1 approval and scope boundary
+- `product/version-0.1-scope-freeze.md`: superseded scope record and compatibility redirect
 - `project/`: risk, technical debt, and research memory
 - `onboarding/`: contributor startup guidance
 - `roadmap.md`: milestone outcomes and release horizons
@@ -34,7 +35,7 @@ amending the higher-authority one.
 - `research/`: historical and cultural research practice
 - `research/version-0.1-research-sprint.md`: active structured research program
 - `research/version-0.1/oats.md`: approved PL-01 historical and gameplay research
-- `research/version-0.1/dry-stone-wall.md`: BL-01 research awaiting human review
+- `research/version-0.1/dry-stone-wall.md`: approved BL-01 historical and gameplay research
 - `qa/`: automated, integration, and playtest strategy
 - `release/`: packaging, compatibility, and release process
 - `workflow/`: feature lifecycle, Git, versioning, and AI collaboration

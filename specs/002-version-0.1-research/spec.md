@@ -9,20 +9,22 @@
 ## Objective
 
 Gather and review the historical, gameplay, language, art, balance, and RimWorld
-1.6 technical evidence required to select and plan the first release confidently.
+1.6 technical evidence required to validate and plan the approved first release.
 
-The gameplay scope is frozen in `docs/product/version-0.1-scope-freeze.md`.
+The authoritative gameplay scope is
+`docs/product/version-0.1-approved-scope.md`.
 
 ## Requirements
 
 - **FR-001:** Research MUST cover every category and field requested by the project owner.
 - **FR-002:** P1 topics MUST produce exact citations, vanilla data, uncertainty, and design implications.
 - **FR-003:** Recommended features MUST document required/optional DLC, absence behavior, and save impact.
-- **FR-004:** Candidate recommendations MUST remain provisional until research and human review.
+- **FR-004:** Research MAY narrow or reject conditional behavior but MUST NOT expand
+  the approved scope without the required governance decision.
 - **FR-005:** No gameplay XML, C#, textures, audio, or package metadata may be created.
 
 ## Success Criteria
 
 - All P1 briefs pass research and discipline review.
-- The four-feature scope is confirmed or revised with recorded evidence.
+- The approved scope remains viable, or any narrowing/rejection is recorded through governance.
 - A reviewed Version 0.1 implementation plan can pass Definition of Ready.

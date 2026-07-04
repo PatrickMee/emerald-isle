@@ -1,10 +1,14 @@
-# Version 0.1 Scope Review and Recommended Plan
+# Historical Version 0.1 Scope Review and Recommended Plan
 
-**Status:** Scope approved and frozen; research gates pending
+**Status:** Historical planning record; approved scope is maintained separately
 
 **Release concept:** The First Holding
 
 **Implementation authorized:** No
+
+**Canonical scope:**
+[`version-0.1-approved-scope.md`](version-0.1-approved-scope.md). This review records
+the reasoning that led to approval; it does not independently define or amend scope.
 
 ## Executive Verdict
 
@@ -13,7 +17,7 @@ features, two loosely related stone features, and a milling feature whose value 
 conditional. It risked becoming a checklist of implementation patterns rather than
 a coherent player experience.
 
-Version 0.1 should be a small settlement-foundation slice: cultivate a hardy grain,
+Version 0.1 should be a small settlement-foundation slice: cultivate a processing grain,
 process it, turn it into useful food, and establish a recognizable dry-stone-built
 holding. The release is intentionally narrow and Core-first. It demonstrates crop,
 resource, production, recipe, food, building, construction, art, localization,
@@ -88,114 +92,9 @@ content volume.
 
 ## Final Recommended Version 0.1 Scope
 
-### 1. PL-01: Oats
-
-**Purpose:** Add a hardy cereal crop and harvested raw grain that establishes the
-agricultural base of the first Emerald Isle holding.
-
-**Gameplay value:** A new crop is justified only through a distinct yield/growth,
-fertility, shelf-life, nutrition, or climate tradeoff against rice, potatoes, corn,
-and haygrass. It becomes the input for the rest of the food slice.
-
-**Dependencies:** P-01 and T-01 through T-04 research; final naming/language review;
-RimWorld 1.6 Core. No DLC required. DLC behavior should remain additive or neutral.
-
-**Implementation:** XML only: plant, harvested item, categories, sowing and harvest
-properties, translations. No C# or Harmony.
-
-**Art effort:** Medium: mature and immature plant graphics plus harvested grain icon;
-normal zoom, wind, growth, blight, snow, and harvest readability.
-
-**Testing effort:** Medium: sowing, growth, fertility, hydroponics decision, harvest,
-nutrition, rot, stacking, animals, bills, save/load, Core-only and supported-DLC matrix.
-
-**Implementation effort:** Small to medium after research.
-
-**Why Version 0.1:** It is visible, low-risk, system-native, enables the food chain,
-and exercises the complete content pipeline without custom code.
-
-### 2. BL-01: Dry-Stone Wall
-
-**Purpose:** Add one recognizable vernacular construction choice that makes a colony
-look like an Emerald Isle holding while creating a balanced defensive/material decision.
-
-**Gameplay value:** A constrained alternative to vanilla walls. The final tradeoff
-must emerge from research and balance, potentially through work, block cost,
-durability, beauty, roof support, cover, or terrain requirements. It cannot be a
-cheaper equal wall.
-
-**Dependencies:** B-01/R-01/T-01/T-02 research; PL-01 only as workflow precedent;
-vanilla stone blocks and construction systems. No new stone resource.
-
-**Implementation:** XML only using supported building, Stuff, linked-graphic, damage,
-designation, and construction behavior. No C# or Harmony.
-
-**Art effort:** Medium to high: one coherent linked wall texture set, menu icon, and
-in-game adjacency/damage validation. Avoid a family of variants in 0.1.
-
-**Testing effort:** Medium: construction materials, replacement, linking, pathing,
-cover, combat damage, fire, roofs, zones, blueprints, deconstruction, save/load,
-and mixed vanilla-wall adjacency.
-
-**Implementation effort:** Medium.
-
-**Why Version 0.1:** It adds immediate visual identity and establishes the building,
-construction, Stuff, linked-art, and combat-validation patterns needed by all later architecture.
-
-### 3. PR-01: Hand Quern and Milled Oats
-
-**Purpose:** Introduce a compact manual production step between harvested oats and
-prepared food, if that step produces a real choice.
-
-**Gameplay value:** Converts raw grain through pawn labor and a small work site,
-potentially trading time and storage complexity for cooking efficiency, shelf life,
-or access to distinct foods. The exact advantage must be evidence-led.
-
-**Dependencies:** PL-01; U-03/F-01/T-01/T-02 research; accepted no-busywork balance
-hypothesis; one stable intermediate item at most.
-
-**Implementation:** XML only through worktable, bills, RecipeDef, ingredients,
-products, work amount, skills, and translations. If standard XML cannot deliver the
-accepted design, defer instead of adding C#.
-
-**Art effort:** Medium: small quern worktable with required rotations/states and one
-milled-oats icon.
-
-**Testing effort:** Medium: bills, ingredient filters, hauling, reservations, work
-skill/speed, bulk decision, storage, cancellation, destruction, save/load, and DLC matrix.
-
-**Implementation effort:** Medium.
-
-**Why Version 0.1:** It establishes the production/manufacturing/recipe pattern that
-future brewing, dairy, flax, textile, and craft features will reuse.
-
-### 4. FO-01: Oat Foods
-
-**Purpose:** Complete the player loop with one or two culturally grounded foods made
-from oats or milled oats.
-
-**Gameplay value:** Provides a visible payoff and a food decision differentiated by
-labor, nutrition, mood, portability, shelf life, or cooking access. It must not be a
-strictly better simple meal or a cosmetic recipe duplicate.
-
-**Dependencies:** PL-01; PR-01 if milling survives its gate; F-01/T-02 research;
-food naming and cultural review; Core cooking facilities.
-
-**Implementation:** XML only using ThingDef and RecipeDef patterns, bills, ingredient
-filters, ingestible properties, thoughts only if existing XML patterns safely support
-the accepted design. No custom food framework.
-
-**Art effort:** Low to medium: one icon per shipped food; reuse normal bill and
-facility presentation.
-
-**Testing effort:** Medium: recipe availability, filters, nutrition, mood, rot,
-caravans, prisoners/animals where relevant, Ideology food interactions, save/load,
-and no-DLC/all-DLC behavior.
-
-**Implementation effort:** Small to medium.
-
-**Why Version 0.1:** It turns separate implementation patterns into a coherent player
-experience and proves end-to-end balance from field through labor to consumption.
+The approved feature set and binding constraints are maintained only in
+[`version-0.1-approved-scope.md`](version-0.1-approved-scope.md). The analyses below
+remain historical planning rationale and cannot expand that scope.
 
 ## Reusable Implementation Patterns
 
@@ -304,9 +203,9 @@ plan must pass Definition of Ready first.
 
 ## Scope Freeze Record
 
-The project owner approved and froze this scope on 2026-07-04. The authoritative
-record is `version-0.1-scope-freeze.md`. Research may narrow or reject conditional
-scope but cannot add or replace gameplay features without an accepted ADR.
+The project owner approved the initial scope on 2026-07-04 and established the
+canonical approval record on 2026-07-05. The authoritative record is
+[`version-0.1-approved-scope.md`](version-0.1-approved-scope.md).
 
 Each feature still advances independently through research review, specification,
 and Definition of Ready. Scope freeze does not authorize implementation.

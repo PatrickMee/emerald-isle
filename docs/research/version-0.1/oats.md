@@ -9,6 +9,7 @@
 **Date:** 2026-07-04
 **Approved:** 2026-07-05
 **Research Definition of Ready:** Passed
+**Approved scope:** `docs/product/version-0.1-approved-scope.md`
 **Implementation authorized:** No
 
 ## Question and Design Need

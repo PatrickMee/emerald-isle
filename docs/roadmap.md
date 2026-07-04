@@ -51,7 +51,7 @@ validated; Milestone 0 blockers resolved; baseline committed and tagged if desir
 identity drift through undocumented exceptions.  
 **Dependencies:** Milestone 0 documents and qualified review for sensitive guidance.
 
-## Version 0.1: Foundations
+## Version 0.1: The First Holding
 
 **Status:** Research and planning; implementation not authorized.  
 
@@ -59,12 +59,9 @@ identity drift through undocumented exceptions.
 vanilla-friendly Emerald Isle slice.  
 **Goals:** Establish a loadable package, build/validation pipeline, naming and
 localization practice, art pipeline, and one bounded feature vertical slice.  
-**Scope:** Exact content chosen through research and feature acceptance; favor a
-low-code, low-compatibility-risk feature that demonstrates identity and tradeoffs.  
-**Frozen scope:** **The First Holding**, comprising oats, one dry-stone wall,
-conditional XML-only hand quern, milled oats, one or two oat foods, and release
-integration. Additions require an accepted ADR; implementation remains blocked by
-ordered research and specification gates.
+**Scope:** The binding feature set, exclusions, historical direction, and phase gate
+are maintained only in
+[`product/version-0.1-approved-scope.md`](product/version-0.1-approved-scope.md).
 
 **Success criteria:** Clean install/load, complete player path, save/load,
 localization readiness, in-game art validation, balanced playtest, clean package.  

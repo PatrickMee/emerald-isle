@@ -2,7 +2,7 @@
 
 **Date:** 2026-07-04  
 **Research program:** `docs/research/version-0.1-research-sprint.md`  
-**Candidate plan:** `docs/product/version-0.1-candidate-plan.md`
+**Approved scope:** `docs/product/version-0.1-approved-scope.md`
 
 ## Phases
 
@@ -10,14 +10,14 @@
 2. Research Priority 1 historical, material, language, and gameplay topics.
 3. Create individual briefs using `templates/research-brief.md`.
 4. Review sources, uncertainty, cultural transformation, balance, art, and feasibility.
-5. Re-score candidates and revise the implementation plan.
+5. Assess the approved scope against the evidence and revise the implementation plan.
 6. Human-review the plan; implementation remains blocked until Ready.
 
-## Current Scope Recommendation
+## Current Scope
 
-`docs/product/version-0.1-candidate-plan.md` recommends PL-01, BL-01, PR-01, and
-FO-01 as **The First Holding**. Research may confirm, narrow, reorder, or reject
-these features before scope freeze.
+The canonical Version 0.1 scope, approved feature constraints, and remaining
+research gate are maintained in `docs/product/version-0.1-approved-scope.md`.
+This plan does not duplicate or independently amend that scope.
 
 ## Prohibited Work
 
