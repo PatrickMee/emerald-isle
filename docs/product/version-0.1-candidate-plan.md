@@ -1,6 +1,6 @@
 # Version 0.1 Scope Review and Recommended Plan
 
-**Status:** Recommended; pending Research Sprint execution and human scope freeze
+**Status:** Scope approved and frozen; research gates pending
 
 **Release concept:** The First Holding
 
@@ -302,15 +302,11 @@ plan must pass Definition of Ready first.
 | EX-01, EX-02 | Site/world/expedition generation depends on later quest and world architecture |
 | QL-02 | Runtime diagnostics require C# and a demonstrated support problem |
 
-## Scope Freeze Gate
+## Scope Freeze Record
 
-This review recommends the scope but does not freeze it. Freeze requires:
+The project owner approved and froze this scope on 2026-07-04. The authoritative
+record is `version-0.1-scope-freeze.md`. Research may narrow or reject conditional
+scope but cannot add or replace gameplay features without an accepted ADR.
 
-- completion and review of Priority 1 Research Sprint briefs
-- confirmed XML-only feasibility for all four features
-- explicit rejection or acceptance of the milling busywork hypothesis
-- verified art estimates and Core-only/all-supported-DLC test design
-- human approval of this plan
-
-After freeze, each feature still advances independently through specification and
-Definition of Ready. Scope freeze does not authorize batch implementation.
+Each feature still advances independently through research review, specification,
+and Definition of Ready. Scope freeze does not authorize implementation.

@@ -2,7 +2,7 @@
 
 **Feature Branch:** `main`  
 **Created:** 2026-07-04  
-**Status:** Planned  
+**Status:** Active research; scope frozen
 **Milestone:** Version 0.1 Foundations  
 **Implementation:** Prohibited
 
@@ -10,6 +10,8 @@
 
 Gather and review the historical, gameplay, language, art, balance, and RimWorld
 1.6 technical evidence required to select and plan the first release confidently.
+
+The gameplay scope is frozen in `docs/product/version-0.1-scope-freeze.md`.
 
 ## Requirements
 
