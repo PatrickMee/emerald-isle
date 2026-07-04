@@ -10,3 +10,9 @@ rewritten to hide history; a new ADR supersedes them and links both directions.
 
 An ADR states context, decision drivers, considered options, decision,
 consequences, compatibility/migration impact, validation, and review triggers.
+
+## Records
+
+| ADR | Status | Decision |
+|---|---|---|
+| [0001](0001-oats-medium-cycle-xml.md) | Accepted | Oats use a medium-cycle, XML-only processing-grain design |

@@ -5,8 +5,9 @@
 - [x] T002A Record human approval and freeze the Version 0.1 scope
 - [ ] T003 Verify RimWorld 1.6 Core/DLC technical contracts and vanilla baselines
 - [ ] T004 Complete P1 historical/material/language research briefs
-- [ ] T004A Review and approve RSC-002 oats research brief
-- [ ] T004B Complete and review dry-stone wall research after T004A
+- [x] T004A Review and approve RSC-002 oats research brief
+- [x] T004B1 Complete RSC-003 dry-stone-wall research after T004A
+- [ ] T004B2 Review and approve RSC-003 dry-stone-wall research
 - [ ] T004C Complete and review hand-quern research after T004B
 - [ ] T004D Complete and review milled-oats research after T004C
 - [ ] T004E Complete and review oat-food research after T004D

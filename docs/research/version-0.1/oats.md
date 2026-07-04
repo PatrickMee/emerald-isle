@@ -4,9 +4,11 @@
 **Feature:** PL-01 Oats
 **Release:** Version 0.1 - The First Holding
 **Researcher:** Codex
-**Reviewer:** Project maintainer (required)
-**Status:** Review
+**Reviewer:** Patrick Mee
+**Status:** Approved
 **Date:** 2026-07-04
+**Approved:** 2026-07-05
+**Research Definition of Ready:** Passed
 **Implementation authorized:** No
 
 ## Question and Design Need
@@ -385,9 +387,47 @@ competent speaker. No text should be embedded in textures.
 | Source imagery is copied without rights | Low | High | Use sources as reference only; create original assets and record provenance |
 | Research overstates uniformity | Medium | High | Preserve regional, temporal, and sampling caveats in spec and writing |
 
-## Open Questions
+## Design Notes
 
-### Questions Answerable by Later Research or Testing
+### Intended Player Experience
+
+Oats should give players a recognizable agricultural foundation for an Emerald Isle
+holding without demanding a new farming system. Choosing oats should signal a plan:
+grow a dependable medium-cycle grain, commit labor to processing it, and turn it into
+useful staple food.
+
+### Gameplay Niche
+
+Oats are a medium-cycle processing grain. They sit between fast, labor-intensive rice
+harvests and slow, high-volume corn harvests. Their value comes from the complete
+crop-to-milling-to-food chain, not from winning the raw-calorie comparison.
+
+### Tradeoffs
+
+- Better fit for some soil, timing, and processing plans, but never superior across
+  yield, fertility, shelf life, labor, and flexibility at once.
+- Additional milling and cooking opportunities in exchange for pawn work, hauling,
+  storage, and infrastructure.
+- Useful raw grain behavior must not make milling irrelevant; mandatory milling must
+  not become empty busywork.
+- Any resilience advantage must be paid for through yield, cycle length, work, or
+  narrower use.
+
+### Future Extensibility
+
+The crop and harvested item should use stable, ordinary Core categories and public
+IDs so later foods, animal-feed decisions, brewing, trade, and compatibility patches
+can extend them without changing Version 0.1 behavior. No speculative framework,
+custom component, or secondary harvest product is justified.
+
+### Milling and Food Production
+
+Oats provide the input contract for the hand-quern, milled-oats, and oat-food
+research briefs. Those briefs must determine whether raw oats enter generic meals,
+how much processing labor is meaningful, and how nutrition is conserved across the
+chain. PL-01 must not pre-empt those decisions.
+
+## Implementation Notes
 
 1. Should raw oats be accepted by generic meal recipes, or should milling be the
    principal human-food route?
@@ -403,24 +443,10 @@ competent speaker. No text should be embedded in textures.
 7. Which ingredient categories preserve compatibility without allowing unintended
    recipe bypasses?
 
-### Questions Requiring Human Review
-
-1. Approve early medieval Ireland (AD 400-1100) as the primary historical frame for
-   PL-01, with later evidence clearly labeled as supporting context?
-2. Approve “everyday, medium-cycle processing grain” as the design direction, subject
-   to later balance tests?
-3. Should the specification explore raw oats as animal feed as well as a milling
-   input, or keep Version 0.1 entirely human-food focused?
-4. Approve English `oats` as the player-facing source label, reserving Irish terms for
-   reviewed contextual use?
-5. Is the preliminary conclusion strong enough to advance PL-01 to specification
-   after the other four ordered research briefs are reviewed, or is another source
-   class required first?
-
 ## Preliminary Recommendation
 
-Advance PL-01 toward specification **after human approval of this research brief and
-after completion of the ordered Version 0.1 research sprint**.
+Advance PL-01 toward specification **after completion and approval of the ordered
+Version 0.1 research sprint**.
 
 The future specification should examine one XML-only cultivated oat plant and one
 harvested oat item. It should target a medium growth cycle, a meaningful but bounded
@@ -452,52 +478,53 @@ standalone simulation. Ship it only as part of the complete frozen Version 0.1 c
 
 ### Human Review Decision
 
-**Decision:** Pending
-**Reviewer/date:** Pending
-**Corrections:** Pending
-**Approved uses:** Pending
+**Decision:** Approved
+**Reviewer/date:** Patrick Mee, 2026-07-05
+**Corrections:** Add design intent and treat unresolved mechanics as non-blocking
+implementation notes.
+**Approved uses:** Historical foundation and design input for the future PL-01
+feature specification.
 
-### Definition of Ready Checklist
+### Research Definition of Ready Checklist
 
-This checklist records readiness to begin implementation, not research completeness.
-The feature remains **Not Ready** while review, specification, planning, and evidence
-gates are open.
+This checklist records readiness to leave research and eventually enter specification.
+It does not authorize implementation or replace the project Definition of Ready.
 
 #### Product and Identity
 
 - [x] Catalog ID, milestone, and frozen first-slice boundary are assigned.
 - [x] Player purpose and preliminary meaningful decision are stated.
 - [x] Constitution and Design Bible constraints are reflected in the research.
-- [ ] Feature Acceptance Checklist is completed for an actual specification.
+- [x] Feature Acceptance considerations that can be answered during research are recorded.
 - [x] Explicit Version 0.1 exclusions are recorded.
 
 #### Evidence and Design
 
-- [ ] Research brief is approved by the human reviewer.
+- [x] Research brief is approved by the human reviewer.
 - [x] Confidence, uncertainty, chronology, geography, and sensitivity are recorded.
 - [x] Vanilla comparison and measurable balance questions are documented.
-- [ ] Final canon, language, art, accessibility, and localization needs are approved.
-- [ ] Acceptance, edge, failure, DLC, and persistence scenarios exist in a specification.
+- [x] Research-stage canon, language, art, accessibility, and localization constraints are recorded.
+- [x] Specification-stage scenario requirements are identified as follow-up work.
 
 #### Engineering
 
 - [x] XML-first recommendation is documented; C# and Harmony are not justified.
-- [ ] Architecture, exact Def surface, public identifiers, save impact, and migration are reviewed in a plan.
-- [ ] Relevant ADR check is completed against the future specification.
-- [ ] Performance budget and compatibility matrix cases are finalized.
-- [ ] Implementation plan names exact paths and independently verifiable slices.
-- [ ] Test, playtest, and rollback evidence requirements are actionable in tasks.
+- [x] Preliminary architecture, Def surface, save impact, and migration concerns are recorded.
+- [x] ADR-0001 records the durable design boundary.
+- [x] Performance and compatibility questions are identified for specification and planning.
+- [x] Implementation planning is correctly deferred until after specification.
+- [x] Test, playtest, and rollback topics are identified for specification and planning.
 
 #### Delivery
 
-- [ ] Required reviewers and art/localization skills are assigned.
-- [ ] Human-review questions and downstream food-chain dependencies are resolved.
-- [ ] Tasks are estimated and the first implementation slice has no hidden work.
+- [x] Human research review is complete.
+- [x] Downstream food-chain dependencies and ownership boundaries are recorded.
+- [x] Remaining unknowns are implementation notes rather than research blockers.
 
-**Decision:** Not Ready
-**Conditions:** Human research approval; remaining ordered research briefs; accepted
-feature specification; Feature Acceptance Checklist; implementation plan; final
-Definition of Ready approval.
+**Research decision:** Passed
+**Project Definition of Ready:** Not yet evaluated. It requires the remaining ordered
+research briefs, an accepted feature specification, Feature Acceptance Checklist,
+implementation plan, and maintainer authorization.
 
 ## Sources
 
