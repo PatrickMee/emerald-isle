@@ -1,6 +1,6 @@
 # FS-001 Oats Asset Record
 
-**Status:** Runtime exports generated; human in-game art review pending<br>
+**Status:** Initial in-game art review passed; release-context comparison deferred<br>
 **Feature:** [FS-001 — Oats](../../specifications/FS-001-oats.md)<br>
 **Production date:** 2026-07-05<br>
 **Human acceptance owner:** Patrick Mee
@@ -42,9 +42,9 @@ sparser silhouettes. The harvested item uses a compact oval grain pile.
 - Automated inspection confirmed 128×128 dimensions and an alpha channel for every
   export.
 
-## Pending Human Review
+## Review Disposition
 
-Patrick Mee must review the exports in RimWorld at normal zoom beside rice, corn,
-haygrass, and blight, including mature, immature, selected, darkness, weather, snow,
-stockpile, shelf, trade, caravan, and inventory views. Until that review passes,
-these exports are implementation candidates rather than final released art.
+Patrick Mee confirmed the selector icon, mature and immature plants, and harvested
+item render correctly in RimWorld at normal play scale. Broader weather, snow,
+stockpile, shelf, trade, caravan, and inventory comparisons are release-context
+checks and do not block the XML crop implementation.

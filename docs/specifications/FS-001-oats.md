@@ -13,8 +13,8 @@
 **Architecture gate:** AR-001 and IP-001 approved by Patrick Mee, 2026-07-05<br>
 **Definition of Ready:** Passed by Patrick Mee, 2026-07-05<br>
 **Implementation authorized:** Yes — Patrick Mee, 2026-07-05
-**Implementation status:** Initial in-game functional checkpoint passed; extended
-playtesting, human Design Review, and release verification pending
+**Implementation status:** Feature implementation and Design Review approved by
+Patrick Mee, 2026-07-05; whole-chain balance and release smoke tests remain deferred
 
 ## Authority and Boundaries
 

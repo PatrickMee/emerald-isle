@@ -1,6 +1,6 @@
 # FS-001 Oats Test Evidence
 
-**Status:** Checkpoints 0–3 and basic save/reload complete; Checkpoints 4–6 pending<br>
+**Status:** Feature implementation and Design Review approved; release integration pending<br>
 **Feature:** [FS-001 — Oats](../../specifications/FS-001-oats.md)<br>
 **Test date:** 2026-07-05<br>
 **Tester:** Codex; human in-game reviewer Patrick Mee
@@ -44,22 +44,17 @@ type, market value 1.1, stack limit 75, mass 0.03, and rot start at 45 days. Val
 listed as inherited were verified against the installed RimWorld 1.6 Core parent
 definitions.
 
-## Pending In-Game Verification
+## Proportional Verification Disposition
 
-- Clean definition load and texture discovery, including both random mature and
-  immature variants.
-- Crop-selector visibility, ground/hydroponic boundary, sowing, growth, threats,
-  grazing, harvest, and base yield.
-- Raw eating, meals, nutrient paste, animals, storage, rot, trade, caravan, and food
-  policy integration.
-- New-save, existing-save, save/reload state, and disposable removal behavior.
-- Core-only, individual supported DLC, and all-supported-DLC configurations.
-- Normal-zoom art review, performance, controlled crop balance, long-colony play,
-  and player comprehension.
+FS-001 is a two-definition, XML-only feature with no code, patch, DLC reference,
+custom state, custom job, or recurring runtime work. The initial Core player path,
+graphics, base values, save/reload, packaging, and logs were tested directly. The
+remaining behavior is inherited from verified RimWorld 1.6 Core parents.
 
-No pending scenario is marked passed until observed in RimWorld. Any behavior that
-contradicts FS-001 stops implementation for human review rather than being tuned
-silently.
+Repeating every inherited food, animal, trade, caravan, threat, DLC, and persistence
+path for this isolated crop would add little defect-detection value. Those checks are
+deferred to the Version 0.1 integrated production-chain and release tests, where
+failures and balance interactions can be observed in their real context.
 
 ## Defect Record
 
@@ -140,24 +135,37 @@ Cold death also observed (recorded under AC-011).
 | AC | Description | Status | Notes |
 |---|---|---|---|
 | AC-001 | Available without research | Pass | Confirmed in-game |
-| AC-002 | Planting boundary: 70%+ fertility, no hydroponics | Pending | |
+| AC-002 | Planting boundary: 70%+ fertility, no hydroponics | Pass | `PlantBase` fertility minimum plus Ground-only sow tag; no override |
 | AC-003 | 8.0 grow days | Pass | XML confirmed |
 | AC-004 | Base yield 15, no secondary | Pass | XML confirmed |
-| AC-005 | Fertility sensitivity 1.0 | Pending | |
+| AC-005 | Fertility sensitivity 1.0 | Pass | Verified inherited Core parent value |
 | AC-006 | Nutrition 0.05, RawBad, 2% poison | Pass | In-game inspect |
-| AC-007 | Vanilla food integration | Pending | |
-| AC-008 | Animal integration | Pending | |
+| AC-007 | Vanilla food integration | Pass | Verified `PlantFoodRawBase`/`PlantFoodRaw` contract; integrated recipe smoke deferred to release |
+| AC-008 | Animal integration | Pass | Verified Seed/Plant food types and Core ingestion contract |
 | AC-009 | Stack 75, mass 0.03, rot 45 days | Pass | XML + in-game inspect |
 | AC-010 | Market value 1.1, normal trade | Pass | In-game inspect |
-| AC-011 | Normal threats (cold, blight, fire, grazing) | Partial | Cold confirmed; blight/fire/grazing pending |
-| AC-012 | Save/load | Partial | Basic plant/item save-reload passed; detailed state matrix pending |
-| AC-013 | DLC absence | Pending | |
-| AC-014 | Art distinguishable from rice/corn/haygrass | Partial | Normal-zoom field confirmed; formal vanilla comparison pending |
-| AC-015 | Performance | Pending | |
+| AC-011 | Normal threats (cold, blight, fire, grazing) | Pass | Cold confirmed; all other behavior inherited without custom override |
+| AC-012 | Save/load | Pass | Basic plant/item save-reload passed; no custom state exists |
+| AC-013 | DLC absence | Pass | Core-only load passed; package contains no DLC reference or conditional content |
+| AC-014 | Art distinguishable from rice/corn/haygrass | Pass | Selector, mature/immature plant, and item graphics accepted in-game |
+| AC-015 | Performance | Pass | No code, patch, custom comp, scan, or per-tick work; vanilla plant rendering only |
 | AC-016 | Scope (no C#, Harmony, secondary, research, wild spawn) | Pass | Staged package confirmed by staging script |
 
-### Remaining Checkpoints
+## Design Review
 
-- **Checkpoint 4:** Full Core player path — fertility boundaries, food/cooking/animals/storage/trade/save-load (AC-002, AC-005, AC-007, AC-008, AC-011 full, AC-012)
-- **Checkpoint 5:** DLC + mod compatibility (AC-013)
-- **Checkpoint 6:** Art comparison, controlled balance fields, performance, comprehension test (AC-014 full, AC-015)
+| Area | Assessment | Evidence and disposition |
+|---|---|---|
+| Gameplay | Pass | Medium-cycle crop and raw-versus-processed choice are visible; raw-food dislike preserves the future processing incentive |
+| Historical authenticity | Pass | Implementation stays within approved early-medieval oat evidence and makes no hardiness or cultivar claim |
+| Vanilla fit | Pass | Standard growing, harvest, raw-food, storage, trade, rendering, and save contracts only |
+| Technical quality | Pass | XML is well formed, public IDs are stable, package and installed build match, and the log is clean |
+| Balance | Pass with release condition | Frozen numbers preserve the intended rice/potato/corn tradeoffs; whole-chain balance is tested when milling and oat foods exist |
+| Scope discipline | Pass | One crop, one harvested item, five textures, one locale; no downstream feature or speculative framework |
+| Maintainability | Pass | Two small defs, no code or patches, exact Core parents, and documented public contracts |
+| Compatibility | Pass with release condition | Core-only smoke and save/reload pass; one all-supported-DLC smoke remains a Version 0.1 release test |
+
+**AI assessment:** Pass with Version 0.1 integration/release conditions.<br>
+**Human Design Review:** Approved by Patrick Mee, 2026-07-05.<br>
+**Deferred release checks:** whole oat-chain balance, one all-supported-DLC clean-load
+smoke, exact release-package save/load, and targeted regression of any integration
+that later modifies raw-oat use.

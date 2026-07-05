@@ -14,7 +14,8 @@ tone.
 approved, its architecture and implementation plan are approved, and the empty
 package/build gate passed. FS-001 is Ready and authorized for implementation;
 its runtime files, clean staged package, and initial in-game functional checkpoint
-now pass. Extended playtesting, Design Review, and release gates remain pending.
+now pass. FS-001 Design Review is approved; whole-chain balance and release
+integration remain pending.
 
 Start with:
 
