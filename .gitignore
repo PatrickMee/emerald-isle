@@ -9,6 +9,8 @@ bin/
 obj/
 Build/
 Dist/
+/build/
+/tmp/
 TestResults/
 *.user
 

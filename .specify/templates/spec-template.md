@@ -31,7 +31,9 @@
 - **FR-003:** The feature MUST [safe failure/compatibility behavior].
 
 ## Research and Cultural Transformation
-[Research brief, significance, uncertainty, sensitivities, and Rim adaptation.]
+[Research brief when needed; otherwise cite accepted evidence and explain why no
+additional research is required. Record significance, uncertainty, sensitivities,
+and Rim adaptation proportional to the claim.]
 
 ## Vanilla Comparison and Balance
 [Alternatives; acquisition, costs, outputs, constraints, progression, abuse cases.]
@@ -58,9 +60,9 @@
 
 ## Review Gates
 - [ ] Feature Acceptance Checklist completed with Accept for planning
-- [ ] Historical/cultural
+- [ ] Historical/cultural review to the depth required by the feature
 - [ ] Gameplay and vanilla fit
 - [ ] Balance
-- [ ] Architecture
+- [ ] Architecture review recorded inline or standalone where useful
 - [ ] Art/audio
 - [ ] QA/release

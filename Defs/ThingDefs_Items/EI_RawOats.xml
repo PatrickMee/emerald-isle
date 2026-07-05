@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="PlantFoodRawBase">
+    <defName>EI_RawOats</defName>
+    <label>oats</label>
+    <description>Harvested oat grain. It can be eaten raw, cooked, fed to animals, stored, traded, or processed into other foods.</description>
+    <soundInteract>Grain_Drop</soundInteract>
+    <soundDrop>Grain_Drop</soundDrop>
+    <graphicData>
+      <texPath>Things/Item/Resource/PlantFoodRaw/EI_RawOats</texPath>
+    </graphicData>
+    <statBases>
+      <MarketValue>1.1</MarketValue>
+    </statBases>
+    <ingestible>
+      <foodType>Seed</foodType>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>45</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

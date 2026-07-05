@@ -4,7 +4,9 @@
 **Review date:** 2026-07-05
 **Review purpose:** Research-to-Specification transition
 **Recommendation:** Ready to transition to Specification
-**Maintainer decision:** Pending
+**Maintainer decision:** Approved
+**Approved by/date:** Patrick Mee, 2026-07-05
+**Specification authorized:** Yes, one feature at a time in the approved order
 **Implementation authorized:** No
 **Canonical scope:** `docs/product/version-0.1-approved-scope.md`
 **Research completion record:** `docs/research/version-0.1/research-completion-summary.md`
@@ -16,9 +18,10 @@ All required research briefs are approved, all Research Definition of Ready gate
 have passed, required durable decisions are recorded, and no unresolved historical
 or gameplay question prevents specification.
 
-This is a recommendation awaiting human approval. It does not create a feature
-specification, approve an implementation plan, pass the project Definition of Ready,
-or authorize gameplay work.
+Patrick Mee approved this transition on 2026-07-05. The project may create one
+feature specification at a time in the approved order. This decision does not
+approve an implementation plan, pass the project Definition of Ready, or authorize
+gameplay work.
 
 ## Required Readiness Checks
 
@@ -195,10 +198,9 @@ invalidates an approved assumption.
 
 ## Phase Boundary
 
-After human approval of this review, the project may create feature specifications
-one at a time under the established workflow. Specification may refine or narrow the
-approved features but cannot expand frozen scope without approval and, where
-appropriate, an ADR.
+The project may create feature specifications one at a time under the established
+workflow. Specification may refine or narrow the approved features but cannot expand
+frozen scope without approval and, where appropriate, an ADR.
 
 Implementation remains prohibited until each feature has:
 
@@ -213,9 +215,9 @@ Implementation remains prohibited until each feature has:
 
 **Ready to transition from Research to Specification.**
 
-**Maintainer decision:** Pending
+**Maintainer decision:** Approved
 
-**Approved by/date:** Pending
+**Approved by/date:** Patrick Mee, 2026-07-05
 
 **Conditions:** Preserve frozen scope, XML-only target, independent gameplay value,
 vanilla tradeoffs, and the approved simplification fallback. Do not begin

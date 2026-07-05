@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Functional English UI for the cultivated plant; not a cultivar claim. -->
+  <EI_Plant_Oats.label>oat plant</EI_Plant_Oats.label>
+  <EI_Plant_Oats.description>A medium-cycle grain crop. It matures more slowly than rice but sooner than corn, producing oats for food, feed, trade, storage, and processing.</EI_Plant_Oats.description>
+
+  <!-- Functional English UI for harvested grain; not a cultivar claim. -->
+  <EI_RawOats.label>oats</EI_RawOats.label>
+  <EI_RawOats.description>Harvested oat grain. It can be eaten raw, cooked, fed to animals, stored, traded, or processed into other foods.</EI_RawOats.description>
+
+</LanguageData>

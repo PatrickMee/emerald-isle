@@ -22,13 +22,17 @@ and package metadata are versioned compatibility surfaces.
 
 ## AI Collaboration
 
-AI may research leads, draft alternatives, implement approved plans, generate
-tests, and review consistency. AI output is untrusted until a human verifies
-claims, licenses, cultural interpretation, game APIs, current source, and in-game
-behavior.
+AI may research material uncertainties, draft alternatives, implement Ready and
+explicitly authorized features, generate tests, and review consistency. AI output
+is untrusted until a human verifies claims, licenses, cultural interpretation,
+game APIs, current source, and in-game behavior.
 
-Every AI task must receive the constitution, active spec/plan, allowed scope,
-paths it may change, relevant game/version context, and required verification.
+Every AI task must receive the constitution, active specification, any applicable
+architecture or implementation record, allowed scope, paths it may change,
+relevant game/version context, and required verification. Do not create a
+standalone research brief, Architecture Review, Implementation Plan, or process
+summary unless it resolves material uncertainty or improves execution,
+maintenance, onboarding, or a future decision.
 Agents must not invent citations, silently broaden scope, introduce dependencies,
 or claim success from static inspection alone.
 

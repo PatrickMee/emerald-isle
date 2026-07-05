@@ -1,5 +1,9 @@
 # Research Brief: [Question]
 
+> Use a standalone brief only when historical, cultural, gameplay, or technical
+> uncertainty can materially change the feature. Match depth to uncertainty and
+> sensitivity; routine features may cite accepted evidence directly in the spec.
+
 **Feature:** [link]  
 **Researcher/reviewer:** [names]  
 **Status:** Draft | Reviewed | Superseded  

@@ -18,6 +18,6 @@
 - [x] T006 Complete cultural, gameplay, balance, architecture, art, and QA reviews at research depth
 - [x] T007 Confirm the approved scope remains viable; no scope change required
 - [x] T007A Prepare the Version 0.1 Research Completion Summary and Readiness Review
-- [ ] T007B Obtain maintainer approval of the Research-to-Specification Readiness Review
+- [x] T007B Obtain maintainer approval of the Research-to-Specification Readiness Review
 - [ ] T008 Revise and human-review the Version 0.1 implementation plan
 - [ ] T009 Pass Definition of Ready for the first selected feature

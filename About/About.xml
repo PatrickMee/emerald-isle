@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Emerald Isle</name>
+  <author>Patrick Mee</author>
+  <packageId>patrickmee.emeraldisle</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <url>https://github.com/PatrickMee/emerald-isle</url>
+  <description>Emerald Isle is a lore-friendly RimWorld expansion inspired by Irish history, archaeology, material culture, language, and mythology.
+
+This infrastructure build contains no gameplay content.</description>
+</ModMetaData>

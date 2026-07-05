@@ -12,7 +12,9 @@
 [One paragraph describing the feature and bounded first slice.]
 
 ## Historical Research
-[Claims, sources, periods, regions, uncertainty, and link to research brief.]
+[Claims, sources, periods, regions, and uncertainty. Link a research brief when one
+was needed; otherwise cite accepted evidence and state why additional research was
+not required.]
 
 ## Cultural Significance
 [Why the inspiration matters, sensitivities, and transformation for the Rim.]
@@ -34,7 +36,8 @@
 **Out:** [explicit exclusions]
 
 ## Technical Design
-[Defs, runtime behavior, persistence, compatibility, dependencies, migration.]
+[Defs, runtime behavior, persistence, compatibility, dependencies, and migration at
+the depth needed to implement safely. Link a standalone AR or plan only when useful.]
 
 ## XML vs C# Decision
 [XML, C#, or hybrid; why; Harmony decision and ADR if relevant.]
@@ -71,10 +74,10 @@
 ## Review Gates
 | Gate | Reviewer | Status | Evidence or conditions |
 |---|---|---|---|
-| Historical/cultural | | Pending | |
+| Historical/cultural, proportional to uncertainty | | Pending | |
 | Gameplay/vanilla fit | | Pending | |
 | Balance | | Pending | |
-| Architecture | | Pending | |
+| Architecture, inline or standalone | | Pending | |
 | Art/audio | | Pending | |
 | QA/release | | Pending | |
 

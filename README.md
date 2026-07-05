@@ -10,9 +10,12 @@ tone.
 ## Current Status
 
 **Milestones 0 and 0.5 are complete.** The stable foundation is released as
-`v0.0.0`, **The Studio Exists**. Version 0.1 is in research and planning; gameplay
-implementation remains blocked until its research sprint and implementation plan
-are reviewed.
+`v0.0.0`, **The Studio Exists**. Version 0.1 research is complete and FS-001 is
+approved, its architecture and implementation plan are approved, and the empty
+package/build gate passed. FS-001 is Ready and authorized for implementation;
+its runtime files, clean staged package, and initial in-game functional checkpoint
+now pass. FS-001 Design Review is approved; whole-chain balance and release
+integration remain pending.
 
 Start with:
 

@@ -4,13 +4,22 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+### Development
+
+- Began FS-001 Oats implementation with XML-only plant and harvested-grain
+  definitions, English localization, and original runtime textures.
+- Static validation passes; in-game verification and human Design Review remain
+  pending before the feature is considered complete.
+
 ### Planning
 
+- Added the RimWorld 1.6 empty-package metadata and clean staging contract.
 - Added the Version 0.1 structured Research Sprint.
 - Added a provisional ranked plan for the first five implementation candidates.
 - Replaced the loose five-candidate list with the cohesive four-feature
   **First Holding** scope recommendation after reviewing installed RimWorld 1.6 data.
-- Gameplay implementation remains blocked pending executed research and review.
+- Completed FS-001 research, specification, architecture, readiness, and
+  implementation authorization.
 
 ## [0.0.0] - 2026-07-04
 
