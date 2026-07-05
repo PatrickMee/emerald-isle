@@ -542,18 +542,18 @@ historical Irish terminology.
 | Art reads as modern packaged oatmeal or flour | Low | Medium | Use original coarse-ground visual with art review. |
 | Scope expands into a milling system | Low | High | Enforce explicit exclusions and frozen scope. |
 
-## Open Questions
+## Implementation Notes
 
-### Questions for Oat Foods Research
+### Oat Foods Research Resolutions
 
-1. Which one or two oat foods are historically supported strongly enough for the
-   target period?
-2. Do they provide two materially different uses for milled oats?
-3. What player benefit justifies separate milling rather than direct cooking?
-4. Can raw oats retain an ordinary use without making processed foods irrelevant?
-5. Does a direct raw-oat recipe produce the same gameplay with less complexity?
+- Oat porridge and oat flatbread are historically supported broad food forms.
+- They provide a fresh everyday path and a portable processed path.
+- Prior milling can stage labor and support the two-way food choice, subject to
+  specification and playtest evidence.
+- Raw oats retain ordinary Core food and feed uses.
+- Direct raw-oat cooking remains the required simpler comparison and fallback.
 
-### Questions for Specification and Testing
+### Notes for Specification and Testing
 
 1. Should the item be non-ingestible, emergency-only, or an explicitly filtered food
    ingredient under verified Core behavior?
@@ -580,13 +580,13 @@ implementation. A future move to C#, Harmony, a generic flour framework, new res
 families, or scope beyond the approved chain would require governed review and, where
 appropriate, an ADR.
 
-Final retention remains conditional on the Oat Foods brief and Version 0.1 Readiness
-Review.
+Oat Foods research is approved. Final retention remains conditional on specification
+and playtesting demonstrating meaningful choices without excessive labor or hauling.
 
-## Preliminary Recommendation
+## Approved Research Recommendation
 
-Advance `milled oats` through research as one XML-only intermediate, subject to human
-approval and the gameplay conditions in this brief.
+Advance `milled oats` into specification as one XML-only intermediate, subject to the
+gameplay conditions in this brief.
 
 Treat it as ground oat material, not a reconstructed standardized commodity. Do not
 give processing an inherent preservation, nutrition, quality, or value bonus. Require
@@ -614,7 +614,7 @@ cooking. It must not create nutrition, preservation, or profit by itself.
 
 Conditionally retain one `milled oats` item and one XML-only hand-quern recipe. Use
 standard bills, narrow filters, stable namespaced IDs, one original icon, and no
-custom systems. Final retention depends on approved Oat Foods research.
+custom systems. Final retention depends on specification and playtest evidence.
 
 ### Human Review Decision
 
@@ -638,7 +638,8 @@ abstraction, not a standardized product reconstruction.
 **Reviewer/date:** Patrick Mee, 2026-07-05
 **Corrections or conditions:** All seven Gameplay Validation conditions remain binding.
 **Approved gameplay direction:** `Recommended with Conditions` as stated in
-Gameplay Validation; final retention remains dependent on Oat Foods research.
+Gameplay Validation; Oat Foods satisfies the downstream research dependency, while
+final retention remains dependent on specification and playtesting.
 
 ### Research Definition of Ready Checklist
 
@@ -687,9 +688,8 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Human questions are resolved and approvals recorded.
 
 **Research decision:** Passed with conditions
-**Project Definition of Ready:** Not evaluated. Oat Foods research, human approvals,
-the Version 0.1 Readiness Review, specification, planning, and authorization remain
-outstanding.
+**Project Definition of Ready:** Not evaluated. Readiness Review approval,
+specification, planning, and implementation authorization remain outstanding.
 
 ## Sources
 

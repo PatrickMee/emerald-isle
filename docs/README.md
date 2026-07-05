@@ -38,7 +38,9 @@ amending the higher-authority one.
 - `research/version-0.1/dry-stone-wall.md`: approved BL-01 historical and gameplay research
 - `research/version-0.1/hand-quern.md`: approved PR-01 research with gameplay conditions
 - `research/version-0.1/milled-oats.md`: approved PR-01 / FO-01 research with gameplay conditions
-- `research/version-0.1/oat-foods.md`: FO-01 research awaiting historical and gameplay review
+- `research/version-0.1/oat-foods.md`: approved FO-01 historical and gameplay research
+- `research/version-0.1/research-completion-summary.md`: completed Version 0.1 research record
+- `product/version-0.1-readiness-review.md`: Research-to-Specification readiness gate awaiting approval
 - `qa/`: automated, integration, and playtest strategy
 - `release/`: packaging, compatibility, and release process
 - `workflow/`: feature lifecycle, Git, versioning, and AI collaboration

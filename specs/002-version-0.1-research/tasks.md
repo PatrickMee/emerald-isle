@@ -3,8 +3,8 @@
 - [x] T001 Define research categories, topics, fields, sources, effort, and priority
 - [x] T002 Challenge the provisional ranking and recommend a cohesive four-feature scope
 - [x] T002A Record human approval and freeze the Version 0.1 scope
-- [ ] T003 Verify RimWorld 1.6 Core/DLC technical contracts and vanilla baselines
-- [ ] T004 Complete P1 historical/material/language research briefs
+- [x] T003 Verify RimWorld 1.6 Core/DLC technical contracts and vanilla baselines
+- [x] T004 Complete P1 historical/material/language research briefs
 - [x] T004A Review and approve RSC-002 oats research brief
 - [x] T004B1 Complete RSC-003 dry-stone-wall research after T004A
 - [x] T004B2 Review and approve RSC-003 dry-stone-wall research
@@ -13,9 +13,11 @@
 - [x] T004D1 Complete RSC-005 milled-oats research after T004C
 - [x] T004D2 Review and approve RSC-005 milled-oats research with gameplay conditions
 - [x] T004E1 Complete RSC-006 oat-food research after T004D
-- [ ] T004E2 Review and approve RSC-006 oat-food research
-- [ ] T005 Complete candidate DLC/save/compatibility matrices
-- [ ] T006 Complete cultural, gameplay, balance, architecture, art, and QA reviews
-- [ ] T007 Confirm the approved scope remains viable; record any governed narrowing or rejection
+- [x] T004E2 Review and approve RSC-006 oat-food research
+- [x] T005 Complete candidate DLC/save/compatibility matrices at research depth
+- [x] T006 Complete cultural, gameplay, balance, architecture, art, and QA reviews at research depth
+- [x] T007 Confirm the approved scope remains viable; no scope change required
+- [x] T007A Prepare the Version 0.1 Research Completion Summary and Readiness Review
+- [ ] T007B Obtain maintainer approval of the Research-to-Specification Readiness Review
 - [ ] T008 Revise and human-review the Version 0.1 implementation plan
 - [ ] T009 Pass Definition of Ready for the first selected feature

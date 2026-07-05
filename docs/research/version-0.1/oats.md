@@ -6,6 +6,8 @@
 **Researcher:** Codex
 **Reviewer:** Patrick Mee
 **Status:** Approved
+**Historical review:** Approved
+**Gameplay review:** Approved
 **Date:** 2026-07-04
 **Approved:** 2026-07-05
 **Research Definition of Ready:** Passed

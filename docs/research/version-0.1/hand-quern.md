@@ -602,19 +602,19 @@ No texture has been created or authorized during research.
 | Removal strands food bills or stored output | Medium | High | Test removal and document save support |
 | Research creates a speculative mill framework | Low | High | Implement only the current building and recipe contract |
 
-## Open Questions
+## Implementation Notes
 
-### Questions for Milled-Oats and Oat-Food Research
+### Downstream Research Resolutions
 
-1. What useful paths remain for raw oats?
-2. What specific player benefit requires a milled-oats intermediate?
-3. Does milling change nutrition availability, shelf life, cooking labor,
-   portability, recipe access, or only item identity?
-4. Can the chain conserve nutrition without confusing stack ratios or rounding?
-5. Would one direct oat-food recipe produce the same gameplay with less maintenance?
-6. Is a batch milling recipe necessary to control hauling and bill frequency?
+- Raw oats retain ordinary Core food and feed paths.
+- Milled oats stage labor and enable a fresh porridge versus portable flatbread choice.
+- Milling itself grants no nutrition or shelf-life bonus; downstream foods create the
+  differentiated roles.
+- Nutrition conservation and integer conversion are mandatory specification tests.
+- Direct cooking remains the required simpler comparison and fallback.
+- Batch size remains an implementation note for hauling and bill-frequency testing.
 
-### Questions for Specification and Testing
+### Notes for Specification and Testing
 
 1. Should operation use Cooking, Crafting, or general labor?
 2. What work amount creates visible labor without dominating food production?
@@ -635,31 +635,32 @@ No texture has been created or authorized during research.
   accepted for later specification review.
 - The low-capital, unpowered, labor-intensive niche is approved for downstream
   validation, not yet implementation.
-- Feature inclusion remains conditional until milled-oats and oat-food research
-  proves that processing creates a meaningful choice.
+- Downstream research supports a meaningful processing choice at design level;
+  inclusion remains conditional on specification and playtesting proving that choice.
 
 ## ADR Assessment
 
 No new ADR is required at this research stage. The canonical scope already defines
 the hand quern as conditional and XML-only. A future decision to add C#, Harmony,
 custom milling behavior, or a broader processing system would require a new ADR and
-scope approval. Final inclusion or rejection should be reconciled during the Version
-0.1 Readiness Review after the downstream research is approved.
+scope approval. The Version 0.1 Readiness Review recommends conditional progression
+to specification; final inclusion still depends on implementation and playtest evidence.
 
-## Preliminary Recommendation
+## Approved Research Recommendation
 
-Approve the historical and technical foundation, but keep PR-01 **conditional**.
+The historical and technical foundation is approved, while PR-01 remains
+**conditional**.
 
-The future specification should include one hand-operated rotary quern only if the
-next two research briefs demonstrate that:
+The milled-oats and oat-food briefs now establish at research depth that:
 
 - raw oats retain useful behavior;
 - milled oats unlock a clear, bounded food-production advantage;
 - the labor and hauling cost creates a decision rather than a compulsory click tax;
 - the complete chain is nutrition-safe and XML-only.
 
-If those tests fail, remove the quern from Version 0.1 and allow direct oat-food
-processing. Historical authenticity does not override gameplay value.
+The future specification and playtests must validate those findings. If they fail,
+remove the quern from Version 0.1 and allow direct oat-food processing. Historical
+authenticity does not override gameplay value.
 
 ## Research Review
 
@@ -699,9 +700,9 @@ accurate Version 0.1 direction.
 **Decision:** Approved with conditions
 **Reviewer/date:** Patrick Mee, 2026-07-05
 **Corrections:** Add an explicit gameplay validation independent of historical support.
-**Approved gameplay direction:** Proceed through research only while the recommendation
-remains `Recommended with Conditions`; downstream research must satisfy the stated
-conditions.
+**Approved gameplay direction:** Downstream research satisfies the conditions at
+research depth. Proceed conditionally into specification, where direct processing,
+labor, hauling, and player behavior must remain explicit tests.
 
 ### Research Definition of Ready Checklist
 
@@ -750,8 +751,8 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Human questions are resolved and approval recorded.
 
 **Research decision:** Passed with conditions
-**Project Definition of Ready:** Not evaluated. Milled-oats and oat-food research,
-specification, planning, and authorization remain outstanding.
+**Project Definition of Ready:** Not evaluated. Readiness Review approval,
+specification, planning, and implementation authorization remain outstanding.
 
 ## Sources
 

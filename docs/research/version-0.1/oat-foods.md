@@ -4,12 +4,13 @@
 **Feature:** FO-01 Oat Foods
 **Release:** Version 0.1 - The First Holding
 **Researcher:** Codex
-**Reviewer:** Unassigned
-**Status:** Review
-**Historical review:** Pending
-**Gameplay review:** Pending
+**Reviewer:** Patrick Mee
+**Status:** Approved
+**Historical review:** Approved
+**Gameplay review:** Approved
 **Date:** 2026-07-05
-**Research Definition of Ready:** Review required
+**Approved:** 2026-07-05
+**Research Definition of Ready:** Passed
 **Approved scope:** `docs/product/version-0.1-approved-scope.md`
 **Implementation authorized:** No
 
@@ -511,6 +512,36 @@ and visual novelty are not enough.
 10. Final English names and descriptions must state the abstraction without claiming
     a standardized historical recipe or measured historical shelf life.
 
+## Canonical Version 0.1 Gameplay Loop
+
+```text
+Oats
+  ↓
+Hand Quern (conditional)
+  ↓
+Milled Oats
+  ↓
+Choice
+  ├── Oat Porridge
+  └── Oat Flatbread
+```
+
+- **Oats:** The player decides whether to retain a flexible raw crop for ordinary
+  Core food and feed uses or commit part of the harvest to processing.
+- **Hand Quern:** If retained after specification and playtesting, the unpowered quern
+  trades pawn labor and hauling for independently scheduled grain preparation. It is
+  removed if it proves to be compulsory busywork.
+- **Milled Oats:** The player chooses how much processed stock to maintain, balancing
+  labor already spent against future cooking flexibility and storage overhead.
+- **Oat Porridge:** The everyday fresh-food path favors near-term meals and a lower
+  final-cooking burden, paid for by prior milling and short keeping time.
+- **Oat Flatbread:** The portable-food path favors a moderately keeping plant-only
+  reserve, paid for by greater complete-chain work and weaker preservation than
+  dedicated vanilla travel foods.
+
+The loop is conditional as a whole. Raw oats remain useful, and no processing stage
+is preserved solely because it is historically supported.
+
 ## Gameplay Opportunities
 
 ### Supported Opportunities
@@ -693,18 +724,20 @@ localization requires competent review.
 | Art resembles modern packaged or famine-era food | Low | Medium | Original art and period-aware review. |
 | Later terms are presented as medieval Irish | Medium | Medium | English labels; language caveat and review. |
 
-## Open Questions
+## Implementation Notes
 
-### Questions Requiring Human Review
+### Human Review Resolutions
 
-1. Approve the two-food direction: oat porridge and oat flatbread?
-2. Approve the gameplay recommendation with all ten conditions?
-3. Prefer the clearer English label `oat flatbread`, or the shorter `oatcake`?
-4. Confirm the fallback: if testing cannot preserve distinct roles in XML, simplify
-   the foods and reconcile removal of redundant milling content rather than adding a
-   custom system?
+- Oat porridge is approved as the everyday cooked food.
+- Oat flatbread is approved as the portable processed food.
+- Both foods remain XML-only and at simple-meal tier.
+- `Oat flatbread` is approved as the player-facing English name.
+- If implementation or playtesting cannot preserve distinct gameplay decisions, the
+  production chain must be simplified rather than expanded with custom systems.
+- The ten research conditions remain implementation and test constraints rather than
+  blockers to leaving research.
 
-### Questions for Specification and Testing
+### Notes for Specification and Testing
 
 1. What work type, skill, and complete-chain budget make prior milling independently
    schedulable and distinguish porridge from a simple meal?
@@ -730,9 +763,9 @@ building, a generic food framework, a third food, mandatory new resources, custo
 thoughts, or another significant departure from the frozen scope. Naming and exact
 balance do not require an ADR unless they change a baseline architectural contract.
 
-## Preliminary Recommendation
+## Approved Research Recommendation
 
-Advance both **oat porridge** and **oat flatbread** to human research review.
+Advance both **oat porridge** and **oat flatbread** into specification.
 
 Historically, the pair is well supported at the level appropriate for a transformed
 RimWorld feature: oats were a common crop, early sources describe oat use in pot foods
@@ -744,6 +777,15 @@ prior preparation with low final-cook burden and short life. Flatbread should pr
 moderate plant-only travel convenience at a larger complete-chain cost and remain
 well below dedicated preserved foods. Raw oats remain useful. If XML balance cannot
 produce those behaviors, simplify rather than add systems.
+
+### Approved Gameplay Principle
+
+> The purpose of the oat food chain is to create meaningful player choice rather
+> than historical completeness.
+>
+> If implementation or playtesting demonstrates that maintaining both oat foods does
+> not create distinct gameplay decisions, the chain should be simplified while
+> preserving the historical identity of Version 0.1.
 
 ## Research Review
 
@@ -771,34 +813,39 @@ infrastructure and narrow milled-oat recipes. Use original art and stable namesp
 IDs. Validate total labor, nutrition, spoilage, caravan value, Core/DLC selection, and
 the simpler direct-recipe alternative during specification and playtesting.
 
-### Questions Requiring Human Review
+### Human Review Decision
 
-- Approve or reject the two-food direction.
-- Approve, amend, or reject the ten gameplay conditions.
-- Select the English flatbread label.
-- Confirm the simplification fallback.
+- The two-food direction is approved.
+- Oat porridge is the everyday cooked food.
+- Oat flatbread is the portable processed food and approved English label.
+- XML-only and simple-meal-tier constraints are approved.
+- The simplification fallback is approved.
+- Remaining numerical and integration uncertainty is assigned to specification,
+  implementation planning, and playtesting.
 
 ### Historical Review Gate
 
-**Decision:** Pending
+**Decision:** Approved
 
-**Reviewer/date:** Unassigned
+**Reviewer/date:** Patrick Mee, 2026-07-05
 
-**Corrections or conditions:** Human review required.
+**Corrections or conditions:** Exact recipes and preservation remain unclaimed;
+uncertainties become implementation notes.
 
-**Proposed approved claims and uses:** Early medieval Irish evidence supports
+**Approved claims and uses:** Early medieval Irish evidence supports
 pot-based oat food and oat flatbread as broad forms; exact recipes, universal use,
 terminology, and shelf life remain unclaimed.
 
 ### Gameplay Review Gate
 
-**Decision:** Pending
+**Decision:** Approved
 
-**Reviewer/date:** Unassigned
+**Reviewer/date:** Patrick Mee, 2026-07-05
 
-**Corrections or conditions:** Human review required.
+**Corrections or conditions:** Preserve the approved gameplay principle and simplify
+the chain if distinct decisions do not survive implementation or playtesting.
 
-**Proposed approved gameplay direction:** `Recommended with Conditions`; retain a
+**Approved gameplay direction:** Retain a
 fresh porridge and portable flatbread only while their complete-chain tradeoffs remain
 distinct, XML-only, and subordinate to relevant vanilla alternatives.
 
@@ -813,7 +860,7 @@ This checklist records readiness to leave research, not readiness to implement.
   applied.
 - [x] Exactly two candidate foods and explicit exclusions prevent cuisine expansion.
 - [x] Intended player experience and simplification fallback are stated.
-- [ ] Human reviewer approves the transformed food direction and names.
+- [x] Human reviewer approves the transformed food direction and names.
 
 #### Evidence and Historical Review
 
@@ -825,7 +872,7 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Recipe, terminology, preservation, social, and continuity uncertainties are
   explicit.
 - [x] Sources, visual references, cultural risks, and prohibited claims are recorded.
-- [ ] Historical review gate is approved by a human reviewer.
+- [x] Historical review gate is approved by a human reviewer.
 
 #### Gameplay Review
 
@@ -837,7 +884,7 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Raw oats, simple meals, pemmican, and packaged survival meals are compared.
 - [x] Complete-chain nutrition, labor, spoilage, value, and abuse cases are assigned
   to specification and testing.
-- [ ] Gameplay review gate is approved or approved with conditions by a human reviewer.
+- [x] Gameplay review gate is approved by a human reviewer.
 
 #### Engineering
 
@@ -856,12 +903,11 @@ This checklist records readiness to leave research, not readiness to implement.
   values.
 - [x] Source and asset provenance requirements are recorded.
 - [x] No specification, implementation, XML, C#, or texture was created.
-- [ ] Human questions are resolved and approvals recorded.
+- [x] Human questions are resolved and approvals recorded.
 
-**Research decision:** Review required
-**Project Definition of Ready:** Not evaluated. Human approval, the Version 0.1
-Readiness Review, specification, planning, and implementation authorization remain
-outstanding.
+**Research decision:** Passed
+**Project Definition of Ready:** Not evaluated. The Version 0.1 Readiness Review,
+specification, planning, and implementation authorization remain outstanding.
 
 ## Sources
 

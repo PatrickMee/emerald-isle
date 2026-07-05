@@ -2,7 +2,7 @@
 
 **Feature Branch:** `main`  
 **Created:** 2026-07-04  
-**Status:** Active research; scope frozen
+**Status:** Research complete; readiness review awaiting maintainer approval
 **Milestone:** Version 0.1 Foundations  
 **Implementation:** Prohibited
 
@@ -27,4 +27,5 @@ The authoritative gameplay scope is
 
 - All P1 briefs pass research and discipline review.
 - The approved scope remains viable, or any narrowing/rejection is recorded through governance.
-- A reviewed Version 0.1 implementation plan can pass Definition of Ready.
+- Research outputs are sufficient to create bounded feature specifications and later
+  implementation plans without additional foundational research.

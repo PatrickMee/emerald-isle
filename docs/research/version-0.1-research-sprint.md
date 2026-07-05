@@ -1,13 +1,12 @@
 # Version 0.1 Research Sprint
 
-**Status:** Active; oats, dry-stone wall, hand-quern, and milled-oats research
-approved; oat foods in review
+**Status:** Complete; Research-to-Specification readiness review awaiting approval
 **Milestone:** Version 0.1 Foundations  
 **Objective:** Produce enough historical, gameplay, art, language, and RimWorld 1.6
 evidence to validate and specify the approved first release with low uncertainty.
 **Implementation authority:** None
 
-## Sprint Outcomes
+## Research Sprint Outcomes
 
 - Reviewed research briefs for every Priority 1 topic and scoped findings for Priority 2.
 - Current RimWorld 1.6 vanilla/DLC comparison data captured from the installed game.
@@ -15,7 +14,8 @@ evidence to validate and specify the approved first release with low uncertainty
 - XML/C#/Harmony feasibility and save/DLC behavior documented for the features in
   the [approved scope](../product/version-0.1-approved-scope.md).
 - Approved scope validated without adding replacement features.
-- Version 0.1 implementation plan revised, reviewed, and passed through Definition of Ready.
+- Research Completion Summary and Readiness Review prepared. Feature specifications,
+  implementation plans, and project Definition of Ready remain later gates.
 
 ## Source Program
 

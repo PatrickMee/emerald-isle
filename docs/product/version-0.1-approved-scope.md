@@ -116,15 +116,19 @@ It does not attempt to recreate monumental sites such as Grianán of Aileach or 
 
 ---
 
-## Remaining Research
+## Research Status
 
-The following research briefs remain before specification begins:
+Complete.
 
-- Hand Quern
-- Milled Oats
-- Oat Foods
+The following research briefs are approved and have passed Research Definition of Ready:
 
-Only after these research briefs are approved should Version 0.1 move from the Research phase into Specification.
+- RSC-002 — Oats
+- RSC-003 — Dry-Stone Wall
+- RSC-004 — Hand Quern
+- RSC-005 — Milled Oats
+- RSC-006 — Oat Foods
+
+The Version 0.1 Readiness Review recommends transition from Research into Specification and awaits maintainer approval. No specification or implementation is authorized by research completion.
 
 ---
 
