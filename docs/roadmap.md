@@ -54,8 +54,9 @@ identity drift through undocumented exceptions.
 ## Version 0.1: The First Holding
 
 **Status:** FS-001 Oats is implemented, verified, Design Review-approved, and merged.
-FS-002 Dry-Stone Wall is approved and frozen, with architecture review next. Version
-0.1 integration and release checks remain pending; later feature specifications remain gated.
+FS-002 Dry-Stone Wall is approved and frozen; AR-002 is prepared for human review.
+Version 0.1 integration and release checks remain pending; later feature specifications
+remain gated.
 
 **Vision:** Prove the entire production pipeline with the smallest coherent,
 vanilla-friendly Emerald Isle slice.  

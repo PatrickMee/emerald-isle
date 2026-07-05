@@ -13,7 +13,7 @@ tone.
 `v0.0.0`, **The Studio Exists**. Version 0.1 research is complete. FS-001 Oats is
 implemented, verified, Design Review-approved, and merged. Whole-chain balance and
 release integration remain pending. FS-002 Dry-Stone Wall is approved and frozen;
-architecture review is next, and implementation is not authorized.
+AR-002 is prepared for human review, and implementation is not authorized.
 
 Start with:
 

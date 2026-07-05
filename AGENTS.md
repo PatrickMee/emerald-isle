@@ -22,9 +22,10 @@ governance, identity, accepted decisions, milestone scope, or review gates.
 ## Current Stage
 
 Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation. FS-001
-Oats is approved, Ready, and authorized for implementation; later features remain
-blocked until their own applicable gates pass. Keep work inside the active feature's
-approved scope and paths.
+Oats is implemented and Design Review-approved. FS-002 Dry-Stone Wall has an approved,
+frozen specification and a draft Architecture Review; implementation remains blocked
+until architecture, Definition of Ready, and explicit maintainer authorization pass.
+Keep work inside the active feature's approved scope and paths.
 
 ## Working Rules
 
@@ -47,5 +48,6 @@ approved scope and paths.
 
 <!-- SPECKIT START -->
 For additional context about technologies, project structure, shell commands, and
-other important information, read the current implementation record when one exists.
+other important information for the active feature, read
+`specs/003-dry-stone-wall/plan.md`.
 <!-- SPECKIT END -->
