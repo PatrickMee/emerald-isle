@@ -1,5 +1,3 @@
 {
-  "feature_directory": "docs/specifications",
-  "spec_file": "docs/specifications/FS-001-oats.md",
-  "feature_id": "FS-001"
+  "feature_directory": "specs/003-dry-stone-wall"
 }
