@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="PlantBase">
+    <defName>EI_Plant_Oats</defName>
+    <label>oat plant</label>
+    <description>A medium-cycle grain crop. It matures more slowly than rice but sooner than corn, producing oats for food, feed, trade, storage, and processing.</description>
+    <statBases>
+      <MaxHitPoints>85</MaxHitPoints>
+      <Nutrition>0.30</Nutrition>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/Oats/EI_Plant_Oats</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+    </graphicData>
+    <selectable>true</selectable>
+    <pathCost>14</pathCost>
+    <ingestible />
+    <plant>
+      <immatureGraphicPath>Things/Plant/Oats/EI_Plant_Oats_Immature</immatureGraphicPath>
+      <dieIfLeafless>true</dieIfLeafless>
+      <maxMeshCount>4</maxMeshCount>
+      <harvestTag>Standard</harvestTag>
+      <harvestedThingDef>EI_RawOats</harvestedThingDef>
+      <harvestYield>15</harvestYield>
+      <sowTags>
+        <li>Ground</li>
+      </sowTags>
+      <topWindExposure>0.1</topWindExposure>
+      <growDays>8.0</growDays>
+      <visualSizeRange>0.5~0.8</visualSizeRange>
+      <wildOrder>2</wildOrder>
+      <purpose>Food</purpose>
+      <humanFoodPlant>true</humanFoodPlant>
+    </plant>
+  </ThingDef>
+
+</Defs>

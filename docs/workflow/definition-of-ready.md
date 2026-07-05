@@ -1,6 +1,9 @@
 # Definition of Ready
 
-A feature may begin implementation only when every applicable item passes:
+A feature may begin implementation only when every applicable item passes. Evidence
+depth is proportional to uncertainty and risk; a requirement does not imply a
+standalone document. Non-applicable items need a concise rationale in the feature
+record.
 
 ## Product and Identity
 
@@ -12,7 +15,8 @@ A feature may begin implementation only when every applicable item passes:
 
 ## Evidence and Design
 
-- [ ] Research brief is reviewed; confidence, uncertainty, and sensitivity are recorded.
+- [ ] Material historical, cultural, gameplay, and technical uncertainty is resolved;
+      a research brief exists only when it adds decision value.
 - [ ] Vanilla/DLC comparison and balance hypothesis are measurable.
 - [ ] Canon, language, art, audio, accessibility, and localization needs are defined.
 - [ ] Acceptance, edge, failure, missing-dependency, and persistence scenarios exist.
@@ -23,7 +27,8 @@ A feature may begin implementation only when every applicable item passes:
 - [ ] Architecture, dependencies, public identifiers, save impact, and migration are reviewed.
 - [ ] Relevant ADRs are accepted and no unresolved ADR conflict remains.
 - [ ] Performance budget and compatibility matrix entries are defined.
-- [ ] Implementation plan and independently verifiable slices have exact paths.
+- [ ] The implementation approach and independently verifiable slices are actionable;
+      a standalone Implementation Plan exists only when sequencing or risk warrants it.
 - [ ] Test/playtest evidence and rollback approach are actionable.
 
 ## Delivery
@@ -31,6 +36,8 @@ A feature may begin implementation only when every applicable item passes:
 - [ ] Required reviewers and skills are available.
 - [ ] Blocking dependencies and owner questions are resolved.
 - [ ] Tasks are estimable and the first slice can be completed without hidden work.
+- [ ] Documentation planned for this feature has a named implementation,
+      maintenance, onboarding, verification, release, or decision-making purpose.
 
 **Decision:** Ready | Not Ready  
 **Approved by/date:** [maintainer, YYYY-MM-DD]  

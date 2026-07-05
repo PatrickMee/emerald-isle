@@ -1,3 +1,5 @@
 {
-  "feature_directory": "specs/002-version-0.1-research"
+  "feature_directory": "docs/specifications",
+  "spec_file": "docs/specifications/FS-001-oats.md",
+  "feature_id": "FS-001"
 }

@@ -6,12 +6,14 @@ Read the [constitution](.specify/memory/constitution.md),
 
 ## Before Work Starts
 
-1. Open or select a feature record under `specs/`.
+1. Open or select the feature's authoritative specification.
 2. Confirm it belongs to the active milestone.
-3. Complete the research and concept sections.
+3. Research only material uncertainty not already resolved by accepted evidence.
 4. Pass the [Feature Acceptance Checklist](docs/design/feature-acceptance-checklist.md).
-5. Obtain the required cultural, gameplay, balance, architecture, and art gates.
-6. Work from an approved implementation plan.
+5. Obtain risk-proportional cultural, gameplay, balance, architecture, art, and QA review.
+6. Record an actionable implementation approach. Create a standalone plan only when
+   sequencing, coordination, compatibility, or risk makes it useful.
+7. Pass Definition of Ready and receive explicit maintainer authorization.
 
 Ideas are welcome, but implementation without an approved feature record may be
 closed or redirected.
@@ -24,13 +26,14 @@ closed or redirected.
 - Record source and license provenance for research, code, audio, and visual work.
 - Preserve public definition names and save compatibility unless migration is
   explicitly approved.
-- Update affected documentation in the same change.
+- Update affected documentation in the same change; do not create redundant summaries.
 
 ## Pull Requests
 
-Describe player value, active milestone, linked spec, evidence for passed gates,
-test results, in-game results, screenshots where visual output changes,
-compatibility impact, and rollback plan. Reviewers may request a smaller scope.
+Describe player value, active milestone, linked spec, applicable decisions, test and
+in-game results, screenshots where visual output changes, compatibility impact, and
+rollback plan. Reviewers may request a smaller scope or less ceremony when the
+evidence already exists.
 
 ## Conduct and Cultural Care
 

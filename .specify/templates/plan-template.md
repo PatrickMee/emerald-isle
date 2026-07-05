@@ -2,6 +2,10 @@
 
 **Branch:** `[###-feature-name]` | **Date:** [DATE] | **Spec:** [link]
 
+> Create this standalone plan only when sequencing, coordination, compatibility, or
+> technical risk makes it materially useful. Routine features may keep the same
+> implementation and verification detail in the approved spec, issue, or PR.
+
 ## Summary
 [Player requirement and smallest technical/art approach.]
 
@@ -24,20 +28,16 @@
 - [ ] XML-first decision applied; C#/Harmony justified
 - [ ] Compatibility, persistence, provenance, and localization addressed
 - [ ] Whole-system verification path defined
+- [ ] Planning depth is proportional; no speculative framework or redundant artifact
 
 ## Research and Decisions
-[Links to research briefs, Feature Acceptance Checklist, and ADRs; unresolved decisions with owners.]
+[Links to research performed where needed, Feature Acceptance Checklist, and ADRs;
+state why standalone research was unnecessary when accepted evidence already resolves
+the feature's uncertainty.]
 
 ## Feature Structure
-```text
-specs/[###-feature]/
-├── spec.md
-├── plan.md
-├── research.md
-├── tasks.md
-├── checklists/
-└── evidence/
-```
+List only artifacts the feature actually needs. Do not create empty research,
+contracts, data-model, quickstart, checklist, or evidence files for symmetry.
 
 **Repository paths affected:** [concrete future paths]
 

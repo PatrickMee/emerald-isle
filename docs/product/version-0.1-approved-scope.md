@@ -128,7 +128,10 @@ The following research briefs are approved and have passed Research Definition o
 - RSC-005 — Milled Oats
 - RSC-006 — Oat Foods
 
-The Version 0.1 Readiness Review recommends transition from Research into Specification and awaits maintainer approval. No specification or implementation is authorized by research completion.
+The Version 0.1 Readiness Review was approved on 2026-07-05. The project is
+authorized to create one feature specification at a time in the approved order.
+Implementation remains unauthorized until the later acceptance, architecture,
+planning, Definition of Ready, and maintainer gates pass.
 
 ---
 

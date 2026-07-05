@@ -53,7 +53,9 @@ identity drift through undocumented exceptions.
 
 ## Version 0.1: The First Holding
 
-**Status:** Research and planning; implementation not authorized.  
+**Status:** FS-001 implementation active; static validation and the initial in-game
+functional checkpoint passed. Extended playtesting and review remain pending, and
+later feature specifications remain gated.
 
 **Vision:** Prove the entire production pipeline with the smallest coherent,
 vanilla-friendly Emerald Isle slice.  

@@ -175,7 +175,7 @@ implementation planning, or playtesting.
 ## Next Gate
 
 The [Version 0.1 Readiness Review](../../product/version-0.1-readiness-review.md)
-recommends transition from Research to Specification. A human maintainer must approve
-that review before any feature specification is created. Implementation remains
-blocked until each feature later passes acceptance, architecture, planning, and the
-project Definition of Ready.
+was approved by Patrick Mee on 2026-07-05. The project may create one feature
+specification at a time in the approved order. Implementation remains blocked until
+each feature later passes acceptance, architecture, planning, and the project
+Definition of Ready.

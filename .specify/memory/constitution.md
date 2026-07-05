@@ -1,13 +1,20 @@
 <!--
 Sync Impact Report
-- Version: 1.0.0 -> 1.1.0
-- Added principles: Gameplay and Story First; RimWorld-Native Fit; Research With
-  Transformation; Tradeoffs Over Power; Milestone Discipline; Traceable Design;
-  Whole-System Verification; Modular Compatibility
-- Added sections: Design Bible authority and mandatory feature conformance
+- Version: 1.1.0 -> 2.0.0
+- Modified principle: VI. Traceable Design Before Implementation ->
+  VI. Proportional Design and Traceability
+- Modified section: Development Quality Gates now follows the streamlined,
+  implementation-centered lifecycle
+- Added section: Process Proportionality
 - Templates updated: .specify/templates/spec-template.md,
-  .specify/templates/plan-template.md, .specify/templates/tasks-template.md
-- Deferred: license selection and initial supported RimWorld/DLC matrix
+  .specify/templates/plan-template.md, .specify/templates/tasks-template.md,
+  templates/feature-spec.md, templates/research-brief.md
+- Runtime guidance updated: docs/workflow/development-workflow.md,
+  docs/workflow/feature-lifecycle.md, docs/workflow/definition-of-ready.md,
+  docs/workflow/definition-of-done.md, docs/workflow/product-governance.md,
+  CONTRIBUTING.md, AGENTS.md
+- Removed sections: none
+- Deferred: none
 -->
 # Emerald Isle Constitution
 
@@ -44,14 +51,22 @@ but MUST NOT justify speculative implementation. The smallest coherent version
 of a feature MUST be preferred, and out-of-scope ideas MUST move to the roadmap
 or backlog.
 
-### VI. Traceable Design Before Implementation
-Every gameplay feature MUST have approved research, specification, vanilla
-comparison, balance analysis, technical plan, and test intent before content or
-code is merged. Every feature MUST pass the canonical Design Bible's Feature
-Acceptance Checklist before implementation planning becomes executable.
-Significant technical or product decisions MUST receive an ADR when the decision
-is made. XML is preferred for declarative content; C# requires a documented
-behavioral need; Harmony patching requires an ADR and compatibility plan.
+### VI. Proportional Design and Traceability
+Every gameplay feature MUST have an approved specification, vanilla comparison,
+balance intent, implementation approach, and test intent before implementation.
+Every feature MUST pass the canonical Design Bible Feature Acceptance Checklist,
+with review depth proportional to risk.
+
+Research MUST be performed when historical, cultural, gameplay, or technical
+uncertainty could change the design; a concise rationale is sufficient when no
+separate research brief is needed. A standalone Architecture Review or
+Implementation Plan MUST be created only when it materially reduces uncertainty,
+coordinates multiple files or contributors, protects a compatibility contract, or
+improves verification. Otherwise the specification, issue, or pull request MAY hold
+the necessary implementation detail. Significant technical or product decisions
+MUST receive an ADR when the decision is made. XML is preferred for declarative
+content; C# requires a documented behavioral need; Harmony patching requires an ADR
+and compatibility plan.
 
 ### VII. Whole-System Verification
 Passing static checks is necessary but insufficient. Every feature MUST be
@@ -80,22 +95,43 @@ contracts and MUST NOT change without migration analysis.
 
 ## Development Quality Gates
 
-A feature advances only when evidence satisfies the gate for its stage:
+A feature advances only when evidence satisfies the applicable gate:
 
-1. **Research**: claims sourced, uncertainty and sensitivity recorded.
-2. **Concept**: gameplay purpose, player choice, and scope are explicit.
-3. **Reviews**: cultural, gameplay, vanilla-fit, balance, architecture, and art
-   reviewers approve or record conditions.
-4. **Plan**: implementation, dependencies, compatibility, migration, and tests
-   are actionable.
-5. **Implementation**: static validation and targeted automated tests pass.
-6. **In-game verification**: full player path and persistence behavior pass.
-7. **Playtest**: balance hypotheses are evaluated against recorded observations.
-8. **Release**: packaging, attribution, localization, compatibility, and rollback
-   checks pass.
+1. **Research when needed**: material uncertainty is resolved to the depth required
+   by the decision.
+2. **Specification and architecture**: player value, scope, tradeoffs, technical
+   boundary, compatibility, and test intent are actionable. Standalone architecture
+   and implementation-plan documents are optional when the work is self-evident.
+3. **Ready**: required reviews pass, blockers are resolved, and a maintainer
+   authorizes implementation.
+4. **Implementation and verification**: the smallest playable slices pass static,
+   automated where useful, in-game, persistence, compatibility, and performance
+   checks.
+5. **Playtest**: player comprehension, gameplay quality, balance, friction, and
+   stories are evaluated from observed play.
+6. **Design review**: the implemented feature is reviewed for gameplay, historical
+   integrity, vanilla fit, technical quality, balance, scope, maintainability, and
+   compatibility.
+7. **Release**: the exact package passes attribution, localization, compatibility,
+   rollback, and release-quality checks.
 
 Review stages MAY iterate or run in parallel, but no gate may be silently skipped.
 A non-applicable gate requires a written rationale in the feature record.
+
+## Process Proportionality
+
+Working, stable, enjoyable software is the primary measure of progress. Documents
+MUST exist only when they materially improve implementation, maintenance,
+onboarding, verification, release, or future decisions. Contributors MUST reuse and
+link authoritative records instead of producing parallel summaries.
+
+Small, low-risk features MUST NOT inherit the documentation burden of foundational
+systems. Research depth MUST track uncertainty. Architecture and implementation
+planning MUST track technical risk and coordination needs. Generalization MUST
+follow repeated implemented evidence; anticipated future reuse is not sufficient.
+If maintaining a process artifact costs more than the decision or memory it
+protects, the team SHOULD simplify or retire the redundant artifact through normal
+review.
 
 ## Governance
 
@@ -112,4 +148,4 @@ conform to it and cannot silently override it. Exceptions MUST be time-bounded,
 documented in the feature plan, and approved by
 a maintainer. Compliance is reviewed at each milestone retrospective.
 
-**Version**: 1.1.0 | **Ratified**: 2026-07-04 | **Last Amended**: 2026-07-04
+**Version**: 2.0.0 | **Ratified**: 2026-07-04 | **Last Amended**: 2026-07-05

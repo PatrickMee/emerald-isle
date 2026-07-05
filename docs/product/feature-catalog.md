@@ -73,3 +73,8 @@ linked from it. Rejected and retired entries remain visible with rationale.
 The authoritative Version 0.1 feature set and constraints are maintained in
 [`version-0.1-approved-scope.md`](version-0.1-approved-scope.md). Catalog version
 estimates remain discovery metadata and do not override that approval record.
+
+**Current implementation state:** PL-01 Oats is Active. Its runtime files, clean
+staged package, crop selector, lifecycle, base harvest, item presentation, and basic
+save/reload checkpoint pass. Extended playtesting, human Design Review, and release
+verification remain pending.

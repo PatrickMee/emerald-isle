@@ -9,7 +9,8 @@ the whole repository.
 1. `.specify/memory/constitution.md` governs non-negotiable principles.
 2. `design/design-bible.md` governs creative and product identity.
 3. Accepted ADRs govern durable technical decisions.
-4. The active milestone specification and plan govern current scope.
+4. The active milestone specification and any applicable architecture or
+   implementation record govern current scope.
 5. Domain guides govern design, art, engineering, research, QA, and release.
 6. Feature documents govern one feature and cannot silently override higher
    authorities.
@@ -22,6 +23,7 @@ amending the higher-authority one.
 - `vision.md`: product identity and boundaries
 - `design/design-bible.md`: canonical creative and product identity
 - `product/feature-catalog.md`: official discovery backlog
+- `product/version-1.0-vision.md`: stable long-term product philosophy after approval
 - `product/version-0.1-approved-scope.md`: canonical Version 0.1 approval and scope boundary
 - `product/version-0.1-scope-freeze.md`: superseded scope record and compatibility redirect
 - `project/`: risk, technical debt, and research memory
@@ -40,7 +42,11 @@ amending the higher-authority one.
 - `research/version-0.1/milled-oats.md`: approved PR-01 / FO-01 research with gameplay conditions
 - `research/version-0.1/oat-foods.md`: approved FO-01 historical and gameplay research
 - `research/version-0.1/research-completion-summary.md`: completed Version 0.1 research record
-- `product/version-0.1-readiness-review.md`: Research-to-Specification readiness gate awaiting approval
+- `product/version-0.1-readiness-review.md`: approved Research-to-Specification transition gate
+- `specifications/FS-001-oats.md`: approved, Ready, and implementation-authorized Oats specification
+- `architecture/AR-001-oats.md`: approved Oats architecture
+- `plans/IP-001-oats.md`: approved Oats implementation plan
+- `release/package-build-contract.md`: approved Version 0.1 package metadata and staging contract
 - `qa/`: automated, integration, and playtest strategy
 - `release/`: packaging, compatibility, and release process
 - `workflow/`: feature lifecycle, Git, versioning, and AI collaboration
@@ -51,6 +57,8 @@ amending the higher-authority one.
 ## Maintenance Rules
 
 - Keep one authoritative home for each rule; link rather than duplicate.
+- Create standalone research, architecture, planning, and evidence documents only
+  when they materially improve implementation, maintenance, onboarding, or decisions.
 - Use repository-relative links.
 - State owner, status, and review trigger when a document is provisional.
 - Update affected guides and templates in the same change as a policy decision.

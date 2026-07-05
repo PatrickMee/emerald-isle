@@ -8,8 +8,8 @@ Constitution and Design Bible.
 | Change | Required proposal | Required approval | Record |
 |---|---|---|---|
 | Routine design within accepted spec | PR | Domain reviewer/maintainer | PR |
-| Feature acceptance | Spec, research, checklist | Product plus required domain gates | Feature record |
-| Architecture decision | ADR | Technical maintainer and affected owners | ADR |
+| Feature acceptance | Spec, required evidence, checklist | Product plus risk-based domain review | Feature record |
+| Architecture decision | Inline review or ADR when durable | Technical maintainer and affected owners | Feature record or ADR |
 | Design Bible amendment | Impact proposal | Founding Maintainer plus affected domain review | Bible version/history |
 | Constitution amendment | Governance proposal | Founding Maintainer | Constitution version/report |
 | Roadmap change | Outcome/scope/dependency analysis | Product authority | Roadmap change and issue |
@@ -23,11 +23,14 @@ self-review. Sensitive cultural or Irish-language changes require qualified revi
 
 1. Candidate exists in the Feature Catalog.
 2. Product triage confirms possible milestone and player value.
-3. Research brief establishes adequate confidence and sensitivities.
+3. Research resolves material uncertainty when accepted evidence is insufficient.
 4. Feature specification defines bounded scope and acceptance.
-5. Feature Acceptance Checklist returns Accept for planning.
-6. Required discipline gates approve or state conditions.
-7. Maintainer marks the feature Accepted and authorizes planning.
+5. Feature Acceptance Checklist returns Accept for implementation preparation.
+6. Architecture and discipline review depth follows actual risk; durable decisions
+   receive ADRs.
+7. Implementation sequencing is recorded in a standalone plan only when that plan
+   materially improves delivery.
+8. Definition of Ready passes and the maintainer explicitly authorizes implementation.
 
 Implementation cannot begin from a catalog row, issue, prompt, or roadmap bullet.
 
@@ -62,3 +65,8 @@ Tags are never moved or reused; corrections receive a new version.
 
 Documents listed in `docs/foundation-baseline.md` are stable authorities. Material
 changes normally require an ADR plus any document-specific amendment process.
+
+Stability does not require ceremony around routine feature work. Governance records
+the smallest evidence needed to protect product identity, public contracts, cultural
+integrity, contributor coordination, and release quality. Working software and
+observed player outcomes remain the measure of delivery.
