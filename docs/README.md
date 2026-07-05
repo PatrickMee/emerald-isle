@@ -37,7 +37,8 @@ amending the higher-authority one.
 - `research/version-0.1/oats.md`: approved PL-01 historical and gameplay research
 - `research/version-0.1/dry-stone-wall.md`: approved BL-01 historical and gameplay research
 - `research/version-0.1/hand-quern.md`: approved PR-01 research with gameplay conditions
-- `research/version-0.1/milled-oats.md`: PR-01 / FO-01 research awaiting historical and gameplay review
+- `research/version-0.1/milled-oats.md`: approved PR-01 / FO-01 research with gameplay conditions
+- `research/version-0.1/oat-foods.md`: FO-01 research awaiting historical and gameplay review
 - `qa/`: automated, integration, and playtest strategy
 - `release/`: packaging, compatibility, and release process
 - `workflow/`: feature lifecycle, Git, versioning, and AI collaboration

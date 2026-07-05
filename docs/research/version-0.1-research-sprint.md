@@ -1,7 +1,7 @@
 # Version 0.1 Research Sprint
 
-**Status:** Active; oats, dry-stone wall, and hand-quern research approved; milled
-oats in review
+**Status:** Active; oats, dry-stone wall, hand-quern, and milled-oats research
+approved; oat foods in review
 **Milestone:** Version 0.1 Foundations  
 **Objective:** Produce enough historical, gameplay, art, language, and RimWorld 1.6
 evidence to validate and specify the approved first release with low uncertainty.

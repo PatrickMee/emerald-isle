@@ -4,12 +4,13 @@
 **Feature:** PR-01 / FO-01 Milled Oats
 **Release:** Version 0.1 - The First Holding
 **Researcher:** Codex
-**Reviewer:** Unassigned
-**Status:** Review
-**Historical review:** Pending
-**Gameplay review:** Pending
+**Reviewer:** Patrick Mee
+**Status:** Approved
+**Historical review:** Approved
+**Gameplay review:** Approved with conditions
 **Date:** 2026-07-05
-**Research Definition of Ready:** Review required
+**Approved:** 2026-07-05
+**Research Definition of Ready:** Passed with conditions
 **Approved scope:** `docs/product/version-0.1-approved-scope.md`
 **Implementation authorized:** No
 
@@ -563,13 +564,13 @@ historical Irish terminology.
    can select the item?
 6. What rot, deterioration, stack, mass, and market values avoid an artificial bonus?
 
-### Questions Requiring Human Review
+### Human Review Resolutions
 
-1. Is `milled oats` accepted as the English abstraction despite the lack of a single
-   standardized archaeological product?
-2. Is the gameplay recommendation approved with all seven conditions?
-3. Is the omission rule accepted: if Oat Foods cannot prove the intermediate's value,
-   remove the separate milling step rather than add compulsory labor?
+- `milled oats` is accepted as the English abstraction despite the lack of a single
+  standardized archaeological product.
+- The gameplay recommendation is approved with all seven conditions.
+- The omission rule is accepted: if Oat Foods cannot prove the intermediate's value,
+  remove the separate milling step rather than add compulsory labor.
 
 ## ADR Assessment
 
@@ -615,28 +616,28 @@ Conditionally retain one `milled oats` item and one XML-only hand-quern recipe. 
 standard bills, narrow filters, stable namespaced IDs, one original icon, and no
 custom systems. Final retention depends on approved Oat Foods research.
 
-### Questions Requiring Human Review
+### Human Review Decision
 
-- Approve or reject the historical abstraction and naming.
-- Approve, amend, or reject the gameplay conditions.
-- Confirm that direct cooking is the required fallback if the next brief does not
-  justify the intermediate.
+- Historical abstraction and English working name approved.
+- Gameplay direction approved with all stated conditions.
+- Direct cooking remains the required fallback if Oat Foods does not justify the
+  intermediate.
 
 ### Historical Review Gate
 
-**Decision:** Pending
-**Reviewer/date:** Unassigned
-**Corrections or conditions:** Human review required.
-**Proposed approved claims and uses:** Oats were milled in the early medieval Irish
+**Decision:** Approved
+**Reviewer/date:** Patrick Mee, 2026-07-05
+**Corrections or conditions:** Preserve uncertainty around product standardization.
+**Approved claims and uses:** Oats were milled in the early medieval Irish
 cereal economy; `milled oats` may represent ground oat material as a broad gameplay
 abstraction, not a standardized product reconstruction.
 
 ### Gameplay Review Gate
 
-**Decision:** Pending
-**Reviewer/date:** Unassigned
-**Corrections or conditions:** Human review required.
-**Proposed approved gameplay direction:** `Recommended with Conditions` as stated in
+**Decision:** Approved with conditions
+**Reviewer/date:** Patrick Mee, 2026-07-05
+**Corrections or conditions:** All seven Gameplay Validation conditions remain binding.
+**Approved gameplay direction:** `Recommended with Conditions` as stated in
 Gameplay Validation; final retention remains dependent on Oat Foods research.
 
 ### Research Definition of Ready Checklist
@@ -649,7 +650,7 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Constitution, Design Bible, and approved Version 0.1 scope are applied.
 - [x] Explicit exclusions prevent a generic milling or flour system.
 - [x] Intended player experience and failure condition are stated.
-- [ ] Human reviewer accepts the name and scope transformation.
+- [x] Human reviewer accepts the name and scope transformation.
 
 #### Evidence and Historical Review
 
@@ -659,7 +660,7 @@ This checklist records readiness to leave research, not readiness to implement.
   distinguished.
 - [x] Claims carry confidence and unsupported standardization is prohibited.
 - [x] Sources, visual references, uncertainty, and cultural risks are recorded.
-- [ ] Historical review gate is approved by a human reviewer.
+- [x] Historical review gate is approved by a human reviewer.
 
 #### Gameplay Review
 
@@ -667,7 +668,7 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Strategy, clicks, tradeoff, labor burden, and simpler alternative are evaluated.
 - [x] Complexity costs and seven measurable retention conditions are recorded.
 - [x] Direct cooking is documented as the required fallback.
-- [ ] Gameplay review gate is approved or approved with conditions by a human reviewer.
+- [x] Gameplay review gate is approved with conditions by a human reviewer.
 
 #### Engineering
 
@@ -683,9 +684,9 @@ This checklist records readiness to leave research, not readiness to implement.
 - [x] Oat Foods research questions and downstream acceptance tests are explicit.
 - [x] Source and asset provenance requirements are recorded.
 - [x] Specification and implementation remain unauthorized.
-- [ ] Human questions are resolved and approvals recorded.
+- [x] Human questions are resolved and approvals recorded.
 
-**Research decision:** Review required
+**Research decision:** Passed with conditions
 **Project Definition of Ready:** Not evaluated. Oat Foods research, human approvals,
 the Version 0.1 Readiness Review, specification, planning, and authorization remain
 outstanding.
