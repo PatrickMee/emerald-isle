@@ -11,8 +11,9 @@
 **Specification QA:** [Passed](../../specs/003-dry-stone-wall/checklists/requirements.md)<br>
 **Feature Acceptance:** [Accept for planning](checklists/FS-002-dry-stone-wall-feature-acceptance.md)<br>
 **Architecture gate:** [AR-002 approved by Patrick Mee, 2026-07-06](../architecture/AR-002-dry-stone-wall.md)<br>
-**Definition of Ready:** Evidence complete — maintainer Ready decision pending<br>
-**Implementation authorized:** No
+**Definition of Ready:** Passed by Patrick Mee, 2026-07-06<br>
+**Implementation authorized:** Yes — Patrick Mee, 2026-07-06<br>
+**Implementation status:** Checkpoint 1 and release-candidate art approved by Patrick Mee, 2026-07-06; broader verification pending
 
 ## Authority and Boundaries
 

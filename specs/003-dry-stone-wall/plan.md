@@ -6,8 +6,8 @@
 **Date:** 2026-07-06
 **Spec:** [FS-002](../../docs/specifications/FS-002-dry-stone-wall.md)
 **Architecture:** [AR-002](../../docs/architecture/AR-002-dry-stone-wall.md)
-**Definition of Ready:** Evidence complete — maintainer Ready decision pending
-**Implementation authorized:** No
+**Definition of Ready:** Passed by Patrick Mee, 2026-07-06
+**Implementation authorized:** Yes — Patrick Mee, 2026-07-06
 
 This compact plan exists because linked wall art, inherited wall behavior, public
 save identifiers, and Core/Odyssey structural verification benefit from an explicit

@@ -23,10 +23,10 @@ governance, identity, accepted decisions, milestone scope, or review gates.
 
 Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation. FS-001
 Oats is implemented and Design Review-approved. FS-002 Dry-Stone Wall has an approved,
-frozen specification and approved Architecture Review. Its Definition of Ready
-evidence is complete, but implementation remains blocked until Patrick Mee explicitly
-declares the feature Ready and authorizes implementation. Keep work inside the active
-feature's approved scope and paths.
+frozen specification and approved Architecture Review. Patrick Mee declared FS-002
+Ready, authorized checkpointed implementation, and approved the release-candidate
+art on 2026-07-06. Broader in-game verification remains open. Keep work inside the
+active feature's approved scope and paths; do not change frozen gameplay values.
 
 ## Working Rules
 

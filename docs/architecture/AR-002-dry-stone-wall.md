@@ -8,8 +8,8 @@
 **Prepared:** 2026-07-06<br>
 **Vanilla reference build:** RimWorld 1.6.4871 rev595<br>
 **Implementation plan:** [Spec Kit plan](../../specs/003-dry-stone-wall/plan.md)<br>
-**Definition of Ready:** Evidence complete — maintainer Ready decision pending<br>
-**Implementation authorized:** No
+**Definition of Ready:** Passed by Patrick Mee, 2026-07-06<br>
+**Implementation authorized:** Yes — Patrick Mee, 2026-07-06<br>
 
 ## Decision Summary
 
@@ -344,9 +344,9 @@ actual failure modes.
 | Engineering | Pass | XML-first architecture, public contracts, save/removal impact, ADR review, performance boundary, delivery slices, verification, and rollback are actionable |
 | Delivery | Pass | Required owner/art/testing roles are available, no blocker or open owner question remains, work is estimable, and every planned record has a stated purpose |
 
-**Assessment:** No unmet Definition of Ready criterion was found. This assessment
-does not approve its own governance gate. Patrick Mee must explicitly declare the
-feature Ready and authorize implementation before any XML or texture is created.
+**Assessment:** No unmet Definition of Ready criterion was found. Patrick Mee's
+2026-07-06 direction to carry on records the maintainer Ready decision and explicit
+implementation authorization.
 
 ## ADR Review and Architecture Decision
 
@@ -357,6 +357,6 @@ This review introduces no Harmony patch, assembly, save schema, API, hard depend
 load-order rule, package change, generated-asset pipeline, or shared framework. No
 new ADR is required.
 
-**Decision:** Patrick Mee approved AR-002 on 2026-07-06. Definition of Ready evidence
-is complete, but the maintainer Ready decision and explicit implementation
-authorization remain pending. Do not implement FS-002 until both are recorded.
+**Decision:** Patrick Mee approved AR-002 and authorized implementation on
+2026-07-06. FS-002 may proceed through the approved checkpointed plan without
+changing frozen gameplay values.

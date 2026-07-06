@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="Wall">
+    <defName>EI_DryStoneWall</defName>
+    <label>dry-stone wall</label>
+    <description>An impassable wall of carefully stacked stone, built without mortar. It uses fewer stone blocks than a standard wall, but takes longer to build and is less durable.</description>
+    <graphicData>
+      <texPath>Things/Building/Linked/DryStoneWall/EI_DryStoneWall_Atlas</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <uiIconPath>Things/Building/Linked/DryStoneWall/EI_DryStoneWall_MenuIcon</uiIconPath>
+    <uiIconPathsStuff Inherit="False" />
+    <statBases>
+      <MaxHitPoints>240</MaxHitPoints>
+      <WorkToBuild>200</WorkToBuild>
+    </statBases>
+    <costStuffCount>4</costStuffCount>
+    <stuffCategories Inherit="False">
+      <li>Stony</li>
+    </stuffCategories>
+    <uiOrder>2001</uiOrder>
+    <designationHotKey Inherit="False" IsNull="True" />
+  </ThingDef>
+
+</Defs>
