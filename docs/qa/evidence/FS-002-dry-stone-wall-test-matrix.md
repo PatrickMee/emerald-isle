@@ -1,6 +1,6 @@
 # FS-002 Dry-Stone Wall Test Evidence
 
-**Status:** Working checkpoint and Version 0.1 artwork approved; broader verification pending<br>
+**Status:** Working checkpoint, Version 0.1 artwork approved, and full-mod-list log reviewed; broader verification pending<br>
 **Feature:** [FS-002 — Dry-Stone Wall](../../specifications/FS-002-dry-stone-wall.md)<br>
 **Test date:** 2026-07-06<br>
 **Tester:** Codex; human in-game reviewer Patrick Mee
@@ -10,10 +10,18 @@
 | Input | Value |
 |---|---|
 | Installed RimWorld data | `1.6.4871 rev595` |
+| Observed runtime log | `RimWorld 1.6.4871 rev597` |
 | Platform | macOS |
 | Package ID | `patrickmee.emeraldisle` |
 | Source branch | `004-dry-stone-wall-specification` |
 | Staging command | `./tools/stage-mod.sh` |
+
+## Evidence Artifacts
+
+| Artifact | Purpose |
+|---|---|
+| [`screenshots/FS-002/2026-07-06-dry-stone-wall-junctions-and-room-overlay.png`](screenshots/FS-002/2026-07-06-dry-stone-wall-junctions-and-room-overlay.png) | Human-provided normal-zoom visual review showing dry-stone wall runs, junctions, selected/room overlays, and rock adjacency context |
+| [`screenshots/FS-002/2026-07-06-debug-log-full-mod-list.png`](screenshots/FS-002/2026-07-06-debug-log-full-mod-list.png) | Human-provided debug-log screenshot showing active full mod list context and visible warnings |
 
 ## Checkpoint 1 — First Working Wall
 
@@ -31,8 +39,8 @@
 | Structure menu | Pass | User-provided in-game screenshot shows Dry-Stone Wall in Architect → Structure |
 | Menu icon and text | Pass | Screenshot shows the custom icon, localized description, Granite blocks selection, and cost of 4 |
 | Five Core materials | Pending in-game | Human verification required |
-| Linked rendering | Pass for art freeze | User-supplied normal-zoom screenshot shows uninterrupted straight runs and readable Stuff tint; final changes are limited to deterministic one-pixel exposed-edge polish |
-| Feature-specific load log | Pass with environment caveat | RimWorld 1.6.4871 rev597 loaded the active Emerald Isle package with no `EI_DryStoneWall`, XML-reference, or missing-texture error |
+| Linked rendering | Pass for visual checkpoint | Human reviewer reported the wall looks good. Preserved screenshot shows uninterrupted straight runs, readable T/cross-style connections, selection/room-overlay readability, and rock-adjacent context. Full material/junction matrix still pending. |
+| Feature-specific load log | Pass with environment caveat | `Player.log` from RimWorld 1.6.4871 rev597 loaded `patrickmee.emeraldisle` and contained no `Emerald`, `EI_DryStoneWall`, XML-reference, missing-texture, or feature-specific error. |
 | Overall clean log | Not established | The session used the owner's full mod list and reported one unattributed English translation-data error plus unrelated third-party warnings; repeat Core + Emerald Isle only |
 
 ### First Launch Environment Note
@@ -45,8 +53,30 @@ description, and that Granite blocks cost 4. It was not a clean isolation run: t
 configuration also contained many Workshop mods, and the log reported unrelated or
 unattributed warnings. Human art review approved the preceding linked rendering, then
 requested RC2 and final polish to improve individual-stone readability. The supplied
-normal-zoom screenshot supports the final art freeze. Five-material availability,
-full junction coverage, and a Core-only clean log still require confirmation.
+normal-zoom screenshots support the final art freeze and visual checkpoint. Five-material
+availability, full junction coverage, and a Core-only clean log still require confirmation.
+
+### 2026-07-06 Player.log Review
+
+The current macOS RimWorld log was read from the active Ludeon/Unity log location
+after the human in-game checkpoint. The relevant findings are:
+
+- RimWorld runtime reported `1.6.4871 rev597`.
+- The active save loaded with `patrickmee.emeraldisle` present in the mod list.
+- Search terms for `Emerald`, `emeraldisle`, `EI_DryStoneWall`, `DryStone`,
+  `Dry-Stone`, XML failures, missing textures, and feature-specific errors found no
+  Emerald Isle or Dry-Stone Wall failure.
+- The visible warnings were not attributed to Emerald Isle: keybinding conflicts,
+  one generic English translation-data error, a `HeatMapHelper` warning, hidden
+  ritual precept additions, and several third-party mod messages.
+- Emerald Isle English DefInjected localization was separately parsed with
+  `xmllint --noout` for source and staged files. No XML parse error was found in
+  `EI_DryStoneWall` or existing oats localization.
+
+This is enough to support a feature-specific log pass in the owner's normal modded
+environment. It is not enough to certify the overall clean-log requirement, because
+the run was not Core + Emerald Isle only and the generic translation warning remains
+unattributed without a generated RimWorld translation report.
 
 No balance tuning is permitted during this checkpoint. Any broken atlas topology or
 tint is an art defect; any mismatch in cost, HP, or work returns to implementation
