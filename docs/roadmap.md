@@ -55,7 +55,7 @@ identity drift through undocumented exceptions.
 
 **Status:** FS-001 Oats is implemented, verified, Design Review-approved, and merged.
 FS-002 Dry-Stone Wall and AR-002 are approved, Ready, and implementation-authorized.
-The first working checkpoint and release-candidate art are human-approved; broader
+The first working checkpoint is human-approved and Version 0.1 runtime art is frozen; broader
 verification is active. Version 0.1 integration and release checks remain pending;
 later feature specifications remain gated.
 

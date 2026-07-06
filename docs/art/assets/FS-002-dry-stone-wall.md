@@ -1,6 +1,6 @@
 # FS-002 Dry-Stone Wall Asset Record
 
-**Status:** Release-candidate revision 4 approved by Patrick Mee, 2026-07-06<br>
+**Status:** Approved and frozen for Version 0.1 by Patrick Mee, 2026-07-06<br>
 **Feature:** [FS-002 — Dry-Stone Wall](../../specifications/FS-002-dry-stone-wall.md)<br>
 **Production date:** 2026-07-06<br>
 **Human acceptance owner:** Patrick Mee
@@ -22,6 +22,18 @@ original four-way dry-stone junction. Generated source images and the temporary
 atlas-build script are ignored local production intermediates, not runtime
 dependencies or committed source art.
 
+Art Review RC2 replaces the prior runtime exports with a lower-density source pattern
+designed to survive 64-pixel atlas reduction. It uses fewer, larger, longer stones,
+more irregular outlines, and stronger neutral joint separation to prevent the wall
+from reading as a single textured slab at normal gameplay zoom.
+
+The Release Candidate Final is a deliberately subtle RC2 polish: a handful of longer
+stones, slightly varied capstones and exposed edges, and selected deeper joints. It
+does not alter the established stone scale, silhouette contract, or overall brightness.
+The final freeze adds three one-pixel raised capstone groups and two tiny top-edge
+recesses only where a linked tile has an exposed horizontal edge. Junction geometry
+and link boundaries remain unchanged.
+
 The RimWorld Wiki linked-wall diagram was consulted only to verify the engine's
 documented 4×4 cell ordering. No pixels, code, or artistic content from the diagram,
 RimWorld, another mod, or a historical photograph were copied.
@@ -34,8 +46,8 @@ source-code license.
 
 | Asset | Runtime path | Dimensions | SHA-256 |
 |---|---|---:|---|
-| Linked wall atlas | `Things/Building/Linked/DryStoneWall/EI_DryStoneWall_Atlas` | 256×256 RGBA | `c2ffa099c49ea240b728e2f29d45511de5f52d6917d6cf1b324a4534f052aa40` |
-| Structure menu icon | `Things/Building/Linked/DryStoneWall/EI_DryStoneWall_MenuIcon` | 64×64 RGBA | `7b812e391cb9eee669ec123c5af115039a2854e008e88f9b98f95545ca03af17` |
+| Linked wall atlas | `Things/Building/Linked/DryStoneWall/EI_DryStoneWall_Atlas` | 256×256 RGBA | `1e23a2087c52dded7ef6e9f978542da93861f82c7248858d44ab8c64de30d33c` |
+| Structure menu icon | `Things/Building/Linked/DryStoneWall/EI_DryStoneWall_MenuIcon` | 64×64 RGBA | `b514a78fea81cbe2269da2ca237745bff1e9d650eeea8afae139c389f03bb6c7` |
 
 ## Verified Linked-Atlas Contract
 
@@ -63,6 +75,14 @@ This matches AR-002; no architecture amendment is required.
 - The release-candidate prompt explicitly constrained the edit to a minority of
   stones. Final post-processing also corrected the generated cut-edge outline to
   strict grayscale so no hidden hue bias affects Stuff tinting.
+- The RC2 prompts explicitly reduced source-course density for 64-pixel readability,
+  then corrected the draft's brick-like regularity with tapered fieldstone shapes,
+  staggered joints, varied lengths, and restrained capstones.
+- The final prompt constrained changes to three-to-five longer stones, modest capstone
+  and exposed-edge irregularity, and selected joint shadows so the result remains a
+  polish pass rather than another redesign.
+- Deterministic final post-processing preserves the generated stone artwork while
+  applying the exact one-pixel capstone and recess limits requested during freeze.
 - The standard image-generation chroma helper converted the background to alpha.
 - Deterministic post-processing converted the source to strict grayscale,
   normalized the two arm widths, created every exact
@@ -72,9 +92,9 @@ This matches AR-002; no architecture amendment is required.
 
 ## Review Disposition
 
-Patrick Mee approved release-candidate revision 4 on 2026-07-06. The linked atlas,
-normal-zoom readability, construction language, and overall style pass human art
-review. Broader feature verification must still cover Stuff tint for all five Core
-stones, wall/rock/door/fence adjacency, damage overlays, selection, paint, snow,
-rain, and darkness. Broken tiling remains an art defect and must not change FS-002
-gameplay.
+Patrick Mee supplied normal-zoom in-game evidence, directed the final limited edge
+polish, and froze the resulting artwork as the approved Version 0.1 runtime asset on
+2026-07-06. Future art changes require a demonstrated gameplay or rendering defect.
+Broader feature verification must still cover all five Core stones,
+wall/rock/door/fence adjacency, damage overlays, selection, paint, snow, rain, and
+darkness. Broken tiling remains an art defect and must not change FS-002 gameplay.

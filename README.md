@@ -13,7 +13,7 @@ tone.
 `v0.0.0`, **The Studio Exists**. Version 0.1 research is complete. FS-001 Oats is
 implemented, verified, Design Review-approved, and merged. Whole-chain balance and
 release integration remain pending. FS-002 Dry-Stone Wall is Ready and authorized;
-its first working checkpoint and release-candidate art are human-approved, with
+its first working checkpoint and Version 0.1 runtime art are human-approved, with
 broader in-game verification still pending.
 
 Start with:

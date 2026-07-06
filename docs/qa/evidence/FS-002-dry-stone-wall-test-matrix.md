@@ -1,6 +1,6 @@
 # FS-002 Dry-Stone Wall Test Evidence
 
-**Status:** Working/art checkpoint approved; broader verification pending<br>
+**Status:** Working checkpoint and Version 0.1 artwork approved; broader verification pending<br>
 **Feature:** [FS-002 — Dry-Stone Wall](../../specifications/FS-002-dry-stone-wall.md)<br>
 **Test date:** 2026-07-06<br>
 **Tester:** Codex; human in-game reviewer Patrick Mee
@@ -31,7 +31,7 @@
 | Structure menu | Pass | User-provided in-game screenshot shows Dry-Stone Wall in Architect → Structure |
 | Menu icon and text | Pass | Screenshot shows the custom icon, localized description, Granite blocks selection, and cost of 4 |
 | Five Core materials | Pending in-game | Human verification required |
-| Linked rendering | Pass (human art review) | Patrick Mee reported the linked atlas and normal-zoom readability working well and approved release-candidate revision 4 |
+| Linked rendering | Pass for art freeze | User-supplied normal-zoom screenshot shows uninterrupted straight runs and readable Stuff tint; final changes are limited to deterministic one-pixel exposed-edge polish |
 | Feature-specific load log | Pass with environment caveat | RimWorld 1.6.4871 rev597 loaded the active Emerald Isle package with no `EI_DryStoneWall`, XML-reference, or missing-texture error |
 | Overall clean log | Not established | The session used the owner's full mod list and reported one unattributed English translation-data error plus unrelated third-party warnings; repeat Core + Emerald Isle only |
 
@@ -43,9 +43,10 @@ reference, or missing-texture failure. A user-provided in-game screenshot confir
 that the wall appears in Architect → Structure with its custom icon and localized
 description, and that Granite blocks cost 4. It was not a clean isolation run: the active
 configuration also contained many Workshop mods, and the log reported unrelated or
-unattributed warnings. Human art review subsequently approved the linked rendering
-and normal-zoom readability. Five-material availability and a Core-only clean log
-still require confirmation.
+unattributed warnings. Human art review approved the preceding linked rendering, then
+requested RC2 and final polish to improve individual-stone readability. The supplied
+normal-zoom screenshot supports the final art freeze. Five-material availability,
+full junction coverage, and a Core-only clean log still require confirmation.
 
 No balance tuning is permitted during this checkpoint. Any broken atlas topology or
 tint is an art defect; any mismatch in cost, HP, or work returns to implementation
