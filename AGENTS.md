@@ -23,9 +23,10 @@ governance, identity, accepted decisions, milestone scope, or review gates.
 
 Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation. FS-001
 Oats is implemented and Design Review-approved. FS-002 Dry-Stone Wall has an approved,
-frozen specification and a draft Architecture Review; implementation remains blocked
-until architecture, Definition of Ready, and explicit maintainer authorization pass.
-Keep work inside the active feature's approved scope and paths.
+frozen specification and approved Architecture Review. Its Definition of Ready
+evidence is complete, but implementation remains blocked until Patrick Mee explicitly
+declares the feature Ready and authorizes implementation. Keep work inside the active
+feature's approved scope and paths.
 
 ## Working Rules
 

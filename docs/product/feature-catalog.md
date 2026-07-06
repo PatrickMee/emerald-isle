@@ -76,5 +76,6 @@ estimates remain discovery metadata and do not override that approval record.
 
 **Current implementation state:** PL-01 Oats is implemented, verification-complete,
 Design Review-approved, and merged. BL-01 Dry-Stone Wall has an approved, frozen
-specification and a draft Architecture Review awaiting human approval; implementation
-is not authorized. Version 0.1 integration and release conditions remain pending.
+specification and approved Architecture Review. Ready evidence is complete, but the
+maintainer Ready decision and implementation authorization remain pending. Version
+0.1 integration and release conditions remain pending.

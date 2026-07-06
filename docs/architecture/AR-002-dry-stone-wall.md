@@ -1,13 +1,14 @@
 # AR-002 — Dry-Stone Wall Architecture Review
 
-**Status:** Draft — Human architecture review required<br>
+**Status:** Approved<br>
+**Approved by/date:** Patrick Mee, 2026-07-06<br>
 **Feature:** [FS-002 — Dry-Stone Wall](../specifications/FS-002-dry-stone-wall.md)<br>
 **Milestone:** Version 0.1 — The First Holding<br>
 **Owner:** Patrick Mee<br>
 **Prepared:** 2026-07-06<br>
 **Vanilla reference build:** RimWorld 1.6.4871 rev595<br>
 **Implementation plan:** [Spec Kit plan](../../specs/003-dry-stone-wall/plan.md)<br>
-**Definition of Ready:** Not evaluated<br>
+**Definition of Ready:** Evidence complete — maintainer Ready decision pending<br>
 **Implementation authorized:** No
 
 ## Decision Summary
@@ -334,7 +335,20 @@ actual failure modes.
 | Modular compatibility | Pass | Unique Def, no external patches, Core-only dependency, no custom state |
 | Proportionality | Pass | AR protects linked-art/save/DLC contracts; no IP-002, framework, or test assembly |
 
-## ADR Review and Recommendation
+## Definition of Ready Assessment
+
+| Area | Result | Evidence |
+|---|---|---|
+| Product and identity | Pass | Catalog ID, owner, milestone, player decision, bounded slice, Constitution/Bible conformance, Feature Acceptance, and exclusions are approved |
+| Evidence and design | Pass | Historical/gameplay research, vanilla/DLC comparison, measurable balance, art/audio/localization, and acceptance/failure/persistence scenarios are complete |
+| Engineering | Pass | XML-first architecture, public contracts, save/removal impact, ADR review, performance boundary, delivery slices, verification, and rollback are actionable |
+| Delivery | Pass | Required owner/art/testing roles are available, no blocker or open owner question remains, work is estimable, and every planned record has a stated purpose |
+
+**Assessment:** No unmet Definition of Ready criterion was found. This assessment
+does not approve its own governance gate. Patrick Mee must explicitly declare the
+feature Ready and authorize implementation before any XML or texture is created.
+
+## ADR Review and Architecture Decision
 
 ADR-0001 is specific to Oats and does not apply. AR-002 conforms to ADR-0002's
 package ID, RimWorld 1.6 support, no-assembly policy, and existing staging layout.
@@ -343,6 +357,6 @@ This review introduces no Harmony patch, assembly, save schema, API, hard depend
 load-order rule, package change, generated-asset pipeline, or shared framework. No
 new ADR is required.
 
-**Recommendation:** Approve AR-002. After approval, evaluate the project Definition
-of Ready and obtain explicit implementation authorization. Do not implement FS-002
-from this draft architecture review.
+**Decision:** Patrick Mee approved AR-002 on 2026-07-06. Definition of Ready evidence
+is complete, but the maintainer Ready decision and explicit implementation
+authorization remain pending. Do not implement FS-002 until both are recorded.

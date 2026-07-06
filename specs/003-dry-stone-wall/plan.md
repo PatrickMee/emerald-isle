@@ -1,10 +1,12 @@
 # Implementation Plan: FS-002 Dry-Stone Wall
 
-**Status:** Draft — Architecture review required
+**Status:** Approved
+**Approved by/date:** Patrick Mee, 2026-07-06
 **Branch:** `004-dry-stone-wall-specification`
 **Date:** 2026-07-06
 **Spec:** [FS-002](../../docs/specifications/FS-002-dry-stone-wall.md)
 **Architecture:** [AR-002](../../docs/architecture/AR-002-dry-stone-wall.md)
+**Definition of Ready:** Evidence complete — maintainer Ready decision pending
 **Implementation authorized:** No
 
 This compact plan exists because linked wall art, inherited wall behavior, public

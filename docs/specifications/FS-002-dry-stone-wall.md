@@ -10,8 +10,8 @@
 **Vanilla balance baseline:** RimWorld 1.6.4871 rev595<br>
 **Specification QA:** [Passed](../../specs/003-dry-stone-wall/checklists/requirements.md)<br>
 **Feature Acceptance:** [Accept for planning](checklists/FS-002-dry-stone-wall-feature-acceptance.md)<br>
-**Architecture gate:** [AR-002 draft — human review required](../architecture/AR-002-dry-stone-wall.md)<br>
-**Definition of Ready:** Not evaluated<br>
+**Architecture gate:** [AR-002 approved by Patrick Mee, 2026-07-06](../architecture/AR-002-dry-stone-wall.md)<br>
+**Definition of Ready:** Evidence complete — maintainer Ready decision pending<br>
 **Implementation authorized:** No
 
 ## Authority and Boundaries
