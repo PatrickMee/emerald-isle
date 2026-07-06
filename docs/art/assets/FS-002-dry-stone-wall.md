@@ -94,7 +94,9 @@ This matches AR-002; no architecture amendment is required.
 
 Patrick Mee supplied normal-zoom in-game evidence, directed the final limited edge
 polish, and froze the resulting artwork as the approved Version 0.1 runtime asset on
-2026-07-06. Future art changes require a demonstrated gameplay or rendering defect.
+2026-07-06. The runtime atlas and menu icon are frozen. Future changes require one
+of three explicit triggers: a rendering bug, a gameplay readability issue, or a
+project-wide art direction change.
 Broader feature verification must still cover all five Core stones,
 wall/rock/door/fence adjacency, damage overlays, selection, paint, snow, rain, and
 darkness. Broken tiling remains an art defect and must not change FS-002 gameplay.
