@@ -74,8 +74,8 @@ The authoritative Version 0.1 feature set and constraints are maintained in
 [`version-0.1-approved-scope.md`](version-0.1-approved-scope.md). Catalog version
 estimates remain discovery metadata and do not override that approval record.
 
-**Current implementation state:** PL-01 Oats is implemented, verification-complete,
-Design Review-approved, and merged. BL-01 Dry-Stone Wall has an approved, frozen
-specification and approved Architecture Review. It is implemented with frozen
-Version 0.1 runtime art and has passed Gate 2 Design Review; PR merge, Version 0.1
-integration, and release conditions remain pending.
+**Current implementation state:** PL-01 Oats and BL-01 Dry-Stone Wall are
+implemented, verification-complete, Design Review-approved, and merged. PR-01 Hand
+Quern has passed Gate 1 with bundled FS-004 implementation as a condition; standalone
+hand-quern implementation remains blocked. Version 0.1 integration and release
+conditions remain pending.
