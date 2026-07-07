@@ -77,5 +77,5 @@ estimates remain discovery metadata and do not override that approval record.
 **Current implementation state:** PL-01 Oats and BL-01 Dry-Stone Wall are
 implemented, verification-complete, Design Review-approved, and merged. PR-01 Hand
 Quern has passed Gate 1 with bundled FS-004 implementation as a condition; standalone
-hand-quern implementation remains blocked. Version 0.1 integration and release
-conditions remain pending.
+hand-quern implementation remains blocked. PR-01 / FO-01 Milled Oats is in Gate 1
+specification review. Version 0.1 integration and release conditions remain pending.

@@ -22,6 +22,9 @@ All notable project changes are documented here.
 - FS-003 Hand Quern passed Gate 1. Standalone implementation remains blocked; the
   hand quern must be implemented with FS-004 Milled Oats so the first
   player-facing slice has a real milling bill.
+- Drafted FS-004 Milled Oats as a proportional Gate 1 specification for maintainer
+  review. The draft records that quern plus milled oats is still not a complete
+  player-facing chain unless FS-005 supplies at least one food consumer.
 
 ### Governance
 
