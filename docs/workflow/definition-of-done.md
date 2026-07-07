@@ -1,35 +1,39 @@
-# Definition of Done
+# Definition of Done (Gate 2 Evidence Checklist)
 
-A feature is complete only when applicable evidence passes:
+A feature merges to main only when applicable evidence passes. Record evidence
+briefly in the specification or pull request; do not create standalone reports
+unless a finding has reusable value. Non-applicable items need a concise
+rationale.
 
 ## Behavior and Quality
 
 - [ ] All acceptance, edge, failure, and safe-degradation scenarios pass.
-- [ ] Static, unit, integration, regression, and configuration checks pass.
-- [ ] Exact packaged build passes clean-load and complete in-game player-path tests.
-- [ ] Save/load, removal/upgrade, and relevant DLC/mod matrix tests pass.
-- [ ] Performance budget passes in representative worst-case conditions.
+- [ ] Static validation and any useful automated checks pass.
+- [ ] The complete in-game player path works in a real game session.
+- [ ] Save/load passes where state persists; relevant DLC/mod matrix checks pass.
 - [ ] Logs contain no new unresolved errors, warnings, or recurring spam.
+- [ ] Performance is acceptable in representative conditions.
 
 ## Product and Presentation
 
-- [ ] Gameplay purpose and meaningful tradeoffs survive playtesting.
-- [ ] Balance hypothesis is accepted, revised, or explicitly bounded by known issues.
-- [ ] Art/audio passes in-game states and vanilla-readability review.
-- [ ] Player text is clear, accessible, localized by key, and language-reviewed as required.
-- [ ] Cultural and canon review conditions are satisfied.
-- [ ] Post-implementation Design Review passes gameplay, historical integrity,
-      vanilla fit, technical quality, balance, scope, maintainability, and compatibility.
+- [ ] Gameplay purpose and meaningful tradeoffs survive maintainer playtest;
+      the balance hypothesis is accepted, revised, or explicitly bounded.
+- [ ] The implemented feature is reviewed against the specification and Design
+      Bible for gameplay, historical integrity, vanilla fit, technical quality,
+      and maintainability.
+- [ ] Art and audio read correctly in-game against vanilla.
+- [ ] Player text is clear, localized by key, and logged in the terminology and
+      canon records where Irish-language or culturally sensitive.
 
-## Memory and Release
+## Memory
 
-- [ ] The specification, durable decisions, tests, and playtest evidence reflect final behavior.
-- [ ] Only affected project-memory records are updated; redundant summaries are not created.
-- [ ] Feature Catalog state, glossary, risk, and debt registers are updated where affected.
-- [ ] Attribution, licenses, changelog, known issues, upgrade and rollback notes are complete.
-- [ ] Required code/design/release reviews approve the exact change.
-- [ ] No blocker/critical defect or expired exception remains.
+- [ ] The specification and durable decisions reflect final behavior; only
+      affected records are updated and no redundant summaries are created.
+- [ ] Feature Catalog state, glossary, and changelog entries are updated where
+      affected.
 
-**Decision:** Done | Not Done  
-**Approved by/date:** [maintainer, YYYY-MM-DD]  
-**Release/version:** [target]
+**Decision:** Done | Not Done
+**Approved by/date:** [maintainer, YYYY-MM-DD]
+
+Release-time obligations (attribution, batched cultural review, exact-artifact
+package tests, rollback) belong to the per-version release checklist at Gate 3.

@@ -1,44 +1,32 @@
-# Definition of Ready
+# Definition of Ready (Gate 1 Approval Checklist)
 
-A feature may begin implementation only when every applicable item passes. Evidence
-depth is proportional to uncertainty and risk; a requirement does not imply a
-standalone document. Non-applicable items need a concise rationale in the feature
-record.
+This checklist lives inside or alongside the feature specification. Passing it
+with one maintainer approval means the feature is accepted, ready, and
+authorized for implementation. Evidence depth is proportional to uncertainty and
+risk; a requirement does not imply a standalone document. Non-applicable items
+need a concise rationale in the feature record.
 
-## Product and Identity
-
-- [ ] Catalog ID, owner, active milestone, and priority are assigned.
-- [ ] Player problem, meaningful decision, story value, and bounded first slice are clear.
-- [ ] Constitution and Design Bible conformance are reviewed.
-- [ ] Feature Acceptance Checklist says Accept for planning.
-- [ ] Explicit exclusions prevent later-milestone scope leakage.
-
-## Evidence and Design
-
-- [ ] Material historical, cultural, gameplay, and technical uncertainty is resolved;
-      a research brief exists only when it adds decision value.
+- [ ] Catalog ID, owner, and active milestone are assigned; the feature belongs
+      to the current approved scope.
+- [ ] Player problem, meaningful decision, story value, and bounded first slice
+      are clear; explicit exclusions prevent scope leakage.
+- [ ] Constitution and Design Bible conformance are reviewed, including
+      tradeoffs over power and vanilla-native fit.
+- [ ] Material historical, cultural, gameplay, and technical uncertainty is
+      resolved in the specification; a standalone research brief exists only
+      when it adds decision value.
 - [ ] Vanilla/DLC comparison and balance hypothesis are measurable.
-- [ ] Canon, language, art, audio, accessibility, and localization needs are defined.
-- [ ] Acceptance, edge, failure, missing-dependency, and persistence scenarios exist.
+- [ ] Irish-language and culturally sensitive content is identified and flagged
+      for the release-time register; high-risk content notes whether earlier
+      qualified review is requested.
+- [ ] The XML-first decision is documented; C# and Harmony needs are justified,
+      with ADRs for durable choices; public identifiers, save impact, and
+      compatibility are stated.
+- [ ] Acceptance, edge, failure, and persistence scenarios exist; test and
+      playtest intent is actionable.
+- [ ] Art, audio, and localization needs are defined or marked not applicable.
+- [ ] No blocking dependency or unresolved question prevents the first slice.
 
-## Engineering
-
-- [ ] XML-first decision is documented; C# and Harmony needs are justified.
-- [ ] Architecture, dependencies, public identifiers, save impact, and migration are reviewed.
-- [ ] Relevant ADRs are accepted and no unresolved ADR conflict remains.
-- [ ] Performance budget and compatibility matrix entries are defined.
-- [ ] The implementation approach and independently verifiable slices are actionable;
-      a standalone Implementation Plan exists only when sequencing or risk warrants it.
-- [ ] Test/playtest evidence and rollback approach are actionable.
-
-## Delivery
-
-- [ ] Required reviewers and skills are available.
-- [ ] Blocking dependencies and owner questions are resolved.
-- [ ] Tasks are estimable and the first slice can be completed without hidden work.
-- [ ] Documentation planned for this feature has a named implementation,
-      maintenance, onboarding, verification, release, or decision-making purpose.
-
-**Decision:** Ready | Not Ready  
-**Approved by/date:** [maintainer, YYYY-MM-DD]  
+**Decision:** Approved | Not Approved
+**Approved by/date:** [maintainer, YYYY-MM-DD]
 **Conditions:** [none or explicit conditions]

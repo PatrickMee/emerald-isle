@@ -1,20 +1,21 @@
 <!--
 Sync Impact Report
-- Version: 1.1.0 -> 2.0.0
-- Modified principle: VI. Traceable Design Before Implementation ->
-  VI. Proportional Design and Traceability
-- Modified section: Development Quality Gates now follows the streamlined,
-  implementation-centered lifecycle
-- Added section: Process Proportionality
-- Templates updated: .specify/templates/spec-template.md,
-  .specify/templates/plan-template.md, .specify/templates/tasks-template.md,
-  templates/feature-spec.md, templates/research-brief.md
+- Version: 2.0.0 -> 3.0.0
+- Modified principle: VI. Proportional Design and Traceability now folds the
+  Feature Acceptance Checklist and readiness review into single-gate
+  specification approval
+- Modified section: Development Quality Gates collapses from seven gates to
+  three (Approved, Done, Released) per ADR 0003
+- Modified section: Governance adds per-release batching for cultural and
+  Irish-language review
+- Templates updated: templates/feature-spec.md
 - Runtime guidance updated: docs/workflow/development-workflow.md,
   docs/workflow/feature-lifecycle.md, docs/workflow/definition-of-ready.md,
   docs/workflow/definition-of-done.md, docs/workflow/product-governance.md,
-  CONTRIBUTING.md, AGENTS.md
+  GOVERNANCE.md, CONTRIBUTING.md, AGENTS.md
 - Removed sections: none
-- Deferred: none
+- Deferred: .specify/templates/* update opportunistically on next use per
+  ADR 0003; historical records under the seven-gate lifecycle are not rewritten
 -->
 # Emerald Isle Constitution
 
@@ -52,21 +53,23 @@ of a feature MUST be preferred, and out-of-scope ideas MUST move to the roadmap
 or backlog.
 
 ### VI. Proportional Design and Traceability
-Every gameplay feature MUST have an approved specification, vanilla comparison,
-balance intent, implementation approach, and test intent before implementation.
-Every feature MUST pass the canonical Design Bible Feature Acceptance Checklist,
-with review depth proportional to risk.
+Every gameplay feature MUST have an approved specification covering player value,
+vanilla comparison, balance intent, implementation approach, and test intent
+before implementation. Design Bible conformance is verified through the approval
+checklist inside the specification, with review depth proportional to risk. One
+maintainer approval of the specification constitutes acceptance, readiness, and
+authorization to implement.
 
 Research MUST be performed when historical, cultural, gameplay, or technical
-uncertainty could change the design; a concise rationale is sufficient when no
-separate research brief is needed. A standalone Architecture Review or
-Implementation Plan MUST be created only when it materially reduces uncertainty,
-coordinates multiple files or contributors, protects a compatibility contract, or
-improves verification. Otherwise the specification, issue, or pull request MAY hold
-the necessary implementation detail. Significant technical or product decisions
-MUST receive an ADR when the decision is made. XML is preferred for declarative
-content; C# requires a documented behavioral need; Harmony patching requires an ADR
-and compatibility plan.
+uncertainty could change the design; findings live inside the specification
+unless a standalone research brief adds decision value. A standalone Architecture
+Review or Implementation Plan MUST be created only when it materially reduces
+uncertainty, coordinates multiple files or contributors, protects a compatibility
+contract, or improves verification. Otherwise the specification, issue, or pull
+request MAY hold the necessary implementation detail. Significant technical or
+product decisions MUST receive an ADR when the decision is made. XML is preferred
+for declarative content; C# requires a documented behavioral need; Harmony
+patching requires an ADR and compatibility plan.
 
 ### VII. Whole-System Verification
 Passing static checks is necessary but insufficient. Every feature MUST be
@@ -95,28 +98,26 @@ contracts and MUST NOT change without migration analysis.
 
 ## Development Quality Gates
 
-A feature advances only when evidence satisfies the applicable gate:
+A feature advances through three gates. Evidence depth is proportional to risk,
+but no gate may be silently skipped; a non-applicable requirement needs a concise
+written rationale in the feature record.
 
-1. **Research when needed**: material uncertainty is resolved to the depth required
-   by the decision.
-2. **Specification and architecture**: player value, scope, tradeoffs, technical
-   boundary, compatibility, and test intent are actionable. Standalone architecture
-   and implementation-plan documents are optional when the work is self-evident.
-3. **Ready**: required reviews pass, blockers are resolved, and a maintainer
-   authorizes implementation.
-4. **Implementation and verification**: the smallest playable slices pass static,
-   automated where useful, in-game, persistence, compatibility, and performance
-   checks.
-5. **Playtest**: player comprehension, gameplay quality, balance, friction, and
-   stories are evaluated from observed play.
-6. **Design review**: the implemented feature is reviewed for gameplay, historical
-   integrity, vanilla fit, technical quality, balance, scope, maintainability, and
-   compatibility.
-7. **Release**: the exact package passes attribution, localization, compatibility,
-   rollback, and release-quality checks.
+1. **Approved**: the specification resolves material uncertainty, defines player
+   value, scope, tradeoffs, technical boundary, compatibility, and test intent,
+   and passes its approval checklist. One maintainer approval authorizes
+   implementation. Standalone research, architecture, and plan documents exist
+   only when they add decision value.
+2. **Done**: the implemented feature passes static validation, its complete
+   in-game player path, save/load where state persists, applicable compatibility
+   and performance checks, and maintainer playtest covering comprehension,
+   balance, and friction. Evidence is recorded in the specification or pull
+   request. Design review of the implemented result happens here.
+3. **Released**: once per version, the exact staged package passes the release
+   checklist, including attribution, localization, batched cultural review,
+   compatibility, rollback, and release-quality checks for every feature in the
+   version.
 
-Review stages MAY iterate or run in parallel, but no gate may be silently skipped.
-A non-applicable gate requires a written rationale in the feature record.
+Gates MAY iterate; failed evidence returns to the earliest invalid assumption.
 
 ## Process Proportionality
 
@@ -148,4 +149,10 @@ conform to it and cannot silently override it. Exceptions MUST be time-bounded,
 documented in the feature plan, and approved by
 a maintainer. Compliance is reviewed at each milestone retrospective.
 
-**Version**: 2.0.0 | **Ratified**: 2026-07-04 | **Last Amended**: 2026-07-05
+Culturally sensitive and Irish-language content is tracked in the terminology
+and canon records as features merge and receives qualified review once per
+release at the Released gate. Content flagged high-risk during specification MAY
+request earlier review. This batching does not waive the qualified-reviewer
+requirement in `GOVERNANCE.md`.
+
+**Version**: 3.0.0 | **Ratified**: 2026-07-04 | **Last Amended**: 2026-07-07
