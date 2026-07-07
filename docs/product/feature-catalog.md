@@ -79,5 +79,5 @@ implemented, verification-complete, Design Review-approved, and merged. PR-01 Ha
 Quern has passed Gate 1 with bundled FS-004 implementation as a condition; standalone
 hand-quern implementation remains blocked. PR-01 / FO-01 Milled Oats has passed
 Gate 1 with bundled FS-005 implementation as a condition; standalone milled-oats
-implementation remains blocked. Version 0.1 integration and release conditions
-remain pending.
+implementation remains blocked. FO-01 Oat Foods is in Gate 1 specification review.
+Version 0.1 integration and release conditions remain pending.

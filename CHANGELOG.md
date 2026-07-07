@@ -28,6 +28,9 @@ All notable project changes are documented here.
 - FS-004 Milled Oats passed Gate 1. Implementation remains blocked until FS-005 is
   approved so the first processing implementation is a playable quern, milled-oats,
   and food-consumer vertical slice.
+- Drafted FS-005 Oat Foods as a proportional Gate 1 specification for maintainer
+  review. The draft defines oat porridge and oat flatbread as the player-facing
+  payoff for the Version 0.1 processing chain.
 
 ### Governance
 

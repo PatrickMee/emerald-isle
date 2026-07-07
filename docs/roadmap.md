@@ -57,9 +57,9 @@ identity drift through undocumented exceptions.
 Design Review-approved, and merged. FS-003 Hand Quern passed Gate 1 with bundled
 FS-004 implementation as a condition; standalone hand-quern implementation remains
 blocked. FS-004 Milled Oats passed Gate 1 with bundled FS-005 implementation as a
-condition; standalone milled-oats implementation remains blocked. Later feature
-specifications remain gated. Version 0.1 integration and release checks remain
-pending.
+condition; standalone milled-oats implementation remains blocked. FS-005 Oat Foods
+is in Gate 1 specification review. Version 0.1 integration and release checks
+remain pending.
 
 **Vision:** Prove the entire production pipeline with the smallest coherent,
 vanilla-friendly Emerald Isle slice.  

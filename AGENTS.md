@@ -30,8 +30,9 @@ Gate 1 with the condition that implementation is bundled with FS-004 Milled Oats
 standalone hand-quern implementation remains blocked. Version 0.1 Gate 3 release
 checks remain pending. FS-004 Milled Oats passed Gate 1 with the condition that
 implementation waits for an approved FS-005 food consumer; standalone milled-oats
-implementation remains blocked. Keep work inside the active feature's approved
-scope and paths.
+implementation remains blocked. FS-005 Oat Foods is the active Gate 1 specification
+review and is not implementation-authorized. Keep work inside the active feature's
+approved scope and paths.
 
 ## Working Rules
 
@@ -55,6 +56,6 @@ scope and paths.
 <!-- SPECKIT START -->
 For additional context about technologies, project structure, shell commands, and
 other important information for the active feature, read
-`docs/specifications/FS-004-milled-oats.md`. No standalone Architecture Review or
-Implementation Plan exists for FS-004 unless human review later requests one.
+`docs/specifications/FS-005-oat-foods.md`. No standalone Architecture Review or
+Implementation Plan exists for FS-005 unless human review later requests one.
 <!-- SPECKIT END -->
