@@ -25,10 +25,11 @@ Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation under 
 three-gate lifecycle (Approved, Done, Released; see
 `docs/workflow/feature-lifecycle.md`). FS-001 Oats passed Gate 2 on 2026-07-07;
 whole-chain balance is deferred to the hand-quern and milled-oats features. FS-002
-Dry-Stone Wall passed Gate 2 and is merged to `main`. FS-003 Hand Quern is the
-active Gate 1 specification review; it is not implementation-authorized. Version
-0.1 Gate 3 release checks remain pending. Keep work inside the active feature's
-approved scope and paths.
+Dry-Stone Wall passed Gate 2 and is merged to `main`. FS-003 Hand Quern passed
+Gate 1 with the condition that implementation is bundled with FS-004 Milled Oats;
+standalone hand-quern implementation remains blocked. Version 0.1 Gate 3 release
+checks remain pending. Keep work inside the active feature's approved scope and
+paths.
 
 ## Working Rules
 

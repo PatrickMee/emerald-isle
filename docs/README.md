@@ -45,7 +45,7 @@ amending the higher-authority one.
 - `product/version-0.1-readiness-review.md`: approved Research-to-Specification transition gate
 - `specifications/FS-001-oats.md`: approved, Ready, and implementation-authorized Oats specification
 - `specifications/FS-002-dry-stone-wall.md`: approved and frozen Dry-Stone Wall specification
-- `specifications/FS-003-hand-quern.md`: Gate 1 review draft for the conditional Hand Quern
+- `specifications/FS-003-hand-quern.md`: approved conditional Hand Quern specification
 - `architecture/AR-002-dry-stone-wall.md`: approved Dry-Stone Wall architecture and Ready assessment
 - `architecture/AR-001-oats.md`: approved Oats architecture
 - `plans/IP-001-oats.md`: approved Oats implementation plan

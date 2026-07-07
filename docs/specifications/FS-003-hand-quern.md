@@ -1,7 +1,7 @@
 # FS-003 — Hand Quern
 
-**Status:** Review<br>
-**Gate 1 status:** Pending maintainer approval<br>
+**Status:** Approved — Frozen<br>
+**Gate 1 status:** Approved by Patrick Mee, 2026-07-07<br>
 **Milestone:** Version 0.1 — The First Holding<br>
 **Catalog feature:** PR-01<br>
 **Feature branch:** `codex/fs-003-hand-quern-specification`<br>
@@ -11,7 +11,8 @@
 **Research:** [RSC-004 Hand Quern](../research/version-0.1/hand-quern.md),
 [RSC-005 Milled Oats](../research/version-0.1/milled-oats.md),
 [RSC-006 Oat Foods](../research/version-0.1/oat-foods.md)<br>
-**Implementation authorized:** No
+**Implementation authorized:** Conditional — only as a bundled FS-003 + FS-004
+implementation after FS-004 also passes Gate 1.
 
 ## Authority and Boundaries
 
@@ -477,8 +478,8 @@ FS-004. It is not independently valuable as playable software without milled oat
 - [x] The FS-004 dependency is explicit: implementation should be bundled with
       FS-004, and no player-facing quern is Done without an actual milling use.
 
-**Decision:** Pending maintainer review<br>
-**Approved by/date:** Not approved<br>
+**Decision:** Approved<br>
+**Approved by/date:** Patrick Mee, 2026-07-07<br>
 **Conditions:** Human direction recorded: implement FS-003 with FS-004 so the first
 player-facing quern has a milling recipe. Electric or powered mills are excluded
 from Version 0.1 and may be reconsidered only after the manual loop proves valuable.

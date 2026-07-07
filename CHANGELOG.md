@@ -19,6 +19,9 @@ All notable project changes are documented here.
 - Drafted FS-003 Hand Quern as a proportional Gate 1 specification for maintainer
   review. The draft records that a player-facing quern cannot pass Gate 2 without
   a real milling use from FS-004.
+- FS-003 Hand Quern passed Gate 1. Standalone implementation remains blocked; the
+  hand quern must be implemented with FS-004 Milled Oats so the first
+  player-facing slice has a real milling bill.
 
 ### Governance
 
