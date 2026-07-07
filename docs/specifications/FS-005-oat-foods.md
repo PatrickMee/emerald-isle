@@ -1,7 +1,7 @@
 # FS-005 — Oat Foods
 
-**Status:** Review<br>
-**Gate 1 status:** Pending maintainer approval<br>
+**Status:** Approved — Frozen<br>
+**Gate 1 status:** Approved by Patrick Mee, 2026-07-07<br>
 **Milestone:** Version 0.1 — The First Holding<br>
 **Catalog feature:** FO-01<br>
 **Feature branch:** `codex/fs-005-oat-foods-specification`<br>
@@ -11,7 +11,8 @@
 **Research:** [RSC-006 Oat Foods](../research/version-0.1/oat-foods.md),
 [RSC-005 Milled Oats](../research/version-0.1/milled-oats.md),
 [RSC-004 Hand Quern](../research/version-0.1/hand-quern.md)<br>
-**Implementation authorized:** No
+**Implementation authorized:** Yes — as a bundled FS-003 + FS-004 + FS-005
+vertical slice.
 
 ## Authority and Boundaries
 
@@ -437,10 +438,10 @@ Renaming or removing them after release requires migration and missing-def analy
 - [x] Dependencies are explicit: FS-005 completes the first processing vertical
       slice with FS-003 and FS-004.
 
-**Decision:** Pending maintainer review<br>
-**Approved by/date:** Not approved<br>
-**Conditions:** Proposed condition: if playtesting shows porridge and flatbread do
-not create distinct decisions, simplify the chain rather than expanding scope.
+**Decision:** Approved<br>
+**Approved by/date:** Patrick Mee, 2026-07-07<br>
+**Conditions:** If playtesting shows porridge and flatbread do not create distinct
+decisions, simplify the chain rather than expanding scope.
 
 ## Gate 2: Evidence
 

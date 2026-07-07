@@ -11,8 +11,8 @@
 **Research:** [RSC-004 Hand Quern](../research/version-0.1/hand-quern.md),
 [RSC-005 Milled Oats](../research/version-0.1/milled-oats.md),
 [RSC-006 Oat Foods](../research/version-0.1/oat-foods.md)<br>
-**Implementation authorized:** Conditional — only as a bundled FS-003 + FS-004
-implementation after FS-004 also passes Gate 1.
+**Implementation authorized:** Yes — as a bundled FS-003 + FS-004 + FS-005
+vertical slice.
 
 ## Authority and Boundaries
 

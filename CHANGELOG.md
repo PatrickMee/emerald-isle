@@ -31,6 +31,8 @@ All notable project changes are documented here.
 - Drafted FS-005 Oat Foods as a proportional Gate 1 specification for maintainer
   review. The draft defines oat porridge and oat flatbread as the player-facing
   payoff for the Version 0.1 processing chain.
+- FS-005 Oat Foods passed Gate 1. The bundled FS-003 Hand Quern, FS-004 Milled
+  Oats, and FS-005 Oat Foods vertical slice is implementation-authorized.
 
 ### Governance
 
