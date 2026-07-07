@@ -5,7 +5,7 @@ Sync Impact Report
   Feature Acceptance Checklist and readiness review into single-gate
   specification approval
 - Modified section: Development Quality Gates collapses from seven gates to
-  three (Approved, Done, Released) per ADR 0002
+  three (Approved, Done, Released) per ADR 0003
 - Modified section: Governance adds per-release batching for cultural and
   Irish-language review
 - Templates updated: templates/feature-spec.md
@@ -15,7 +15,7 @@ Sync Impact Report
   GOVERNANCE.md, CONTRIBUTING.md, AGENTS.md
 - Removed sections: none
 - Deferred: .specify/templates/* update opportunistically on next use per
-  ADR 0002; historical records under the seven-gate lifecycle are not rewritten
+  ADR 0003; historical records under the seven-gate lifecycle are not rewritten
 -->
 # Emerald Isle Constitution
 

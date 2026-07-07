@@ -11,7 +11,7 @@ tone.
 
 **Milestones 0 and 0.5 are complete.** The stable foundation is released as
 `v0.0.0`, **The Studio Exists**. The project follows the three-gate feature
-lifecycle (Approved, Done, Released) under Constitution 3.0.0 and ADR-0002.
+lifecycle (Approved, Done, Released) under Constitution 3.0.0 and ADR-0003.
 FS-001 Oats has passed Gate 2: implementation, in-game verification, and
 maintainer playtest are complete. Remaining version 0.1 features (dry-stone
 wall and the oat processing chain) await their Gate 1 specifications; release

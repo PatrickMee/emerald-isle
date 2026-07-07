@@ -1,6 +1,6 @@
 # Development Workflow
 
-**Status:** Stable workflow baseline under Constitution 3.0.0 and ADR 0002
+**Status:** Stable workflow baseline under Constitution 3.0.0 and ADR 0003
 **Purpose:** Ship playable, maintainable Emerald Isle features with the least process
 that safely preserves quality and project memory.
 

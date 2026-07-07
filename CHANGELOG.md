@@ -15,7 +15,7 @@ All notable project changes are documented here.
 ### Governance
 
 - Adopted the three-gate feature lifecycle (Approved, Done, Released) through
-  ADR-0002 and Constitution 3.0.0, with cultural and Irish-language review
+  ADR-0003 and Constitution 3.0.0, with cultural and Irish-language review
   batched per release.
 
 ### Planning

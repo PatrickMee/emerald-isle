@@ -1,6 +1,6 @@
 # Emerald Isle Agent Instructions
 
-**Status:** Stable AI Agent Guide, aligned with Constitution 3.0.0 and ADR 0002.
+**Status:** Stable AI Agent Guide, aligned with Constitution 3.0.0 and ADR 0003.
 Material changes normally require an ADR and human maintainer approval.
 
 ## Required Reading

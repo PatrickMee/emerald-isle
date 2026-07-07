@@ -1,4 +1,4 @@
-# ADR 0002: Three-Gate Feature Lifecycle
+# ADR 0003: Three-Gate Feature Lifecycle
 
 **Status:** Accepted
 **Date:** 2026-07-07

@@ -1,7 +1,7 @@
 # Feature Lifecycle
 
 **Status:** Stable Feature Workflow baseline under Constitution 3.0.0 and
-ADR 0002. Material changes normally require an ADR.
+ADR 0003. Material changes normally require an ADR.
 
 The canonical philosophy and proportionality rules live in
 [`development-workflow.md`](development-workflow.md). This document is the
