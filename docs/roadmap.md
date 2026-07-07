@@ -53,11 +53,10 @@ identity drift through undocumented exceptions.
 
 ## Version 0.1: The First Holding
 
-**Status:** FS-001 Oats is implemented, verified, Design Review-approved, and merged.
-FS-002 Dry-Stone Wall and AR-002 are approved, Ready, and implementation-authorized.
-FS-002 is implemented with frozen Version 0.1 runtime art and has passed
-Gate 2 Design Review; PR merge, Version 0.1 integration, and release checks remain
-pending. Later feature specifications remain gated.
+**Status:** FS-001 Oats and FS-002 Dry-Stone Wall are implemented, verified,
+Design Review-approved, and merged. FS-003 Hand Quern is in Gate 1 specification
+review and is not implementation-authorized. Later feature specifications remain
+gated. Version 0.1 integration and release checks remain pending.
 
 **Vision:** Prove the entire production pipeline with the smallest coherent,
 vanilla-friendly Emerald Isle slice.  

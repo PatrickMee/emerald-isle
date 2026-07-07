@@ -25,9 +25,8 @@ Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation under 
 three-gate lifecycle (Approved, Done, Released; see
 `docs/workflow/feature-lifecycle.md`). FS-001 Oats passed Gate 2 on 2026-07-07;
 whole-chain balance is deferred to the hand-quern and milled-oats features. FS-002
-Dry-Stone Wall has an approved, frozen specification, approved Architecture Review,
-implemented runtime assets, and passed proportional implementation verification;
-Gate 2 Design Review is approved and PR merge is the active closure step. Version
+Dry-Stone Wall passed Gate 2 and is merged to `main`. FS-003 Hand Quern is the
+active Gate 1 specification review; it is not implementation-authorized. Version
 0.1 Gate 3 release checks remain pending. Keep work inside the active feature's
 approved scope and paths.
 
@@ -53,5 +52,6 @@ approved scope and paths.
 <!-- SPECKIT START -->
 For additional context about technologies, project structure, shell commands, and
 other important information for the active feature, read
-`specs/003-dry-stone-wall/plan.md`.
+`docs/specifications/FS-003-hand-quern.md`. No standalone Architecture Review or
+Implementation Plan exists for FS-003 unless human review later requests one.
 <!-- SPECKIT END -->
