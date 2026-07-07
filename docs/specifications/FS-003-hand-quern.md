@@ -37,9 +37,9 @@ Oat Porridge or Oat Flatbread
 ```
 
 A standalone player-facing quern with no useful milling recipe is not acceptable.
-Gate 2 for this feature must not pass unless the quern has an actual milling use in
-the same release path, or the implementation deliberately keeps it non-player-facing
-until FS-004 supplies that use.
+FS-003 implementation must be coordinated with FS-004 Milled Oats so the first
+player-facing quern has an actual milling use. Gate 2 for this feature must not
+pass with an empty worktable.
 
 This document contains no XML, C#, Harmony patch, file layout, texture path,
 public `defName`, or implementation sequence. Public identifiers and file paths are
@@ -56,7 +56,7 @@ simulate every historical processing step.
 The feature must feel like a small vanilla worktable: familiar placement,
 construction, bills, hauling, reservations, work priorities, save behavior, and
 failure states. It must not introduce a new milling framework, powered mill,
-resource family, or custom code.
+electric mill, resource family, or custom code.
 
 ## Historical Research
 
@@ -138,9 +138,9 @@ DLC, no electricity, no fuel, and no minimum skill gate. Material access and paw
 labor are the intended constraints.
 
 If implemented before the milled-oats recipe is also ready, it must not ship as a
-player-facing dead worktable. The preferred delivery path is to implement and
-verify the quern together with its first milling recipe, or keep it unavailable to
-players until that recipe exists.
+player-facing dead worktable. The approved delivery path is to implement and
+verify the quern together with FS-004 Milled Oats so the first in-game slice is
+playable.
 
 ### Physical Role
 
@@ -300,8 +300,9 @@ The design fails if any of these become true:
 - Oat porridge, oat flatbread, or any other food.
 - A generic milling, flour, grain, baking, drying, dehulling, sifting, or water
   system.
-- Watermills, windmills, animal mills, powered automation, upgrades, quality
-  grades, byproducts, waste, bran, hulls, straw, or flour variants.
+- Electric querns, electric mills, watermills, windmills, animal mills, powered
+  automation, upgrades, quality grades, byproducts, waste, bran, hulls, straw, or
+  flour variants.
 - Gender, status, ideology, culture, pawn-type, or faction restrictions.
 - Ritual, mythological, mood, health, medical, learning, or beauty bonuses.
 - Custom C#, Harmony, custom jobs, custom UI, custom ticking behavior, or custom
@@ -404,9 +405,15 @@ complete in-game player-path test.
 
 ## Future Expansion
 
-Future releases may consider larger mills, water-powered processing, settlement
-throughput upgrades, broader grain processing, or cultural production spaces only
-after Version 0.1 proves the small XML chain is worth keeping. FS-003 must not add
+Future releases may consider a powered mill, larger mill, water-powered
+processing, settlement-throughput upgrade, broader grain processing, or cultural
+production space only after Version 0.1 proves the small XML manual milling loop is
+worth keeping and needs scaling.
+
+An electric or otherwise powered mill is RimWorld-consistent as a possible later
+progression feature. It is out of scope for Version 0.1 because it would add a
+second production tier, power dependency, component cost, additional art, and a new
+balance relationship before the manual chain has been proven. FS-003 must not add
 extension framework code, generic categories, placeholder recipes, or unused
 material abstractions for those possibilities.
 
@@ -431,15 +438,15 @@ behavior; this must be documented at release.
 - FS-005 Oat Foods supplies the downstream payoff that ultimately validates the
   processing chain.
 
-FS-003 can be specified independently, but it is not independently valuable as
-playable software without FS-004.
+FS-003 can be specified independently, but implementation should be bundled with
+FS-004. It is not independently valuable as playable software without milled oats.
 
 ## Risks
 
 | Risk | Likelihood | Impact | Mitigation | Owner |
 |---|---|---:|---|---|
 | Quern becomes compulsory busywork | High | High | Preserve raw-oat paths; test direct-cooking fallback; remove/simplify if behavior converges | Maintainer |
-| Building ships without a useful bill | Medium | High | Block Gate 2 for player-facing implementation until FS-004 recipe exists | Maintainer |
+| Building ships without a useful bill | Medium | High | Bundle FS-003 implementation with FS-004 and block Gate 2 until a real milling bill works | Maintainer |
 | Work type competes with skilled cooking and weakens scheduling value | Medium | High | Use non-Cooking production labor or stop for review if XML cannot express it | Implementer |
 | Nutrition or value is created by processing | Medium | High | FS-004 must model full conversion and rounding before implementation | Implementer |
 | Construction is so cheap that parallel querns erase throughput constraint | Medium | Medium | Test cost, footprint, and pawn-labor scaling together | Implementer |
@@ -467,13 +474,14 @@ playable software without FS-004.
 - [x] Acceptance, edge, failure, and persistence scenarios exist; test and playtest
       intent is actionable.
 - [x] Art, audio, and localization needs are defined or marked not applicable.
-- [x] The FS-004 dependency is explicit and blocks Gate 2, not specification review:
-      no player-facing quern is Done without an actual milling use.
+- [x] The FS-004 dependency is explicit: implementation should be bundled with
+      FS-004, and no player-facing quern is Done without an actual milling use.
 
 **Decision:** Pending maintainer review<br>
 **Approved by/date:** Not approved<br>
-**Conditions:** Proposed condition: implementation should be coordinated with
-FS-004 or kept non-player-facing until FS-004 supplies a milling recipe.
+**Conditions:** Human direction recorded: implement FS-003 with FS-004 so the first
+player-facing quern has a milling recipe. Electric or powered mills are excluded
+from Version 0.1 and may be reconsidered only after the manual loop proves valuable.
 
 ## Gate 2: Evidence
 
@@ -489,6 +497,6 @@ validation or a placeable empty worktable is insufficient.
 
 | Question | Owner | Due point | Status |
 |---|---|---|---|
-| Should FS-003 implementation be bundled with FS-004, or should the quern remain non-player-facing until FS-004 exists? | Patrick Mee | Before FS-003 implementation starts | Human review required |
+| Should FS-003 implementation be bundled with FS-004, or should the quern remain non-player-facing until FS-004 exists? | Patrick Mee | Before FS-003 implementation starts | Resolved 2026-07-07: bundle FS-003 implementation with FS-004 |
 | Does the exact supported RimWorld 1.6 build allow non-Cooking production labor for the quern without custom code? | Implementer | During implementation discovery | Verify before XML finalization |
 | Does playtesting show that direct raw-oat cooking provides equivalent gameplay more simply? | Maintainer | Complete-chain playtest after FS-004/FS-005 | Must simplify if yes |
