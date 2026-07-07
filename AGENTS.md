@@ -27,8 +27,9 @@ three-gate lifecycle (Approved, Done, Released; see
 whole-chain balance is deferred to the hand-quern and milled-oats features. FS-002
 Dry-Stone Wall has an approved, frozen specification, approved Architecture Review,
 implemented runtime assets, and passed proportional implementation verification;
-Gate 2 Design Review is the active closure step. Version 0.1 Gate 3 release checks
-remain pending. Keep work inside the active feature's approved scope and paths.
+Gate 2 Design Review is approved and PR merge is the active closure step. Version
+0.1 Gate 3 release checks remain pending. Keep work inside the active feature's
+approved scope and paths.
 
 ## Working Rules
 

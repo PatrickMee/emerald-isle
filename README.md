@@ -15,7 +15,8 @@ lifecycle (Approved, Done, Released) under Constitution 3.0.0 and ADR-0003.
 FS-001 Oats has passed Gate 2: implementation, in-game verification, and
 maintainer playtest are complete. FS-002 Dry-Stone Wall is implemented with
 human-approved Version 0.1 runtime art and passed proportional implementation
-verification; Gate 2 Design Review and version 0.1 release checks remain pending.
+verification; Gate 2 Design Review is approved and version 0.1 release checks
+remain pending.
 Remaining oat-processing features await their Gate 1 specifications.
 
 Start with:

@@ -13,7 +13,7 @@
 **Architecture gate:** [AR-002 approved by Patrick Mee, 2026-07-06](../architecture/AR-002-dry-stone-wall.md)<br>
 **Definition of Ready:** Passed by Patrick Mee, 2026-07-06<br>
 **Implementation authorized:** Yes — Patrick Mee, 2026-07-06<br>
-**Implementation status:** Proportional implementation verification passed by Patrick Mee, 2026-07-07; Design Review pending
+**Gate 2 status:** Done — Design Review approved by Patrick Mee, 2026-07-07
 
 ## Authority and Boundaries
 
