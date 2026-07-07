@@ -8,8 +8,9 @@ All notable project changes are documented here.
 
 - Added the first working FS-002 Dry-Stone Wall checkpoint: one XML-only,
   stone-only linked wall with original, human-approved Version 0.1 runtime art.
-- FS-002 broader material, persistence, structural, and isolation verification
-  remains pending before feature completion.
+- FS-002 passed proportional implementation verification; exhaustive isolation,
+  compatibility, and release-matrix checks are deferred to Version 0.1 release
+  integration.
 - Began FS-001 Oats implementation with XML-only plant and harvested-grain
   definitions, English localization, and original runtime textures.
 - Static validation passes; in-game verification and human Design Review remain

@@ -12,9 +12,9 @@ tone.
 **Milestones 0 and 0.5 are complete.** The stable foundation is released as
 `v0.0.0`, **The Studio Exists**. Version 0.1 research is complete. FS-001 Oats is
 implemented, verified, Design Review-approved, and merged. Whole-chain balance and
-release integration remain pending. FS-002 Dry-Stone Wall is Ready and authorized;
-its first working checkpoint and Version 0.1 runtime art are human-approved, with
-broader in-game verification still pending.
+release integration remain pending. FS-002 Dry-Stone Wall is implemented with
+human-approved Version 0.1 runtime art and passed proportional implementation
+verification; Design Review and release integration remain pending.
 
 Start with:
 
