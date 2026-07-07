@@ -21,8 +21,9 @@
 
 ## Constitution Check
 - [ ] Gameplay/story purpose and tradeoff are explicit
-- [ ] Design Bible reviewed and Feature Acceptance Checklist accepted
-- [ ] RimWorld-native and cultural transformation reviews pass
+- [ ] Design Bible conformance reviewed through the Gate 1 approval checklist
+- [ ] RimWorld-native and cultural transformation reviews pass; sensitive content
+      flagged for the cultural review register
 - [ ] Active milestone and smallest coherent scope confirmed
 - [ ] Vanilla comparison and balance hypothesis recorded
 - [ ] XML-first decision applied; C#/Harmony justified
@@ -31,9 +32,9 @@
 - [ ] Planning depth is proportional; no speculative framework or redundant artifact
 
 ## Research and Decisions
-[Links to research performed where needed, Feature Acceptance Checklist, and ADRs;
-state why standalone research was unnecessary when accepted evidence already resolves
-the feature's uncertainty.]
+[Links to research recorded in the specification or a standalone brief, the Gate 1
+approval, and ADRs; state why standalone research was unnecessary when accepted
+evidence already resolves the feature's uncertainty.]
 
 ## Feature Structure
 List only artifacts the feature actually needs. Do not create empty research,
