@@ -12,7 +12,9 @@ Emerald Isle begins as a maintainer-led open-source project.
 - **Technical, gameplay, balance, art, research, QA, and documentation review:**
   Founding Maintainer until additional reviewers are appointed
 - **Sensitive cultural and player-facing Irish-language approval:** must include a
-  suitably qualified reviewer; this authority is not presumed from maintainership
+  suitably qualified reviewer; this authority is not presumed from maintainership.
+  Review is batched per release against the terminology and canon records, with
+  earlier review available for content flagged high-risk at specification time
 
 The temporary concentration of roles is explicit startup risk, not the desired
 long-term model. Before Version 1.0, at least one backup maintainer should have

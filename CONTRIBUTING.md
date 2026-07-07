@@ -6,14 +6,13 @@ Read the [constitution](.specify/memory/constitution.md),
 
 ## Before Work Starts
 
-1. Open or select the feature's authoritative specification.
-2. Confirm it belongs to the active milestone.
-3. Research only material uncertainty not already resolved by accepted evidence.
-4. Pass the [Feature Acceptance Checklist](docs/design/feature-acceptance-checklist.md).
-5. Obtain risk-proportional cultural, gameplay, balance, architecture, art, and QA review.
-6. Record an actionable implementation approach. Create a standalone plan only when
-   sequencing, coordination, compatibility, or risk makes it useful.
-7. Pass Definition of Ready and receive explicit maintainer authorization.
+1. Open or select the feature's authoritative specification and confirm it belongs
+   to the active milestone.
+2. Resolve material uncertainty inside the specification; research briefs and
+   standalone plans exist only when they add decision value.
+3. Pass the specification's approval checklist
+   ([Definition of Ready](docs/workflow/definition-of-ready.md)) and receive one
+   explicit maintainer approval, which authorizes implementation.
 
 Ideas are welcome, but implementation without an approved feature record may be
 closed or redirected.

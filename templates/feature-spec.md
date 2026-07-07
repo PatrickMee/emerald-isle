@@ -6,7 +6,8 @@
 **Owner:** [Name]  
 **Created/updated:** [YYYY-MM-DD]
 
-**Design Bible conformance:** [link to completed Feature Acceptance Checklist]
+**Design Bible conformance:** [reviewed at Gate 1; note any conditions or link
+supporting analysis when the feature is high-risk]
 
 ## Overview
 [One paragraph describing the feature and bounded first slice.]
@@ -71,15 +72,22 @@ the depth needed to implement safely. Link a standalone AR or plan only when use
 |---|---|---|---|---|
 | [Risk] | [L/M/H] | [L/M/H] | [Action] | [Name] |
 
-## Review Gates
-| Gate | Reviewer | Status | Evidence or conditions |
-|---|---|---|---|
-| Historical/cultural, proportional to uncertainty | | Pending | |
-| Gameplay/vanilla fit | | Pending | |
-| Balance | | Pending | |
-| Architecture, inline or standalone | | Pending | |
-| Art/audio | | Pending | |
-| QA/release | | Pending | |
+## Gate 1: Approval
+[Complete the checklist in `docs/workflow/definition-of-ready.md`. One maintainer
+approval accepts, readies, and authorizes the feature.]
+
+**Decision:** Approved | Not Approved
+**Approved by/date:** [maintainer, YYYY-MM-DD]
+**Conditions:** [none or explicit conditions]
+
+## Gate 2: Evidence
+[Record in-game, save/load, compatibility, and playtest evidence per
+`docs/workflow/definition-of-done.md`, here or in the pull request. Log
+Irish-language and culturally sensitive content in the terminology and canon
+records for release-time review.]
+
+**Decision:** Done | Not Done
+**Approved by/date:** [maintainer, YYYY-MM-DD]
 
 ## Open Questions and Decisions
 [Question, owner, due point, and ADR link where applicable.]

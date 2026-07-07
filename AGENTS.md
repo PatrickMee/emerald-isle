@@ -1,7 +1,7 @@
 # Emerald Isle Agent Instructions
 
-**Status:** Stable AI Agent Guide, aligned with Constitution 2.0.0. Material
-changes normally require an ADR and human maintainer approval.
+**Status:** Stable AI Agent Guide, aligned with Constitution 3.0.0 and ADR 0002.
+Material changes normally require an ADR and human maintainer approval.
 
 ## Required Reading
 
@@ -21,15 +21,17 @@ governance, identity, accepted decisions, milestone scope, or review gates.
 
 ## Current Stage
 
-Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation. FS-001
-Oats is approved, Ready, and authorized for implementation; later features remain
-blocked until their own applicable gates pass. Keep work inside the active feature's
-approved scope and paths.
+Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation under the
+three-gate lifecycle (Approved, Done, Released; see
+`docs/workflow/feature-lifecycle.md`). FS-001 Oats passed Gate 1 and is in Gate 2;
+remaining Gate 2 evidence and the version 0.1 Gate 3 release checks are pending.
+Later features remain blocked until their own Gate 1 approval. Keep work inside the
+active feature's approved scope and paths.
 
 ## Working Rules
 
-- Start implementation only from an accepted, Ready feature with explicit maintainer
-  authorization; a standalone plan is required only when the feature adopted one.
+- Start implementation only from a Gate 1 approved specification with explicit
+  maintainer approval; a standalone plan is required only when the feature adopted one.
 - Keep scope within the active milestone and paths authorized by the spec and any
   applicable architecture/implementation record.
 - Verify RimWorld symbols and behavior against the supported current source/build;
