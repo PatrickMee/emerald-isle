@@ -56,7 +56,8 @@ identity drift through undocumented exceptions.
 **Status:** FS-001 Oats and FS-002 Dry-Stone Wall are implemented, verified,
 Design Review-approved, and merged. FS-003 Hand Quern passed Gate 1 with bundled
 FS-004 implementation as a condition; standalone hand-quern implementation remains
-blocked. FS-004 Milled Oats is in Gate 1 specification review. Later feature
+blocked. FS-004 Milled Oats passed Gate 1 with bundled FS-005 implementation as a
+condition; standalone milled-oats implementation remains blocked. Later feature
 specifications remain gated. Version 0.1 integration and release checks remain
 pending.
 

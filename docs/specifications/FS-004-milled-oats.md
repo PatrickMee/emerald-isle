@@ -1,7 +1,7 @@
 # FS-004 — Milled Oats
 
-**Status:** Review<br>
-**Gate 1 status:** Pending maintainer approval<br>
+**Status:** Approved — Frozen<br>
+**Gate 1 status:** Approved by Patrick Mee, 2026-07-07<br>
 **Milestone:** Version 0.1 — The First Holding<br>
 **Catalog feature:** PR-01 / FO-01<br>
 **Feature branch:** `codex/fs-004-milled-oats-specification`<br>
@@ -11,7 +11,8 @@
 **Research:** [RSC-005 Milled Oats](../research/version-0.1/milled-oats.md),
 [RSC-004 Hand Quern](../research/version-0.1/hand-quern.md),
 [RSC-006 Oat Foods](../research/version-0.1/oat-foods.md)<br>
-**Implementation authorized:** No
+**Implementation authorized:** Conditional — only as a bundled FS-003 + FS-004 +
+FS-005 vertical slice after FS-005 also passes Gate 1.
 
 ## Authority and Boundaries
 
@@ -411,12 +412,11 @@ or removing them after release requires migration and missing-def analysis.
 - [x] Dependencies are explicit: FS-004 should be implemented with FS-003, and the
       player-facing chain cannot pass Gate 2 without an FS-005 food consumer.
 
-**Decision:** Pending maintainer review<br>
-**Approved by/date:** Not approved<br>
-**Conditions:** Proposed condition: implementation should wait until FS-005 is
-approved or be treated as a non-player-facing technical slice. The preferred path is
-to approve FS-005 before implementing the quern/milled-oats/first-food vertical
-slice.
+**Decision:** Approved<br>
+**Approved by/date:** Patrick Mee, 2026-07-07<br>
+**Conditions:** Implementation must wait until FS-005 is approved and then proceed
+as a bundled quern/milled-oats/first-food vertical slice. A player-facing quern
+recipe that produces a dead ingredient is not Done.
 
 ## Gate 2: Evidence
 
@@ -433,6 +433,6 @@ insufficient.
 
 | Question | Owner | Due point | Status |
 |---|---|---|---|
-| Should implementation wait for FS-005 so the first processing slice includes a useful food consumer? | Patrick Mee | Before implementation starts | Recommended: yes |
+| Should implementation wait for FS-005 so the first processing slice includes a useful food consumer? | Patrick Mee | Before implementation starts | Resolved 2026-07-07: yes |
 | Can RimWorld 1.6 XML express non-Cooking hand-quern labor with narrow recipe filters? | Implementer | During implementation discovery | Verify before XML finalization |
 | Does direct raw-oat cooking provide equivalent gameplay with less friction? | Maintainer | Complete-chain playtest after FS-005 | Must simplify if yes |

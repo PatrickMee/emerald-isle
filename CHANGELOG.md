@@ -25,6 +25,9 @@ All notable project changes are documented here.
 - Drafted FS-004 Milled Oats as a proportional Gate 1 specification for maintainer
   review. The draft records that quern plus milled oats is still not a complete
   player-facing chain unless FS-005 supplies at least one food consumer.
+- FS-004 Milled Oats passed Gate 1. Implementation remains blocked until FS-005 is
+  approved so the first processing implementation is a playable quern, milled-oats,
+  and food-consumer vertical slice.
 
 ### Governance
 

@@ -28,9 +28,10 @@ whole-chain balance is deferred to the hand-quern and milled-oats features. FS-0
 Dry-Stone Wall passed Gate 2 and is merged to `main`. FS-003 Hand Quern passed
 Gate 1 with the condition that implementation is bundled with FS-004 Milled Oats;
 standalone hand-quern implementation remains blocked. Version 0.1 Gate 3 release
-checks remain pending. FS-004 Milled Oats is the active Gate 1 specification review
-and is not implementation-authorized. Keep work inside the active feature's
-approved scope and paths.
+checks remain pending. FS-004 Milled Oats passed Gate 1 with the condition that
+implementation waits for an approved FS-005 food consumer; standalone milled-oats
+implementation remains blocked. Keep work inside the active feature's approved
+scope and paths.
 
 ## Working Rules
 
