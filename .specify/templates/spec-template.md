@@ -58,11 +58,18 @@ and Rim adaptation proportional to the claim.]
 ## Dependencies, Assumptions, and Risks
 [Explicit list with mitigations.]
 
-## Review Gates
-- [ ] Feature Acceptance Checklist completed with Accept for planning
-- [ ] Historical/cultural review to the depth required by the feature
-- [ ] Gameplay and vanilla fit
-- [ ] Balance
-- [ ] Architecture review recorded inline or standalone where useful
-- [ ] Art/audio
-- [ ] QA/release
+## Gate 1: Approval
+Complete the approval checklist in `docs/workflow/definition-of-ready.md`. One
+maintainer approval accepts, readies, and authorizes the feature. Flag
+Irish-language or culturally sensitive content for the cultural review register.
+
+**Decision:** Approved | Not Approved
+**Approved by/date:** [maintainer, YYYY-MM-DD]
+**Conditions:** [none or explicit conditions]
+
+## Gate 2: Evidence
+Record in-game, save/load, compatibility, and playtest evidence per
+`docs/workflow/definition-of-done.md`, here or in the pull request.
+
+**Decision:** Done | Not Done
+**Approved by/date:** [maintainer, YYYY-MM-DD]

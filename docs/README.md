@@ -52,6 +52,7 @@ amending the higher-authority one.
 - `release/package-build-contract.md`: approved Version 0.1 package metadata and staging contract
 - `release/v0.1-release-checklist.md`: Version 0.1 release record in preparation
 - `localization/cultural-review-register.md`: batched cultural and Irish-language review register
+- `qa/version-0.1-release-test-matrix.md`: Version 0.1 exact-artifact release test matrix
 - `qa/`: automated, integration, and playtest strategy
 - `release/`: packaging, compatibility, and release process
 - `workflow/`: feature lifecycle, Git, versioning, and AI collaboration
