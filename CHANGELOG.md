@@ -6,10 +6,17 @@ All notable project changes are documented here.
 
 ### Development
 
-- Began FS-001 Oats implementation with XML-only plant and harvested-grain
-  definitions, English localization, and original runtime textures.
-- Static validation passes; in-game verification and human Design Review remain
-  pending before the feature is considered complete.
+- Completed FS-001 Oats: XML-only plant and harvested-grain definitions, English
+  localization, and original runtime textures. Static validation, in-game
+  player-path verification, and maintainer playtest passed (Gate 2, 2026-07-07).
+  Whole-chain balance is deferred to the hand-quern and milled-oats features;
+  release smoke tests run at the version 0.1 release gate.
+
+### Governance
+
+- Adopted the three-gate feature lifecycle (Approved, Done, Released) through
+  ADR-0002 and Constitution 3.0.0, with cultural and Irish-language review
+  batched per release.
 
 ### Planning
 

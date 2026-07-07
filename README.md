@@ -10,12 +10,12 @@ tone.
 ## Current Status
 
 **Milestones 0 and 0.5 are complete.** The stable foundation is released as
-`v0.0.0`, **The Studio Exists**. Version 0.1 research is complete and FS-001 is
-approved, its architecture and implementation plan are approved, and the empty
-package/build gate passed. FS-001 is Ready and authorized for implementation;
-its runtime files, clean staged package, and initial in-game functional checkpoint
-now pass. FS-001 Design Review is approved; whole-chain balance and release
-integration remain pending.
+`v0.0.0`, **The Studio Exists**. The project follows the three-gate feature
+lifecycle (Approved, Done, Released) under Constitution 3.0.0 and ADR-0002.
+FS-001 Oats has passed Gate 2: implementation, in-game verification, and
+maintainer playtest are complete. Remaining version 0.1 features (dry-stone
+wall and the oat processing chain) await their Gate 1 specifications; release
+checks run once at the version 0.1 release gate.
 
 Start with:
 

@@ -14,7 +14,11 @@
 **Definition of Ready:** Passed by Patrick Mee, 2026-07-05<br>
 **Implementation authorized:** Yes — Patrick Mee, 2026-07-05
 **Implementation status:** Feature implementation and Design Review approved by
-Patrick Mee, 2026-07-05; whole-chain balance and release smoke tests remain deferred
+Patrick Mee, 2026-07-05
+**Gate 2 (Done):** Passed — maintainer in-game playtest of the complete player
+path by Patrick Mee, 2026-07-07. Whole-chain balance is bounded by the
+not-yet-implemented hand-quern and milled-oats features and will be evaluated
+with those features; version 0.1 release smoke tests belong to Gate 3.
 
 ## Authority and Boundaries
 

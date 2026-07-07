@@ -23,9 +23,10 @@ governance, identity, accepted decisions, milestone scope, or review gates.
 
 Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation under the
 three-gate lifecycle (Approved, Done, Released; see
-`docs/workflow/feature-lifecycle.md`). FS-001 Oats passed Gate 1 and is in Gate 2;
-remaining Gate 2 evidence and the version 0.1 Gate 3 release checks are pending.
-Later features remain blocked until their own Gate 1 approval. Keep work inside the
+`docs/workflow/feature-lifecycle.md`). FS-001 Oats passed Gate 2 on 2026-07-07;
+whole-chain balance is deferred to the hand-quern and milled-oats features, and
+version 0.1 Gate 3 release checks are pending. Remaining version 0.1 features
+require their own Gate 1 approval before implementation. Keep work inside the
 active feature's approved scope and paths.
 
 ## Working Rules
