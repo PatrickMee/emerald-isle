@@ -74,6 +74,8 @@ The authoritative Version 0.1 feature set and constraints are maintained in
 [`version-0.1-approved-scope.md`](version-0.1-approved-scope.md). Catalog version
 estimates remain discovery metadata and do not override that approval record.
 
-**Current implementation state:** PL-01 Oats is Active and implementation-verified.
-Patrick Mee approved its Design Review on 2026-07-05. Version 0.1 integration and
-release conditions remain pending.
+**Current implementation state:** PL-01 Oats is implemented, verification-complete,
+Design Review-approved, and merged. BL-01 Dry-Stone Wall has an approved, frozen
+specification and approved Architecture Review. It is implemented with frozen
+Version 0.1 runtime art and has passed Gate 2 Design Review; PR merge, Version 0.1
+integration, and release conditions remain pending.

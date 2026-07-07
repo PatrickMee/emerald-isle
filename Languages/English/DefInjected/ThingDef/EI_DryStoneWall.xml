@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <!-- Functional English label; cashel inspiration remains design documentation. -->
+  <EI_DryStoneWall.label>dry-stone wall</EI_DryStoneWall.label>
+  <EI_DryStoneWall.description>An impassable wall of carefully stacked stone, built without mortar. It uses fewer stone blocks than a standard wall, but takes longer to build and is less durable.</EI_DryStoneWall.description>
+
+</LanguageData>

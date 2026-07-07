@@ -24,10 +24,12 @@ governance, identity, accepted decisions, milestone scope, or review gates.
 Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation under the
 three-gate lifecycle (Approved, Done, Released; see
 `docs/workflow/feature-lifecycle.md`). FS-001 Oats passed Gate 2 on 2026-07-07;
-whole-chain balance is deferred to the hand-quern and milled-oats features, and
-version 0.1 Gate 3 release checks are pending. Remaining version 0.1 features
-require their own Gate 1 approval before implementation. Keep work inside the
-active feature's approved scope and paths.
+whole-chain balance is deferred to the hand-quern and milled-oats features. FS-002
+Dry-Stone Wall has an approved, frozen specification, approved Architecture Review,
+implemented runtime assets, and passed proportional implementation verification;
+Gate 2 Design Review is approved and PR merge is the active closure step. Version
+0.1 Gate 3 release checks remain pending. Keep work inside the active feature's
+approved scope and paths.
 
 ## Working Rules
 
@@ -50,5 +52,6 @@ active feature's approved scope and paths.
 
 <!-- SPECKIT START -->
 For additional context about technologies, project structure, shell commands, and
-other important information, read the current implementation record when one exists.
+other important information for the active feature, read
+`specs/003-dry-stone-wall/plan.md`.
 <!-- SPECKIT END -->

@@ -13,9 +13,11 @@ tone.
 `v0.0.0`, **The Studio Exists**. The project follows the three-gate feature
 lifecycle (Approved, Done, Released) under Constitution 3.0.0 and ADR-0003.
 FS-001 Oats has passed Gate 2: implementation, in-game verification, and
-maintainer playtest are complete. Remaining version 0.1 features (dry-stone
-wall and the oat processing chain) await their Gate 1 specifications; release
-checks run once at the version 0.1 release gate.
+maintainer playtest are complete. FS-002 Dry-Stone Wall is implemented with
+human-approved Version 0.1 runtime art and passed proportional implementation
+verification; Gate 2 Design Review is approved and version 0.1 release checks
+remain pending.
+Remaining oat-processing features await their Gate 1 specifications.
 
 Start with:
 

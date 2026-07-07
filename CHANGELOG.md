@@ -11,6 +11,11 @@ All notable project changes are documented here.
   player-path verification, and maintainer playtest passed (Gate 2, 2026-07-07).
   Whole-chain balance is deferred to the hand-quern and milled-oats features;
   release smoke tests run at the version 0.1 release gate.
+- Added the first working FS-002 Dry-Stone Wall checkpoint: one XML-only,
+  stone-only linked wall with original, human-approved Version 0.1 runtime art.
+- FS-002 passed Gate 2: proportional implementation verification, maintainer
+  Design Review, and merge readiness. Exhaustive isolation, compatibility, and
+  release-matrix checks are deferred to Version 0.1 release integration.
 
 ### Governance
 
