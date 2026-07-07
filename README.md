@@ -15,6 +15,7 @@ lifecycle (Approved, Done, Released) under Constitution 3.0.0 and ADR-0003.
 FS-001 Oats has passed Gate 2: implementation, in-game verification, and
 maintainer playtest are complete. FS-002 Dry-Stone Wall has passed Gate 2 and is
 merged. FS-003 Hand Quern passed Gate 1 with bundled FS-004 implementation as a
+condition. FS-004 Milled Oats passed Gate 1 with bundled FS-005 implementation as a
 condition. Version 0.1 release checks remain pending.
 
 Start with:
