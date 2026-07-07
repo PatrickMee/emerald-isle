@@ -47,6 +47,7 @@ amending the higher-authority one.
 - `specifications/FS-002-dry-stone-wall.md`: approved and frozen Dry-Stone Wall specification
 - `specifications/FS-003-hand-quern.md`: approved conditional Hand Quern specification
 - `specifications/FS-004-milled-oats.md`: approved conditional Milled Oats specification
+- `specifications/FS-005-oat-foods.md`: approved Oat Foods specification
 - `architecture/AR-002-dry-stone-wall.md`: approved Dry-Stone Wall architecture and Ready assessment
 - `architecture/AR-001-oats.md`: approved Oats architecture
 - `plans/IP-001-oats.md`: approved Oats implementation plan
