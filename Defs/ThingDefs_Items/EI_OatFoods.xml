@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="MealBase">
+    <defName>EI_OatPorridge</defName>
+    <label>oat porridge</label>
+    <description>A fresh cooked oat food. It is quick to finish once oats have already been milled, but it does not keep for long.</description>
+    <graphicData>
+      <texPath>Things/Item/Food/OatFoods/EI_OatPorridge</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>Buyable</tradeability>
+    <statBases>
+      <MarketValue>11</MarketValue>
+      <Mass>0.44</Mass>
+      <WorkToMake>120</WorkToMake>
+      <Nutrition>0.9</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetFeedingAnimals>-25</optimalityOffsetFeedingAnimals>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>2</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="MealBase">
+    <defName>EI_OatFlatbread</defName>
+    <label>oat flatbread</label>
+    <description>A plain cooked oat flatbread. It takes substantial work to make, but keeps longer than fresh meals.</description>
+    <graphicData>
+      <texPath>Things/Item/Food/OatFoods/EI_OatFlatbread</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>Buyable</tradeability>
+    <statBases>
+      <MarketValue>11</MarketValue>
+      <Mass>0.44</Mass>
+      <WorkToMake>420</WorkToMake>
+      <Nutrition>0.8</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetFeedingAnimals>-25</optimalityOffsetFeedingAnimals>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>14</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

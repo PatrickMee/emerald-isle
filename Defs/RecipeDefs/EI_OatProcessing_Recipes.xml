@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef>
+    <defName>EI_MillOats</defName>
+    <label>mill oats</label>
+    <description>Mill raw oats into a prepared cooking ingredient.</description>
+    <jobString>Milling oats.</jobString>
+    <workAmount>180</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <targetCountAdjustment>10</targetCountAdjustment>
+    <workSkill>Crafting</workSkill>
+    <workSkillLearnFactor>0</workSkillLearnFactor>
+    <recipeUsers>
+      <li>EI_HandQuern</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EI_RawOats</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EI_RawOats</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EI_MilledOats>10</EI_MilledOats>
+    </products>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>EI_CookOatPorridge</defName>
+    <label>cook oat porridge</label>
+    <description>Cook milled oats into fresh oat porridge.</description>
+    <jobString>Cooking oat porridge.</jobString>
+    <workAmount>120</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workSkill>Cooking</workSkill>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EI_MilledOats</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EI_MilledOats</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EI_OatPorridge>1</EI_OatPorridge>
+    </products>
+    <displayPriority>101</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>EI_CookOatFlatbread</defName>
+    <label>cook oat flatbread</label>
+    <description>Cook milled oats into plain oat flatbread.</description>
+    <jobString>Cooking oat flatbread.</jobString>
+    <workAmount>420</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workSkill>Cooking</workSkill>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EI_MilledOats</li>
+          </thingDefs>
+        </filter>
+        <count>10</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EI_MilledOats</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EI_OatFlatbread>1</EI_OatFlatbread>
+    </products>
+    <displayPriority>102</displayPriority>
+  </RecipeDef>
+
+</Defs>

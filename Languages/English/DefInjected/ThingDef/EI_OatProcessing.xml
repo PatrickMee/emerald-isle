@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_HandQuern.label>hand quern</EI_HandQuern.label>
+  <EI_HandQuern.description>A compact, unpowered quern for milling oats into a prepared cooking ingredient.</EI_HandQuern.description>
+
+  <EI_MilledOats.label>milled oats</EI_MilledOats.label>
+  <EI_MilledOats.description>Ground oats prepared for cooking. They are an ingredient, not a finished meal.</EI_MilledOats.description>
+
+  <EI_OatPorridge.label>oat porridge</EI_OatPorridge.label>
+  <EI_OatPorridge.description>A fresh cooked oat food. It is quick to finish once oats have already been milled, but it does not keep for long.</EI_OatPorridge.description>
+
+  <EI_OatFlatbread.label>oat flatbread</EI_OatFlatbread.label>
+  <EI_OatFlatbread.description>A plain cooked oat flatbread. It takes substantial work to make, but keeps longer than fresh meals.</EI_OatFlatbread.description>
+
+</LanguageData>
