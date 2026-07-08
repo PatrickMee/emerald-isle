@@ -18,8 +18,14 @@ jobs:
       - name: Stage and validate package
         run: ./tools/stage-mod.sh
 
+      - name: Verify release excludes developer-only assets
+        run: ./tools/validate-release-safety.sh build/EmeraldIsle
+
       - name: List staged package contents
         run: find build/EmeraldIsle -type f | sort
+
+      - name: Validate developer tools package
+        run: ./tools/stage-dev-mod.sh
 
       - name: Check texture path references resolve
         run: |

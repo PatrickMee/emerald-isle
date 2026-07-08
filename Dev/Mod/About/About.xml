@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Emerald Isle Developer Tools</name>
+  <author>Patrick Mee</author>
+  <packageId>patrickmee.emeraldisle.devtools</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <modDependencies>
+    <li>
+      <packageId>patrickmee.emeraldisle</packageId>
+      <displayName>Emerald Isle</displayName>
+    </li>
+  </modDependencies>
+  <loadAfter>
+    <li>patrickmee.emeraldisle</li>
+  </loadAfter>
+  <url>https://github.com/PatrickMee/emerald-isle</url>
+  <description>Development-only testing tools for Emerald Isle. This companion package provides local regression scenarios and generated resource starts for mod development. It is not gameplay content and must never ship in a public release.</description>
+</ModMetaData>

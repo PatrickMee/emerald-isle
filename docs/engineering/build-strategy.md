@@ -36,3 +36,16 @@ One documented command must create the release candidate from a clean checkout.
 The build must not depend on a developer's Workshop folder or mutate source files.
 Generated outputs are reproducible, ignored, and rebuilt in CI. Release testing
 uses the exact staged archive, not loose developer files.
+
+## Developer Testing Framework
+
+Developer-only test assets live under `Dev/` and are staged only by
+`tools/stage-dev-mod.sh` into a separate companion package with packageId
+`patrickmee.emeraldisle.devtools`. The public package is always staged by
+`tools/stage-mod.sh`.
+
+Release staging runs `tools/validate-release-safety.sh` before publishing the
+staged package. The guard fails if developer-only paths, package IDs, or
+identifiers appear in the production package. CI validates both the public package
+and the developer companion package, but only the public package is a release
+candidate.
