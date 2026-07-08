@@ -130,6 +130,14 @@ if [[ "$verify_empty" == true ]]; then
   done
 fi
 
+release_safety_validator="$repo_root/tools/validate-release-safety.sh"
+if [[ -f "$release_safety_validator" ]]; then
+  bash "$release_safety_validator" "$temporary"
+else
+  printf 'Release-safety validator is missing: %s\n' "$release_safety_validator" >&2
+  exit 65
+fi
+
 mkdir -p "$(dirname "$output")"
 rm -rf "$output"
 mv "$temporary" "$output"

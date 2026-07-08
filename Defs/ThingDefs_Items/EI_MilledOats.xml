@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>EI_MilledOats</defName>
+    <label>milled oats</label>
+    <description>Ground oats prepared for cooking. They are an ingredient, not a finished meal.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Processed/EI_MilledOats</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <rotatable>false</rotatable>
+    <stackLimit>75</stackLimit>
+    <thingCategories>
+      <li>Manufactured</li>
+    </thingCategories>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <DeteriorationRate>6</DeteriorationRate>
+      <MarketValue>1.1</MarketValue>
+      <Mass>0.03</Mass>
+      <Flammability>1.0</Flammability>
+    </statBases>
+    <tickerType>Rare</tickerType>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

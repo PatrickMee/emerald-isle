@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_MillOats.label>mill oats</EI_MillOats.label>
+  <EI_MillOats.description>Mill raw oats into a prepared cooking ingredient.</EI_MillOats.description>
+  <EI_MillOats.jobString>Milling oats.</EI_MillOats.jobString>
+
+  <EI_CookOatPorridge.label>cook oat porridge</EI_CookOatPorridge.label>
+  <EI_CookOatPorridge.description>Cook milled oats into fresh oat porridge.</EI_CookOatPorridge.description>
+  <EI_CookOatPorridge.jobString>Cooking oat porridge.</EI_CookOatPorridge.jobString>
+
+  <EI_CookOatFlatbread.label>cook oat flatbread</EI_CookOatFlatbread.label>
+  <EI_CookOatFlatbread.description>Cook milled oats into plain oat flatbread.</EI_CookOatFlatbread.description>
+  <EI_CookOatFlatbread.jobString>Cooking oat flatbread.</EI_CookOatFlatbread.jobString>
+
+</LanguageData>

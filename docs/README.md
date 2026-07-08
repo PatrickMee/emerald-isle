@@ -52,6 +52,7 @@ amending the higher-authority one.
 - `architecture/AR-001-oats.md`: approved Oats architecture
 - `plans/IP-001-oats.md`: approved Oats implementation plan
 - `release/package-build-contract.md`: approved Version 0.1 package metadata and staging contract
+- `engineering/developer-testing-framework.md`: development-only regression testing framework and release safeguards
 - `release/v0.1-release-checklist.md`: Version 0.1 release record in preparation
 - `localization/cultural-review-register.md`: batched cultural and Irish-language review register
 - `qa/version-0.1-release-test-matrix.md`: Version 0.1 exact-artifact release test matrix
