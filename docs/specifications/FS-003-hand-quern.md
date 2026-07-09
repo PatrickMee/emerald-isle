@@ -486,13 +486,19 @@ from Version 0.1 and may be reconsidered only after the manual loop proves valua
 
 ## Gate 2: Evidence
 
-Not started. No implementation is authorized by this document.
+Bundled implementation and technical validation are recorded in
+[FS-003/FS-004/FS-005 Oat Processing Test Evidence](../qa/evidence/FS-003-004-005-oat-processing-test-matrix.md).
 
-Gate 2 must prove the complete player path with a real milling recipe. Static
-validation or a placeable empty worktable is insufficient.
+Static validation, package staging, release-safety checks, texture path checks,
+the dedicated quern work giver, and maintainer-provided in-game production-path
+evidence pass. The hand quern is no longer an empty worktable; it participates in
+the complete oats -> milled oats -> food chain.
 
-**Decision:** Not Done<br>
-**Approved by/date:** Not approved
+Patrick Mee completed the final in-game smoke test for the exact staged package
+on 2026-07-10 and confirmed that the oat-processing path works correctly.
+
+**Decision:** Done<br>
+**Approved by/date:** Patrick Mee, 2026-07-10
 
 ## Open Questions and Decisions
 
