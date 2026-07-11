@@ -1,8 +1,9 @@
 # Version 0.1 Release Test Matrix
 
-**Status:** Skeleton — execute against the exact staged release archive at Gate 3
+**Status:** Ready for execution — results pending against the exact staged release archive
 **Feature set:** FS-001 Oats, FS-002 Dry-Stone Wall, FS-003 Hand Quern,
-FS-004 Milled Oats (per the [v0.1 release checklist](../release/v0.1-release-checklist.md))
+FS-004 Milled Oats, and FS-005 Oat Foods (per the
+[v0.1 release checklist](../release/v0.1-release-checklist.md))
 **Policy:** [Supported platforms](../engineering/supported-platforms.md) — test
 Core-only plus the all-supported-DLC configuration at minimum; no v0.1 feature
 requires or enhances a specific DLC, so per-DLC solo runs are risk-based only.
@@ -28,7 +29,7 @@ Record before executing. All runs use the exact archive produced by
 | C1 | Core + Emerald Isle only | New colony | Pending | |
 | C2 | Core + Emerald Isle only | Existing vanilla save, mod added | Pending | |
 | C3 | All supported DLC + Emerald Isle | New colony | Pending | |
-| C4 | Core + Emerald Isle, then mod removed | Save with planted oats, stored oats/milled oats, built walls, placed quern | Pending | |
+| C4 | Core + Emerald Isle, then mod removed | Save with planted oats, stored oats/milled oats/oat foods, built walls, placed quern, and active bills | Pending | |
 
 ## Per-Configuration Checks
 
@@ -60,7 +61,17 @@ degradation (missing-Def warnings, content loss) matches release notes.
 - [ ] Quern buildable; milling bill converts raw oats to milled oats as specified
 - [ ] Milled oats usable per specification; whole-chain labor and value hold
 - [ ] Save/load with an active bill, work in progress, and stored milled oats
-- [ ] [Extend from FS-003/FS-004 acceptance criteria when implementation lands]
+
+### FS-005 Oat Foods
+
+- [ ] Cook oat porridge and oat flatbread from milled oats at the supported Core
+      cooking buildings
+- [ ] Food policies, storage, caravans, traders, animals, prisoners, babies, and
+      nutrient paste do not select the foods outside their specified roles
+- [ ] Porridge and flatbread nutrition, work, mass, value, and spoilage preserve
+      the intended fresh-food versus portable-food tradeoff
+- [ ] Save/load with stored foods, active cooking bills, stockpile settings, and
+      food policies preserves state
 
 ### Whole-Chain Balance (release-blocking, deferred from FS-001)
 

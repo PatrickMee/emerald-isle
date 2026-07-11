@@ -33,6 +33,14 @@ All notable project changes are documented here.
   payoff for the Version 0.1 processing chain.
 - FS-005 Oat Foods passed Gate 1. The bundled FS-003 Hand Quern, FS-004 Milled
   Oats, and FS-005 Oat Foods vertical slice is implementation-authorized.
+- Completed the bundled FS-003 Hand Quern, FS-004 Milled Oats, and FS-005 Oat
+  Foods vertical slice with XML-only definitions, English localization, original
+  runtime art, and a dedicated vanilla bill work giver. Static validation,
+  complete in-game production-path verification, maintainer art review, and
+  maintainer playtest passed (Gate 2, 2026-07-10).
+- Added a permanent, separately staged developer-testing package with automated
+  resource generation and release-safety guards. Developer assets are excluded
+  from public packages.
 
 ### Governance
 

@@ -45,15 +45,17 @@ amending the higher-authority one.
 - `product/version-0.1-readiness-review.md`: approved Research-to-Specification transition gate
 - `specifications/FS-001-oats.md`: approved, Ready, and implementation-authorized Oats specification
 - `specifications/FS-002-dry-stone-wall.md`: approved and frozen Dry-Stone Wall specification
-- `specifications/FS-003-hand-quern.md`: approved conditional Hand Quern specification
-- `specifications/FS-004-milled-oats.md`: approved conditional Milled Oats specification
-- `specifications/FS-005-oat-foods.md`: approved Oat Foods specification
+- `specifications/FS-003-hand-quern.md`: approved and Gate 2 Done Hand Quern specification
+- `specifications/FS-004-milled-oats.md`: approved and Gate 2 Done Milled Oats specification
+- `specifications/FS-005-oat-foods.md`: approved and Gate 2 Done Oat Foods specification
 - `architecture/AR-002-dry-stone-wall.md`: approved Dry-Stone Wall architecture and Ready assessment
 - `architecture/AR-001-oats.md`: approved Oats architecture
 - `plans/IP-001-oats.md`: approved Oats implementation plan
 - `release/package-build-contract.md`: approved Version 0.1 package metadata and staging contract
 - `engineering/developer-testing-framework.md`: development-only regression testing framework and release safeguards
-- `release/v0.1-release-checklist.md`: Version 0.1 release record in preparation
+- `release/v0.1-release-checklist.md`: Version 0.1 Gate 3 candidate-validation record
+- `release/v0.1.0.md`: draft Version 0.1 release notes, installation, compatibility,
+  removal, known-issue, licensing, and rollback guidance
 - `localization/cultural-review-register.md`: batched cultural and Irish-language review register
 - `qa/version-0.1-release-test-matrix.md`: Version 0.1 exact-artifact release test matrix
 - `qa/`: automated, integration, and playtest strategy

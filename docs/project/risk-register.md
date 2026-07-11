@@ -12,7 +12,7 @@
 | R-008 | Performance degradation in large colonies | M | H | Performance budgets and representative profiling | First runtime system | Gameplay lead | Deferred |
 | R-009 | AI-generated false claims or scope drift | M | H | Source verification, bounded tasks, human gates | AI-authored change | Maintainer | Controlled |
 | R-010 | Documentation becomes contradictory | M | M | Authority order, ownership, milestone audits | Duplicate rule found | Docs lead | Controlled |
-| R-011 | Generated Oats art fails vanilla readability or asset acceptance | M | M | Preserve provenance; test all required states beside vanilla crops; require human art acceptance | FS-001 in-game art review | Art owner | Open |
+| R-011 | Generated Oats art fails vanilla readability or asset acceptance | M | M | Preserve provenance; test all required states beside vanilla crops; require human art acceptance | FS-001 in-game art review | Art owner | Closed 2026-07-07 |
 
 Review at milestone start, monthly during active development, and before release.
 Closed risks remain in history with closure evidence.

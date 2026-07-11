@@ -21,18 +21,14 @@ governance, identity, accepted decisions, milestone scope, or review gates.
 
 ## Current Stage
 
-Milestones 0 and 0.5 are closed. Version 0.1 is in product implementation under the
-three-gate lifecycle (Approved, Done, Released; see
-`docs/workflow/feature-lifecycle.md`). FS-001 Oats passed Gate 2 on 2026-07-07;
-whole-chain balance is deferred to the hand-quern and milled-oats features. FS-002
-Dry-Stone Wall passed Gate 2 and is merged to `main`. FS-003 Hand Quern passed
-Gate 1 with the condition that implementation is bundled with FS-004 Milled Oats;
-standalone hand-quern implementation remains blocked. Version 0.1 Gate 3 release
-checks remain pending. FS-004 Milled Oats passed Gate 1 with the condition that
-implementation waits for an approved FS-005 food consumer; standalone milled-oats
-implementation remains blocked. FS-005 Oat Foods passed Gate 1. The bundled
-FS-003 + FS-004 + FS-005 vertical slice is implementation-authorized. Keep work
-inside the approved specifications and release-scope paths.
+Milestones 0 and 0.5 are closed. Version 0.1 follows the three-gate lifecycle
+(Approved, Done, Released; see `docs/workflow/feature-lifecycle.md`). FS-001 Oats,
+FS-002 Dry-Stone Wall, FS-003 Hand Quern, FS-004 Milled Oats, and FS-005 Oat Foods
+have passed Gate 2 and are merged to `main`. Version 0.1 is now in Gate 3
+release-candidate validation. Compatibility, whole-chain balance, cultural
+review, exact-artifact testing, and release authorization remain pending. Keep
+work inside the approved release scope; do not begin Version 0.2 gameplay work
+before the Version 0.1 release decision.
 
 ## Working Rules
 

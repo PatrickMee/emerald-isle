@@ -16,10 +16,13 @@ require a row unless it surfaces to players.
 
 | Item | Feature | Player-facing? | Sensitivity notes | Review status |
 |---|---|---|---|---|
-| "oat plant" / "oats" labels and descriptions | FS-001 | Yes | Functional English; no Irish-language text; agricultural framing only | No qualified review required unless reviewer disagrees |
-| "dry-stone wall" label and description | FS-002 | Yes | Functional English; cashel inspiration remains design documentation, not player text | No qualified review required unless reviewer disagrees |
+| "oat plant" / "oats" labels and descriptions | FS-001 | Yes | Functional English; no Irish-language text; agricultural framing only | Pending batched release review |
+| "dry-stone wall" label and description | FS-002 | Yes | Functional English; cashel inspiration remains design documentation, not player text | Pending batched release review |
+| "hand quern" / "mill oats" labels and descriptions | FS-003 | Yes | Functional English; domestic milling is historically inspired; no Irish-language term or reconstruction claim appears in game | Pending batched release review |
+| "milled oats" label and description | FS-004 | Yes | Functional English; presented as a gameplay ingredient rather than a standardized historical product | Pending batched release review |
+| "oat porridge" / "oat flatbread" labels and descriptions | FS-005 | Yes | Functional English; ordinary food framing; no claim of an exact historical recipe or universal Irish identity | Pending batched release review |
 
-No Irish-language player-facing strings have shipped as of 2026-07-07. If this
+No Irish-language player-facing strings have shipped as of 2026-07-11. If this
 remains true at release, the Version 0.1 batched review confirms the register
 and the absence of Irish-language content rather than reviewing translations.
 

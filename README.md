@@ -12,13 +12,10 @@ tone.
 **Milestones 0 and 0.5 are complete.** The stable foundation is released as
 `v0.0.0`, **The Studio Exists**. The project follows the three-gate feature
 lifecycle (Approved, Done, Released) under Constitution 3.0.0 and ADR-0003.
-FS-001 Oats has passed Gate 2: implementation, in-game verification, and
-maintainer playtest are complete. FS-002 Dry-Stone Wall has passed Gate 2 and is
-merged. FS-003 Hand Quern passed Gate 1 with bundled FS-004 implementation as a
-condition. FS-004 Milled Oats passed Gate 1 with bundled FS-005 implementation as a
-condition. FS-005 Oat Foods passed Gate 1, authorizing the bundled quern,
-milled-oats, and oat-food vertical slice for implementation. Version 0.1 release
-checks remain pending.
+All five Version 0.1 features have passed Gate 2: Oats, Dry-Stone Wall, Hand
+Quern, Milled Oats, and Oat Foods are implemented, verified in game, approved,
+and merged. Version 0.1 is now in Gate 3 release-candidate validation; it is not
+yet released.
 
 Start with:
 

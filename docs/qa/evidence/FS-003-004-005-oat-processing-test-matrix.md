@@ -67,6 +67,21 @@ Maintainer-provided in-game review during implementation confirmed:
 The maintainer completed the final smoke test on 2026-07-10 and reported that
 the complete slice works correctly in game.
 
+## Runtime Art Provenance
+
+The hand-quern, milled-oats, oat-porridge, and oat-flatbread runtime assets were
+created specifically for Emerald Isle with OpenAI image-generation and editing
+tools under Patrick Mee's art direction, iterative in-game review, and final
+human approval. Historical and vanilla imagery informed the written direction
+only; no third-party game texture or reference image was incorporated into the
+runtime exports. In-game screenshots supplied during review were used to assess
+readability and tinting, not as source pixels.
+
+The exports were refined for transparent backgrounds, vanilla-scale readability,
+Stuff tint behavior where applicable, palette, silhouette, and food identity.
+They are governed by [`CREATIVE_ASSETS_LICENSE.md`](../../../CREATIVE_ASSETS_LICENSE.md).
+No third-party attribution is required for these four assets.
+
 ## Defects Found and Resolved
 
 | ID | Defect | Cause | Resolution | Status |
