@@ -15,6 +15,11 @@ as `v0.1.0` with Oats, Dry-Stone Wall, Hand Quern, Milled Oats, and Oat Foods.
 The project follows the three-gate feature lifecycle (Approved, Done, Released)
 under Constitution 3.0.0 and ADR-0003.
 
+Install Version 0.1 from the
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)
+or download the immutable package from the
+[GitHub release](https://github.com/PatrickMee/emerald-isle/releases/tag/v0.1.0).
+
 Start with:
 
 - [Vision](docs/vision.md)
