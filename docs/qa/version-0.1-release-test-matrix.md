@@ -16,8 +16,8 @@ Record before executing. All runs use the exact archive produced by
 | Input | Value |
 |---|---|
 | RimWorld build | 1.6.4871 rev597 |
-| Release commit | `999990dbdf16579620c75488a3871455e7044926` |
-| Archive | Local staged package at `RimWorldMac.app/Mods/EmeraldIsle`; 26 files; content-manifest SHA-256 `913ad3a94421c590db7dae5bbc97321f97cf77ed404fb03bde139fd5a0f18dbe` |
+| Release commit | `fad78944a45b3285da5888c8c232995b7075d80d` (`v0.1.0`); human-tested runtime candidate `999990dbdf16579620c75488a3871455e7044926` is byte-identical |
+| Archive | Published `EmeraldIsle-v0.1.0.zip`; 26 files; SHA-256 `94de4d0a05eddc111a645c517c9d4647115b215b947e910e467c50ed2f7f5b16` |
 | Platform | macOS |
 | Tester | Patrick Mee |
 | Date | 2026-07-11 |
@@ -153,3 +153,11 @@ Harmony, custom tickers, scans, map/world components, or custom serialization.
 | Required configuration outcomes | Pass with explicit C4 waiver | 2026-07-11 |
 | Matrix blockers resolved or explicitly waived with rationale | Pass | 2026-07-12 |
 | Evidence linked from the v0.1 release checklist | Pass | 2026-07-11 |
+
+## Published Artifact Verification
+
+The GitHub release artifact was downloaded after publication on 2026-07-12. Its
+SHA-256 matched the pre-publication archive, extraction produced exactly 26 files,
+all XML parsed, release-safety validation passed, package metadata reported
+`patrickmee.emeraldisle` and RimWorld 1.6, and `diff -qr` found no difference from
+the staged package that passed human in-game testing.
