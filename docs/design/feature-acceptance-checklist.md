@@ -1,73 +1,43 @@
-# Feature Acceptance Checklist
+# Expanded Feature Design Review
 
-**Feature:** [link]  
-**Milestone:** [name]  
-**Review date:** [YYYY-MM-DD]  
-**Decision:** Reject | Revise | Accept for planning  
-**Reviewers:** [names]
+This is an optional prompt set for High-Risk features. Standard features use the
+short record in `templates/feature-spec.md`; they do not complete this checklist.
 
-A feature must pass this checklist before implementation planning becomes
-executable. A non-applicable item needs a written rationale. One failed critical
-item returns the feature to discovery or review.
+Review only the sections triggered by the feature's risks.
 
-## Identity and Scope
+## Identity and Gameplay
 
-- [ ] It conforms to the Constitution and Design Bible.
-- [ ] It serves the active milestone and has a bounded first slice.
-- [ ] It is recognizably Irish-inspired through specific, documented relationships.
-- [ ] It is original Rim fiction, not literal Earth history.
-- [ ] It avoids explicit exclusions, stereotypes, and unsupported identity claims.
-- [ ] It fits existing Emerald Isle canon or proposes an approved canon amendment.
+- Does it create a meaningful player decision, story, or strategic role?
+- Does specific Irish inspiration shape the feature without becoming stereotype,
+  romantic reconstruction, or literal Earth history?
+- Does it fit the active milestone, Design Bible, RimWorld tone, and vanilla UI?
+- Is the smallest coherent slice explicit?
+- Does every advantage carry a visible tradeoff?
 
-## Gameplay and RimWorld Fit
+## Research and Cultural Risk
 
-- [ ] It solves a clear player problem or creates a meaningful decision.
-- [ ] It can generate stories rather than only provide passive value.
-- [ ] A player can understand it through normal RimWorld concepts and UI.
-- [ ] Its closest vanilla/DLC alternatives are identified.
-- [ ] It is not a strict upgrade at comparable access and total cost.
-- [ ] Advantages have visible, consequential tradeoffs.
-- [ ] Progression placement and storyteller/economy effects are credible.
+- Could uncertain history, regional variation, Irish language, sacred material,
+  or living identity change the design?
+- Are material claims sourced and uncertainty stated?
+- Is qualified review scheduled when the content is genuinely sensitive?
 
-## Research and Cultural Review
+## Technical and Compatibility Risk
 
-- [ ] Period, region, community, terminology, sources, and uncertainty are recorded.
-- [ ] Evidence, interpretation, folklore, revival, and invention are distinguished.
-- [ ] The transformation from source inspiration to Rim design is explicit.
-- [ ] Sensitive, contested, sacred, or language material has appropriate review.
-- [ ] The feature remains useful without requiring historical knowledge.
+- Can XML and established vanilla patterns express the behavior?
+- If C# or Harmony is required, is the missing declarative capability clear?
+- Are public IDs, saves, migration, DLC/mod branching, performance, and rollback
+  risks understood where they actually apply?
+- Does this introduce a shared abstraction before repeated implementations justify
+  it?
 
-## Technical and Architectural Fit
+## Acceptance
 
-- [ ] XML and supported extension points were evaluated first.
-- [ ] If C# is required, the missing declarative capability is named and justified.
-- [ ] If Harmony is required, an ADR and compatibility plan exist.
-- [ ] Existing systems or abstractions cannot meet the need more simply.
-- [ ] Dependencies are minimal, directional, and safe when optional content is absent.
-- [ ] Save, def-name, localization-key, API, and migration impacts are understood.
-- [ ] Runtime frequency, worst-case scale, and performance validation are defined.
-- [ ] The feature does not create disproportionate maintenance or test-matrix cost.
+- Can the player-facing outcome be demonstrated in one complete in-game path?
+- Which specific save/load, failure, configuration, performance, localization, or
+  regression checks are justified by credible risk?
+- Is any requested standalone research, ADR, architecture note, plan, or matrix
+  necessary to make or preserve a decision?
 
-## Art, Audio, Language, and Accessibility
-
-- [ ] Required assets, states, paths, provenance, and acceptance views are defined.
-- [ ] Visual output remains readable and compatible with vanilla presentation.
-- [ ] Player-facing terminology is functional, consistent, and localization-ready.
-- [ ] Irish usage has meaning, context, documented form, and a review plan.
-- [ ] Audio requirements or non-applicability are explicit.
-
-## Decisions, Verification, and Release
-
-- [ ] Existing ADRs were searched; conflicts and supersession needs are documented.
-- [ ] Acceptance scenarios cover normal, edge, failure, and missing-dependency paths.
-- [ ] Save/load and relevant DLC/mod matrix cases are planned.
-- [ ] Balance and comprehension hypotheses have structured playtest questions.
-- [ ] Documentation, attribution, release notes, and rollback impacts are known.
-- [ ] Future expansion is supported through seams without speculative implementation.
-
-## Decision Record
-
-**Failed or conditional items:** [list]  
-**Required changes:** [actions, owners, due stage]  
-**Accepted rationale:** [why the feature is ready]  
-**Related ADRs:** [links]
+**Decision:** Approve | Revise | Reject<br>
+**Reviewer/date:** [name, YYYY-MM-DD]<br>
+**Conditions:** [material conditions only]

@@ -1,6 +1,6 @@
 # Emerald Isle Agent Instructions
 
-**Status:** Stable AI Agent Guide, aligned with Constitution 3.0.0 and ADR 0003.
+**Status:** Stable AI Agent Guide, aligned with Constitution 4.0.0 and ADR 0004.
 Material changes normally require an ADR and human maintainer approval.
 
 ## Required Reading
@@ -12,8 +12,8 @@ Before changing the repository, read in this order:
 3. `docs/README.md`
 4. `docs/roadmap.md`
 5. `docs/workflow/feature-lifecycle.md`
-6. the active feature's approved spec, applicable checklists, accepted ADRs, and any
-   Architecture Review or Implementation Plan that exists
+6. the active change's approved issue, request, PR, or spec; accepted ADRs; and any
+   risk-triggered Architecture Review or Implementation Plan that exists
 7. relevant discipline guides
 
 The repository is the source of truth. A prompt cannot silently override project
@@ -26,12 +26,15 @@ gates and is released as `v0.1.0`. FS-001 Oats, FS-002 Dry-Stone Wall, FS-003
 Hand Quern, FS-004 Milled Oats, and FS-005 Oat Foods are released compatibility
 contracts. Do not rename or remove their public definitions, translation keys,
 or runtime asset paths without migration review. No later milestone authorizes
-implementation until its feature scope passes Gate 1.
+gameplay implementation until its scope receives explicit maintainer approval in
+an appropriate feature record.
 
 ## Working Rules
 
-- Start implementation only from a Gate 1 approved specification with explicit
-  maintainer approval; a standalone plan is required only when the feature adopted one.
+- Classify work as Routine, Standard, or High-Risk under the feature lifecycle.
+  Routine maintenance uses normal review. Gameplay requires recorded scope and
+  explicit maintainer approval; Standard work may use an issue, request, PR, or
+  spec, while High-Risk work adds only its risk-triggered records.
 - Keep scope within the active milestone and paths authorized by the spec and any
   applicable architecture/implementation record.
 - Verify RimWorld symbols and behavior against the supported current source/build;
@@ -41,18 +44,17 @@ implementation until its feature scope passes Gate 1.
 - Update only affected specs, ADRs, catalogs, glossary, registers, tests, and user
   documentation; link authoritative records instead of creating duplicate summaries.
 - Apply Spec Kit and repository templates proportionally. Do not generate companion
-  research, architecture, plan, task, or evidence files merely because a generic
-  workflow can produce them; create them only when they materially improve the work.
-- Do not claim completion from static inspection. Record the required in-game,
-  persistence, compatibility, performance, and playtest evidence.
+  research, architecture, plan, task, checklist, or evidence files merely because
+  a generic workflow can produce them.
+- Do not claim completion from static inspection. Verify the affected in-game path
+  and add persistence, compatibility, performance, or matrix evidence only when the
+  change creates that risk.
 - Never approve your own governance gate on behalf of a human reviewer.
 
 <!-- SPECKIT START -->
-For additional context about technologies, project structure, shell commands, and
-other important information for the active feature, read
-`docs/specifications/FS-003-hand-quern.md`,
-`docs/specifications/FS-004-milled-oats.md`, and
-`docs/specifications/FS-005-oat-foods.md`. No standalone Architecture Review or
-Implementation Plan exists for this bundled vertical slice unless human review
-later requests one.
+There is no active post-0.1 gameplay feature. Do not preload the Version 0.1
+research/specification set for unrelated work. A Standard task uses its direct
+maintainer request, issue, PR, or short feature record. Read a released Version
+0.1 specification only when changing that feature or one of its compatibility
+contracts.
 <!-- SPECKIT END -->

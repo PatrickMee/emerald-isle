@@ -8,7 +8,7 @@
 
 ## Release Gate
 
-A release requires frozen scope, approved specs, clean package build, static and
+A release requires frozen scope, approved feature records, clean package build, static and
 automated checks, clean in-game load, targeted save/load and compatibility tests,
 resolved blocker/critical defects, localization and attribution checks, changelog,
 known issues, installation/upgrade notes, and rollback artifacts.

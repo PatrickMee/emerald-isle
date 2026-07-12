@@ -1,23 +1,20 @@
-# Summary
+# What changed and why
 
-[What changed and why.]
+[Player value or maintenance purpose. Link the approved issue/request/spec when
+gameplay scope changed.]
 
-## Authority and Scope
+## Verification
 
-- Active milestone/spec:
-- Constitution check:
-- Design Bible checklist:
-- Related ADRs:
+- [ ] Relevant static/build checks passed
+- [ ] The affected in-game path was exercised, or no gameplay changed
+- [ ] No new unresolved log error or recurring warning was introduced
+- [ ] Human gameplay/visual review completed where applicable
+- [ ] Public IDs, saves, DLC/mod behavior, provenance, and documentation were
+      updated only where affected
 
-## Evidence
+**Evidence:** [concise results, screenshots, or not-applicable reason]
 
-- [ ] Required discipline reviews recorded
-- [ ] Tests/static validation pass or are not applicable with rationale
-- [ ] In-game and save/load evidence recorded or not applicable with rationale
-- [ ] Compatibility and performance impact assessed
-- [ ] Documentation, localization, provenance, and attribution updated
-- [ ] No unrelated scope included
+## Risk and rollback
 
-## Risk and Rollback
-
-[Known risks, migration, rollback, screenshots/logs, and reviewer focus.]
+[Only real compatibility, migration, performance, cultural, or rollback concerns.
+Write "None" when there are none.]

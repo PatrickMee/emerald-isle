@@ -179,8 +179,10 @@ explosion, hardware performance, core-identity dilution.
 
 ## Roadmap Governance
 
-At each milestone start, convert only that milestone into approved feature specs.
-At each exit, review evidence, compatibility obligations, player feedback, and the
-next milestone's assumptions. Deferring, splitting, or removing roadmap content is
-healthy when evidence changes. Advancing with unresolved exit criteria requires a
-written exception approved under the Constitution.
+At each milestone start, approve only the feature records needed for its next
+playable slices. Standard work uses short records; High-Risk work adds formal
+specifications only where risk justifies them. At each exit, review evidence,
+compatibility obligations, player feedback, and the next milestone's assumptions.
+Deferring, splitting, or removing roadmap content is healthy when evidence changes.
+Advancing with unresolved exit criteria requires a written exception approved
+under the Constitution.

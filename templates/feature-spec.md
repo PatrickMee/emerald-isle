@@ -1,93 +1,60 @@
-# Feature: [Name]
+# Feature Record: [Name]
 
-**Spec ID:** [NNN-slug]  
-**Status:** Discovery | Review | Approved | Implementing | Verifying | Released  
-**Milestone:** [Milestone]  
-**Owner:** [Name]  
-**Created/updated:** [YYYY-MM-DD]
+This short record may be copied into a GitHub issue, pull request, or repository
+file. Standard features should stay short. Expand only the sections whose risks
+need durable detail.
 
-**Design Bible conformance:** [reviewed at Gate 1; note any conditions or link
-supporting analysis when the feature is high-risk]
+**ID/milestone:** [ID and active milestone]<br>
+**Owner:** [name]<br>
+**Risk class:** Standard | High-Risk<br>
+**Status:** Proposed | Approved | Implementing | Done | Released
 
-## Overview
-[One paragraph describing the feature and bounded first slice.]
+## Decision
 
-## Historical Research
-[Claims, sources, periods, regions, and uncertainty. Link a research brief when one
-was needed; otherwise cite accepted evidence and state why additional research was
-not required.]
+**Player value:** [decision, story, or strategic role]
 
-## Cultural Significance
-[Why the inspiration matters, sensitivities, and transformation for the Rim.]
+**In scope:** [smallest coherent slice]
 
-## Gameplay Purpose
-[Player problem, decisions, stories, and why this deserves scope.]
+**Out of scope:** [boundaries that prevent scope growth]
 
-## Vanilla Comparison
-[Closest vanilla/DLC alternatives and differentiation.]
+**Vanilla comparison and tradeoff:** [closest alternative; why this is not a
+strict upgrade]
 
-## Balance Analysis
-[Costs, outputs, constraints, progression, abuse cases, and hypothesis.]
+## Basis
 
-## Player Scenarios and Acceptance
-1. **Given** [state], **when** [action], **then** [observable result].
+[Only the historical, cultural, gameplay, or technical evidence that changes the
+design. Cite sources where claims matter. Flag sensitive or uncertain material.]
 
-## Scope
-**In:** [bounded behavior]  
-**Out:** [explicit exclusions]
+## Implementation Boundary
 
-## Technical Design
-[Defs, runtime behavior, persistence, compatibility, dependencies, and migration at
-the depth needed to implement safely. Link a standalone AR or plan only when useful.]
+- XML/C#/Harmony: [choice and why]
+- Public IDs/save impact: [contracts or none]
+- Required/optional DLC and fallback: [only applicable behavior]
+- Art/localization/provenance: [assets and player-facing text]
+- Dependencies/compatibility: [credible interactions only]
 
-## XML vs C# Decision
-[XML, C#, or hybrid; why; Harmony decision and ADR if relevant.]
+## Acceptance Checks
 
-## Art Requirements
-[Function, assets, states, references, paths, acceptance views.]
+- [ ] [Observable player-path result]
+- [ ] [Meaningful tradeoff or balance result]
+- [ ] [Relevant failure/regression result]
 
-## Audio Requirements
-[Cues, function, mixing context, provenance, or justified non-applicability.]
+## Approval
 
-## Localization
-[Keys, terminology, context, Irish-language review, layout risks.]
+**Decision:** Approved | Not Approved<br>
+**Maintainer/date:** [name, YYYY-MM-DD]<br>
+**Conditions:** [material conditions only]
 
-## Testing
-[Static, unit, integration, in-game, save/load, matrix, playtest questions.]
+## Done Evidence
 
-## Future Expansion
-[Extension seams only; no speculative implementation.]
+[Static/build result, complete affected in-game path, log review, human review,
+and only the save/DLC/performance/cultural checks triggered by actual risk. A PR
+link or concise maintainer confirmation is sufficient.]
 
-## Dependencies
+**Decision:** Done | Not Done<br>
+**Maintainer/date:** [name, YYYY-MM-DD]
 
-**Required DLC:** [none or explicit list]  
-**Optional DLC enhancements:** [DLC and added behavior]  
-**Behavior without DLC:** [fallback, omission, or safe degradation]  
-**Save compatibility:** [state, migration, DLC add/remove, feature removal]
+## High-Risk Additions — Only When Triggered
 
-[Other game, mod, feature, art, research, and tooling dependencies.]
-
-## Risks
-| Risk | Likelihood | Impact | Mitigation | Owner |
-|---|---|---|---|---|
-| [Risk] | [L/M/H] | [L/M/H] | [Action] | [Name] |
-
-## Gate 1: Approval
-[Complete the checklist in `docs/workflow/definition-of-ready.md`. One maintainer
-approval accepts, readies, and authorizes the feature.]
-
-**Decision:** Approved | Not Approved
-**Approved by/date:** [maintainer, YYYY-MM-DD]
-**Conditions:** [none or explicit conditions]
-
-## Gate 2: Evidence
-[Record in-game, save/load, compatibility, and playtest evidence per
-`docs/workflow/definition-of-done.md`, here or in the pull request. Log
-Irish-language and culturally sensitive content in the terminology and canon
-records for release-time review.]
-
-**Decision:** Done | Not Done
-**Approved by/date:** [maintainer, YYYY-MM-DD]
-
-## Open Questions and Decisions
-[Question, owner, due point, and ADR link where applicable.]
+[Link targeted research, ADR, architecture, implementation, migration, cultural,
+performance, or compatibility records. Do not create empty companion documents.]

@@ -48,7 +48,8 @@ and [compatibility guidance](https://rimworldwiki.com/wiki/Modding_Tutorials/Com
 
 ## Verification
 
-Use RimWorld development mode and config errors during development. Test clean
-startup, definitions, player path, save/load, removal or upgrade as supported,
-optional DLC/mod absence, load-order interactions, and a sanitized Player.log.
-Claims of compatibility only cover the published test matrix.
+Use RimWorld development mode and config errors during development. Always test
+relevant definitions, the affected player path, and a sanitized Player.log. Add
+clean-start, save/load, removal/upgrade, DLC/mod absence, load order, and broader
+configuration checks when the change creates those risks. Compatibility claims
+must not exceed recorded evidence.

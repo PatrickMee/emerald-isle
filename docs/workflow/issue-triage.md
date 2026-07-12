@@ -22,5 +22,7 @@ cost of delay. Popularity alone does not override Design Bible or milestone scop
 `New -> Needs evidence -> Triaged -> Accepted/Deferred/Rejected -> In progress -> Review -> Closed`
 
 Every closure states resolution: fixed, duplicate, cannot reproduce, unsupported,
-out of scope, superseded, or documented limitation. Accepted feature proposals
-enter the Feature Catalog; issues never bypass specification and readiness gates.
+out of scope, superseded, or documented limitation. An accepted issue may itself
+serve as the Standard feature record when it contains the lifecycle's required
+scope, tradeoff, boundary, and acceptance checks. High-Risk proposals escalate to
+a concise specification and only their risk-triggered records.

@@ -1,16 +1,16 @@
 # Documentation Strategy
 
-This directory is the studio handbook. Documents are organized by decision
-domain so contributors can find the authority for a question without reading
-the whole repository.
+This directory is the studio handbook and historical project memory. New
+contributors start with the Constitution, Design Bible, roadmap, lifecycle, and
+active feature record; they do not need to read the whole repository.
 
 ## Authority Order
 
 1. `.specify/memory/constitution.md` governs non-negotiable principles.
 2. `design/design-bible.md` governs creative and product identity.
 3. Accepted ADRs govern durable technical decisions.
-4. The active milestone specification and any applicable architecture or
-   implementation record govern current scope.
+4. The active milestone and approved issue, request, PR, or specification govern
+   current scope, with risk-triggered architecture or implementation records.
 5. Domain guides govern design, art, engineering, research, QA, and release.
 6. Feature documents govern one feature and cannot silently override higher
    authorities.
@@ -35,7 +35,7 @@ amending the higher-authority one.
 - `art/`: visual direction and asset pipeline
 - `engineering/`: code, XML, asset, and localization conventions
 - `research/`: historical and cultural research practice
-- `research/version-0.1-research-sprint.md`: active structured research program
+- `research/version-0.1-research-sprint.md`: completed Version 0.1 research program
 - `research/version-0.1/oats.md`: approved PL-01 historical and gameplay research
 - `research/version-0.1/dry-stone-wall.md`: approved BL-01 historical and gameplay research
 - `research/version-0.1/hand-quern.md`: approved PR-01 research with gameplay conditions
@@ -68,6 +68,7 @@ amending the higher-authority one.
 ## Maintenance Rules
 
 - Keep one authoritative home for each rule; link rather than duplicate.
+- Issues and pull requests may be authoritative Standard feature records.
 - Create standalone research, architecture, planning, and evidence documents only
   when they materially improve implementation, maintenance, onboarding, or decisions.
 - Use repository-relative links.
@@ -84,7 +85,7 @@ amending the higher-authority one.
 | Documentation strategy | this document |
 | Constitution | `../.specify/memory/constitution.md` |
 | Vision and roadmap | `vision.md`, `roadmap.md` |
-| Design Bible and feature gate | `design/design-bible.md`, `design/feature-acceptance-checklist.md` |
+| Design Bible and expanded High-Risk review | `design/design-bible.md`, `design/feature-acceptance-checklist.md` |
 | Architecture | `architecture.md` |
 | Balance and art | `design/balance-guide.md`, `art/art-guide.md` |
 | Coding, XML, and C# standards | `engineering/coding-standards.md` |
@@ -97,6 +98,6 @@ amending the higher-authority one.
 | Development workflow | `workflow/development-workflow.md` |
 | Branching and versioning | `workflow/git-versioning-ai.md`, `release/release-strategy.md` |
 | Feature catalog and lifecycle | `product/feature-catalog.md`, `workflow/feature-lifecycle.md` |
-| Ready and Done gates | `workflow/definition-of-ready.md`, `workflow/definition-of-done.md` |
+| Optional High-Risk Ready and Done prompts | `workflow/definition-of-ready.md`, `workflow/definition-of-done.md` |
 | Build, performance, compatibility | `engineering/build-strategy.md`, `engineering/performance-budget.md`, `engineering/compatibility-policy.md` |
 | Project memory registers | `project/risk-register.md`, `project/technical-debt-register.md`, `project/research-catalog.md`, `glossary.md` |

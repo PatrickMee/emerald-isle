@@ -36,7 +36,7 @@ placeholder content.
 ## Content Boundaries
 
 Organize by player-facing domain, then asset type. A feature may touch several
-technical folders, but its specification owns the cross-folder narrative. Shared
+technical folders, but its approved feature record owns the cross-folder narrative. Shared
 utilities require demonstrated reuse; avoid a generic dumping ground.
 
 ## XML Versus C# Decision

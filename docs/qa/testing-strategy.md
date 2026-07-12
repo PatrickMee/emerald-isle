@@ -1,29 +1,42 @@
 # Testing Strategy
 
-Quality evidence is layered. No single layer proves the mod works.
+Testing follows changed behavior and credible failure risk. Test volume is not a
+quality metric; useful evidence is evidence that would catch the defect being
+guarded against.
 
-## Layers
+## Baseline for Every Gameplay Change
 
-1. **Static validation**: XML parsing, schemas where practical, duplicate names,
-   missing references, localization keys, texture paths, packaging, analyzers.
-2. **Unit tests**: pure C# calculations, selection rules, transformations, and
-   regression cases.
-3. **Integration tests**: definition loading, serialization boundaries, DLC and
-   mod-presence adapters, and Harmony target discovery.
-4. **In-game smoke tests**: clean load, new colony, spawn/acquire/use/destroy path,
-   save/load, removal behavior, and log review.
-5. **Playtests**: player comprehension, decision quality, balance, pacing,
-   exploits, and story outcomes.
-6. **Compatibility matrix**: supported game versions, DLC combinations, and a
-   small risk-based set of major mods.
+1. Run relevant static/build validation.
+2. Exercise one complete in-game path through the changed behavior.
+3. Review the log for new errors or recurring warnings caused by the change.
+4. Obtain human gameplay or visual review.
 
-## Regression Rule
+Routine non-gameplay work verifies only its affected surface.
 
-A regression test must fail against the defective behavior and pass after the
-fix. Visual changes require in-game evidence at representative zoom and states.
+## Risk-Triggered Checks
 
-## Evidence
+- **Save/load:** new or changed persistent state, public defs, bills, policies, or
+  migrations.
+- **DLC/mod combinations:** behavior or availability actually branches by
+  configuration.
+- **Regression automation:** a defect can be reproduced with a stable automated
+  assertion or the same failure is likely to recur.
+- **Performance:** code runs frequently, scales with map entities, allocates in a
+  hot path, or introduces a measurable loading/runtime concern.
+- **Long playtest:** balance, pacing, economy, storyteller interaction, or delayed
+  state matters more than immediate function.
+- **Compatibility/removal:** the change modifies public IDs, shared systems,
+  patches, serialized state, or dependency boundaries.
 
-Test reports record build, game version, DLC/mod list, save origin, scenario,
-steps, expected and actual results, logs, screenshots, severity, and disposition.
-Release candidates must be tested from a clean package, not a developer tree.
+Do not run a broad matrix merely because one exists. Do not waive a check when its
+trigger is present.
+
+## Release Evidence
+
+Release candidates are tested from the exact staged package, not the developer
+tree. Always verify package metadata, XML/load safety, texture paths, exclusion of
+developer assets, clean load, and representative smoke paths. Recheck individual
+features only when they or a shared dependency changed.
+
+Record ordinary evidence once in the issue, PR, or feature record. Use a separate
+matrix only for cross-feature, configuration, migration, or release-level work.

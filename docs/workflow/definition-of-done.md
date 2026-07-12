@@ -1,39 +1,28 @@
-# Definition of Done (Gate 2 Evidence Checklist)
+# Done Prompts
 
-A feature merges to main only when applicable evidence passes. Record evidence
-briefly in the specification or pull request; do not create standalone reports
-unless a finding has reusable value. Non-applicable items need a concise
-rationale.
+This is an optional expansion aid for High-Risk work, not a mandatory form for
+Routine or Standard changes. The canonical workflow is
+[`feature-lifecycle.md`](feature-lifecycle.md).
 
-## Behavior and Quality
+Standard gameplay is done when:
 
-- [ ] All acceptance, edge, failure, and safe-degradation scenarios pass.
-- [ ] Static validation and any useful automated checks pass.
-- [ ] The complete in-game player path works in a real game session.
-- [ ] Save/load passes where state persists; relevant DLC/mod matrix checks pass.
-- [ ] Logs contain no new unresolved errors, warnings, or recurring spam.
-- [ ] Performance is acceptable in representative conditions.
+- relevant static/build validation passes;
+- one complete in-game path through the changed behavior works;
+- the log contains no new unresolved error or recurring warning from the change;
+- the maintainer accepts gameplay and visual behavior against the approved scope;
+- affected public IDs, provenance, changelog, or durable decisions are updated.
 
-## Product and Presentation
+Add only the checks triggered by actual risk:
 
-- [ ] Gameplay purpose and meaningful tradeoffs survive maintainer playtest;
-      the balance hypothesis is accepted, revised, or explicitly bounded.
-- [ ] The implemented feature is reviewed against the specification and Design
-      Bible for gameplay, historical integrity, vanilla fit, technical quality,
-      and maintainability.
-- [ ] Art and audio read correctly in-game against vanilla.
-- [ ] Player text is clear, localized by key, and logged in the terminology and
-      canon records where Irish-language or culturally sensitive.
+- save/load for new or changed persistent state;
+- DLC/mod combinations where behavior varies;
+- focused regression for a repaired defect;
+- performance evidence for a credible hot path;
+- localization/cultural review for affected player-facing material;
+- migration and rollback checks for compatibility changes.
 
-## Memory
+Record results once in the PR, issue, or feature record. A separate evidence file
+is reserved for cross-feature or release-level matrices.
 
-- [ ] The specification and durable decisions reflect final behavior; only
-      affected records are updated and no redundant summaries are created.
-- [ ] Feature Catalog state, glossary, and changelog entries are updated where
-      affected.
-
-**Decision:** Done | Not Done
+**Decision:** Done | Not Done<br>
 **Approved by/date:** [maintainer, YYYY-MM-DD]
-
-Release-time obligations (attribution, batched cultural review, exact-artifact
-package tests, rollback) belong to the per-version release checklist at Gate 3.

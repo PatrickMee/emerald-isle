@@ -10,14 +10,14 @@
 
 This Bible defines what Emerald Isle is. The Constitution governs how the project
 works; this document governs creative and product identity. ADRs, milestone plans,
-feature specifications, art briefs, and implementation must conform to both.
+feature records, art briefs, and implementation must conform to both.
 
 When documents conflict, use this order:
 
 1. Constitution
 2. Design Bible
 3. Accepted ADRs
-4. Active milestone specification and plan
+4. Active milestone and approved feature record
 5. Discipline guides
 6. Feature records
 

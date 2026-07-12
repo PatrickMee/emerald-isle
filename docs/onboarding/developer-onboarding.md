@@ -4,35 +4,44 @@
 
 1. `README.md`
 2. Constitution and Design Bible
-3. `docs/README.md`, roadmap, and current `specs/*/plan.md`
-4. Governance, contribution guide, lifecycle, Definition of Ready/Done
-5. Relevant discipline guides and accepted ADRs
+3. Active milestone in `docs/roadmap.md`
+4. `docs/workflow/feature-lifecycle.md`
+5. The active issue, request, PR, or spec and only the discipline guides/ADRs
+   relevant to the change
+
+Do not read the entire historical Version 0.1 documentation set before ordinary
+work. Use it when changing a released contract or when its evidence answers a
+current question.
 
 ## Current Repository State
 
-Milestones 0 and 0.5 are documentation-only. Do not add gameplay, package, build,
-XML, C#, or assets until closure is recorded and a Version 0.1 feature passes Ready.
+Version 0.1 is released. Its public defs, translation keys, texture paths, package
+ID, and Workshop ID are compatibility contracts. Later gameplay requires active-
+milestone scope and explicit maintainer approval.
 
 ## Work Setup
 
-- Clone the configured remote after it exists; never work inside another repo.
-- Use the documented supported game/toolchain once adopted.
-- Keep RimWorld binaries, personal saves, logs, credentials, and Workshop content
-  outside version control.
-- Create a short-lived branch using the project naming policy.
-- Start from a cataloged feature or triaged issue, not an unrecorded prompt.
+- Clone the repository and keep RimWorld binaries, saves, logs, credentials, and
+  downloaded Workshop content outside version control.
+- Use a short-lived branch when review or rollback benefits; focused maintainer
+  changes may commit directly under the current collaboration policy.
+- Classify work as Routine, Standard, or High-Risk.
+- Start from the approved record appropriate to that risk; do not create empty
+  companion documents.
 
 ## Working Agreement
 
-Update repository memory in the same change. Verify current game definitions and
-assemblies rather than relying on stale snippets. Preserve exact reproduction and
-test evidence. Do not claim compatibility beyond the tested matrix.
+Verify current RimWorld definitions rather than relying on remembered APIs. Keep
+changes small, preserve released IDs, record asset/source provenance, and test the
+affected path in the real game. Add save, DLC/mod, performance, migration, or
+cultural checks only when the change creates that risk.
 
-AI agents receive the same authorities, bounded paths, active spec and plan,
-verification requirements, and prohibited actions. Human approval remains required.
+AI agents follow the same scope and may not grant human approval. Record results
+once in the issue, PR, or feature record.
 
 ## First Contribution
 
-Documentation corrections and research-source improvements are safest before
-Version 0.1. For implementation, select an approved task, confirm Ready, make the
-smallest coherent change, run required checks, and complete the PR template.
+Routine documentation or metadata work needs normal review. Standard XML gameplay
+uses a short feature record and explicit maintainer approval, then implementation,
+affected-path validation, human review, and merge. Use the PR template without
+inventing not-applicable paperwork.

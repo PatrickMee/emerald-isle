@@ -1,5 +1,8 @@
 # ADR 0003: Three-Gate Feature Lifecycle
 
+**Amended by:** [ADR 0004](0004-risk-tiered-hobby-workflow.md), which preserves
+the three outcomes while making records and verification risk-tiered.
+
 **Status:** Accepted
 **Date:** 2026-07-07
 **Decision owners:** Patrick Mee

@@ -1,32 +1,28 @@
-# Definition of Ready (Gate 1 Approval Checklist)
+# Ready Prompts
 
-This checklist lives inside or alongside the feature specification. Passing it
-with one maintainer approval means the feature is accepted, ready, and
-authorized for implementation. Evidence depth is proportional to uncertainty and
-risk; a requirement does not imply a standalone document. Non-applicable items
-need a concise rationale in the feature record.
+This is an optional expansion aid for High-Risk work, not a mandatory form for
+Routine or Standard changes. The canonical workflow is
+[`feature-lifecycle.md`](feature-lifecycle.md).
 
-- [ ] Catalog ID, owner, and active milestone are assigned; the feature belongs
-      to the current approved scope.
-- [ ] Player problem, meaningful decision, story value, and bounded first slice
-      are clear; explicit exclusions prevent scope leakage.
-- [ ] Constitution and Design Bible conformance are reviewed, including
-      tradeoffs over power and vanilla-native fit.
-- [ ] Material historical, cultural, gameplay, and technical uncertainty is
-      resolved in the specification; a standalone research brief exists only
-      when it adds decision value.
-- [ ] Vanilla/DLC comparison and balance hypothesis are measurable.
-- [ ] Irish-language and culturally sensitive content is identified and flagged
-      for the release-time register; high-risk content notes whether earlier
-      qualified review is requested.
-- [ ] The XML-first decision is documented; C# and Harmony needs are justified,
-      with ADRs for durable choices; public identifiers, save impact, and
-      compatibility are stated.
-- [ ] Acceptance, edge, failure, and persistence scenarios exist; test and
-      playtest intent is actionable.
-- [ ] Art, audio, and localization needs are defined or marked not applicable.
-- [ ] No blocking dependency or unresolved question prevents the first slice.
+Standard gameplay is ready when one recorded issue, request, PR, or specification
+answers four questions and receives explicit maintainer approval:
 
-**Decision:** Approved | Not Approved
-**Approved by/date:** [maintainer, YYYY-MM-DD]
-**Conditions:** [none or explicit conditions]
+- What player value and active-milestone outcome does this create?
+- What is in scope, out of scope, and the vanilla comparison/tradeoff?
+- What are the XML/C# boundary, public IDs, save, DLC/mod, art, and localization
+  implications that actually apply?
+- What observable checks will prove the smallest playable slice works?
+
+For High-Risk work, additionally resolve only applicable blockers:
+
+- uncertain historical, cultural, gameplay, or technical claims;
+- C#, Harmony, migration, shared-framework, or public-contract decisions;
+- significant cultural/Irish-language review needs;
+- performance, compatibility, dependency, rollback, or coordination risk.
+
+Standalone research, ADR, architecture, or implementation-plan documents are
+created only when they materially resolve one of those blockers.
+
+**Decision:** Approved | Not Approved<br>
+**Approved by/date:** [maintainer, YYYY-MM-DD]<br>
+**Conditions:** [only material conditions]

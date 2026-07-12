@@ -12,8 +12,10 @@ tone.
 **Milestones 0 and 0.5 are complete.** The stable foundation is released as
 `v0.0.0`, **The Studio Exists**. Version 0.1, **The First Holding**, is released
 as `v0.1.0` with Oats, Dry-Stone Wall, Hand Quern, Milled Oats, and Oat Foods.
-The project follows the three-gate feature lifecycle (Approved, Done, Released)
-under Constitution 3.0.0 and ADR-0003.
+The project follows a risk-tiered three-outcome lifecycle (Approved, Done,
+Released) under Constitution 4.0.0 and ADR-0004. Routine work uses normal review,
+Standard gameplay uses one short feature record, and only High-Risk work adds
+formal research, architecture, planning, or verification records.
 
 Install Version 0.1 from the
 [Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)
@@ -24,15 +26,13 @@ Start with:
 
 - [Vision](docs/vision.md)
 - [Design Bible](docs/design/design-bible.md)
-- [Feature Acceptance Checklist](docs/design/feature-acceptance-checklist.md)
 - [Constitution](.specify/memory/constitution.md)
 - [Architecture](docs/architecture.md)
 - [Foundation baseline](docs/foundation-baseline.md)
 - [Supported platforms](docs/engineering/supported-platforms.md)
 - [Feature Catalog](docs/product/feature-catalog.md)
-- [Definition of Ready](docs/workflow/definition-of-ready.md)
-- [Definition of Done](docs/workflow/definition-of-done.md)
 - [Development workflow](docs/workflow/development-workflow.md)
+- [Feature lifecycle](docs/workflow/feature-lifecycle.md)
 - [Contribution guide](CONTRIBUTING.md)
 - [Documentation index](docs/README.md)
 
@@ -42,7 +42,7 @@ Start with:
 - Content must feel native to RimWorld and avoid simple power creep.
 - Every advantage needs a cost, constraint, risk, or opportunity cost.
 - Scope follows the active milestone. Future ideas influence seams, not code.
-- A feature is not complete until it works in-game through its full player path.
+- A gameplay change is not complete until its affected player path works in-game.
 
 ## License and Attribution
 

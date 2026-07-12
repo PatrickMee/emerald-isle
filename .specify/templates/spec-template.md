@@ -1,75 +1,59 @@
-# Feature Specification: [FEATURE NAME]
+# Feature Record: [FEATURE NAME]
 
-**Feature Branch:** `[###-feature-name]`  
-**Created:** [DATE]  
-**Status:** Draft  
-**Milestone:** [ACTIVE MILESTONE]  
+**Feature Branch:** `[###-feature-name]`<br>
+**Created:** [DATE]<br>
+**Status:** Proposed | Approved | Implementing | Done | Released<br>
+**Milestone:** [ACTIVE MILESTONE]<br>
+**Risk class:** Standard | High-Risk<br>
 **Input:** "$ARGUMENTS"
 
-**Design Bible:** `docs/design/design-bible.md` (mandatory authority)
+> Standard features should stay short and may live directly in an issue or PR.
+> Use this repository file only when durable detail adds value. Expand from
+> `templates/feature-spec.md` only for concrete High-Risk concerns.
 
-> Complete the detailed sections in `templates/feature-spec.md`. This Spec Kit
-> template defines mandatory acceptance and governance fields.
+## Decision
 
-## Player Value and Scenarios
+**Player value:** [decision, story, or strategic role]
 
-### Player Story 1 - [Title] (P1)
-[Player goal and meaningful decision.]
+**In scope:** [smallest coherent slice]
 
-**Why now:** [Milestone fit]  
-**Independent test:** [Observable in-game proof]
+**Out of scope:** [explicit boundaries]
 
-1. **Given** [state], **when** [action], **then** [result].
+**Vanilla comparison and tradeoff:** [closest alternative and cost]
 
-### Edge and Failure Cases
-- [Boundary, missing dependency, persistence, or compatibility case]
+## Basis
 
-## Requirements
+[Only research/cultural evidence that can change the design; otherwise not
+applicable.]
 
-- **FR-001:** The feature MUST [testable player-visible behavior].
-- **FR-002:** The feature MUST [tradeoff or constraint].
-- **FR-003:** The feature MUST [safe failure/compatibility behavior].
+## Implementation Boundary
 
-## Research and Cultural Transformation
-[Research brief when needed; otherwise cite accepted evidence and explain why no
-additional research is required. Record significance, uncertainty, sensitivities,
-and Rim adaptation proportional to the claim.]
+- XML/C#/Harmony: [choice and why]
+- Public IDs/save impact: [contracts or none]
+- DLC/mod behavior: [only applicable branches]
+- Art/localization/provenance: [only affected assets/text]
 
-## Vanilla Comparison and Balance
-[Alternatives; acquisition, costs, outputs, constraints, progression, abuse cases.]
+## Acceptance Checks
 
-## Scope
-**In scope:** [smallest coherent slice]  
-**Out of scope:** [future work]
+- [ ] [Observable complete player-path result]
+- [ ] [Tradeoff or balance result]
+- [ ] [Relevant failure or regression result]
 
-## Cross-Discipline Requirements
-**Technical:** [XML/C# direction, persistence, compatibility]  
-**Art/audio:** [assets and states]  
-**Localization:** [keys and terminology]  
-**Required DLC:** [none or list]  
-**Optional DLC enhancements:** [DLC and behavior]  
-**Behavior without DLC:** [fallback/omission]  
-**Save compatibility:** [migration and DLC add/remove]
+## Approval
 
-## Success Criteria
-- **SC-001:** [Measurable player or quality outcome].
-- **SC-002:** [Measurable balance or reliability outcome].
+**Decision:** Approved | Not Approved<br>
+**Maintainer/date:** [name, YYYY-MM-DD]<br>
+**Conditions:** [material conditions only]
 
-## Dependencies, Assumptions, and Risks
-[Explicit list with mitigations.]
+## Done Evidence
 
-## Gate 1: Approval
-Complete the approval checklist in `docs/workflow/definition-of-ready.md`. One
-maintainer approval accepts, readies, and authorizes the feature. Flag
-Irish-language or culturally sensitive content for the cultural review register.
+[Static/build result, affected in-game path, log review, human review, and only
+risk-triggered save/DLC/performance/cultural checks. A PR link is sufficient.]
 
-**Decision:** Approved | Not Approved
-**Approved by/date:** [maintainer, YYYY-MM-DD]
-**Conditions:** [none or explicit conditions]
+**Decision:** Done | Not Done<br>
+**Maintainer/date:** [name, YYYY-MM-DD]
 
-## Gate 2: Evidence
-Record in-game, save/load, compatibility, and playtest evidence per
-`docs/workflow/definition-of-done.md`, here or in the pull request.
+## High-Risk Additions
 
-**Decision:** Done | Not Done
-**Approved by/date:** [maintainer, YYYY-MM-DD]
+[Only targeted research, ADR, architecture, implementation, migration,
+compatibility, cultural, performance, or verification links.]

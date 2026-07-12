@@ -22,10 +22,12 @@ repository and release access.
 
 ## Decision Process
 
-Routine changes follow the accepted spec, Design Bible, discipline guides, and
-pull-request review. The Founding Maintainer resolves deadlocks. Constitution and
-Design Bible amendments require explicit approval and documented impact. Durable
-technical decisions use ADRs. Release approval cannot be delegated to an AI agent.
+Routine maintenance follows the stable authorities and ordinary commit or
+pull-request review. Standard gameplay follows an approved short feature record;
+High-Risk work adds only the review artifacts its risks require. The Founding
+Maintainer resolves deadlocks. Constitution and Design Bible amendments require
+explicit approval and documented impact. Durable technical decisions use ADRs.
+Release approval cannot be delegated to an AI agent.
 
 ## Reviewer Appointment
 

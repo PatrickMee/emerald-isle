@@ -1,43 +1,36 @@
 # Tasks: [FEATURE NAME]
 
-**Input:** approved specification plus any applicable plan, research, ADRs, and
-review conditions. Do not create missing artifact types merely to satisfy this list.
+Create a standalone task list only when sequencing or coordination adds value.
+Standard one-session work normally uses the approved feature record and PR.
 
-Use `[ID] [P?] [Gate/Slice] action with exact path`. `[P]` means different
-files and no unresolved dependency.
+**Input:** [approved issue/request/PR/spec and risk-triggered records]
 
-## Phase 1: Gate 1 — Approval
-- [ ] T001 Confirm milestone scope and constitution check
-- [ ] T002 Complete the specification's approval checklist
-      (`docs/workflow/definition-of-ready.md`), including research, cultural
-      flagging, gameplay, balance, architecture, and art/audio conditions
-- [ ] T003 Obtain the single maintainer approval that authorizes implementation
+Use `[ID] [P?] action with exact path`. `[P]` means different files and no
+unresolved dependency.
 
-## Phase 2: Verification First
-- [ ] T004 Define regression and acceptance evidence
-- [ ] T005 Define in-game, save/load, and compatibility scenarios
-- [ ] T006 Prepare smallest representative test fixture or prototype plan
+## Scope and Stop Conditions
 
-## Phase 3+: Delivery Slices
-For each slice: define the regression/acceptance proof, add the smallest declarative
-content or behavior, integrate assets/localization, and verify the player path. Skip
-task categories that do not improve the feature.
+- [ ] T001 Confirm approved in/out scope and public contracts
+- [ ] T002 Identify concrete conditions that require maintainer review before
+      continuing
 
-- [ ] T007 [Slice 1] [concrete task and path]
-- [ ] T008 [Slice 1] Run static and automated validation
-- [ ] T009 [Slice 1] Verify complete in-game player path and record evidence
+## Delivery Slices
 
-## Final Phase: Gate 2 — Done
-- [ ] T010 Run maintainer playtest, review the implemented result against the
-      specification and Design Bible, and resolve findings
-- [ ] T011 Record Gate 2 evidence (`docs/workflow/definition-of-done.md`) in the
-      specification or pull request; log sensitive content in the cultural
-      review register
-- [ ] T012 Update only affected docs, localization, attribution, changelog, and
-      known issues, then merge
+For each slice, implement the smallest behavior, run relevant static validation,
+exercise its affected in-game path, and fix defects before continuing.
 
-Release-time work (exact-artifact matrix, batched cultural review, rollback,
-tag) belongs to the per-version Gate 3 release checklist, not feature tasks.
+- [ ] T003 [Concrete implementation task and path]
+- [ ] T004 [Relevant validation and in-game proof]
+
+## Completion
+
+- [ ] T005 Obtain human gameplay/visual review
+- [ ] T006 Record results once in the issue, PR, or feature record
+- [ ] T007 Update only affected public-contract, provenance, decision, risk, or
+      release memory, then merge
+
+Release packaging and version-level smoke checks belong to the release checklist.
 
 ## Dependencies and Checkpoints
-[Explicit task graph, parallel work, gate owners, and stop conditions.]
+
+[Only real dependency order, parallel work, owners, and stop conditions.]

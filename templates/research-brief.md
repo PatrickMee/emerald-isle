@@ -2,7 +2,8 @@
 
 > Use a standalone brief only when historical, cultural, gameplay, or technical
 > uncertainty can materially change the feature. Match depth to uncertainty and
-> sensitivity; routine features may cite accepted evidence directly in the spec.
+> sensitivity; Standard features normally cite accepted evidence directly in their
+> issue, request, PR, or feature record.
 
 **Feature:** [link]  
 **Researcher/reviewer:** [names]  
@@ -85,6 +86,7 @@ Evaluate gameplay independently from historical support.
 - [ ] Sources, uncertainty, sensitivity, and prohibited claims are recorded.
 - [ ] Player decision, tradeoff, simpler alternative, and complexity cost are explicit.
 - [ ] Dependencies and unresolved downstream questions are assigned.
-- [ ] Specification and implementation remain unauthorized until their later gates.
+- [ ] Gameplay implementation remains unauthorized until the feature record receives
+      explicit maintainer approval.
 
 **Research decision:** Pending | Passed | Passed with conditions | Rejected

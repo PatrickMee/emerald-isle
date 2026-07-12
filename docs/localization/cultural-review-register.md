@@ -2,7 +2,7 @@
 
 **Purpose:** Accumulates Irish-language and culturally sensitive content as
 features merge, for batched qualified review at each release gate
-(Constitution 3.0.0, ADR-0003, `GOVERNANCE.md`). A suitably qualified reviewer
+(Constitution 4.0.0, ADR-0004, `GOVERNANCE.md`). A suitably qualified reviewer
 evaluates every open row before a release is approved; this authority is not
 presumed from maintainership. Content flagged high-risk at specification time
 may request earlier review.

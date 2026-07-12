@@ -1,5 +1,5 @@
 name: Feature proposal
-description: Propose a researched, milestone-aligned player feature
+description: Propose a small, milestone-aligned player feature
 title: "[Proposal]: "
 labels: [proposal, triage]
 body:
@@ -18,9 +18,8 @@ body:
   - type: textarea
     id: inspiration
     attributes:
-      label: Specific Irish inspiration and initial sources
-    validations:
-      required: true
+      label: Historical or cultural basis, if it affects the design
+      description: Cite only the evidence needed for the proposed decision; leave blank when not applicable.
   - type: textarea
     id: vanilla
     attributes:
@@ -31,5 +30,19 @@ body:
     id: scope
     attributes:
       label: Smallest coherent scope and explicit exclusions
+    validations:
+      required: true
+  - type: textarea
+    id: boundary
+    attributes:
+      label: Implementation boundary and compatibility
+      description: XML/C#, public IDs, saves, DLC/mod behavior, assets, and only the risks that apply.
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Observable acceptance checks
+      description: List the smallest in-game checks that prove this feature works.
     validations:
       required: true

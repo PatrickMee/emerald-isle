@@ -4,6 +4,13 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+### Governance
+
+- Adopted Constitution 4.0.0 and ADR-0004. Routine maintenance now uses ordinary
+  review, Standard gameplay defaults to one short feature record and affected-path
+  verification, and only High-Risk work triggers formal research, architecture,
+  planning, migration, or test-matrix artifacts.
+
 ## [0.1.0] - 2026-07-12
 
 ### The First Holding

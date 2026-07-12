@@ -6,13 +6,13 @@ Read the [constitution](.specify/memory/constitution.md),
 
 ## Before Work Starts
 
-1. Open or select the feature's authoritative specification and confirm it belongs
-   to the active milestone.
-2. Resolve material uncertainty inside the specification; research briefs and
-   standalone plans exist only when they add decision value.
-3. Pass the specification's approval checklist
-   ([Definition of Ready](docs/workflow/definition-of-ready.md)) and receive one
-   explicit maintainer approval, which authorizes implementation.
+1. Classify the change using the
+   [feature lifecycle](docs/workflow/feature-lifecycle.md).
+2. Routine maintenance needs no separate feature record. Standard gameplay uses a
+   short issue, request, PR, or specification covering player value, scope,
+   tradeoff, implementation boundary, compatibility, and acceptance checks.
+3. Receive one explicit maintainer approval before gameplay implementation.
+   High-Risk work adds only the records required by its concrete risks.
 
 Ideas are welcome, but implementation without an approved feature record may be
 closed or redirected.
@@ -29,10 +29,9 @@ closed or redirected.
 
 ## Pull Requests
 
-Describe player value, active milestone, linked spec, applicable decisions, test and
-in-game results, screenshots where visual output changes, compatibility impact, and
-rollback plan. Reviewers may request a smaller scope or less ceremony when the
-evidence already exists.
+Describe what changed and why, the authoritative issue/request/spec when one exists,
+the affected-path and in-game results, screenshots for visual changes, and any real
+compatibility or rollback concern. Do not fill sections that do not apply.
 
 ## Conduct and Cultural Care
 
