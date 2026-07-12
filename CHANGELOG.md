@@ -11,6 +11,14 @@ All notable project changes are documented here.
   verification, and only High-Risk work triggers formal research, architecture,
   planning, migration, or test-matrix artifacts.
 
+### Planning
+
+- Corrected the Feature Catalog to reflect the completed Version 0.1 release and
+  added the proposed Standard FS-006 Linen Household record for Version 0.5.
+  Targeted research rejected a flax-to-brat chain in favor of historically
+  defensible flax, linen, and a linen tunic; gameplay implementation remains
+  unapproved.
+
 ## [0.1.0] - 2026-07-12
 
 ### The First Holding

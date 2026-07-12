@@ -2,10 +2,11 @@
 
 **Status:** Official discovery backlog, not approved scope  
 **Owner:** Product governance  
-**Rule:** Catalog entry does not authorize specification or implementation.
+**Rule:** A catalog entry does not authorize gameplay implementation.
 
 This catalog preserves candidate ideas before detailed design. Promotion requires
-milestone triage, research, Design Bible acceptance, and an approved feature spec.
+active-milestone triage, a proportionate Design Bible check, an approved feature
+record, and research only where uncertainty could change the decision.
 
 ## Estimate Legend
 
@@ -20,7 +21,7 @@ milestone triage, research, Design Bible acceptance, and an approved feature spe
 | AN-01 | Animals | Irish wolfhound-inspired working hound | 0.5 | H | H | M | M | N | H | M | L | H |
 | AN-02 | Animals | Small hardy cattle landrace | 0.5 | H | H | Y | N | N | H | M | M | M |
 | PL-01 | Plants | Oats | 0.1 | M | H | Y | N | N | M | L | S | H |
-| PL-02 | Plants | Flax-like fiber and oil crop | 0.5 | H | H | M | M | N | M | M | M | M |
+| PL-02 | Plants | Flax crop and linen textile | 0.5 | H | H | Y | N | N | M | M | M | H |
 | FO-01 | Food | Oat bread and porridge chain | 0.1 | M | H | Y | N | N | M | L | S | H |
 | FO-02 | Food | Dairy-preservation foods | 0.5 | H | H | M | M | N | M | M | M | M |
 | RS-01 | Resources | Cut peat-like fuel | 0.5 | H | H | M | M | M | M | H | L | M |
@@ -35,7 +36,7 @@ milestone triage, research, Design Bible acceptance, and an approved feature spe
 | AR-01 | Armor | Hide-and-textile protective set | 0.5 | M | M | Y | N | N | H | H | M | L |
 | AR-02 | Armor | Elite metalwork defensive set | 1.0 | M | M | M | M | N | H | H | L | L |
 | AP-01 | Apparel | Brat-inspired cloak | 0.5 | M | H | Y | N | N | H | M | M | M |
-| AP-02 | Apparel | Léine-inspired layered garment | 1.0 | M | H | Y | N | N | H | M | M | L |
+| AP-02 | Apparel | Linen tunic (léine-inspired) | 0.5 | M | H | Y | N | N | H | M | M | M |
 | RE-01 | Research | Vernacular masonry methods | 0.1 | M | H | Y | N | N | L | M | XS | H |
 | RE-02 | Research | Monastic preservation craft | 0.5 | M | H | Y | N | N | L | H | S | M |
 | PR-01 | Production | Quern and milling workflow | 0.1 | H | H | M | M | N | M | M | M | H |
@@ -63,7 +64,7 @@ milestone triage, research, Design Bible acceptance, and an approved feature spe
 
 ## Promotion States
 
-`Candidate -> Researched -> Triaged -> Specifying -> Accepted -> Planned -> Active -> Released -> Retired`
+`Candidate -> Triaged -> Approved -> Active -> Done -> Released -> Retired`
 
 Only one state is current. State changes are recorded in this catalog or an issue
 linked from it. Rejected and retired entries remain visible with rationale.
@@ -74,11 +75,17 @@ The authoritative Version 0.1 feature set and constraints are maintained in
 [`version-0.1-approved-scope.md`](version-0.1-approved-scope.md). Catalog version
 estimates remain discovery metadata and do not override that approval record.
 
-**Current implementation state:** PL-01 Oats and BL-01 Dry-Stone Wall are
-implemented, verification-complete, Design Review-approved, and merged. PR-01 Hand
-Quern has passed Gate 1 with bundled FS-004 implementation as a condition; standalone
-hand-quern implementation remains blocked. PR-01 / FO-01 Milled Oats has passed
-Gate 1 with bundled FS-005 implementation as a condition; standalone milled-oats
-implementation remains blocked. FO-01 Oat Foods passed Gate 1, authorizing the
-bundled quern, milled-oats, and oat-food vertical slice for implementation. Version
-0.1 integration and release conditions remain pending.
+**Released state:** Version 0.1 shipped on 2026-07-12. PL-01 Oats, BL-01
+Dry-Stone Wall, PR-01 Hand Quern and milling workflow, and FO-01 Oat Foods passed
+Approved, Done, and Released. Their public identifiers and runtime paths are
+compatibility contracts. Other entries carrying a 0.1 discovery estimate were not
+part of the canonical approved scope and remain candidates unless separately
+triaged.
+
+## Version 0.5 First-Slice Proposal
+
+PL-02 Flax/Linen and AP-02 Linen Tunic are combined in the concise Standard
+feature record [FS-006 — Linen Household](../specifications/FS-006-linen-household.md).
+The proposal is not approved and does not authorize gameplay implementation. Its
+research rejects the earlier flax-to-brat combination because the brat is a
+woollen cloak; flax oil and the brat both remain outside the proposed slice.
