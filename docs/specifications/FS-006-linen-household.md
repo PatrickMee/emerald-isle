@@ -1,6 +1,6 @@
 # FS-006 Feature Record: Linen Household
 
-**Status:** Proposed — not approved for implementation<br>
+**Status:** Approved — implementation authorized<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -145,10 +145,11 @@ multiplier, 1.15 heat-insulation multiplier, and no meaningful armor role.
 
 ## Approval
 
-**Decision:** Pending<br>
-**Approved by/date:** —<br>
-**Conditions:** Implementation, XML, and runtime art remain unauthorized until
-Patrick Mee explicitly approves this record.
+**Decision:** Approved<br>
+**Approved by/date:** Patrick Mee, 2026-07-12<br>
+**Conditions:** Implement the recorded XML-only Standard slice. Stop for review
+if a listed stop condition occurs or the approved tradeoff cannot be expressed
+through verified vanilla XML.
 
 ## Done Evidence
 

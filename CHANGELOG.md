@@ -14,7 +14,8 @@ All notable project changes are documented here.
 ### Planning
 
 - Corrected the Feature Catalog to reflect the completed Version 0.1 release and
-  added the proposed Standard FS-006 Linen Household record for Version 0.5.
+  added the Standard FS-006 Linen Household record for Version 0.5. Patrick Mee
+  approved its XML-only implementation on 2026-07-12.
   Targeted research rejected a flax-to-brat chain in favor of historically
   defensible flax, linen, and a linen tunic; gameplay implementation remains
   unapproved.
