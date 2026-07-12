@@ -10,12 +10,10 @@ tone.
 ## Current Status
 
 **Milestones 0 and 0.5 are complete.** The stable foundation is released as
-`v0.0.0`, **The Studio Exists**. The project follows the three-gate feature
-lifecycle (Approved, Done, Released) under Constitution 3.0.0 and ADR-0003.
-All five Version 0.1 features have passed Gate 2: Oats, Dry-Stone Wall, Hand
-Quern, Milled Oats, and Oat Foods are implemented, verified in game, approved,
-and merged. Version 0.1 is now in Gate 3 release-candidate validation; it is not
-yet released.
+`v0.0.0`, **The Studio Exists**. Version 0.1, **The First Holding**, is released
+as `v0.1.0` with Oats, Dry-Stone Wall, Hand Quern, Milled Oats, and Oat Foods.
+The project follows the three-gate feature lifecycle (Approved, Done, Released)
+under Constitution 3.0.0 and ADR-0003.
 
 Start with:
 

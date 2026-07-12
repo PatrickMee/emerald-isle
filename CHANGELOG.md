@@ -4,6 +4,10 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.1.0] - 2026-07-12
+
+### The First Holding
+
 ### Development
 
 - Completed FS-001 Oats: XML-only plant and harvested-grain definitions, English
@@ -74,4 +78,5 @@ All notable project changes are documented here.
 - Froze the nine foundation authorities under ADR-based change control.
 
 [Unreleased]: docs/roadmap.md
+[0.1.0]: docs/release/v0.1.0.md
 [0.0.0]: docs/release/v0.0.0.md

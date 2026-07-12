@@ -53,10 +53,9 @@ identity drift through undocumented exceptions.
 
 ## Version 0.1: The First Holding
 
-**Status:** FS-001 Oats and FS-002 Dry-Stone Wall are implemented, verified,
-Design Review-approved, and merged. The bundled FS-003 Hand Quern, FS-004 Milled
-Oats, and FS-005 Oat Foods vertical slice is implemented, verified, Gate 2 Done,
-and merged. Version 0.1 integration and release checks remain pending.
+**Status:** Released as `v0.1.0` on 2026-07-12. FS-001 Oats, FS-002 Dry-Stone
+Wall, FS-003 Hand Quern, FS-004 Milled Oats, and FS-005 Oat Foods passed all
+three lifecycle gates.
 
 **Vision:** Prove the entire production pipeline with the smallest coherent,
 vanilla-friendly Emerald Isle slice.  
