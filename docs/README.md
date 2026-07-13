@@ -60,6 +60,9 @@ amending the higher-authority one.
 - `release/v0.1-release-checklist.md`: completed Version 0.1 Gate 3 release record
 - `release/v0.1.0.md`: Version 0.1 release notes, installation, compatibility,
   removal, known-issue, licensing, and rollback guidance
+- `release/v0.2-release-checklist.md`: Version 0.2 release-candidate Gate 3 record
+- `release/v0.2.0.md`: Version 0.2 release-candidate notes, installation,
+  compatibility, removal, known-issue, licensing, and rollback guidance
 - `localization/cultural-review-register.md`: batched cultural and Irish-language review register
 - `qa/version-0.1-release-test-matrix.md`: Version 0.1 exact-artifact release test matrix
 - `qa/`: automated, integration, and playtest strategy
