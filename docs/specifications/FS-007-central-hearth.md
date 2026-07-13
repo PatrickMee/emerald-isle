@@ -1,6 +1,6 @@
 # FS-007 Feature Record: Central Hearth
 
-**Status:** Approved — implementation authorized<br>
+**Status:** Implementation candidate — awaiting maintainer playtest<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -46,8 +46,8 @@ In scope:
 
 - one buildable central hearth building;
 - use of vanilla stone blocks and wood or another vanilla fuel input;
-- heat, light, fueled operation, and cooking bills only if vanilla XML supports the
-  complete behavior cleanly;
+- heat, light, fueled operation, and campfire-grade cooking bills through vanilla
+  XML bill and work-giver behavior;
 - placement and balance tuned against the vanilla campfire and fueled stove;
 - English localization and original runtime art for the building.
 
@@ -110,17 +110,20 @@ type. A restrained English name avoids premature language review.
 
 Recommendation: **XML-only**.
 
-Use vanilla building, fueled, heat, light, graphic, construction, and bill patterns
-only after verifying the exact RimWorld 1.6 defs during implementation. Do not add
-C# to make pawns gather around the hearth, alter room roles, or merge unrelated
-campfire and stove behavior. If vanilla XML cannot express a coherent tradeoff,
-return the feature for maintainer review rather than expanding implementation.
+Use vanilla building, fueled, heat, light, graphic, construction, and bill patterns.
+The verified RimWorld 1.6 route gives the hearth an independent XML `WorkGiverDef`
+using vanilla `WorkGiver_DoBill`, with recipes declared on the hearth itself; it does
+not patch Core recipes or work givers. Do not add C# to make pawns gather around the
+hearth, alter room roles, or merge unrelated campfire and stove behavior. If vanilla
+XML cannot express a coherent tradeoff, return the feature for maintainer review
+rather than expanding implementation.
 
 Tentative public identifiers:
 
 - `EI_CentralHearth`
-- `EI_Building_CentralHearth_Label`
-- `EI_Building_CentralHearth_Description`
+- `EI_DoBillsCookCentralHearth`
+- `EI_CentralHearth.label`
+- `EI_CentralHearth.description`
 
 These names are placeholders and are not compatibility commitments until release.
 
@@ -177,5 +180,21 @@ or a broader furniture/architecture set.
 
 ## Done Evidence
 
-Not started. No gameplay files, XML, C#, textures, localization, architecture
-records, implementation plans, task lists, or checklists have been created.
+Implementation candidate prepared on 2026-07-13:
+
+- `EI_CentralHearth` is a 2×1 stone-stuffable, continuously wood-fueled building
+  using verified Core heat, light, fire-overlay, gather-spot, bill, and work-table
+  components.
+- `EI_DoBillsCookCentralHearth` delegates cooking to vanilla `WorkGiver_DoBill`.
+  The hearth declares Core campfire-grade recipes plus the released Emerald Isle
+  oat porridge and oat flatbread recipes; it does not patch Core defs.
+- English def-injected localization and original 256×128/64×64 RGBA runtime art are
+  present. Provenance and production controls are recorded in the FS-007 asset record.
+- Repository XML parsing, exact texture dimensions/alpha checks, and public package
+  staging passed. A Core-only RimWorld 1.6.4871 rev597 quick-test load reached a new
+  game with no FS-007 XML, cross-reference, localization, or texture error. Direct
+  app launch produced only the expected Steam initialization warning.
+
+Maintainer verification is still required for the complete build, fuel, cooking,
+heat/light, deconstruction, save/load, and normal-zoom visual path. The acceptance
+checks above remain open until that in-game evidence is reported.
