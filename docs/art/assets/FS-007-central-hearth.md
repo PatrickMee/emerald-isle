@@ -1,6 +1,6 @@
 # FS-007 Central Hearth Asset Record
 
-**Status:** Draft runtime export; awaiting in-game human art review<br>
+**Status:** Approved and frozen for Version 0.5 by Patrick Mee, 2026-07-13<br>
 **Feature:** [FS-007 — Central Hearth](../../specifications/FS-007-central-hearth.md)<br>
 **Production date:** 2026-07-13<br>
 **Human acceptance owner:** Patrick Mee
@@ -40,6 +40,20 @@ source-code license.
 
 ## Review Disposition
 
-Automated inspection must confirm RGBA dimensions, alpha, and XML path references.
-Human in-game review remains required at normal zoom, in darkness, beside all Core
-stone variants and the released dry-stone wall, and with fueled and unfueled states.
+Automated inspection confirmed the recorded RGBA dimensions, alpha, SHA-256 hashes,
+and XML path references. Human in-game review confirmed normal-zoom readability,
+the centered vanilla fire overlay, dry-stone architectural fit, and clear stuff
+tinting across the requested Granite, Limestone, Sandstone, Slate, Marble, and Jade
+comparison set.
+
+The maintainer's Pass 2 review approved the current sprite as the baseline design.
+It reads immediately as a durable, everyday, early medieval dry-stone cooking hearth;
+its silhouette, painterly rendering, outline weight, and material behavior fit both
+vanilla RimWorld and Emerald Isle.
+
+A single constrained refinement candidate explored slight rim irregularity, limited
+capstone variation, and a deeper pit. It was rejected because the result enlarged
+several capstones, increased surface texture density, and produced a more regular
+ring without a clear gameplay-zoom improvement. Per the maintainer's stop guidance,
+the approved baseline was frozen instead of iterating further. No runtime texture,
+dimensions, pivot implication, transparency, filename, or asset path changed.

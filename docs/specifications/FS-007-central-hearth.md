@@ -1,6 +1,6 @@
 # FS-007 Feature Record: Central Hearth
 
-**Status:** Implementation candidate — awaiting maintainer playtest<br>
+**Status:** Implemented — maintainer playtest passed; awaiting integration<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -140,21 +140,21 @@ included.
 
 ## Objective Acceptance Checks
 
-- [ ] The hearth can be built from approved vanilla materials on the intended
+- [x] The hearth can be built from approved vanilla materials on the intended
       terrain and category without adding a custom menu framework.
-- [ ] A pawn can fuel and use it through vanilla jobs with no new recurring log
+- [x] A pawn can fuel and use it through vanilla jobs with no new recurring log
       errors.
-- [ ] The hearth provides the approved heat/light behavior and does not outperform
+- [x] The hearth provides the approved heat/light behavior and does not outperform
       campfire, fueled stove, and electric heater across their full lifecycles.
-- [ ] Any cooking bills included in the approved scope work through vanilla bill
+- [x] Any cooking bills included in the approved scope work through vanilla bill
       flow and do not obsolete the fueled stove.
-- [ ] The building persists across save/load without broken fuel, bill, graphic,
+- [x] The building persists across save/load without broken fuel, bill, graphic,
       or temperature behavior.
-- [ ] The complete build, fuel, use, deconstruct, and reinstall-or-non-reinstall
+- [x] The complete build, fuel, use, deconstruct, and reinstall-or-non-reinstall
       behavior matches the approved tradeoff.
-- [ ] Runtime art is readable at normal zoom, in darkness, and beside released
+- [x] Runtime art is readable at normal zoom, in darkness, and beside released
       Version 0.1 dry-stone walls.
-- [ ] Core-only operation loads cleanly; supported DLC absence or presence does
+- [x] Core-only operation loads cleanly; supported DLC absence or presence does
       not change the feature.
 
 ## Risks and Stop Conditions
@@ -180,7 +180,7 @@ or a broader furniture/architecture set.
 
 ## Done Evidence
 
-Implementation candidate prepared on 2026-07-13:
+Implementation and maintainer playtest completed on 2026-07-13:
 
 - `EI_CentralHearth` is a 2×1 stone-stuffable, continuously wood-fueled building
   using verified Core heat, light, fire-overlay, gather-spot, bill, and work-table
@@ -194,10 +194,18 @@ Implementation candidate prepared on 2026-07-13:
   staging passed. A Core-only RimWorld 1.6.4871 rev597 quick-test load reached a new
   game with no FS-007 XML, cross-reference, localization, or texture error. Direct
   app launch produced only the expected Steam initialization warning.
-- Patrick Mee confirmed in the Core-only quick-test game on 2026-07-13 that the
-  granite hearth exposed its Bills tab and a pawn completed the released
-  `EI_CookOatFlatbread` recipe. The post-cook log contained no FS-007 error.
+- A second quick-test load with Royalty, Ideology, Biotech, Anomaly, and Odyssey
+  active reached a new game without an FS-007 XML, cross-reference, localization,
+  texture, or DLC error. Direct launch again produced only the expected Steam
+  initialization warning.
+- Patrick Mee confirmed the complete manual path: construction, fueling, vanilla
+  bill operation, oat-flatbread cooking, heat and light, save/load persistence,
+  deconstruction, intended non-reinstall behavior, and absence of recurring log
+  errors. The hearth remained a slower, larger, continuously fueled alternative
+  to a dedicated stove rather than replacing it.
+- Patrick Mee approved and froze the current runtime art after normal-zoom,
+  fire-overlay, dry-stone context, and stuff-tint review. The separate asset record
+  captures the Pass 2 disposition.
 
-Maintainer verification is still required for the complete build, fuel, cooking,
-heat/light, deconstruction, save/load, and normal-zoom visual path. The acceptance
-checks above remain open until that in-game evidence is reported.
+No FS-007 stop condition was triggered. The feature remains unreleased, and its
+tentative public identifiers become compatibility commitments only at release.

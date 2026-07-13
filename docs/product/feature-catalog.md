@@ -97,5 +97,5 @@ feature record [FS-007 — Central Hearth](../specifications/FS-007-central-hear
 The approval authorizes only the bounded XML-first, one-building scope in FS-007;
 C#, Harmony, custom gathering behavior, Ideology integration, new fuel resources,
 and broader furniture or architecture sets remain excluded.
-An XML-only implementation candidate is awaiting maintainer gameplay and visual
-review.
+The XML-only implementation passed maintainer gameplay and visual review on
+2026-07-13 and is awaiting integration; it remains unreleased.
