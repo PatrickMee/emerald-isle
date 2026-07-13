@@ -194,6 +194,9 @@ Implementation candidate prepared on 2026-07-13:
   staging passed. A Core-only RimWorld 1.6.4871 rev597 quick-test load reached a new
   game with no FS-007 XML, cross-reference, localization, or texture error. Direct
   app launch produced only the expected Steam initialization warning.
+- Patrick Mee confirmed in the Core-only quick-test game on 2026-07-13 that the
+  granite hearth exposed its Bills tab and a pawn completed the released
+  `EI_CookOatFlatbread` recipe. The post-cook log contained no FS-007 error.
 
 Maintainer verification is still required for the complete build, fuel, cooking,
 heat/light, deconstruction, save/load, and normal-zoom visual path. The acceptance
