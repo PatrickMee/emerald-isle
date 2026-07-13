@@ -27,7 +27,7 @@
       </sowTags>
       <topWindExposure>0.1</topWindExposure>
       <immatureGraphicPath>Things/Plant/Flax/EI_Plant_Flax_Immature</immatureGraphicPath>
-      <visualSizeRange>0.3~1.0</visualSizeRange>
+      <visualSizeRange>0.5~1.0</visualSizeRange>
       <wildOrder>2</wildOrder>
     </plant>
   </ThingDef>
