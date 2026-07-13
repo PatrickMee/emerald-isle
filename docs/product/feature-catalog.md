@@ -82,10 +82,12 @@ compatibility contracts. Other entries carrying a 0.1 discovery estimate were no
 part of the canonical approved scope and remain candidates unless separately
 triaged.
 
-## Version 0.5 First-Slice Proposal
+## Version 0.5 First Slice
 
 PL-02 Flax/Linen and AP-02 Linen Tunic are combined in the concise Standard
 feature record [FS-006 — Linen Household](../specifications/FS-006-linen-household.md).
-The proposal is not approved and does not authorize gameplay implementation. Its
-research rejects the earlier flax-to-brat combination because the brat is a
-woollen cloak; flax oil and the brat both remain outside the proposed slice.
+Patrick Mee approved the Standard slice on 2026-07-12, authorizing its XML-only
+implementation. The slice was implemented and passed maintainer playtesting on
+2026-07-13; it remains unreleased pending integration. Its research rejects the
+earlier flax-to-brat combination because the brat is a woollen cloak; flax oil
+and the brat remain outside the slice.

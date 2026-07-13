@@ -10,6 +10,8 @@
     <li>
       <packageId>patrickmee.emeraldisle</packageId>
       <displayName>Emerald Isle</displayName>
+      <steamWorkshopUrl>https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723</steamWorkshopUrl>
+      <downloadUrl>https://github.com/PatrickMee/emerald-isle/releases</downloadUrl>
     </li>
   </modDependencies>
   <loadAfter>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_ProcessFlax.label>process flax into linen</EI_ProcessFlax.label>
+  <EI_ProcessFlax.description>Prepare harvested flax fiber for use as linen cloth.</EI_ProcessFlax.description>
+  <EI_ProcessFlax.jobString>Processing flax into linen.</EI_ProcessFlax.jobString>
+
+</LanguageData>

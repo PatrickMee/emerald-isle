@@ -14,10 +14,18 @@ All notable project changes are documented here.
 ### Planning
 
 - Corrected the Feature Catalog to reflect the completed Version 0.1 release and
-  added the proposed Standard FS-006 Linen Household record for Version 0.5.
+  added the Standard FS-006 Linen Household record for Version 0.5. Patrick Mee
+  approved its XML-only implementation on 2026-07-12.
   Targeted research rejected a flax-to-brat chain in favor of historically
-  defensible flax, linen, and a linen tunic; gameplay implementation remains
-  unapproved.
+  defensible flax, linen, and a linen tunic.
+
+### Development
+
+- Implemented the first FS-006 playable checkpoint: ground-grown flax, raw-flax
+  processing at three vanilla work locations, linen as a general Fabric, and a
+  linen-only everyday tunic. Maintainer playtesting passed on 2026-07-13 after
+  correcting stack-count texture paths and the processing bill's vanilla
+  work-giver compatibility.
 
 ## [0.1.0] - 2026-07-12
 
