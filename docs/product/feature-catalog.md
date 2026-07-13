@@ -89,3 +89,10 @@ feature record [FS-006 — Linen Household](../specifications/FS-006-linen-house
 The proposal is not approved and does not authorize gameplay implementation. Its
 research rejects the earlier flax-to-brat combination because the brat is a
 woollen cloak; flax oil and the brat both remain outside the proposed slice.
+
+## Version 0.5 Next-Slice Draft
+
+FU-01 Central Hearth is prepared for maintainer review in the concise Standard
+feature record [FS-007 — Central Hearth](../specifications/FS-007-central-hearth.md).
+The draft is awaiting approval and does not authorize gameplay implementation,
+XML, C#, Harmony, art, or localization.

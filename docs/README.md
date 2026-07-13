@@ -50,6 +50,8 @@ amending the higher-authority one.
 - `specifications/FS-005-oat-foods.md`: approved and Gate 2 Done Oat Foods specification
 - `specifications/FS-006-linen-household.md`: proposed Standard Version 0.5
   feature record; implementation is not authorized
+- `specifications/FS-007-central-hearth.md`: draft Standard Version 0.5 feature
+  record awaiting maintainer approval; implementation is not authorized
 - `architecture/AR-002-dry-stone-wall.md`: approved Dry-Stone Wall architecture and Ready assessment
 - `architecture/AR-001-oats.md`: approved Oats architecture
 - `plans/IP-001-oats.md`: approved Oats implementation plan
