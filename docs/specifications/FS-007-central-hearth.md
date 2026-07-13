@@ -1,6 +1,6 @@
 # FS-007 Feature Record: Central Hearth
 
-**Status:** Draft — awaiting maintainer approval<br>
+**Status:** Approved — implementation authorized<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -14,8 +14,8 @@ It should turn the holding's main room into a visible place of heat, cooking, an
 daily gathering without introducing custom social systems, ideology behavior, or
 new progression.
 
-This draft does not approve implementation. Public identifiers below are tentative
-until maintainer approval and release.
+This approval authorizes implementation of the bounded FS-007 scope below. Public
+identifiers remain tentative until release.
 
 ## Risk Class Justification
 
@@ -168,11 +168,12 @@ included.
 
 ## Approval
 
-**Decision:** Pending<br>
-**Approved by/date:** —<br>
-**Required maintainer decision:** Approve, reject, or revise FS-007 Central Hearth
-as the next Version 0.5 gameplay feature. Implementation, XML, runtime art, and
-localization remain unauthorized until explicit approval.
+**Decision:** Approved<br>
+**Approved by/date:** Patrick Mee, 2026-07-13<br>
+**Conditions:** Implementation must remain within the XML-first, one-building
+Standard scope above. Stop and return for maintainer review if the feature needs
+C#, Harmony, custom gathering behavior, Ideology integration, new fuel resources,
+or a broader furniture/architecture set.
 
 ## Done Evidence
 
