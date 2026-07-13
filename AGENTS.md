@@ -27,8 +27,8 @@ Hand Quern, FS-004 Milled Oats, and FS-005 Oat Foods are released compatibility
 contracts. Do not rename or remove their public definitions, translation keys,
 or runtime asset paths without migration review. No later milestone authorizes
 gameplay implementation until its scope receives explicit maintainer approval in
-an appropriate feature record. FS-006 Linen Household is approved and its
-recorded XML-only Standard implementation is authorized.
+an appropriate feature record. FS-006 Linen Household is implemented and passed
+maintainer playtesting on 2026-07-13; it remains unreleased pending integration.
 
 ## Working Rules
 
@@ -53,9 +53,8 @@ recorded XML-only Standard implementation is authorized.
 - Never approve your own governance gate on behalf of a human reviewer.
 
 <!-- SPECKIT START -->
-FS-006 Linen Household is the active post-0.1 feature. Read
-`docs/specifications/FS-006-linen-household.md` and implement only its approved
-XML-first slice. Stop on its recorded review conditions. Do not preload the
-Version 0.1 research/specification set unless changing one of its released
-compatibility contracts.
+FS-006 Linen Household is the completed post-0.1 implementation awaiting
+integration. Read `docs/specifications/FS-006-linen-household.md` before changing
+its XML-first slice. Do not preload the Version 0.1 research/specification set
+unless changing one of its released compatibility contracts.
 <!-- SPECKIT END -->

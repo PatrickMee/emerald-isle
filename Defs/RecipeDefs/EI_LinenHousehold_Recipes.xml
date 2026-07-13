@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef>
+    <defName>EI_ProcessFlax</defName>
+    <label>process flax into linen</label>
+    <description>Prepare harvested flax fiber for use as linen cloth.</description>
+    <jobString>Processing flax into linen.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Tailor</effectWorking>
+    <soundWorking>Recipe_Tailor</soundWorking>
+    <workAmount>400</workAmount>
+    <targetCountAdjustment>20</targetCountAdjustment>
+    <workSkill>Crafting</workSkill>
+    <recipeUsers>
+      <li>CraftingSpot</li>
+      <li>HandTailoringBench</li>
+      <li>ElectricTailoringBench</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EI_RawFlax</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EI_RawFlax</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EI_Linen>20</EI_Linen>
+    </products>
+  </RecipeDef>
+
+</Defs>

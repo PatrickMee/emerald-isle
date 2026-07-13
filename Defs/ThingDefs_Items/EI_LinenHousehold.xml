@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>EI_RawFlax</defName>
+    <label>raw flax</label>
+    <description>Harvested flax stems and fiber ready to be processed into linen.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Textile/EI_RawFlax</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>1.0</MarketValue>
+      <Mass>0.022</Mass>
+      <Flammability>1.2</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+  </ThingDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>EI_Linen</defName>
+    <label>linen</label>
+    <description>A light fabric processed from flax fiber. It handles warm weather well, but is less durable and less insulating in the cold than cloth.</description>
+    <graphicData>
+      <texPath>Things/Item/Resource/Textile/EI_Linen</texPath>
+      <graphicClass>Graphic_StackCount</graphicClass>
+      <color>(188,178,150)</color>
+    </graphicData>
+    <statBases>
+      <StuffPower_Armor_Sharp>0.30</StuffPower_Armor_Sharp>
+      <StuffPower_Armor_Blunt>0</StuffPower_Armor_Blunt>
+      <StuffPower_Armor_Heat>0.14</StuffPower_Armor_Heat>
+      <StuffPower_Insulation_Cold>10</StuffPower_Insulation_Cold>
+      <StuffPower_Insulation_Heat>24</StuffPower_Insulation_Heat>
+      <MaxHitPoints>70</MaxHitPoints>
+      <MarketValue>1.7</MarketValue>
+      <Mass>0.022</Mass>
+      <Flammability>1.2</Flammability>
+      <DeteriorationRate>4</DeteriorationRate>
+    </statBases>
+    <burnableByRecipe>true</burnableByRecipe>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <minRewardCount>30</minRewardCount>
+    <stuffProps>
+      <statFactors>
+        <Flammability>1.2</Flammability>
+        <Beauty>1</Beauty>
+      </statFactors>
+      <categories>
+        <li>Fabric</li>
+        <li>EI_LinenFabric</li>
+      </categories>
+      <color>(188,178,150)</color>
+      <commonality>1.1</commonality>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+    <thingCategories>
+      <li>Textiles</li>
+    </thingCategories>
+    <comps>
+      <li>
+        <compClass>CompColorable</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>EI_LinenTunic</defName>
+    <label>linen tunic</label>
+    <description>A simple, lightweight linen tunic inspired by everyday early medieval Irish clothing. It is comfortable in warm weather but provides little protection from cold or weapons.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/LinenTunic/EI_LinenTunic</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <costStuffCount>50</costStuffCount>
+    <stuffCategories>
+      <li>EI_LinenFabric</li>
+    </stuffCategories>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <WorkToMake>2200</WorkToMake>
+      <Mass>0.4</Mass>
+      <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>0.35</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>1.15</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>1.5</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Legs</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/LinenTunic/EI_LinenTunic</wornGraphicPath>
+      <layers>
+        <li>OnSkin</li>
+      </layers>
+      <tags>
+        <li>Neolithic</li>
+      </tags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+        <li>Spacefarer</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <displayPriority>205</displayPriority>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_Single">
+      <color>(188,178,150)</color>
+    </colorGenerator>
+  </ThingDef>
+
+</Defs>
