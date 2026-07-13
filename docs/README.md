@@ -49,7 +49,9 @@ amending the higher-authority one.
 - `specifications/FS-004-milled-oats.md`: approved and Gate 2 Done Milled Oats specification
 - `specifications/FS-005-oat-foods.md`: approved and Gate 2 Done Oat Foods specification
 - `specifications/FS-006-linen-household.md`: implemented Standard Version 0.5
-  Linen Household feature record; maintainer playtesting passed
+  Linen Household feature record; maintainer playtesting and art review passed
+- `specifications/FS-007-central-hearth.md`: implemented and maintainer-tested
+  Standard Version 0.5 Central Hearth feature record; awaiting integration
 - `architecture/AR-002-dry-stone-wall.md`: approved Dry-Stone Wall architecture and Ready assessment
 - `architecture/AR-001-oats.md`: approved Oats architecture
 - `plans/IP-001-oats.md`: approved Oats implementation plan
