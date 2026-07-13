@@ -1,9 +1,10 @@
 # Emerald Isle Design Bible
 
-**Status:** Stable baseline at v0.0.0; material changes require an ADR and Bible amendment review  
-**Version:** 1.0.0  
-**Adopted:** 2026-07-04  
-**Owner:** Project maintainers  
+**Status:** Stable baseline; material changes require an ADR and Bible amendment review<br>
+**Version:** 1.1.0<br>
+**Adopted:** 2026-07-04<br>
+**Last amended:** 2026-07-13 by [ADR 0005](../adr/0005-shared-stone-construction-language.md)<br>
+**Owner:** Project maintainers<br>
 **Review trigger:** Every milestone boundary and any proposed identity change
 
 ## Purpose and Authority
@@ -146,6 +147,41 @@ Palette is grounded and material-led. Green is available but not mandatory or
 identity-defining. Ornament has location, function, hierarchy, and breathing room.
 Validate assets at normal zoom, in darkness and weather, beside vanilla content,
 and in damaged or selected states.
+
+### Stone Construction Language
+
+Stonework made by the same Emerald Isle culture should read as the work of one
+early medieval Irish-inspired community using a shared material knowledge and
+construction tradition. This is a project-wide visual language for dry-stone
+walls, hearths, wells, kilns, ovens, mills, bridges, boundary walls, ruins, and
+future stone buildings.
+
+Shared stonework uses:
+
+- comparable fieldstone proportions and size distribution;
+- dry-stone construction with no visible mortar;
+- stacked, load-bearing construction logic rather than cut masonry or brick-like
+  coursing;
+- comparable edge wear, outline weight, and degree of hand-built irregularity;
+- comparable painterly texture density at normal RimWorld zoom; and
+- a consistent highlight direction, joint-shadow depth, and overall value range.
+
+This language does not make assets identical. Each asset keeps a silhouette,
+footprint, functional detail, and gameplay read suited to its purpose. Soot on a
+hearth, heat wear on a kiln, water staining on a well, structural mass on a bridge,
+or collapse patterns in a ruin may distinguish function while preserving the
+shared underlying stone treatment.
+
+Future art briefs for stone assets must identify how the asset follows this
+language and record any intentional deviation. Cut ashlar, visible mortar,
+regular brick-like blocks, or a substantially different rendering treatment need
+an explicit cultural, material, chronological, or gameplay reason in the approved
+feature record.
+
+This guidance does not require immediate redesign of approved Version 0.1 assets.
+The frozen Dry-Stone Wall is the first approved visual reference, not a mandatory
+template. Assets still in production should be compared with it at normal gameplay
+scale before their own art review and freeze.
 
 ## 9. Naming Conventions
 
@@ -322,3 +358,10 @@ features and ADRs, migration needs, and rejected alternatives. Maintainer approv
 is required. Use semantic versioning: MAJOR changes project identity or removes a
 pillar, MINOR adds or materially expands guidance, PATCH clarifies without changing
 meaning. Record the new version and update dependent templates in the same change.
+
+## Amendment History
+
+| Version | Date | Change | Authority |
+|---|---|---|---|
+| 1.0.0 | 2026-07-04 | Adopted the initial Design Bible. | Project maintainers |
+| 1.1.0 | 2026-07-13 | Added the project-wide Stone Construction Language. | [ADR 0005](../adr/0005-shared-stone-construction-language.md) |
