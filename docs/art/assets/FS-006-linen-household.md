@@ -1,6 +1,6 @@
 # FS-006 Linen Household Asset Record
 
-**Status:** Flax artwork Pass 2 — awaiting maintainer in-game review<br>
+**Status:** Flax artwork Pass 2 — maintainer approved in-game, 2026-07-13<br>
 **Feature:** [FS-006 — Linen Household](../../specifications/FS-006-linen-household.md)<br>
 **Production date:** 2026-07-12<br>
 **Human acceptance owner:** Patrick Mee
@@ -70,6 +70,7 @@ grayscale so RimWorld's Stuff tint supplies the linen color.
 
 Patrick Mee accepted the original FS-006 player path on 2026-07-13. The flax
 plant artwork was subsequently reopened for the documented normal-zoom gameplay
-readability defect. The four Pass 2 plant exports require maintainer in-game art
-review before they replace the previously accepted visual baseline. All other
-FS-006 runtime exports remain accepted.
+readability defect. Patrick Mee approved the four Pass 2 plant exports after
+in-game review on 2026-07-13, including the stronger pre-harvest scale and early
+blue-purple flower recognition cues. They now replace the previous visual
+baseline. All other FS-006 runtime exports remain accepted.
