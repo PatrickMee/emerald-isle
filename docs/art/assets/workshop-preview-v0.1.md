@@ -35,3 +35,11 @@ source-code license.
   future updates.
 - The existing GitHub v0.1.0 archive remains immutable. The Workshop package adds
   only this listing preview and does not change gameplay or public identifiers.
+
+## Version 0.2 Supersession
+
+Version 0.2 was initially uploaded with this preview unchanged. It still carries
+the subtitle `The First Holding` and depicts only the Version 0.1 holding. The
+separately recorded [Version 0.2 preview](workshop-preview-v0.2.md) supersedes it
+for subsequent Workshop package updates without changing this historical record
+or the immutable GitHub `v0.1.0` archive.

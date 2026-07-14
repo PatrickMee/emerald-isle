@@ -18,10 +18,10 @@ ADR-0004. Routine work uses normal review, Standard gameplay uses one short
 feature record, and only High-Risk work adds formal research, architecture,
 planning, or verification records.
 
-Download Version 0.2 from the immutable
+Install Version 0.2 from the
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)
+or download the immutable package from the
 [GitHub release](https://github.com/PatrickMee/emerald-isle/releases/tag/v0.2.0).
-Steam Workshop updates use the existing
-[Emerald Isle listing](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723).
 
 Start with:
 
