@@ -1,7 +1,7 @@
 # Steam Workshop Listing
 
-**Status:** Version 0.2 package uploaded; description and change note prepared for
-manual publication and public verification<br>
+**Status:** Version 0.2 package uploaded; description, change note, and replacement
+preview prepared for manual publication and public verification<br>
 **Workshop item:** [Emerald Isle 3763433723](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)<br>
 **Current release:** `v0.2.0` - The Hearth and Household<br>
 **Publication owner:** Patrick Mee
@@ -70,8 +70,11 @@ Steam published-file API that:
 - the description contains `Version 0.2 - The Hearth and Household`;
 - the description names flax, linen, the linen tunic, and central hearth;
 - the Version 0.2 change note is visible;
+- the preview reads `VERSION 0.2` and `THE HEARTH AND HOUSEHOLD` and depicts the
+  flax, linen, oats, and central-hearth household scene;
 - the item still resolves to Workshop ID `3763433723`.
 
-The current `About/Preview.png` remains the approved Version 0.1 image and still
-contains the subtitle `The First Holding`. Updating that image is a separate
-Version 0.2 presentation task.
+The replacement `About/Preview.png` is recorded in the
+[Version 0.2 preview asset record](../art/assets/workshop-preview-v0.2.md). It
+remains a candidate until maintainer visual acceptance and the public Workshop
+page both confirm the replacement.

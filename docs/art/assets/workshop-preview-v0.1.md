@@ -36,10 +36,10 @@ source-code license.
 - The existing GitHub v0.1.0 archive remains immutable. The Workshop package adds
   only this listing preview and does not change gameplay or public identifiers.
 
-## Version 0.2 Carry-Forward
+## Version 0.2 Supersession
 
-Version 0.2 retains this preview unchanged. It still carries the subtitle
-`The First Holding` and depicts only the Version 0.1 holding, so it is not a
-complete presentation of the flax, linen tunic, or central hearth added in
-`v0.2.0`. Replace it through a separately reviewed Version 0.2 preview-art task;
-do not silently relabel or regenerate the approved Version 0.1 source record.
+Version 0.2 was initially uploaded with this preview unchanged. It still carries
+the subtitle `The First Holding` and depicts only the Version 0.1 holding. The
+separately recorded [Version 0.2 preview](workshop-preview-v0.2.md) supersedes it
+for subsequent Workshop package updates without changing this historical record
+or the immutable GitHub `v0.1.0` archive.

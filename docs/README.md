@@ -65,6 +65,8 @@ amending the higher-authority one.
   compatibility, removal, known-issue, licensing, and rollback guidance
 - `release/steam-workshop-listing.md`: canonical Steam Workshop description,
   current-release change note, and public listing verification checks
+- `art/assets/workshop-preview-v0.2.md`: Version 0.2 Workshop preview art brief,
+  provenance, export contract, and acceptance status
 - `localization/cultural-review-register.md`: batched cultural and Irish-language review register
 - `qa/version-0.1-release-test-matrix.md`: Version 0.1 exact-artifact release test matrix
 - `qa/`: automated, integration, and playtest strategy
