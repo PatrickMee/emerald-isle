@@ -63,6 +63,8 @@ amending the higher-authority one.
 - `release/v0.2-release-checklist.md`: completed Version 0.2 Gate 3 release record
 - `release/v0.2.0.md`: Version 0.2 release notes, installation,
   compatibility, removal, known-issue, licensing, and rollback guidance
+- `release/steam-workshop-listing.md`: canonical Steam Workshop description,
+  current-release change note, and public listing verification checks
 - `localization/cultural-review-register.md`: batched cultural and Irish-language review register
 - `qa/version-0.1-release-test-matrix.md`: Version 0.1 exact-artifact release test matrix
 - `qa/`: automated, integration, and playtest strategy
