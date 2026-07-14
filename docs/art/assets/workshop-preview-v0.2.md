@@ -1,6 +1,7 @@
 # Version 0.2 Steam Workshop Preview Asset Record
 
-**Status:** Candidate prepared; maintainer art review and Steam publication pending<br>
+**Status:** Accepted and published. Patrick Mee accepted the preview, uploaded it
+to the Workshop listing, and confirmed the public page on 2026-07-14.<br>
 **Release:** v0.2.0 - The Hearth and Household<br>
 **Production date:** 2026-07-13<br>
 **Human acceptance owner:** Patrick Mee
