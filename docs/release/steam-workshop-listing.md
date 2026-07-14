@@ -1,7 +1,8 @@
 # Steam Workshop Listing
 
-**Status:** Version 0.2 package uploaded; description, change note, and replacement
-preview prepared for manual publication and public verification<br>
+**Status:** Version 0.2 published and verified. Patrick Mee applied the
+description, change note, and replacement preview in Steam and confirmed the
+public Workshop page reflects all three on 2026-07-14.<br>
 **Workshop item:** [Emerald Isle 3763433723](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)<br>
 **Current release:** `v0.2.0` - The Hearth and Household<br>
 **Publication owner:** Patrick Mee
