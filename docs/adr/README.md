@@ -19,3 +19,4 @@ consequences, compatibility/migration impact, validation, and review triggers.
 | [0002](0002-version-0.1-package-build-contract.md) | Accepted | Version 0.1 uses a root-level XML-first package and clean staging contract |
 | [0003](0003-three-gate-lifecycle.md) | Accepted | Features use the three-gate Approved, Done, Released lifecycle |
 | [0004](0004-risk-tiered-hobby-workflow.md) | Accepted | Routine, Standard, and High-Risk work receive proportionate records and verification |
+| [0005](0005-shared-stone-construction-language.md) | Accepted | Stone assets share one construction language while retaining distinct gameplay identities |

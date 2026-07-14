@@ -22,6 +22,11 @@ Every asset request records gameplay function, camera context, dimensions,
 states and damage variants, palette/material references, cultural sources,
 animation or shader needs, file names, texture paths, and acceptance screenshots.
 
+When several assets represent construction by the same in-world culture, their
+briefs also identify the shared material and construction language plus any
+intentional functional deviation. Stone assets follow the Design Bible's
+[Stone Construction Language](../design/design-bible.md#stone-construction-language).
+
 ## Pipeline
 
 Keep editable sources outside game-ready exports. Review silhouette and grayscale
