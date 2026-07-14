@@ -1,6 +1,6 @@
 # FS-008 Feature Record: Brat Cloak
 
-**Status:** Proposed<br>
+**Status:** Approved<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -95,9 +95,9 @@ into quality, status, or exchange contexts without freezing the mod at one era.
 
 ## Approval
 
-**Decision:** Approved | Not Approved<br>
-**Maintainer/date:** [Patrick Mee, YYYY-MM-DD]<br>
-**Conditions:** [material conditions only]
+**Decision:** Approved<br>
+**Maintainer/date:** Patrick Mee, 2026-07-14<br>
+**Conditions:** none
 
 ## Done Evidence
 
