@@ -1,6 +1,7 @@
 # FS-008 Feature Record: Brat Cloak
 
-**Status:** Approved<br>
+**Status:** Implementing — XML and localization staged; art and in-game
+verification pending<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
