@@ -45,10 +45,12 @@ own stuff category, so enforcement would require patching vanilla wool
 definitions, adding compatibility surface for a restriction the fiction does not
 need. Instead the cloak accepts vanilla Fabric stuffs and its stat multipliers
 make wool the optimal and default presentation, mirroring how FS-006 keeps linen
-inside vanilla Fabric recipes. The implementation must verify vanilla textile
-categorization against installed RimWorld 1.6 data before freezing this choice;
-if a clean wool-scoped mechanism exists in Core without patching, the maintainer
-may adopt it at implementation review.
+inside vanilla Fabric recipes. The RimWorld wiki (accessed 2026-07-14) confirms
+the Fabric category contains all wools alongside cloth, devilstrand, hyperweave,
+and synthread, with no wool-specific category; the implementation still confirms
+this against installed RimWorld 1.6 data before freezing the choice. RimWorld
+wools are also notably flammable, which the balance pass may use as part of the
+wool brat's tradeoff.
 
 ## Basis
 
