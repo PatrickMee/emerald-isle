@@ -1,9 +1,9 @@
 # Emerald Isle Design Bible
 
 **Status:** Stable baseline; material changes require an ADR and Bible amendment review<br>
-**Version:** 1.1.0<br>
+**Version:** 1.2.0<br>
 **Adopted:** 2026-07-04<br>
-**Last amended:** 2026-07-13 by [ADR 0005](../adr/0005-shared-stone-construction-language.md)<br>
+**Last amended:** 2026-07-14 by [ADR 0006](../adr/0006-cultural-continuity-through-adaptation.md)<br>
 **Owner:** Project maintainers<br>
 **Review trigger:** Every milestone boundary and any proposed identity change
 
@@ -42,6 +42,8 @@ RimWorld purpose, and this feels as though it has always belonged on the Rim."
 - **Vanilla fluency:** readable, restrained, systemic, and interoperable.
 - **Tradeoffs:** strengths create costs, risks, dependencies, or lost alternatives.
 - **Cultural care:** evidence, plurality, context, and freedom from caricature.
+- **Adaptive continuity:** Irish-inspired identity persists by transforming through
+  colony progression rather than remaining fixed to one historical tech tier.
 - **Expandable restraint:** stable seams for tomorrow, minimal machinery today.
 
 ## 2. Core Design Philosophy
@@ -231,6 +233,21 @@ with numerically superior tiers. Early content is accessible but constrained;
 later content earns flexibility, reliability, specialization, or integration
 through investment and new dependencies.
 
+Emerald Isle is not an early-medieval technology tier. Early medieval Irish
+material culture is a foundational design root, especially for the released
+holding content, but the long-term project treats Irish inspiration as a living
+design language that adapts across RimWorld's full colony arc. Later features may
+express the same cultural roots through mature settlement, industry, ideology,
+biotech, anomaly, spacer, political, or world-scale contexts when doing so creates
+meaningful gameplay and remains RimWorld-native.
+
+Historical authenticity should preserve durable relationships rather than freeze
+objects in time: landscape and settlement, food and labor, craft and material,
+memory and belief, hospitality and exchange, kinship and obligation, myth and
+uncertainty. A later-game feature is valid only when it transforms one of these
+relationships into a clear RimWorld decision or story; an Irish label, green
+palette, knot motif, or obsolete historical object is not enough.
+
 Avoid parallel research trees, currencies, or skill systems unless repeated
 features demonstrate that vanilla progression cannot express the product. DLC
 integration enriches paths but core content must remain coherent without optional
@@ -350,6 +367,13 @@ New systems earn abstraction after repeated concrete needs. Optional integration
 stay optional. Each milestone may revise the roadmap from evidence, but may not
 quietly import later scope. Long-term ambition is protected by shipping small,
 coherent, maintainable releases.
+
+Future expansion should grow from the first holding without treating the first
+holding as the project's endpoint. The released versions establish cultural
+roots: ordinary food, local materials, domestic processing, household craft, and
+settlement enclosure. Later releases may supersede early tools mechanically, but
+they should preserve recognizable continuity in player choices, visual language,
+social meaning, and story consequences.
 
 ## Design Bible Amendment Process
 

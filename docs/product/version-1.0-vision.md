@@ -22,6 +22,11 @@ mythological inspiration. It is not a recreation of Ireland. It asks how materia
 constraints, practices, stories, and social ideas associated with Ireland could be
 transformed into a distinct culture on the Rim.
 
+Emerald Isle is not an early-medieval technology tier. Early medieval sources and
+ordinary domestic life provide the initial roots, but the product promise is a
+culture that adapts as a colony moves from first holding to mature settlement and
+later RimWorld pressures.
+
 The colony remains the center of play. Emerald Isle should deepen ordinary RimWorld
 decisions—what to grow, build, preserve, value, risk, remember, and pass on—without
 requiring the player to learn a separate game. The result should be recognizable to
@@ -40,6 +45,8 @@ The mod's distinctive promise is disciplined transformation:
 
 - archaeological and historical evidence defines a credible design space;
 - cultural context prevents generic “Celtic” shorthand and romantic reconstruction;
+- Irish-inspired identity persists through adaptation rather than remaining fixed to
+  one historical technology phase;
 - RimWorld's systems turn that material into choices, costs, failures, and stories;
 - restrained presentation makes the result feel native to the base game; and
 - small, interoperable features accumulate into a coherent way of life.
@@ -55,6 +62,11 @@ than an assortment of additions. A player can establish, sustain, and recognize 
 Irish-inspired holding through normal colony play. Its content creates several
 viable strategies, produces memorable setbacks and successes, and remains useful
 alongside vanilla content rather than replacing it.
+
+The culture should remain recognizable as the colony matures. Early objects may be
+superseded, upgraded, or made situational by later play, but the colony should not
+stop feeling like Emerald Isle once vanilla progression reaches industry, high
+wealth, advanced research, or DLC systems.
 
 Finished does not mean exhaustive coverage of Irish history or culture. It means the
 core promise is complete, understandable, balanced, maintainable, and trustworthy.
@@ -77,21 +89,25 @@ Future features should follow these rules:
 2. **Transform rather than reproduce.** Preserve the meaningful constraints and
    relationships in the source material while rewriting literal Earth history for
    RimWorld's setting.
-3. **Prefer ordinary life before spectacle.** Food, work, shelter, craft, exchange,
+3. **Preserve cultural continuity through adaptation.** Irish inspiration is a
+   living design language, not a fixed historical tech tier. Later-game features
+   should evolve recognizable roots instead of abandoning them or reskinning
+   generic technology.
+4. **Prefer ordinary life before spectacle.** Food, work, shelter, craft, exchange,
    memory, and community establish identity more reliably than monuments or famous
    myths.
-4. **Create situational strengths.** Every advantage must have an observable cost or
+5. **Create situational strengths.** Every advantage must have an observable cost or
    opportunity cost. Emerald Isle content must not become the automatic best choice.
-5. **Use RimWorld's language.** Prefer familiar jobs, bills, stats, information,
+6. **Use RimWorld's language.** Prefer familiar jobs, bills, stats, information,
    threats, and feedback. New systems must earn their conceptual and maintenance cost.
-6. **Ship the smallest coherent form.** Build only what the current feature needs.
+7. **Ship the smallest coherent form.** Build only what the current feature needs.
    Preserve stable extension seams without constructing speculative frameworks.
-7. **Remain understandable without prior knowledge.** Research should deepen the
+8. **Remain understandable without prior knowledge.** Research should deepen the
    feature, not become homework for the player.
-8. **Treat compatibility as product quality.** Optional DLC and mod interactions
+9. **Treat compatibility as product quality.** Optional DLC and mod interactions
    fail safely; public identifiers and save-visible behavior are durable promises.
-9. **Let evidence narrow scope.** Research, testing, and playtesting may simplify or
-   reject a feature when its gameplay value does not justify its burden.
+10. **Let evidence narrow scope.** Research, testing, and playtesting may simplify or
+    reject a feature when its gameplay value does not justify its burden.
 
 ## Balancing Evidence and Play
 

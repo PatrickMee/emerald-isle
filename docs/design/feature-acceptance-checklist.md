@@ -11,6 +11,9 @@ Review only the sections triggered by the feature's risks.
 - Does specific Irish inspiration shape the feature without becoming stereotype,
   romantic reconstruction, or literal Earth history?
 - Does it fit the active milestone, Design Bible, RimWorld tone, and vanilla UI?
+- Does it treat Irish inspiration as a living design language rather than a fixed
+  historical tech tier, naming the cultural relationship it preserves or
+  transforms?
 - Is the smallest coherent slice explicit?
 - Does every advantage carry a visible tradeoff?
 
