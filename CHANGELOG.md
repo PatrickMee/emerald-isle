@@ -4,7 +4,9 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
-## [0.2.0] - Release candidate
+## [0.2.0] - 2026-07-13
+
+### The Hearth and Household
 
 ### Governance
 
@@ -12,6 +14,9 @@ All notable project changes are documented here.
   review, Standard gameplay defaults to one short feature record and affected-path
   verification, and only High-Risk work triggers formal research, architecture,
   planning, migration, or test-matrix artifacts.
+- Completed the batched low-risk cultural review for FS-006 and FS-007; no
+  Irish-language player text or specialist archaeological claim ships in the
+  release.
 
 ### Planning
 

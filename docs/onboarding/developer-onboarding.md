@@ -15,9 +15,9 @@ current question.
 
 ## Current Repository State
 
-Version 0.1 is released. Its public defs, translation keys, texture paths, package
-ID, and Workshop ID are compatibility contracts. Later gameplay requires active-
-milestone scope and explicit maintainer approval.
+Version 0.2 is released. The public defs, translation keys, texture paths, package
+ID, and Workshop ID shipped through `v0.2.0` are compatibility contracts. Later
+gameplay requires active-milestone scope and explicit maintainer approval.
 
 ## Work Setup
 

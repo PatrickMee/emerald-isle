@@ -10,17 +10,18 @@ tone.
 ## Current Status
 
 **Milestones 0 and 0.5 are complete.** The stable foundation is released as
-`v0.0.0`, **The Studio Exists**. Version 0.1, **The First Holding**, is released
-as `v0.1.0` with Oats, Dry-Stone Wall, Hand Quern, Milled Oats, and Oat Foods.
-The project follows a risk-tiered three-outcome lifecycle (Approved, Done,
-Released) under Constitution 4.0.0 and ADR-0004. Routine work uses normal review,
-Standard gameplay uses one short feature record, and only High-Risk work adds
-formal research, architecture, planning, or verification records.
+`v0.0.0`, **The Studio Exists**. Version 0.2, **The Hearth and Household**, is
+released as `v0.2.0` with the complete Version 0.1 holding plus flax, linen, a
+linen tunic, and the central hearth. The project follows a risk-tiered
+three-outcome lifecycle (Approved, Done, Released) under Constitution 4.0.0 and
+ADR-0004. Routine work uses normal review, Standard gameplay uses one short
+feature record, and only High-Risk work adds formal research, architecture,
+planning, or verification records.
 
-Install Version 0.1 from the
-[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)
-or download the immutable package from the
-[GitHub release](https://github.com/PatrickMee/emerald-isle/releases/tag/v0.1.0).
+Download Version 0.2 from the immutable
+[GitHub release](https://github.com/PatrickMee/emerald-isle/releases/tag/v0.2.0).
+Steam Workshop updates use the existing
+[Emerald Isle listing](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723).
 
 Start with:
 

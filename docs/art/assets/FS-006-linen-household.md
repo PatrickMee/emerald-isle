@@ -1,6 +1,6 @@
 # FS-006 Linen Household Asset Record
 
-**Status:** Flax artwork Pass 2 — maintainer approved in-game, 2026-07-13<br>
+**Status:** Released in `v0.2.0` - Flax artwork Pass 2 approved in-game, 2026-07-13<br>
 **Feature:** [FS-006 — Linen Household](../../specifications/FS-006-linen-household.md)<br>
 **Production date:** 2026-07-12<br>
 **Human acceptance owner:** Patrick Mee

@@ -1,6 +1,6 @@
 # FS-007 Central Hearth Asset Record
 
-**Status:** Approved and frozen for Version 0.5 by Patrick Mee, 2026-07-13<br>
+**Status:** Released in `v0.2.0` - approved and frozen by Patrick Mee, 2026-07-13<br>
 **Feature:** [FS-007 — Central Hearth](../../specifications/FS-007-central-hearth.md)<br>
 **Production date:** 2026-07-13<br>
 **Human acceptance owner:** Patrick Mee

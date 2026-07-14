@@ -1,6 +1,6 @@
 # FS-006 Feature Record: Linen Household
 
-**Status:** Implemented — maintainer playtest passed<br>
+**Status:** Released in `v0.2.0` - maintainer playtest passed<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -99,9 +99,9 @@ multiplier, 1.15 heat-insulation multiplier, and no meaningful armor role.
 - **Recommendation:** XML-only. Installed RimWorld 1.6 Core provides verified
   patterns in `Plant_Cotton`, `Cloth`, `Apparel_TribalA`, Crafting Spot, Hand
   Tailoring Bench, and Electric Tailoring Bench.
-- **Tentative public IDs:** `EI_Plant_Flax`, `EI_RawFlax`, `EI_Linen`,
-  `EI_ProcessFlax`, `EI_LinenTunic`, and one linen-specific StuffCategoryDef.
-  These become compatibility contracts only when released.
+- **Released public IDs:** `EI_Plant_Flax`, `EI_RawFlax`, `EI_Linen`,
+  `EI_ProcessFlax`, `EI_LinenTunic`, and the linen-specific StuffCategoryDef.
+  These are compatibility contracts as of `v0.2.0`.
 - **Persistence:** New plants, items, apparel, bills, stockpile filters, outfits,
   inventories, and trader stock can enter saves. Save/load is therefore an
   applicable Done check; removal retains RimWorld's ordinary missing-def risk.
@@ -170,4 +170,5 @@ gameplay: stack-count art moved into the directories required by
 `Graphic_StackCount`; Developer Tools gained dependency URLs; and the processing
 recipe dropped an incorrect `requiredGiverWorkType`, matching vanilla
 patchleather so Tailoring benches and the Crafting Spot can use their own vanilla
-work givers. FS-006 is implemented but remains unreleased until its release gate.
+work givers. FS-006 shipped in `v0.2.0`; its public definitions, localization
+keys, and runtime asset paths are released compatibility contracts.

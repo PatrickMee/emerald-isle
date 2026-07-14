@@ -79,6 +79,10 @@ premature abstractions.
 
 ## Version 0.5: Living Culture
 
+**Status:** In progress. Its first two Standard slices, FS-006 Linen Household and
+FS-007 Central Hearth, shipped as the `v0.2.0` preview on 2026-07-13. That release
+does not authorize the remaining Version 0.5 candidate scope.
+
 **Vision:** The colony experiences a connected culture rather than isolated themed
 items.  
 **Goals:** Link proven foundations through daily work, food, craft, place, social

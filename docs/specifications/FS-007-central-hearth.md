@@ -1,6 +1,6 @@
 # FS-007 Feature Record: Central Hearth
 
-**Status:** Implemented — maintainer playtest passed; awaiting integration<br>
+**Status:** Released in `v0.2.0` - maintainer playtest passed<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -14,8 +14,8 @@ It should turn the holding's main room into a visible place of heat, cooking, an
 daily gathering without introducing custom social systems, ideology behavior, or
 new progression.
 
-This approval authorizes implementation of the bounded FS-007 scope below. Public
-identifiers remain tentative until release.
+This approval authorized implementation of the bounded FS-007 scope below. Its
+public identifiers are compatibility contracts as of `v0.2.0`.
 
 ## Risk Class Justification
 
@@ -102,9 +102,9 @@ type. A restrained English name avoids premature language review.
 - **Compatibility:** Do not patch vanilla campfires, stoves, heaters, room roles,
   thoughts, rituals, or recipes. The hearth should be independently removable
   subject to RimWorld's ordinary missing-def behavior for buildings present in saves.
-- **Released-contract note:** If approved and implemented, the building def,
-  designation category, thing categories, recipe links, translation keys, and asset
-  paths become public compatibility contracts at release.
+- **Released-contract note:** The building def, designation category, thing
+  categories, recipe links, translation keys, and asset paths are public
+  compatibility contracts as of `v0.2.0`.
 
 ## XML/C#/Harmony Recommendation
 
@@ -118,14 +118,14 @@ hearth, alter room roles, or merge unrelated campfire and stove behavior. If van
 XML cannot express a coherent tradeoff, return the feature for maintainer review
 rather than expanding implementation.
 
-Tentative public identifiers:
+Released public identifiers:
 
 - `EI_CentralHearth`
 - `EI_DoBillsCookCentralHearth`
 - `EI_CentralHearth.label`
 - `EI_CentralHearth.description`
 
-These names are placeholders and are not compatibility commitments until release.
+These names are compatibility commitments as of `v0.2.0`.
 
 ## Art Requirements
 
@@ -207,5 +207,6 @@ Implementation and maintainer playtest completed on 2026-07-13:
   fire-overlay, dry-stone context, and stuff-tint review. The separate asset record
   captures the Pass 2 disposition.
 
-No FS-007 stop condition was triggered. The feature remains unreleased, and its
-tentative public identifiers become compatibility commitments only at release.
+No FS-007 stop condition was triggered. The feature shipped in `v0.2.0`; its
+public definitions, localization keys, and runtime asset paths are released
+compatibility contracts.
