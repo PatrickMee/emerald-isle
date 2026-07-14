@@ -84,9 +84,11 @@ FS-007 Central Hearth, shipped as the `v0.2.0` preview on 2026-07-13. That relea
 does not authorize the remaining Version 0.5 candidate scope.
 
 **Vision:** The colony experiences a connected culture rather than isolated themed
-items.  
+items, and that culture begins to persist beyond the earliest settlement phase.
 **Goals:** Link proven foundations through daily work, food, craft, place, social
-meaning, and small story-generating interactions.  
+meaning, and small story-generating interactions. Show how the released roots can
+adapt into repeatable colony choices without becoming an obsolete early-game tier
+(ADR-0006).  
 **Scope:** A curated set of interoperating systems selected after 0.1 evidence;
 possible agriculture, food, craft, animals, architecture, or social expression.  
 **Success criteria:** Features create multiple viable colony patterns, remain
@@ -104,9 +106,11 @@ flattening, compatibility matrix growth.
 ## Version 1.0: Emerald Isle
 
 **Vision:** A stable, cohesive expansion whose identity, quality, and usability
-support broad public adoption.  
+support broad public adoption across a full colony arc.
 **Goals:** Complete the core product promise, stabilize contracts, polish onboarding,
-balance progression, and publish maintainable contributor/support practices.  
+balance progression, and publish maintainable contributor/support practices. Ensure
+Emerald Isle remains recognizable from first holding through mature colony
+development without requiring early tools to stay mechanically dominant.  
 **Scope:** Only systems required for a complete core identity; later mythology,
 large governance, and world/sea ambitions remain outside scope.  
 **Success criteria:** New and experienced players understand the offering; long

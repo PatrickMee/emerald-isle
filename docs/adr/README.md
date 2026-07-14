@@ -20,3 +20,4 @@ consequences, compatibility/migration impact, validation, and review triggers.
 | [0003](0003-three-gate-lifecycle.md) | Accepted | Features use the three-gate Approved, Done, Released lifecycle |
 | [0004](0004-risk-tiered-hobby-workflow.md) | Accepted | Routine, Standard, and High-Risk work receive proportionate records and verification |
 | [0005](0005-shared-stone-construction-language.md) | Accepted | Stone assets share one construction language while retaining distinct gameplay identities |
+| [0006](0006-cultural-continuity-through-adaptation.md) | Accepted | Emerald Isle treats Irish inspiration as a living design language across colony progression |

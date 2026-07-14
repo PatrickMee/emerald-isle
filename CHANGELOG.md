@@ -4,6 +4,13 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+### Governance
+
+- Adopted ADR-0006 Cultural Continuity Through Adaptation: Irish inspiration is a
+  living design language across the full colony arc, not a fixed early-medieval
+  tech tier. Amended the Design Bible (1.2.0), Version 1.0 vision, roadmap, and
+  expanded feature review prompts accordingly.
+
 ## [0.2.0] - 2026-07-13
 
 ### The Hearth and Household
