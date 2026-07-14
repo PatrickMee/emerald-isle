@@ -26,8 +26,21 @@ No Irish-language player-facing strings shipped in Version 0.1. The batched
 review confirmed the register and the absence of Irish-language content rather
 than reviewing translations.
 
+## Version 0.2 (reviewed)
+
+| Item | Feature | Player-facing? | Sensitivity notes | Review status |
+|---|---|---|---|---|
+| Flax, raw flax, linen, and linen tunic names, descriptions, gameplay framing, and runtime art | FS-006 | Yes | Functional English; the linen tunic is inspired by the `leine` garment category without claiming an exact reconstruction, universal cut, status, or color; no Irish-language text | Approved 2026-07-13 |
+| Central hearth name, description, gameplay framing, and runtime art | FS-007 | Yes | Functional English; broad domestic-hearth framing without claiming one exact Irish archaeological form, ritual meaning, or decorative shorthand; no Irish-language text | Approved 2026-07-13 |
+
+No Irish-language player-facing strings ship in Version 0.2. Patrick Mee reviewed
+the low-risk English framing and runtime art as an Irish citizen with lived
+cultural familiarity; this approval does not claim Irish-language or specialist
+archaeological authority.
+
 ## Review Log
 
 | Release | Reviewer | Qualification basis | Date | Outcome |
 |---|---|---|---|---|
 | v0.1.0 | Patrick Mee | Irish citizen with lived cultural familiarity; review scope limited to low-risk player-facing English and general cultural framing, not Irish-language translation or specialist archaeological validation | 2026-07-12 | Pass — all five Version 0.1 entries approved; no Irish-language content present |
+| v0.2.0 | Patrick Mee | Irish citizen with lived cultural familiarity; review scope limited to FS-006/FS-007 low-risk English names, descriptions, gameplay framing, and runtime art, not Irish-language translation or specialist archaeological validation | 2026-07-13 | Pass - FS-006 and FS-007 approved; no Irish-language content present |

@@ -82,10 +82,24 @@ compatibility contracts. Other entries carrying a 0.1 discovery estimate were no
 part of the canonical approved scope and remain candidates unless separately
 triaged.
 
-## Version 0.5 First-Slice Proposal
+## Version 0.5 First Slice
 
 PL-02 Flax/Linen and AP-02 Linen Tunic are combined in the concise Standard
 feature record [FS-006 — Linen Household](../specifications/FS-006-linen-household.md).
-The proposal is not approved and does not authorize gameplay implementation. Its
-research rejects the earlier flax-to-brat combination because the brat is a
-woollen cloak; flax oil and the brat both remain outside the proposed slice.
+Patrick Mee approved the Standard slice on 2026-07-12, authorizing its XML-only
+implementation. The slice was implemented and passed maintainer playtesting on
+2026-07-13; the reopened flax art pass was also approved on 2026-07-13. PL-02 and
+AP-02 shipped in `v0.2.0` and are now Released compatibility contracts. The
+feature research rejects the earlier flax-to-brat combination because the brat is
+a woollen cloak; flax oil and the brat remain outside the slice.
+
+## Version 0.5 Next-Slice Approval
+
+FU-01 Central Hearth is approved for implementation in the concise Standard
+feature record [FS-007 — Central Hearth](../specifications/FS-007-central-hearth.md).
+The approval authorizes only the bounded XML-first, one-building scope in FS-007;
+C#, Harmony, custom gathering behavior, Ideology integration, new fuel resources,
+and broader furniture or architecture sets remain excluded.
+The XML-only implementation passed maintainer gameplay and visual review on
+2026-07-13. FU-01 shipped in `v0.2.0` and is now a Released compatibility
+contract.

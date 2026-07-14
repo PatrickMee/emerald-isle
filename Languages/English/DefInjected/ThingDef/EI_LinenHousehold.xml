@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_Plant_Flax.label>flax plant</EI_Plant_Flax.label>
+  <EI_Plant_Flax.description>A fiber crop grown for linen. It matures sooner than cotton, but its harvest must be processed before it can be used as cloth.</EI_Plant_Flax.description>
+
+  <EI_RawFlax.label>raw flax</EI_RawFlax.label>
+  <EI_RawFlax.description>Harvested flax stems and fiber ready to be processed into linen.</EI_RawFlax.description>
+
+  <EI_Linen.label>linen</EI_Linen.label>
+  <EI_Linen.description>A light fabric processed from flax fiber. It handles warm weather well, but is less durable and less insulating in the cold than cloth.</EI_Linen.description>
+
+  <EI_LinenTunic.label>linen tunic</EI_LinenTunic.label>
+  <EI_LinenTunic.description>A simple, lightweight linen tunic inspired by everyday early medieval Irish clothing. It is comfortable in warm weather but provides little protection from cold or weapons.</EI_LinenTunic.description>
+
+</LanguageData>

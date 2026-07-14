@@ -1,6 +1,6 @@
 # FS-006 Feature Record: Linen Household
 
-**Status:** Proposed — not approved for implementation<br>
+**Status:** Released in `v0.2.0` - maintainer playtest passed<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -99,9 +99,9 @@ multiplier, 1.15 heat-insulation multiplier, and no meaningful armor role.
 - **Recommendation:** XML-only. Installed RimWorld 1.6 Core provides verified
   patterns in `Plant_Cotton`, `Cloth`, `Apparel_TribalA`, Crafting Spot, Hand
   Tailoring Bench, and Electric Tailoring Bench.
-- **Tentative public IDs:** `EI_Plant_Flax`, `EI_RawFlax`, `EI_Linen`,
-  `EI_ProcessFlax`, `EI_LinenTunic`, and one linen-specific StuffCategoryDef.
-  These become compatibility contracts only when released.
+- **Released public IDs:** `EI_Plant_Flax`, `EI_RawFlax`, `EI_Linen`,
+  `EI_ProcessFlax`, `EI_LinenTunic`, and the linen-specific StuffCategoryDef.
+  These are compatibility contracts as of `v0.2.0`.
 - **Persistence:** New plants, items, apparel, bills, stockpile filters, outfits,
   inventories, and trader stock can enter saves. Save/load is therefore an
   applicable Done check; removal retains RimWorld's ordinary missing-def risk.
@@ -119,17 +119,17 @@ multiplier, 1.15 heat-insulation multiplier, and no meaningful armor role.
 
 ## Acceptance Checks
 
-- [ ] Flax appears in growing-zone selection, grows only in ground cultivation,
+- [x] Flax appears in growing-zone selection, grows only in ground cultivation,
       and harvests raw flax at the approved targets.
-- [ ] A pawn can process raw flax into linen at all three approved vanilla work
+- [x] A pawn can process raw flax into linen at all three approved vanilla work
       locations without a custom work giver.
-- [ ] Linen stores, trades, and works in representative vanilla Fabric recipes.
-- [ ] The linen tunic can be made only from linen, equips correctly, and provides
+- [x] Linen stores, trades, and works in representative vanilla Fabric recipes.
+- [x] The linen tunic can be made only from linen, equips correctly, and provides
       the approved warm-weather tradeoff without replacing tribalwear.
-- [ ] Crop, processing, textile, and garment persist across save/load without a
+- [x] Crop, processing, textile, and garment persist across save/load without a
       new log error or broken bill/filter reference.
-- [ ] Runtime art is readable at normal zoom and original/provenance-recorded.
-- [ ] The complete flax → linen → tunic path works in RimWorld 1.6 Core with a
+- [x] Runtime art is readable at normal zoom and original/provenance-recorded.
+- [x] The complete flax → linen → tunic path works in RimWorld 1.6 Core with a
       clean relevant log.
 
 ## Risks and Stop Conditions
@@ -145,11 +145,30 @@ multiplier, 1.15 heat-insulation multiplier, and no meaningful armor role.
 
 ## Approval
 
-**Decision:** Pending<br>
-**Approved by/date:** —<br>
-**Conditions:** Implementation, XML, and runtime art remain unauthorized until
-Patrick Mee explicitly approves this record.
+**Decision:** Approved<br>
+**Approved by/date:** Patrick Mee, 2026-07-12<br>
+**Conditions:** Implement the recorded XML-only Standard slice. Stop for review
+if a listed stop condition occurs or the approved tradeoff cannot be expressed
+through verified vanilla XML.
 
 ## Done Evidence
 
-Not started. No gameplay files have been created or modified.
+Patrick Mee accepted the affected in-game path on 2026-07-13 after testing the
+flax crop, harvested stacks, flax-processing bill, linen, and tunic in RimWorld
+1.6. The existing colony and bill survived the restarts used to install corrected
+definitions. The final Player.log contains no Emerald Isle definition, texture,
+recipe, or job error; unrelated pre-existing game/mod warnings remain outside
+this feature.
+
+Static and package verification also passed: all XML parses, all six public defs
+resolve, the linen-only Stuff filter coexists with vanilla `Fabric`, all 26 RGBA
+runtime textures resolve, the developer scenario automatically discovers all
+three new item defs, and public release staging excludes developer content.
+
+Three defects found during playtest were corrected without changing approved
+gameplay: stack-count art moved into the directories required by
+`Graphic_StackCount`; Developer Tools gained dependency URLs; and the processing
+recipe dropped an incorrect `requiredGiverWorkType`, matching vanilla
+patchleather so Tailoring benches and the Crafting Spot can use their own vanilla
+work givers. FS-006 shipped in `v0.2.0`; its public definitions, localization
+keys, and runtime asset paths are released compatibility contracts.

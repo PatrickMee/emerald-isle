@@ -48,8 +48,10 @@ amending the higher-authority one.
 - `specifications/FS-003-hand-quern.md`: approved and Gate 2 Done Hand Quern specification
 - `specifications/FS-004-milled-oats.md`: approved and Gate 2 Done Milled Oats specification
 - `specifications/FS-005-oat-foods.md`: approved and Gate 2 Done Oat Foods specification
-- `specifications/FS-006-linen-household.md`: proposed Standard Version 0.5
-  feature record; implementation is not authorized
+- `specifications/FS-006-linen-household.md`: released Standard Version 0.5
+  Linen Household feature record; shipped in `v0.2.0`
+- `specifications/FS-007-central-hearth.md`: released Standard Version 0.5
+  Central Hearth feature record; shipped in `v0.2.0`
 - `architecture/AR-002-dry-stone-wall.md`: approved Dry-Stone Wall architecture and Ready assessment
 - `architecture/AR-001-oats.md`: approved Oats architecture
 - `plans/IP-001-oats.md`: approved Oats implementation plan
@@ -58,6 +60,9 @@ amending the higher-authority one.
 - `release/v0.1-release-checklist.md`: completed Version 0.1 Gate 3 release record
 - `release/v0.1.0.md`: Version 0.1 release notes, installation, compatibility,
   removal, known-issue, licensing, and rollback guidance
+- `release/v0.2-release-checklist.md`: completed Version 0.2 Gate 3 release record
+- `release/v0.2.0.md`: Version 0.2 release notes, installation,
+  compatibility, removal, known-issue, licensing, and rollback guidance
 - `localization/cultural-review-register.md`: batched cultural and Irish-language review register
 - `qa/version-0.1-release-test-matrix.md`: Version 0.1 exact-artifact release test matrix
 - `qa/`: automated, integration, and playtest strategy
