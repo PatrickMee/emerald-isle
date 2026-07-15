@@ -1,6 +1,7 @@
 # FS-008 Brat Cloak Asset Record
 
-**Status:** Art pending — runtime contract defined, exports not yet produced<br>
+**Status:** Candidate exports produced 2026-07-14; maintainer in-game visual
+acceptance pending<br>
 **Feature:** [FS-008 — Brat Cloak](../../specifications/FS-008-brat-cloak.md)<br>
 **Human acceptance owner:** Patrick Mee
 
@@ -26,8 +27,17 @@ a distinct outer layer over the linen tunic without hiding the pawn silhouette.
 
 ## Provenance
 
-To be recorded at production, following the FS-006 pattern: original generated
-source art under Emerald Isle art direction, processed to runtime exports, with
-production intermediates kept out of the repository. Runtime exports are
-creative assets governed by
+The 16 candidate exports were generated programmatically on 2026-07-14 by Claude
+(Anthropic) under Emerald Isle art direction, using an original Python/Pillow
+drawing script and no input images or third-party assets. The script derives
+per-body-type cloak proportions from the accepted FS-006 tunic silhouettes and
+reproduces the established flat two-tone style: fill `(205,205,198)` and outline
+`(56,56,52)` at the measured alpha levels, so RimWorld's Stuff tint supplies the
+textile color. The generation script is a local production intermediate kept out
+of the repository. Runtime exports are creative assets governed by
 [`CREATIVE_ASSETS_LICENSE.md`](../../../CREATIVE_ASSETS_LICENSE.md).
+
+Candidate status: automated inspection confirms count, dimensions, alpha, and
+XML-referenced stems. The exports remain candidates until maintainer visual
+acceptance in-game; readability defects reopen the art pass, following the
+FS-006 precedent.
