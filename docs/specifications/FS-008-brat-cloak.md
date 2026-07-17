@@ -1,7 +1,7 @@
 # FS-008 Feature Record: Brat Cloak
 
-**Status:** Implementing — XML and localization staged; art and in-game
-verification pending<br>
+**Status:** Implementing — XML and localization staged; art accepted;
+gameplay, balance, log, and persistence verification pending<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -102,8 +102,13 @@ into quality, status, or exchange contexts without freezing the mod at one era.
 
 ## Done Evidence
 
-[Recorded at implementation: static/build result, in-game player path, log
-review, maintainer visual and gameplay review.]
+- Maintainer visual review: Patrick Mee accepted the front, side, and back worn
+  exports at normal play zoom on 2026-07-17. See the
+  [FS-008 art asset record](../art/assets/FS-008-brat-cloak.md).
+- Remaining before Done: full crafting and wear path across required body types
+  and directions, balance comparison, textile-category confirmation, clean-log
+  review, save/load persistence, staged-package validation, and maintainer
+  gameplay review.
 
 **Decision:** Done | Not Done<br>
 **Maintainer/date:** [name, YYYY-MM-DD]

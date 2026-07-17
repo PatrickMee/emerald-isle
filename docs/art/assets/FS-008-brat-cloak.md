@@ -1,7 +1,7 @@
 # FS-008 Brat Cloak Asset Record
 
-**Status:** Candidate exports produced 2026-07-14; maintainer in-game visual
-acceptance pending<br>
+**Status:** Accepted — maintainer in-game visual acceptance recorded
+2026-07-17<br>
 **Feature:** [FS-008 — Brat Cloak](../../specifications/FS-008-brat-cloak.md)<br>
 **Human acceptance owner:** Patrick Mee
 
@@ -27,17 +27,35 @@ a distinct outer layer over the linen tunic without hiding the pawn silhouette.
 
 ## Provenance
 
-The 16 candidate exports were generated programmatically on 2026-07-14 by Claude
-(Anthropic) under Emerald Isle art direction, using an original Python/Pillow
-drawing script and no input images or third-party assets. The script derives
-per-body-type cloak proportions from the accepted FS-006 tunic silhouettes and
-reproduces the established flat two-tone style: fill `(205,205,198)` and outline
-`(56,56,52)` at the measured alpha levels, so RimWorld's Stuff tint supplies the
-textile color. The generation script is a local production intermediate kept out
-of the repository. Runtime exports are creative assets governed by
+The initial 16 candidate exports were generated programmatically on 2026-07-14 by
+Claude (Anthropic) under Emerald Isle art direction, using an original
+Python/Pillow drawing script and no input images or third-party assets. On
+2026-07-16, after the first wool in-game review showed that the front silhouette
+read as a rigid poncho or apron, the 15 worn exports were revised with OpenAI's
+built-in image-generation tool. Each existing body-type and direction export was
+used as the edit target, while the accepted revised male directional exports were
+used as design references for the other body types. The revision softened the
+sides and hem, clarified the shoulder drape, lowered the front fastening, and
+added restrained folds. Flat magenta chroma-key backgrounds were removed locally,
+and final exports were downsampled to the existing 128x128 RGBA runtime contract.
+The first revised wool screenshot still showed the pawn head hiding the fastening
+and shoulder construction, so a second front-view pass widened the five south
+silhouettes and moved their fastening and central fold into the visible lower
+region. Subsequent east- and north-view screenshots showed that the side read as
+a narrow hanging panel and the back as a straight tunic; a third pass gave the
+five north exports broader shoulders, a lower wrap seam, and a flared hem. An
+attempt to solve the side readability problem with an asymmetric rearward drape
+was rejected as theatrical and inconsistent with the practical rectangular
+garment. A supplied reconstruction photograph became the design authority for
+the final five east exports: compact, mostly vertical blanket drapes with modest
+side depth, near-level hems, and no train or swept tail. The ground icon was
+unchanged. No third-party assets were incorporated into the runtime exports.
+Runtime exports are creative assets governed by
 [`CREATIVE_ASSETS_LICENSE.md`](../../../CREATIVE_ASSETS_LICENSE.md).
 
-Candidate status: automated inspection confirms count, dimensions, alpha, and
-XML-referenced stems. The exports remain candidates until maintainer visual
-acceptance in-game; readability defects reopen the art pass, following the
-FS-006 precedent.
+Automated inspection confirms count, dimensions, alpha, and XML-referenced
+stems. Patrick Mee accepted the revised exports in-game on 2026-07-17 after
+reviewing the front, side, and back views at normal play zoom. The accepted side
+view uses the practical compact drape established by the supplied reconstruction
+photograph, with no train or swept tail. Any later readability defect reopens the
+art pass, following the FS-006 precedent.
