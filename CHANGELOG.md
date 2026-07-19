@@ -4,12 +4,17 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.3.0] - 2026-07-18
+
+### The Brat Cloak
+
 ### Development
 
-- Began FS-008 Brat Cloak: XML-only shell-layer cloak definition and English
-  localization. Fabric-stuffable with wool-optimal insulation; provisional
-  balance values pending in-game comparison against the duster and parka.
-  Worn-art exports and maintainer verification remain pending.
+- Added FS-008 Brat Cloak: a cheap, quick-to-make shell-layer garment accepting
+  vanilla Fabric textiles, with wool as the strongest cold-weather presentation.
+- Added original ground and worn art for all five supported body types and
+  directions. Maintainer gameplay, visual, crafting, save/load, balance, and
+  render-matrix checks passed.
 
 ### Governance
 
@@ -17,6 +22,9 @@ All notable project changes are documented here.
   living design language across the full colony arc, not a fixed early-medieval
   tech tier. Amended the Design Bible (1.2.0), Version 1.0 vision, roadmap, and
   expanded feature review prompts accordingly.
+- Completed the scoped Version 0.3 cultural review for FS-008's low-risk English
+  framing and practical garment art; no Irish-language text or specialist
+  archaeological reconstruction claim ships in the release.
 
 ## [0.2.0] - 2026-07-13
 
@@ -127,6 +135,7 @@ All notable project changes are documented here.
 - Froze the nine foundation authorities under ADR-based change control.
 
 [Unreleased]: docs/roadmap.md
+[0.3.0]: docs/release/v0.3.0.md
 [0.2.0]: docs/release/v0.2.0.md
 [0.1.0]: docs/release/v0.1.0.md
 [0.0.0]: docs/release/v0.0.0.md
