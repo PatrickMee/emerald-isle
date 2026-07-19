@@ -1,7 +1,7 @@
 # FS-008 Feature Record: Brat Cloak
 
-**Status:** Implementing — XML and localization staged; art accepted;
-gameplay, balance, log, and persistence verification pending<br>
+**Status:** Done — maintainer accepted gameplay, art, and the full body-type
+render matrix<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>
@@ -81,17 +81,17 @@ into quality, status, or exchange contexts without freezing the mod at one era.
 
 ## Acceptance Checks
 
-- [ ] A colonist can craft the brat cloak at an existing vanilla apparel bench
+- [x] A colonist can craft the brat cloak at an existing vanilla apparel bench
       from stocked vanilla textiles and wear it over the linen tunic; both render
       correctly at normal zoom in all body types and directions.
-- [ ] With identical stuff, the brat is cheaper in material and work than the
+- [x] With identical stuff, the brat is cheaper in material and work than the
       duster and parka, insulates against cold better than the duster, and
       contributes less armor than both; a wool brat outperforms a cloth brat for
       warmth. The brat is selected in at least one rational early-colony loadout
       without displacing dusters, parkas, or armor in every loadout.
-- [ ] Textile categorization verified against installed RimWorld 1.6 data; the
+- [x] Textile categorization verified against installed RimWorld 1.6 data; the
       material decision above is confirmed or revised at implementation review.
-- [ ] Clean load with no Emerald Isle errors or warnings; save/load preserves
+- [x] Clean load with no Emerald Isle errors or warnings; save/load preserves
       worn and stockpiled cloaks; the staged package passes CI validation.
 
 ## Approval
@@ -105,10 +105,23 @@ into quality, status, or exchange contexts without freezing the mod at one era.
 - Maintainer visual review: Patrick Mee accepted the front, side, and back worn
   exports at normal play zoom on 2026-07-17. See the
   [FS-008 art asset record](../art/assets/FS-008-brat-cloak.md).
-- Remaining before Done: full crafting and wear path across required body types
-  and directions, balance comparison, textile-category confirmation, clean-log
-  review, save/load persistence, staged-package validation, and maintainer
-  gameplay review.
+- Maintainer gameplay review: Patrick Mee confirmed normal crafting from stocked
+  textiles, wearing over the linen tunic, and save/load with worn and stockpiled
+  cloaks on 2026-07-18.
+- Balance review against installed RimWorld `1.6.4871 rev595`: the brat uses 45
+  stuff and 5,000 work versus 80/8,000 for the parka and 80/10,000 for the
+  duster. Its armor multiplier is 0.1 versus 0.2/0.3; cold insulation is 1.7
+  versus 2.0/0.6; heat insulation is 0.3 versus 0.0/0.85. Sheep wool supplies
+  26 base cold insulation versus cloth's 18, preserving the intended niche.
+- Installed Core definitions confirm `WoolBase` belongs to the `Fabric` stuff
+  category, including sheep wool through inheritance.
+- The 2026-07-17 RimWorld `Player.log` loads Emerald Isle and its developer tools
+  with no error, exception, or warning entries. The exact staged package passed
+  release-safety validation, and GitHub Actions run 39, `Validate mod package`,
+  passed for commit `3e4c111`.
+- Full render matrix: Patrick Mee confirmed normal-zoom in-game checks across
+  Male, Female, Thin, Hulk, and Fat body types in every required direction on
+  2026-07-18.
 
-**Decision:** Done | Not Done<br>
-**Maintainer/date:** [name, YYYY-MM-DD]
+**Decision:** Done<br>
+**Maintainer/date:** Patrick Mee, 2026-07-18
