@@ -4,6 +4,13 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+### Development
+
+- Began FS-008 Brat Cloak: XML-only shell-layer cloak definition and English
+  localization. Fabric-stuffable with wool-optimal insulation; provisional
+  balance values pending in-game comparison against the duster and parka.
+  Worn-art exports and maintainer verification remain pending.
+
 ### Governance
 
 - Adopted ADR-0006 Cultural Continuity Through Adaptation: Irish inspiration is a

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="ApparelMakeableBase">
+    <defName>EI_BratCloak</defName>
+    <label>brat cloak</label>
+    <description>A heavy rectangular cloak worn over everyday clothing, inspired by the early medieval Irish brat. Cheap and quick to make, it keeps the wearer warm in cold weather but offers little protection from weapons and does nothing against heat.</description>
+    <graphicData>
+      <texPath>Things/Pawn/Humanlike/Apparel/BratCloak/EI_BratCloak</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <techLevel>Neolithic</techLevel>
+    <costStuffCount>45</costStuffCount>
+    <stuffCategories>
+      <li>Fabric</li>
+    </stuffCategories>
+    <tradeability>Sellable</tradeability>
+    <statBases>
+      <MaxHitPoints>100</MaxHitPoints>
+      <!-- Provisional balance values pending FS-008 in-game comparison:
+           must stay cheaper than duster/parka (80 stuff, ~8000+ work),
+           warmer than duster, weaker armor than both (parka 0.2, duster 0.3). -->
+      <WorkToMake>5000</WorkToMake>
+      <Mass>1.2</Mass>
+      <StuffEffectMultiplierArmor>0.1</StuffEffectMultiplierArmor>
+      <StuffEffectMultiplierInsulation_Cold>1.7</StuffEffectMultiplierInsulation_Cold>
+      <StuffEffectMultiplierInsulation_Heat>0.3</StuffEffectMultiplierInsulation_Heat>
+      <EquipDelay>2</EquipDelay>
+    </statBases>
+    <thingCategories>
+      <li>ApparelMisc</li>
+    </thingCategories>
+    <apparel>
+      <bodyPartGroups>
+        <li>Torso</li>
+        <li>Neck</li>
+        <li>Shoulders</li>
+      </bodyPartGroups>
+      <wornGraphicPath>Things/Pawn/Humanlike/Apparel/BratCloak/EI_BratCloak</wornGraphicPath>
+      <layers>
+        <li>Shell</li>
+      </layers>
+      <tags>
+        <li>Neolithic</li>
+      </tags>
+      <canBeDesiredForIdeo>false</canBeDesiredForIdeo>
+      <defaultOutfitTags>
+        <li>Worker</li>
+        <li>Soldier</li>
+      </defaultOutfitTags>
+    </apparel>
+    <recipeMaker>
+      <recipeUsers>
+        <li>ElectricTailoringBench</li>
+        <li>HandTailoringBench</li>
+        <li>CraftingSpot</li>
+      </recipeUsers>
+      <displayPriority>206</displayPriority>
+    </recipeMaker>
+    <colorGenerator Class="ColorGenerator_Single">
+      <color>(188,178,150)</color>
+    </colorGenerator>
+  </ThingDef>
+
+</Defs>
