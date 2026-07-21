@@ -1,7 +1,6 @@
 # FS-008 Feature Record: Brat Cloak
 
-**Status:** Done — maintainer accepted gameplay, art, and the full body-type
-render matrix<br>
+**Status:** Released in `v0.3.0` — all three lifecycle gates passed<br>
 **Milestone:** Version 0.5 — Living Culture<br>
 **Risk class:** Standard<br>
 **Owner:** Patrick Mee<br>

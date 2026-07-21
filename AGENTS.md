@@ -23,7 +23,8 @@ governance, identity, accepted decisions, milestone scope, or review gates.
 
 Milestones 0 and 0.5 are closed. Version 0.1, The First Holding, is released as
 `v0.1.0`; Version 0.2, The Hearth and Household, is released as `v0.2.0`.
-FS-001 through FS-007 are released compatibility contracts. Do not rename or
+Version 0.3, The Brat Cloak, is released as `v0.3.0`. FS-001 through FS-008 are
+released compatibility contracts. Do not rename or
 remove their public definitions, translation keys, or runtime asset paths without
 migration review. No later milestone authorizes gameplay implementation until its
 scope receives explicit maintainer approval in an appropriate feature record.
@@ -51,8 +52,8 @@ scope receives explicit maintainer approval in an appropriate feature record.
 - Never approve your own governance gate on behalf of a human reviewer.
 
 <!-- SPECKIT START -->
-FS-006 Linen Household and FS-007 Central Hearth shipped in `v0.2.0`. Read their
-feature records before changing either released XML-first slice. Do not preload
-the Version 0.1 research/specification set unless changing one of its released
-compatibility contracts.
+FS-006 Linen Household and FS-007 Central Hearth shipped in `v0.2.0`; FS-008
+Brat Cloak shipped in `v0.3.0`. Read their feature records before changing these
+released XML-first slices. Do not preload the Version 0.1 research/specification
+set unless changing one of its released compatibility contracts.
 <!-- SPECKIT END -->

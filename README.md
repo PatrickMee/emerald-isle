@@ -10,8 +10,9 @@ tone.
 ## Current Status
 
 **Milestones 0 and 0.5 are complete.** The stable foundation is released as
-`v0.0.0`, **The Studio Exists**. Version 0.3, **The Brat Cloak**, adds a
-practical wool-optimal outer garment to the complete Version 0.2 household.
+`v0.0.0`, **The Studio Exists**. The current release is `v0.3.0`, **The Brat
+Cloak**, which adds a practical wool-optimal outer garment to the complete
+Version 0.2 household.
 The project follows a risk-tiered
 three-outcome lifecycle (Approved, Done, Released) under Constitution 4.0.0 and
 ADR-0004. Routine work uses normal review, Standard gameplay uses one short

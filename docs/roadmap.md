@@ -81,7 +81,8 @@ premature abstractions.
 
 **Status:** In progress. Its first two Standard slices, FS-006 Linen Household and
 FS-007 Central Hearth, shipped as the `v0.2.0` preview on 2026-07-13. FS-008 Brat
-Cloak passed its feature Done gate on 2026-07-18 and is prepared for `v0.3.0`.
+Cloak passed its feature Done gate on 2026-07-18 and shipped in `v0.3.0` on
+2026-07-21.
 These releases do not authorize the remaining Version 0.5 candidate scope.
 
 **Vision:** The colony experiences a connected culture rather than isolated themed
