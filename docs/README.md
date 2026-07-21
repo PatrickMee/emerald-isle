@@ -52,8 +52,8 @@ amending the higher-authority one.
   Linen Household feature record; shipped in `v0.2.0`
 - `specifications/FS-007-central-hearth.md`: released Standard Version 0.5
   Central Hearth feature record; shipped in `v0.2.0`
-- `specifications/FS-008-brat-cloak.md`: Done Standard Version 0.5 Brat Cloak
-  feature record; targeted for `v0.3.0`
+- `specifications/FS-008-brat-cloak.md`: released Standard Version 0.5 Brat
+  Cloak feature record; shipped in `v0.3.0`
 - `architecture/AR-002-dry-stone-wall.md`: approved Dry-Stone Wall architecture and Ready assessment
 - `architecture/AR-001-oats.md`: approved Oats architecture
 - `plans/IP-001-oats.md`: approved Oats implementation plan
@@ -65,8 +65,8 @@ amending the higher-authority one.
 - `release/v0.2-release-checklist.md`: completed Version 0.2 Gate 3 release record
 - `release/v0.2.0.md`: Version 0.2 release notes, installation,
   compatibility, removal, known-issue, licensing, and rollback guidance
-- `release/v0.3-release-checklist.md`: Version 0.3 Gate 3 release record
-- `release/v0.3.0.md`: Version 0.3 release notes, installation,
+- `release/v0.3-release-checklist.md`: completed Version 0.3 Gate 3 release record
+- `release/v0.3.0.md`: released Version 0.3 notes, installation,
   compatibility, removal, known-issue, licensing, and rollback guidance
 - `release/steam-workshop-listing.md`: canonical Steam Workshop description,
   current-release change note, and public listing verification checks

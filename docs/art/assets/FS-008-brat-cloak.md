@@ -1,6 +1,6 @@
 # FS-008 Brat Cloak Asset Record
 
-**Status:** Accepted — maintainer in-game visual acceptance recorded
+**Status:** Released in `v0.3.0` — maintainer in-game visual acceptance recorded
 2026-07-17<br>
 **Feature:** [FS-008 — Brat Cloak](../../specifications/FS-008-brat-cloak.md)<br>
 **Human acceptance owner:** Patrick Mee

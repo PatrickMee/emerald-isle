@@ -104,11 +104,11 @@ The XML-only implementation passed maintainer gameplay and visual review on
 2026-07-13. FU-01 shipped in `v0.2.0` and is now a Released compatibility
 contract.
 
-## Version 0.5 Third-Slice Approval
+## Version 0.5 Third Slice
 
-AP-01 Brat Cloak is approved for implementation in the concise Standard feature
-record [FS-008 — Brat Cloak](../specifications/FS-008-brat-cloak.md), approved by
-Patrick Mee on 2026-07-14. The approval authorizes only the bounded XML-only,
-one-garment scope in FS-008: a Fabric-stuffable, wool-optimal shell-layer cloak
-at existing benches. New textiles, vanilla-def patches, animals, dyes, status
-variants, and social mechanics remain excluded.
+AP-01 Brat Cloak shipped in `v0.3.0` on 2026-07-21 and is now a Released
+compatibility contract. Its concise Standard feature record is
+[FS-008 — Brat Cloak](../specifications/FS-008-brat-cloak.md). The released scope
+is one XML-only, Fabric-stuffable, wool-optimal shell-layer cloak at existing
+benches. New textiles, vanilla-def patches, animals, dyes, status variants, and
+social mechanics remain excluded.
