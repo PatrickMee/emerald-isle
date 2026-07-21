@@ -1,16 +1,14 @@
 # Steam Workshop Listing
 
-**Status:** Version 0.3 candidate fields prepared; Steam upload and public
-verification pending<br>
+**Status:** Version 0.3 published and publicly verified<br>
 **Workshop item:** [Emerald Isle 3763433723](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)<br>
-**Current release:** `v0.2.0` - The Hearth and Household<br>
-**Prepared update:** `v0.3.0` - The Brat Cloak<br>
+**Current release:** `v0.3.0` - The Brat Cloak<br>
 **Publication owner:** Patrick Mee
 
-Steam listing text is managed separately from `About/About.xml`. The code blocks
-below are the exact prepared inputs for the Workshop description and Version 0.3
-change note. Apply them with the public package, then confirm
-the public Workshop page matches this record.
+Steam listing text is managed separately from `About/About.xml`. The description
+below is the approved Version 0.3 input. The published Steam change note is the
+concise `Added the Brat cloak`; the detailed release record remains in the
+Version 0.3 GitHub release notes.
 
 ## Description
 
@@ -41,7 +39,7 @@ Existing Version 0.2 saves can add the brat cloak without custom migration or se
 [url=https://github.com/PatrickMee/emerald-isle/releases/tag/v0.3.0]Version 0.3 release notes and manual download[/url]
 ```
 
-## Version 0.3 Change Note
+## Detailed Version 0.3 Change Note Draft
 
 ```text
 Version 0.3.0 - The Brat Cloak
@@ -66,17 +64,17 @@ https://github.com/PatrickMee/emerald-isle/releases/tag/v0.3.0
 
 ## Verification
 
-After applying both fields in Steam, verify through the public Workshop page or
-Steam published-file API that:
+The signed-out public Workshop page and changelog were inspected on 2026-07-21.
+Verification confirmed that:
 
 - the description contains `Version 0.3 - The Brat Cloak`;
 - the description names the brat cloak and its wool-optimal cold-weather niche;
-- the Version 0.3 change note is visible;
+- the latest change note reads `Added the Brat cloak`;
 - the preview reads `VERSION 0.3` and `THE BRAT CLOAK` and depicts the practical
   dark brat over the linen underlayer in the established household scene;
 - the item still resolves to Workshop ID `3763433723`.
 
 The replacement `About/Preview.png` is recorded in the
 [Version 0.3 preview asset record](../art/assets/workshop-preview-v0.3.md). It
-remains a candidate until maintainer visual acceptance and the public Workshop
-page both confirm the replacement.
+was accepted by Patrick Mee and publicly verified with Workshop item
+`3763433723`.

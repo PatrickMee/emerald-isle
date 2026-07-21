@@ -1,7 +1,7 @@
 # Version 0.3 Steam Workshop Preview Asset Record
 
-**Status:** Candidate — automated export checks pass; maintainer visual
-acceptance and public Steam verification pending<br>
+**Status:** Accepted and published — maintainer acceptance and public Steam
+verification complete<br>
 **Release:** v0.3.0 - The Brat Cloak<br>
 **Production date:** 2026-07-18<br>
 **Human acceptance owner:** Patrick Mee
@@ -54,5 +54,7 @@ copied game textures were used. The preview is governed by
 ## Review Disposition
 
 Automated inspection confirms dimensions, indexed PNG format, exact typography,
-thumbnail legibility, file-size ceiling, and SHA-256. Maintainer visual
-acceptance and public Steam verification remain open.
+thumbnail legibility, file-size ceiling, and SHA-256. Patrick Mee accepted and
+published the preview with Version 0.3. Codex independently inspected the
+signed-out public Workshop page on 2026-07-21 and confirmed that item
+`3763433723` publicly presents Version 0.3 and the replacement preview.
