@@ -389,3 +389,4 @@ meaning. Record the new version and update dependent templates in the same chang
 |---|---|---|---|
 | 1.0.0 | 2026-07-04 | Adopted the initial Design Bible. | Project maintainers |
 | 1.1.0 | 2026-07-13 | Added the project-wide Stone Construction Language. | [ADR 0005](../adr/0005-shared-stone-construction-language.md) |
+| 1.2.0 | 2026-07-14 | Added Cultural Continuity Through Adaptation. | [ADR 0006](../adr/0006-cultural-continuity-through-adaptation.md) |

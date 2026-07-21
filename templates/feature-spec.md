@@ -23,7 +23,10 @@ strict upgrade]
 ## Basis
 
 [Only the historical, cultural, gameplay, or technical evidence that changes the
-design. Cite sources where claims matter. Flag sensitive or uncertain material.]
+design. Cite sources where claims matter. Flag sensitive or uncertain material.
+For progression-facing work, name the documented cultural relationship being
+preserved or transformed. Do not create a separate artifact unless its risk
+requires one.]
 
 ## Implementation Boundary
 

@@ -2,6 +2,7 @@
 
 **Status:** Stable product vision<br>
 **Approved by/date:** Patrick Mee, 2026-07-05<br>
+**Last amended:** Patrick Mee, 2026-07-14 via [ADR 0006](../adr/0006-cultural-continuity-through-adaptation.md)<br>
 **Scope:** Long-term product philosophy, not a roadmap or feature list<br>
 **Owner:** Project maintainers<br>
 **Created:** 2026-07-05<br>
