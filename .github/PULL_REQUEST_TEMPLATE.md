@@ -1,7 +1,9 @@
 # What changed and why
 
 [Player value or maintenance purpose. Link the approved issue/request/spec when
-gameplay scope changed.]
+gameplay scope changed. If this PR is the feature record for progression-facing
+gameplay, name the documented cultural relationship being preserved or
+transformed.]
 
 ## Verification
 

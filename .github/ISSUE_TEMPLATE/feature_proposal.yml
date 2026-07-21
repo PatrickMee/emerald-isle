@@ -19,7 +19,11 @@ body:
     id: inspiration
     attributes:
       label: Historical or cultural basis, if it affects the design
-      description: Cite only the evidence needed for the proposed decision; leave blank when not applicable.
+      description: >-
+        Cite only the evidence needed for the proposed decision; leave blank when
+        not applicable. For progression-facing work, name the documented cultural
+        relationship being preserved or transformed. Do not create a separate
+        artifact unless its risk requires one.
   - type: textarea
     id: vanilla
     attributes:
