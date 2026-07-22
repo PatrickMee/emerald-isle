@@ -8,15 +8,16 @@ Constitution and Design Bible.
 | Change | Required proposal | Required approval | Record |
 |---|---|---|---|
 | Routine maintenance within accepted behavior | Commit or PR | Maintainer | Commit or PR |
-| Standard gameplay approval | Short issue, request, PR, or spec | Maintainer | Existing feature record |
+| Standard gameplay approval | One short issue, direct request, PR, or justified spec | Maintainer | Chosen feature record |
 | High-Risk gameplay approval | Concise spec plus risk-triggered records | Maintainer and affected domain | Spec and applicable ADR/review |
-| Feature done | PR or feature record with affected-path evidence | Maintainer | Existing PR or feature record |
+| Feature done | Implementation PR with affected-path evidence | Maintainer | Implementation PR |
 | Architecture decision | Inline review or ADR when durable | Technical maintainer | Feature record or ADR |
 | Design Bible amendment | Impact proposal | Founding Maintainer plus affected domain review | Bible version/history |
 | Constitution amendment | Governance proposal | Founding Maintainer | Constitution version/report |
 | Roadmap change | Short outcome/scope rationale | Product authority | Roadmap edit or issue |
 | Milestone closure | Delivered/deferred scope and open-risk review | Founding Maintainer | Roadmap/release record |
-| Release (Gate 3) | Release checklist and exact artifact evidence | Release authority | Tag and release record |
+| Release candidate | Release PR and exact artifact evidence | Release authority | Release PR |
+| Published release | Approved candidate is published and smoke-verified | Release authority | Immutable tag and GitHub release |
 
 No AI agent holds approval authority. Authors may prepare evidence but disclose
 self-review. Sensitive cultural or Irish-language content is registered as
@@ -33,7 +34,19 @@ may request earlier review.
 4. One explicit maintainer approval authorizes implementation.
 
 A direct maintainer request may serve as the Standard feature record when it
-contains the required decisions. A catalog or roadmap bullet alone is insufficient.
+contains the required decisions. The implementation PR links or restates it and
+owns Done evidence. A catalog or roadmap bullet alone is insufficient.
+
+## Status and Evidence Ownership
+
+The roadmap owns only milestone state. The catalog owns only unpromoted
+candidates. One chosen feature record owns Approved scope, the implementation PR
+owns Done evidence, a release PR owns publication approval, and the immutable tag
+plus GitHub release own Released state.
+
+Indexes, AGENTS, feature catalogs, art records, and non-owner specifications may
+link to the owner but do not mirror its state. A gate change therefore updates one
+record, not every document that mentions the work.
 
 ## ADR Acceptance
 
@@ -50,17 +63,20 @@ needs discussion. Moving an idea is easier than broadening an active milestone.
 
 ## Milestone Closure
 
-Closure records what shipped, what was deferred, any unresolved blocker or public
-compatibility risk, the release/baseline evidence, and maintainer confirmation. A
-separate closure audit is not required. Exceptions state why closure remains honest
-and where the remaining work lives.
+Closure is satisfied by the roadmap's milestone state plus the linked immutable
+release history. Record only material deferrals, unresolved public risks, or an
+exception that keeps closure honest; a separate closure audit or status-propagation
+PR is not required.
 
 ## Tags and Releases
 
 Annotated tags use `vMAJOR.MINOR.PATCH` and point to a reviewed commit. The tag
 message names the milestone/release. Published releases attach or identify the exact
 verified artifact, changelog, support matrix, known issues, and rollback target.
-Tags are never moved or reused; corrections receive a new version.
+Tags are never moved or reused; corrections receive a new version. Post-publication
+verification belongs in the GitHub release body or a comment on the merged release
+PR. Open a follow-up repository PR only when a durable fact is wrong or publication
+differed from the approved candidate.
 
 ## Foundation Authorities
 

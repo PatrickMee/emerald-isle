@@ -53,9 +53,8 @@ identity drift through undocumented exceptions.
 
 ## Version 0.1: The First Holding
 
-**Status:** Released as `v0.1.0` on 2026-07-12. FS-001 Oats, FS-002 Dry-Stone
-Wall, FS-003 Hand Quern, FS-004 Milled Oats, and FS-005 Oat Foods passed all
-three lifecycle gates.
+**Status:** Closed. See the immutable `v0.1.0` GitHub release for the published
+baseline and its included feature records.
 
 **Vision:** Prove the entire production pipeline with the smallest coherent,
 vanilla-friendly Emerald Isle slice.  
@@ -79,11 +78,9 @@ premature abstractions.
 
 ## Version 0.5: Living Culture
 
-**Status:** In progress. Its first two Standard slices, FS-006 Linen Household and
-FS-007 Central Hearth, shipped as the `v0.2.0` preview on 2026-07-13. FS-008 Brat
-Cloak passed its feature Done gate on 2026-07-18 and shipped in `v0.3.0` on
-2026-07-21.
-These releases do not authorize the remaining Version 0.5 candidate scope.
+**Status:** Active. Published slices are recorded by immutable GitHub releases and
+their linked feature records. No remaining candidate is authorized until the
+maintainer approves one feature record.
 
 **Vision:** The colony experiences a connected culture rather than isolated themed
 items, and that culture begins to persist beyond the earliest settlement phase.

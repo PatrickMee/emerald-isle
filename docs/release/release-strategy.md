@@ -4,22 +4,36 @@
 
 - **Development**: unversioned local builds, never presented as supported.
 - **Preview**: explicitly opt-in builds for focused feedback; save risk stated.
-- **Stable**: passed release checklist and supported compatibility matrix.
+- **Stable**: passed the release checklist and all applicable compatibility checks.
 
 ## Release Gate
 
-A release requires frozen scope, approved feature records, clean package build, static and
-automated checks, clean in-game load, targeted save/load and compatibility tests,
-resolved blocker/critical defects, localization and attribution checks, changelog,
-known issues, installation/upgrade notes, and rollback artifacts.
+A release PR freezes a coherent set of Done features, identifies the exact commit
+and artifact digest, and obtains approval to publish. Prefer batching related
+features so the player update and publication effort are coherent. A one-feature
+release is valid when feedback, urgency, or product coherence justifies it; state
+the reason in the release PR.
+
+The candidate requires a clean package build, relevant static and automated
+checks, clean in-game load, affected-path smoke tests, resolved blocker/critical
+defects, localization and attribution checks, changelog, known issues,
+installation/upgrade notes, and rollback preparation. Save/load, DLC/mod matrices,
+performance, and cultural review are required only when the included changes or
+supported configurations trigger them.
 
 Test the exact archive to be published. Verify package ID, metadata, supported
 versions, dependencies, load order, file casing, absence of source/editor files,
 and behavior when optional integrations are missing.
 
-Use `templates/release-checklist.md` for the signed release record. An annotated,
-immutable Git tag may be created only after the checklist identifies the exact
-reviewed commit and artifact.
+Use `templates/release-checklist.md` in the release PR. An annotated, immutable Git
+tag may be created only after that PR approves the exact reviewed commit and
+artifact.
+
+After merge, publish the same artifact through GitHub and the supported
+distribution channel. Record download and smoke verification in the GitHub release
+body or a comment on the merged release PR. Do not create a second bookkeeping PR
+unless publication exposed a wrong durable fact or differed from the approved
+candidate.
 
 ## Versioning
 

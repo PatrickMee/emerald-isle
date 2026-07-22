@@ -8,11 +8,14 @@ Read the [constitution](.specify/memory/constitution.md),
 
 1. Classify the change using the
    [feature lifecycle](docs/workflow/feature-lifecycle.md).
-2. Routine maintenance needs no separate feature record. Standard gameplay uses a
-   short issue, request, PR, or specification covering player value, scope,
+2. Routine maintenance needs no separate feature record. Standard gameplay normally
+   chooses one short issue, direct request, or PR covering player value, scope,
    tradeoff, implementation boundary, compatibility, and acceptance checks.
+   Use a short repository specification only when durable detail cannot fit clearly
+   in those records.
 3. Receive one explicit maintainer approval before gameplay implementation.
-   High-Risk work adds only the records required by its concrete risks.
+   High-Risk work uses a repository specification and adds only the records
+   required by its concrete risks.
 
 Ideas are welcome, but implementation without an approved feature record may be
 closed or redirected.
@@ -26,12 +29,16 @@ closed or redirected.
 - Preserve public definition names and save compatibility unless migration is
   explicitly approved.
 - Update affected documentation in the same change; do not create redundant summaries.
+- Do not propagate Approved, Done, or Released status into maps, catalogs, agent
+  guides, art records, or specifications that do not own that state.
 
 ## Pull Requests
 
-Describe what changed and why, the authoritative issue/request/spec when one exists,
-the affected-path and in-game results, screenshots for visual changes, and any real
-compatibility or rollback concern. Do not fill sections that do not apply.
+Link or restate the chosen approval record. The implementation PR is the sole home
+for affected-path evidence and the Done decision; include screenshots for visual
+changes and only real compatibility or rollback concerns. Do not fill sections
+that do not apply or create a separate evidence file unless the result cannot fit
+clearly in the PR.
 
 ## Conduct and Cultural Care
 

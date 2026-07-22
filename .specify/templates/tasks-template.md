@@ -3,7 +3,7 @@
 Create a standalone task list only when sequencing or coordination adds value.
 Standard one-session work normally uses the approved feature record and PR.
 
-**Input:** [approved issue/request/PR/spec and risk-triggered records]
+**Input:** [chosen feature record and risk-triggered records]
 
 Use `[ID] [P?] action with exact path`. `[P]` means different files and no
 unresolved dependency.
@@ -25,11 +25,11 @@ exercise its affected in-game path, and fix defects before continuing.
 ## Completion
 
 - [ ] T005 Obtain human gameplay/visual review
-- [ ] T006 Record results once in the issue, PR, or feature record
+- [ ] T006 Record results and the Done decision in the implementation PR
 - [ ] T007 Update only affected public-contract, provenance, decision, risk, or
       release memory, then merge
 
-Release packaging and version-level smoke checks belong to the release checklist.
+Release packaging and version-level smoke checks belong to the release PR.
 
 ## Dependencies and Checkpoints
 

@@ -6,7 +6,7 @@
 2. Constitution and Design Bible
 3. Active milestone in `docs/roadmap.md`
 4. `docs/workflow/feature-lifecycle.md`
-5. The active issue, request, PR, or spec and only the discipline guides/ADRs
+5. The chosen feature record and only the discipline guides/ADRs
    relevant to the change
 
 Do not read the entire historical Version 0.1 documentation set before ordinary
@@ -15,9 +15,10 @@ current question.
 
 ## Current Repository State
 
-Version 0.2 is released. The public defs, translation keys, texture paths, package
-ID, and Workshop ID shipped through `v0.2.0` are compatibility contracts. Later
-gameplay requires active-milestone scope and explicit maintainer approval.
+The roadmap owns the active milestone and the highest immutable GitHub release
+owns the published baseline. Public defs, translation keys, texture paths,
+package ID, and Workshop ID in published builds are compatibility contracts.
+Later gameplay requires active-milestone scope and explicit maintainer approval.
 
 ## Work Setup
 
@@ -37,7 +38,7 @@ affected path in the real game. Add save, DLC/mod, performance, migration, or
 cultural checks only when the change creates that risk.
 
 AI agents follow the same scope and may not grant human approval. Record results
-once in the issue, PR, or feature record.
+and the Done decision once in the implementation PR.
 
 ## First Contribution
 

@@ -22,7 +22,10 @@ feature domains and never include editor backups. Do not hand-edit generated exp
 
 Record asset ID, feature, owner, source path, export path, dimensions/states,
 references, license/provenance, export tool/settings, in-game screenshots, reviewer,
-and status. Replacement assets retain compatibility paths unless migration is approved.
+and visual acceptance. The asset record owns provenance, export, and visual-review
+facts; it does not own feature Done or Released state. Do not update it solely
+because a lifecycle gate changed. Replacement assets retain compatibility paths
+unless migration is approved.
 
 AI-generated and third-party material follows the Design Bible's provenance and
 human-direction requirements. Unclear rights block inclusion.

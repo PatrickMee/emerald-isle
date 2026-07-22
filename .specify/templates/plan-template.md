@@ -4,8 +4,8 @@
 
 > Create this standalone plan only for High-Risk work where sequencing,
 > coordination, compatibility, migration, or technical risk makes it materially
-> useful. Standard work keeps implementation detail in its issue, request, PR, or
-> feature record.
+> useful. Standard work keeps implementation detail in its chosen issue, direct
+> request, or PR.
 
 ## Summary
 [Player requirement and smallest technical/art approach.]
