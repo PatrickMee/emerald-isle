@@ -3,7 +3,7 @@
 > Use a standalone brief only when historical, cultural, gameplay, or technical
 > uncertainty can materially change the feature. Match depth to uncertainty and
 > sensitivity; Standard features normally cite accepted evidence directly in their
-> issue, request, PR, or feature record.
+> chosen issue, direct request, or PR.
 
 **Feature:** [link]  
 **Researcher/reviewer:** [names]  

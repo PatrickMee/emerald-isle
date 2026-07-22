@@ -1,20 +1,26 @@
-# What changed and why
+# Scope and approval
 
-[Player value or maintenance purpose. Link the approved issue/request/spec when
-gameplay scope changed. If this PR is the feature record for progression-facing
-gameplay, name the documented cultural relationship being preserved or
-transformed.]
+[Link the chosen feature record, or restate a direct maintainer request. For
+Routine work, state the maintenance purpose.]
 
-## Verification
+## What changed
 
-- [ ] Relevant static/build checks passed
-- [ ] The affected in-game path was exercised, or no gameplay changed
-- [ ] No new unresolved log error or recurring warning was introduced
-- [ ] Human gameplay/visual review completed where applicable
-- [ ] Public IDs, saves, DLC/mod behavior, provenance, and documentation were
-      updated only where affected
+[Describe the player-visible or maintenance result and any explicit exclusions.]
 
-**Evidence:** [concise results, screenshots, or not-applicable reason]
+## Verification and Done decision
+
+[Record relevant static/build results, the complete affected in-game path, log
+review, human gameplay/visual review, and only risk-triggered save, DLC/mod,
+performance, cultural, or migration checks. Link large evidence only when needed.]
+
+**Maintainer decision:** Done | Not Done | Not applicable to Routine work<br>
+**Reviewer/date:** [name, YYYY-MM-DD]
+
+## Durable records
+
+[List contracts, ADRs, provenance, user guidance, or other durable memory changed.
+Do not update maps, catalogs, AGENTS, art records, or specifications merely to
+mirror lifecycle status. Write "None" when there are none.]
 
 ## Risk and rollback
 

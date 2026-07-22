@@ -4,8 +4,9 @@ This is an optional expansion aid for High-Risk work, not a mandatory form for
 Routine or Standard changes. The canonical workflow is
 [`feature-lifecycle.md`](feature-lifecycle.md).
 
-Standard gameplay is ready when one recorded issue, request, PR, or specification
-answers four questions and receives explicit maintainer approval:
+Standard gameplay is ready when one chosen issue, direct request, PR, or
+risk-justified short specification answers four questions and receives explicit
+maintainer approval:
 
 - What player value and active-milestone outcome does this create?
 - What is in scope, out of scope, and the vanilla comparison/tradeoff?
@@ -23,6 +24,5 @@ For High-Risk work, additionally resolve only applicable blockers:
 Standalone research, ADR, architecture, or implementation-plan documents are
 created only when they materially resolve one of those blockers.
 
-**Decision:** Approved | Not Approved<br>
-**Approved by/date:** [maintainer, YYYY-MM-DD]<br>
-**Conditions:** [only material conditions]
+Record the Approved/Not Approved decision, maintainer, date, and any material
+conditions in the chosen feature record—not in a separate Ready document.

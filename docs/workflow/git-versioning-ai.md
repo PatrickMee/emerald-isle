@@ -29,10 +29,14 @@ game APIs, current source, and in-game behavior.
 
 Every AI task must identify the active authority and approved scope at the depth
 needed for the change. Routine work may rely on the direct request and affected
-files. Standard gameplay uses its short issue, request, PR, or spec. High-Risk
-work includes its applicable architecture, migration, compatibility, or research
-records. Do not create a standalone brief, review, plan, checklist, or process
-summary merely because a tool offers one.
+files. Standard gameplay normally chooses one short issue, direct request, or PR;
+a short specification is an exception when durable detail cannot fit clearly
+there. The implementation PR owns verification and the Done decision. High-Risk work uses a
+repository specification plus its applicable architecture, migration,
+compatibility, or research records. Do not create a standalone brief, review,
+plan, checklist, evidence file, or process summary merely because a tool offers
+one. Do not propagate lifecycle state into maps, catalogs, AGENTS, art records, or
+specifications that do not own it.
 Agents must not invent citations, silently broaden scope, introduce dependencies,
 or claim success from static inspection alone.
 

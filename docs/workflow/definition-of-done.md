@@ -21,8 +21,9 @@ Add only the checks triggered by actual risk:
 - localization/cultural review for affected player-facing material;
 - migration and rollback checks for compatibility changes.
 
-Record results once in the PR, issue, or feature record. A separate evidence file
-is reserved for cross-feature or release-level matrices.
+Record results and maintainer acceptance once in the implementation PR. A
+separate evidence file is reserved for a High-Risk result that cannot fit clearly
+in the PR or a genuinely cross-feature matrix.
 
-**Decision:** Done | Not Done<br>
-**Approved by/date:** [maintainer, YYYY-MM-DD]
+Record the Done/Not Done decision, maintainer, and date in the implementation PR,
+not in a separate Done document.

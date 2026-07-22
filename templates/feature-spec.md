@@ -1,13 +1,14 @@
-# Feature Record: [Name]
+# Risk-Justified Feature Record: [Name]
 
-This short record may be copied into a GitHub issue, pull request, or repository
-file. Standard features should stay short. Expand only the sections whose risks
-need durable detail.
+Use this repository file for High-Risk gameplay or, exceptionally, Standard work
+whose durable detail cannot fit clearly in one issue, direct maintainer request,
+or PR. Expand only the sections whose risks need detail; do not create empty
+companion documents.
 
 **ID/milestone:** [ID and active milestone]<br>
 **Owner:** [name]<br>
 **Risk class:** Standard | High-Risk<br>
-**Status:** Proposed | Approved | Implementing | Done | Released
+**Document status:** Draft | Accepted | Superseded
 
 ## Decision
 
@@ -25,16 +26,15 @@ strict upgrade]
 [Only the historical, cultural, gameplay, or technical evidence that changes the
 design. Cite sources where claims matter. Flag sensitive or uncertain material.
 For progression-facing work, name the documented cultural relationship being
-preserved or transformed. Do not create a separate artifact unless its risk
-requires one.]
+preserved or transformed.]
 
-## Implementation Boundary
+## Implementation Boundary and Risks
 
 - XML/C#/Harmony: [choice and why]
-- Public IDs/save impact: [contracts or none]
+- Public IDs/save/migration impact: [contracts or none]
 - Required/optional DLC and fallback: [only applicable behavior]
 - Art/localization/provenance: [assets and player-facing text]
-- Dependencies/compatibility: [credible interactions only]
+- Dependencies/compatibility/performance: [credible risks only]
 
 ## Acceptance Checks
 
@@ -48,16 +48,8 @@ requires one.]
 **Maintainer/date:** [name, YYYY-MM-DD]<br>
 **Conditions:** [material conditions only]
 
-## Done Evidence
+## Risk-Triggered Records
 
-[Static/build result, complete affected in-game path, log review, human review,
-and only the save/DLC/performance/cultural checks triggered by actual risk. A PR
-link or concise maintainer confirmation is sufficient.]
-
-**Decision:** Done | Not Done<br>
-**Maintainer/date:** [name, YYYY-MM-DD]
-
-## High-Risk Additions — Only When Triggered
-
-[Link targeted research, ADR, architecture, implementation, migration, cultural,
-performance, or compatibility records. Do not create empty companion documents.]
+[Link only targeted research, ADR, architecture, implementation, migration,
+cultural, performance, compatibility, or verification records. Done evidence and
+Released state belong to the implementation PR and immutable release, not here.]

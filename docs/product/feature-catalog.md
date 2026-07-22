@@ -62,53 +62,26 @@ record, and research only where uncertainty could change the decision.
 | QL-01 | Quality of Life | Emerald Isle build/category organization | 0.1 | M | N/A | Y | N | N | L | L | XS | H |
 | QL-02 | Quality of Life | Compatibility/config diagnostic report | 0.5 | H | N/A | N | Y | M | L | L | M | M |
 
-## Promotion States
+## Promotion and Ownership
 
-`Candidate -> Triaged -> Approved -> Active -> Done -> Released -> Retired`
+This catalog owns ideas only while they remain candidates. Triage may change a
+candidate's estimate, priority, or wording here. Once the maintainer promotes an
+idea, exactly one issue, direct request, PR, or High-Risk specification owns its
+Approved and Done lifecycle. Immutable Git tags and GitHub releases own Released
+state. Do not copy those states back into this catalog.
 
-Only one state is current. State changes are recorded in this catalog or an issue
-linked from it. Rejected and retired entries remain visible with rationale.
+The links below are navigation for previously promoted candidates, not a status
+dashboard:
 
-## Version 0.1 Approved Scope
+| Candidate | Feature record |
+|---|---|
+| PL-01 | [FS-001 — Oats](../specifications/FS-001-oats.md) |
+| BL-01 | [FS-002 — Dry-Stone Wall](../specifications/FS-002-dry-stone-wall.md) |
+| PR-01 | [FS-003 — Hand Quern](../specifications/FS-003-hand-quern.md), [FS-004 — Milled Oats](../specifications/FS-004-milled-oats.md) |
+| FO-01 | [FS-005 — Oat Foods](../specifications/FS-005-oat-foods.md) |
+| PL-02, AP-02 | [FS-006 — Linen Household](../specifications/FS-006-linen-household.md) |
+| FU-01 | [FS-007 — Central Hearth](../specifications/FS-007-central-hearth.md) |
+| AP-01 | [FS-008 — Brat Cloak](../specifications/FS-008-brat-cloak.md) |
 
-The authoritative Version 0.1 feature set and constraints are maintained in
-[`version-0.1-approved-scope.md`](version-0.1-approved-scope.md). Catalog version
-estimates remain discovery metadata and do not override that approval record.
-
-**Released state:** Version 0.1 shipped on 2026-07-12. PL-01 Oats, BL-01
-Dry-Stone Wall, PR-01 Hand Quern and milling workflow, and FO-01 Oat Foods passed
-Approved, Done, and Released. Their public identifiers and runtime paths are
-compatibility contracts. Other entries carrying a 0.1 discovery estimate were not
-part of the canonical approved scope and remain candidates unless separately
-triaged.
-
-## Version 0.5 First Slice
-
-PL-02 Flax/Linen and AP-02 Linen Tunic are combined in the concise Standard
-feature record [FS-006 — Linen Household](../specifications/FS-006-linen-household.md).
-Patrick Mee approved the Standard slice on 2026-07-12, authorizing its XML-only
-implementation. The slice was implemented and passed maintainer playtesting on
-2026-07-13; the reopened flax art pass was also approved on 2026-07-13. PL-02 and
-AP-02 shipped in `v0.2.0` and are now Released compatibility contracts. The
-feature research rejects the earlier flax-to-brat combination because the brat is
-a woollen cloak; flax oil and the brat remain outside the slice.
-
-## Version 0.5 Next-Slice Approval
-
-FU-01 Central Hearth is approved for implementation in the concise Standard
-feature record [FS-007 — Central Hearth](../specifications/FS-007-central-hearth.md).
-The approval authorizes only the bounded XML-first, one-building scope in FS-007;
-C#, Harmony, custom gathering behavior, Ideology integration, new fuel resources,
-and broader furniture or architecture sets remain excluded.
-The XML-only implementation passed maintainer gameplay and visual review on
-2026-07-13. FU-01 shipped in `v0.2.0` and is now a Released compatibility
-contract.
-
-## Version 0.5 Third Slice
-
-AP-01 Brat Cloak shipped in `v0.3.0` on 2026-07-21 and is now a Released
-compatibility contract. Its concise Standard feature record is
-[FS-008 — Brat Cloak](../specifications/FS-008-brat-cloak.md). The released scope
-is one XML-only, Fabric-stuffable, wool-optimal shell-layer cloak at existing
-benches. New textiles, vanilla-def patches, animals, dyes, status variants, and
-social mechanics remain excluded.
+Catalog version values are discovery estimates. They neither approve work nor
+override the roadmap, a feature record, or a published release.

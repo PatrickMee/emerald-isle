@@ -1,15 +1,15 @@
-# Feature Record: [FEATURE NAME]
+# Risk-Justified Feature Record: [FEATURE NAME]
 
 **Feature Branch:** `[###-feature-name]`<br>
 **Created:** [DATE]<br>
-**Status:** Proposed | Approved | Implementing | Done | Released<br>
+**Document status:** Draft | Accepted | Superseded<br>
 **Milestone:** [ACTIVE MILESTONE]<br>
 **Risk class:** Standard | High-Risk<br>
 **Input:** "$ARGUMENTS"
 
-> Standard features should stay short and may live directly in an issue or PR.
-> Use this repository file only when durable detail adds value. Expand from
-> `templates/feature-spec.md` only for concrete High-Risk concerns.
+> Use this repository specification for High-Risk gameplay or, exceptionally,
+> Standard work whose durable detail cannot fit clearly in one issue, direct
+> maintainer request, or PR. Add supporting artifacts only for concrete risks.
 
 ## Decision
 
@@ -23,17 +23,17 @@
 
 ## Basis
 
-[Only research/cultural evidence that can change the design; otherwise not
-applicable. For progression-facing work, name the documented cultural relationship
-being preserved or transformed. Do not create a separate artifact unless its risk
-requires one.]
+[Only research or cultural evidence that can change the design. For
+progression-facing work, name the documented cultural relationship being preserved
+or transformed.]
 
-## Implementation Boundary
+## Implementation Boundary and Risks
 
 - XML/C#/Harmony: [choice and why]
-- Public IDs/save impact: [contracts or none]
+- Public IDs/save/migration impact: [contracts or none]
 - DLC/mod behavior: [only applicable branches]
 - Art/localization/provenance: [only affected assets/text]
+- Dependencies/compatibility/performance: [credible risks only]
 
 ## Acceptance Checks
 
@@ -47,15 +47,8 @@ requires one.]
 **Maintainer/date:** [name, YYYY-MM-DD]<br>
 **Conditions:** [material conditions only]
 
-## Done Evidence
+## Risk-Triggered Records
 
-[Static/build result, affected in-game path, log review, human review, and only
-risk-triggered save/DLC/performance/cultural checks. A PR link is sufficient.]
-
-**Decision:** Done | Not Done<br>
-**Maintainer/date:** [name, YYYY-MM-DD]
-
-## High-Risk Additions
-
-[Only targeted research, ADR, architecture, implementation, migration,
-compatibility, cultural, performance, or verification links.]
+[Link only targeted research, ADR, architecture, implementation, migration,
+compatibility, cultural, performance, or verification records. Done evidence and
+Released state belong to the implementation PR and immutable release, not here.]

@@ -9,19 +9,19 @@ tone.
 
 ## Current Status
 
-**Milestones 0 and 0.5 are complete.** The stable foundation is released as
-`v0.0.0`, **The Studio Exists**. The current release is `v0.3.0`, **The Brat
-Cloak**, which adds a practical wool-optimal outer garment to the complete
-Version 0.2 household.
-The project follows a risk-tiered
-three-outcome lifecycle (Approved, Done, Released) under Constitution 4.0.0 and
-ADR-0004. Routine work uses normal review, Standard gameplay uses one short
-feature record, and only High-Risk work adds formal research, architecture,
-planning, or verification records.
+The [roadmap](docs/roadmap.md) owns the active milestone. The current published
+baseline is the highest immutable entry in
+[GitHub releases](https://github.com/PatrickMee/emerald-isle/releases). Stable
+builds are also distributed through the
+[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723).
 
-Install the current release from the
-[Steam Workshop](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)
-or download the immutable package from the
+The project follows a risk-tiered three-outcome lifecycle (Approved, Done,
+Released) under Constitution 4.0.0 and ADR-0004. Routine work uses normal review,
+Standard gameplay uses one short feature record plus its implementation PR, and
+only High-Risk work adds formal research, architecture, planning, or verification
+records.
+
+Install from the Steam Workshop or download the immutable package from
 [GitHub releases](https://github.com/PatrickMee/emerald-isle/releases).
 
 Start with:

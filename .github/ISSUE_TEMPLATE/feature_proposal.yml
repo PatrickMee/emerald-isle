@@ -1,46 +1,30 @@
 name: Feature proposal
-description: Propose a small, milestone-aligned player feature
+description: Approve one small, milestone-aligned player outcome
 title: "[Proposal]: "
 labels: [proposal, triage]
 body:
-  - type: input
-    id: milestone
-    attributes:
-      label: Target milestone
-    validations:
-      required: true
   - type: textarea
-    id: player_value
+    id: outcome
     attributes:
-      label: Player decision or story created
-    validations:
-      required: true
-  - type: textarea
-    id: inspiration
-    attributes:
-      label: Historical or cultural basis, if it affects the design
-      description: >-
-        Cite only the evidence needed for the proposed decision; leave blank when
-        not applicable. For progression-facing work, name the documented cultural
-        relationship being preserved or transformed. Do not create a separate
-        artifact unless its risk requires one.
-  - type: textarea
-    id: vanilla
-    attributes:
-      label: Vanilla comparison and meaningful tradeoff
+      label: Player outcome and active milestone
+      description: What decision or story does this create, and why does it belong now?
     validations:
       required: true
   - type: textarea
     id: scope
     attributes:
-      label: Smallest coherent scope and explicit exclusions
+      label: Smallest scope, exclusions, and tradeoff
+      description: Include the closest vanilla alternative and why this is not a strict upgrade.
     validations:
       required: true
   - type: textarea
     id: boundary
     attributes:
-      label: Implementation boundary and compatibility
-      description: XML/C#, public IDs, saves, DLC/mod behavior, assets, and only the risks that apply.
+      label: Implementation boundary and real risks
+      description: >-
+        Cover XML/C#, public IDs, saves, DLC/mod behavior, assets, and historical or
+        cultural basis only where they affect the decision. Name explicit N/A items
+        only when useful.
     validations:
       required: true
   - type: textarea
