@@ -25,3 +25,4 @@ LocalCopies/
 
 # Local-only agent data
 .agents/private/
+.aider*
