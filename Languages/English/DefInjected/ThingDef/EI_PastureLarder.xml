@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_KerryCattle.label>Kerry cattle</EI_KerryCattle.label>
+  <EI_KerryCattle.description>A small, hardy dairy breed adapted to making the most of limited pasture. Compared with standard cows, Kerry cattle eat less and withstand colder weather, but each cow gives less milk and the smaller body yields less meat. Matching a standard cow's output takes more animals and more milking work.</EI_KerryCattle.description>
+
+  <EI_FarmhouseCheese.label>farmhouse cheese</EI_FarmhouseCheese.label>
+  <EI_FarmhouseCheese.description>A firm wheel made from ordinary milk. Turning fresh milk into cheese costs cooking work and heat and loses some nutrition, but the result keeps much longer without refrigeration.</EI_FarmhouseCheese.description>
+
+</LanguageData>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="OrganicProductBase">
+    <defName>EI_FarmhouseCheese</defName>
+    <label>farmhouse cheese</label>
+    <description>A firm wheel made from ordinary milk. Turning fresh milk into cheese costs cooking work and heat and loses some nutrition, but the result keeps much longer without refrigeration.</description>
+    <graphicData>
+      <texPath>Things/Item/Food/EI_FarmhouseCheese</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <stackLimit>10</stackLimit>
+    <tradeability>Buyable</tradeability>
+    <socialPropernessMatters>true</socialPropernessMatters>
+    <statBases>
+      <MarketValue>20</MarketValue>
+      <Mass>0.40</Mass>
+      <MaxHitPoints>60</MaxHitPoints>
+      <Flammability>0.4</Flammability>
+      <DeteriorationRate>3</DeteriorationRate>
+      <WorkToMake>600</WorkToMake>
+      <Nutrition>0.50</Nutrition>
+      <FoodPoisonChanceFixedHuman>0.01</FoodPoisonChanceFixedHuman>
+    </statBases>
+    <ingestible>
+      <preferability>RawTasty</preferability>
+      <foodType>AnimalProduct</foodType>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetFeedingAnimals>-25</optimalityOffsetFeedingAnimals>
+    </ingestible>
+    <thingCategories>
+      <li>Foods</li>
+    </thingCategories>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>35</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+      <li Class="CompProperties_FoodPoisonable" />
+    </comps>
+    <allowedArchonexusCount>40</allowedArchonexusCount>
+  </ThingDef>
+
+</Defs>
