@@ -130,63 +130,63 @@
         <labelPlural>Kerry calves</labelPlural>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryBull</texPath>
-          <drawSize>1.05</drawSize>
+          <drawSize>0.85</drawSize>
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryCow</texPath>
-          <drawSize>1.0</drawSize>
+          <drawSize>0.80</drawSize>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryDessicated</texPath>
-          <drawSize>1.05</drawSize>
+          <drawSize>0.85</drawSize>
         </dessicatedBodyGraphicData>
         <femaleDessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryDessicated</texPath>
-          <drawSize>1.0</drawSize>
+          <drawSize>0.80</drawSize>
         </femaleDessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryBull</texPath>
-          <drawSize>1.65</drawSize>
+          <drawSize>1.40</drawSize>
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryCow</texPath>
-          <drawSize>1.55</drawSize>
+          <drawSize>1.30</drawSize>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryDessicated</texPath>
-          <drawSize>1.65</drawSize>
+          <drawSize>1.40</drawSize>
         </dessicatedBodyGraphicData>
         <femaleDessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryDessicated</texPath>
-          <drawSize>1.55</drawSize>
+          <drawSize>1.30</drawSize>
         </femaleDessicatedBodyGraphicData>
       </li>
       <li>
         <bodyGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryBull</texPath>
-          <drawSize>2.15</drawSize>
+          <drawSize>1.85</drawSize>
           <shadowData>
-            <volume>(0.62, 0.46, 0.46)</volume>
-            <offset>(0,0,-0.24)</offset>
+            <volume>(0.54, 0.40, 0.40)</volume>
+            <offset>(0,0,-0.20)</offset>
           </shadowData>
         </bodyGraphicData>
         <femaleGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryCow</texPath>
-          <drawSize>2.05</drawSize>
+          <drawSize>1.75</drawSize>
           <shadowData>
-            <volume>(0.60, 0.45, 0.45)</volume>
-            <offset>(0,0,-0.24)</offset>
+            <volume>(0.52, 0.39, 0.39)</volume>
+            <offset>(0,0,-0.20)</offset>
           </shadowData>
         </femaleGraphicData>
         <dessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryDessicated</texPath>
-          <drawSize>2.15</drawSize>
+          <drawSize>1.85</drawSize>
         </dessicatedBodyGraphicData>
         <femaleDessicatedBodyGraphicData>
           <texPath>Things/Pawn/Animal/KerryCattle/EI_KerryDessicated</texPath>
-          <drawSize>2.05</drawSize>
+          <drawSize>1.75</drawSize>
         </femaleDessicatedBodyGraphicData>
       </li>
     </lifeStages>
