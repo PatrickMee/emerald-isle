@@ -5,12 +5,23 @@ The Art Guide defines direction; this document defines production control.
 ## Stages
 
 1. Approved feature art brief and cultural references
-2. Silhouette, scale, state, and grayscale/readability review
-3. Editable source production with creator and license metadata
-4. Export using documented dimensions, color/profile, alpha, compression, and naming
-5. Automated path/reference checks
-6. In-game review at normal zoom, weather, light, damage, rotation, selection, and adjacency
-7. Release export from clean sources; archive source and provenance
+2. Installed-build vanilla comparison and silhouette, scale, state, and grayscale review
+3. One representative runtime prototype approved at normal zoom and 64×64 preview
+4. Editable source production with creator and license metadata
+5. Export using documented dimensions, color/profile, alpha, compression, and naming
+6. Automated path/reference checks
+7. In-game review at normal zoom, weather, light, damage, rotation, selection, and adjacency
+8. Release export from clean sources; archive source and provenance
+
+For pawn and animal sets, do not generate every direction or state before the
+representative prototype passes. The comparison review must place the prototype
+beside at least two relevant vanilla pawns and check projection, anatomical
+occlusion, outline weight, texture density, and map-scale silhouette.
+
+Texture framing and runtime scale are separate controls. Validate both the
+exported opaque bounds and the consuming definition's draw size; source padding
+does not make a subject smaller when the export process fits opaque pixels to the
+runtime canvas.
 
 ## Source and Export Separation
 

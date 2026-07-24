@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_MakeFarmhouseCheese.label>make farmhouse cheese</EI_MakeFarmhouseCheese.label>
+  <EI_MakeFarmhouseCheese.description>Heat and press ordinary milk into a firm cheese that keeps well without refrigeration.</EI_MakeFarmhouseCheese.description>
+  <EI_MakeFarmhouseCheese.jobString>Making farmhouse cheese.</EI_MakeFarmhouseCheese.jobString>
+
+</LanguageData>

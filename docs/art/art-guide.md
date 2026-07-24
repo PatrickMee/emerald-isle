@@ -27,6 +27,25 @@ briefs also identify the shared material and construction language plus any
 intentional functional deviation. Stone assets follow the Design Bible's
 [Stone Construction Language](../design/design-bible.md#stone-construction-language).
 
+## Pawn and Animal Sprites
+
+Treat the supported installed RimWorld build as the visual baseline. Before
+production, compare the proposed subject with at least two functionally or
+physically similar vanilla pawns at normal gameplay zoom.
+
+Animal sprites use compact top-down token anatomy, not standing side-elevation
+illustration. The torso remains the dominant silhouette; heads and identifying
+features stay readable; legs, feet, and other small anatomy are simplified,
+foreshortened, occluded, or integrated into the body edge as the vanilla
+comparison requires. A realistic subject does not justify photographic anatomy,
+texture density, or perspective.
+
+Approve one representative direction at runtime size before producing the full
+directional and state set. It must remain readable when previewed at 64×64,
+without depending on fine internal detail. Generation briefs must describe the
+required silhouette, projection, and anatomical occlusion explicitly; phrases
+such as “RimWorld-style” are not sufficient art direction.
+
 ## Pipeline
 
 Keep editable sources outside game-ready exports. Review silhouette and grayscale
