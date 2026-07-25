@@ -10,18 +10,23 @@
 
 **Anatomy revision date:** 2026-07-24
 
+**Cheese revision date:** 2026-07-24
+
 **Human acceptance owner:** Patrick Mee
 
 ## Provenance and License
 
-The source sheets and cheese source image were generated with OpenAI's built-in
+The source sheets and cheese source images were generated with OpenAI's built-in
 image-generation tool under project art direction. The 2026-07-24 anatomy
 revision used a maintainer-provided in-game comparison screenshot as a
 style-and-perspective reference for the abstract animal-token construction; the
 prompt explicitly excluded the failed black Kerry sprites visible in that image.
-No screenshot or Core-art pixels were copied or composited into the exports. The
-generated sources are local production intermediates and are not runtime
-dependencies or committed source-art files.
+The 2026-07-24 cheese revision used a maintainer-provided in-game screenshot as a
+style, outline, and map-scale reference for nearby vanilla food items; the prior
+cheese export was used only to retain the wheel-and-wedge identity. No screenshot
+or Core-art pixels were copied or composited into the exports. The generated
+sources are local production intermediates and are not runtime dependencies or
+committed source-art files.
 
 Codex removed a flat magenta chroma key, contracted the cattle matte by one pixel
 to remove a visible fringe, split the directional sheets, and deterministically
@@ -50,7 +55,7 @@ Irish native dairy breed.
 | Desiccated Kerry east | `Things/Pawn/Animal/KerryCattle/EI_KerryDessicated_east` | 256x256 RGBA | `eac68129492ca33ead7e9ca6658ea9002c3e30ea578a803ba7f7b7638d4ee39d` |
 | Desiccated Kerry north | `Things/Pawn/Animal/KerryCattle/EI_KerryDessicated_north` | 256x256 RGBA | `4e53b8497c94c4de2142e9ac107c09cbe3da198c876fd55541de1d3d0063f84b` |
 | Desiccated Kerry south | `Things/Pawn/Animal/KerryCattle/EI_KerryDessicated_south` | 256x256 RGBA | `b838c23eb5819e51c9e8625ae2d9e36f711ad8928cb97c0b245fc5b8af319a8c` |
-| Farmhouse cheese | `Things/Item/Food/EI_FarmhouseCheese` | 128x128 RGBA | `b07aefe80e92c50cd47fd1b6700772ce5ee4c092bd07dadcb08b583b090d4c25` |
+| Farmhouse cheese | `Things/Item/Food/EI_FarmhouseCheese` | 128x128 RGBA | `6aa7c0e0dbb2882d2c3a45154540aa4068ed0f0a9b332c718fb1c655696953fa` |
 
 West-facing cattle use RimWorld's normal mirroring of the east export.
 
@@ -70,6 +75,14 @@ with only major skull, rib, spine, and leg forms and no blood, flesh, gore, or
 copied Core art. The cheese prompt requested one compact straw-gold farmhouse
 wheel with a nearby cut wedge and excluded packaging, plate, mold, holes, and
 scenery.
+
+In-game review on 2026-07-24 showed that the first cheese export still read as a
+softly shaded product illustration rather than a vanilla-compatible map item.
+The replacement prompt therefore required a compact wheel-dominant token, one
+small adjacent wedge, a heavy near-black hand-drawn contour, two to three broad
+tonal regions, restrained surface detail, and readability at 64x64. It explicitly
+excluded photorealism, glossy rendering, fine pores, dramatic highlights, soft
+outlines, scattered pieces, and oversized presentation.
 
 The 2026-07-24 comparison review found that the simplified cattle still used
 standing side-elevation anatomy with long, individually readable legs, unlike
