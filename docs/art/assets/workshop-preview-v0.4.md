@@ -1,9 +1,10 @@
 # Version 0.4 Steam Workshop Preview Asset Record
 
-**Status:** Generated; maintainer visual acceptance and publication pending<br>
+**Status:** Maintainer accepted; publication pending<br>
 **Release candidate:** v0.4.0 - Pasture and Larder<br>
 **Production date:** 2026-07-25<br>
-**Human acceptance owner:** Patrick Mee
+**Human acceptance owner:** Patrick Mee<br>
+**Human acceptance date:** 2026-07-25
 
 ## Art Brief
 
@@ -47,3 +48,9 @@ not runtime dependencies or committed source art. The preview is governed by
   stays below Steam's one-megabyte ceiling, and retains Workshop ID `3763433723`;
 - the public Workshop page must show the replacement before this record is marked
   published.
+
+## Review Disposition
+
+Patrick Mee accepted the Version 0.4 preview at full size and Steam thumbnail
+scale on 2026-07-25. Public Workshop publication and signed-out verification
+remain release-gate work.
