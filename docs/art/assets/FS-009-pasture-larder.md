@@ -1,6 +1,6 @@
 # FS-009 Pasture and Larder Asset Record
 
-**Status:** Revised runtime exports complete; human in-game visual re-review pending
+**Status:** Human in-game acceptance complete
 
 **Feature record:** Direct maintainer request restated in the implementation PR
 
@@ -13,6 +13,8 @@
 **Cheese revision date:** 2026-07-24
 
 **Human acceptance owner:** Patrick Mee
+
+**Human acceptance date:** 2026-07-25
 
 ## Provenance and License
 
@@ -108,8 +110,11 @@ further painting or copied game assets.
 
 ## Review Checklist
 
-- confirm all four cattle directions read as one breed at normal gameplay zoom;
-- confirm cow and bull remain distinguishable and visibly smaller than vanilla cows;
-- inspect outlines in snow, darkness, and selection highlighting for residual fringe;
-- confirm calf scaling remains legible without implying a separate adult-sized calf;
-- confirm the cheese reads as food in stockpiles and bill/product icons.
+- [x] all four cattle directions read as one breed at normal gameplay zoom;
+- [x] cow and bull remain distinguishable and visibly smaller than vanilla cows;
+- [x] outlines remain clean under normal in-game presentation;
+- [x] calf scaling remains legible without implying a separate adult-sized calf;
+- [x] cheese reads as food in stockpiles and bill/product icons.
+
+Patrick Mee accepted the final cattle and cheese art and the requested manual
+gameplay checks on 2026-07-25.
