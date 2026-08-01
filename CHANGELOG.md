@@ -4,6 +4,12 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+### Balance
+
+- Hand-quern milling now grants Crafting experience at half the normal recipe
+  rate, rewarding the additional processing labor without making it an efficient
+  skill-training shortcut.
+
 ## [0.3.0] - 2026-07-18
 
 ### The Brat Cloak
