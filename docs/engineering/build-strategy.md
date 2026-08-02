@@ -37,6 +37,20 @@ The build must not depend on a developer's Workshop folder or mutate source file
 Generated outputs are reproducible, ignored, and rebuilt in CI. Release testing
 uses the exact staged archive, not loose developer files.
 
+`python3 tools/build-release.py vX.Y.Z --candidate` creates the review artifact;
+the same command without `--candidate` requires clean, synchronized `main` and an
+annotated tag identifying `HEAD`. Archives have sorted entries, normalized
+timestamps and permissions, and an embedded `About/BuildInfo.txt` containing the
+release version, package ID, and Workshop item ID. Excluding a Git commit from
+the embedded file lets the approved candidate and tagged-main rebuild remain
+byte-identical; the annotated tag and release record retain source provenance.
+
+Steam uploads are staged by `tools/stage-workshop-release.py` from the published
+GitHub ZIP. `tools/verify-workshop-release.py` independently compares the public
+Steam package and a subscriber cache to that ZIP. CI runs the cumulative runtime
+contract validator so a feature branch cannot silently drop previously released
+balance values or definitions.
+
 ## Developer Testing Framework
 
 Developer-only test assets live under `Dev/` and are staged only by
