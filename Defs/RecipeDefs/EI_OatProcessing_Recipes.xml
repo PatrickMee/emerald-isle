@@ -13,7 +13,7 @@
     <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
     <targetCountAdjustment>10</targetCountAdjustment>
     <workSkill>Crafting</workSkill>
-    <workSkillLearnFactor>0</workSkillLearnFactor>
+    <workSkillLearnFactor>0.5</workSkillLearnFactor>
     <recipeUsers>
       <li>EI_HandQuern</li>
     </recipeUsers>
