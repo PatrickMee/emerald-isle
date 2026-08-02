@@ -6,6 +6,9 @@ All notable project changes are documented here.
 
 ### Balance
 
+- Flax now yields 9 raw flax per harvest instead of 8, giving its shorter
+  growing cycle a clearer land-efficiency advantage while retaining the added
+  processing labor and ground-only cultivation tradeoffs.
 - Hand-quern milling now grants Crafting experience at half the normal recipe
   rate, rewarding the additional processing labor without making it an efficient
   skill-training shortcut.
