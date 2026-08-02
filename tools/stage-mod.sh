@@ -138,6 +138,14 @@ else
   exit 65
 fi
 
+runtime_contract_validator="$repo_root/tools/validate-runtime-contracts.py"
+if [[ -f "$runtime_contract_validator" ]]; then
+  python3 "$runtime_contract_validator" "$temporary"
+else
+  printf 'Runtime-contract validator is missing: %s\n' "$runtime_contract_validator" >&2
+  exit 65
+fi
+
 mkdir -p "$(dirname "$output")"
 rm -rf "$output"
 mv "$temporary" "$output"

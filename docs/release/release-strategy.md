@@ -25,6 +25,32 @@ Test the exact archive to be published. Verify package ID, metadata, supported
 versions, dependencies, load order, file casing, absence of source/editor files,
 and behavior when optional integrations are missing.
 
+Every release must use this artifact path:
+
+1. Merge all included Done feature PRs into `main`; never release from an open
+   feature branch.
+2. On the release-record branch, run
+   `python3 tools/build-release.py vX.Y.Z --candidate` and record its SHA-256 in
+   the release PR.
+3. After approval and merge, create the annotated tag on the reviewed commit,
+   update local `main` from `origin/main`, and run
+   `python3 tools/build-release.py vX.Y.Z`.
+4. Refuse publication unless the final tagged-main ZIP has the approved candidate
+   SHA-256. Publish that exact ZIP and checksum to the GitHub release.
+5. Run `python3 tools/stage-workshop-release.py vX.Y.Z`. This downloads the
+   GitHub asset and stages that content into RimWorld's local Mods folder; do not
+   rebuild or copy loose feature-branch files for Steam.
+6. Upload the staged local package to existing Workshop item `3763433723`.
+7. On a separate subscribed client, run
+   `python3 tools/verify-workshop-release.py vX.Y.Z`. This compares Steam's public
+   package size and every subscribed file against the GitHub release artifact.
+
+The release scripts print the next maintainer action so the human Steam upload
+and independent subscriber check cannot be mistaken for automated steps. A game
+reload does not prove that Steam downloaded a new Workshop manifest. If the
+subscriber check fails after Steam publishes the expected size, exit RimWorld
+and Steam, restart Steam, then unsubscribe/resubscribe before checking again.
+
 Use `templates/release-checklist.md` in the release PR. An annotated, immutable Git
 tag may be created only after that PR approves the exact reviewed commit and
 artifact.

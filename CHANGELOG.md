@@ -4,6 +4,16 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.4.1] - 2026-08-01
+
+### Pasture and Larder
+
+- Added hardy, feed-efficient Kerry dairy cattle using Core milk.
+- Added farmhouse cheese made at the central hearth and vanilla fueled/electric
+  stoves, trading cooking work and some nutrition for a 35-day shelf life.
+- Includes the Version 0.3.1 balance improvements: flax yields 9 raw flax and
+  hand-quern milling grants Crafting experience at half the normal recipe rate.
+
 ## [0.3.1] - 2026-08-01
 
 ### Balance
@@ -146,6 +156,7 @@ All notable project changes are documented here.
 - Froze the nine foundation authorities under ADR-based change control.
 
 [Unreleased]: docs/roadmap.md
+[0.4.1]: docs/release/v0.4.1.md
 [0.3.1]: docs/release/v0.3.1.md
 [0.3.0]: docs/release/v0.3.0.md
 [0.2.0]: docs/release/v0.2.0.md
