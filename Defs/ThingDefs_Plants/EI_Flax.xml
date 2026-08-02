@@ -21,7 +21,7 @@
       <dieIfLeafless>true</dieIfLeafless>
       <harvestTag>Standard</harvestTag>
       <harvestedThingDef>EI_RawFlax</harvestedThingDef>
-      <harvestYield>8</harvestYield>
+      <harvestYield>9</harvestYield>
       <sowTags>
         <li>Ground</li>
       </sowTags>
