@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_KerryCattle.label>Kerry cattle</EI_KerryCattle.label>
+  <EI_KerryCattle.labelPlural>Kerry cattle</EI_KerryCattle.labelPlural>
+  <EI_KerryCattle.labelMale>Kerry bull</EI_KerryCattle.labelMale>
+  <EI_KerryCattle.labelMalePlural>Kerry bulls</EI_KerryCattle.labelMalePlural>
+  <EI_KerryCattle.labelFemale>Kerry cow</EI_KerryCattle.labelFemale>
+  <EI_KerryCattle.labelFemalePlural>Kerry cows</EI_KerryCattle.labelFemalePlural>
+  <EI_KerryCattle.lifeStages.0.label>Kerry calf</EI_KerryCattle.lifeStages.0.label>
+  <EI_KerryCattle.lifeStages.0.labelPlural>Kerry calves</EI_KerryCattle.lifeStages.0.labelPlural>
+
+</LanguageData>

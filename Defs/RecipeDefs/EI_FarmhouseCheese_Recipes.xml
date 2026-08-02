@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef>
+    <defName>EI_MakeFarmhouseCheese</defName>
+    <label>make farmhouse cheese</label>
+    <description>Heat and press ordinary milk into a firm cheese that keeps well without refrigeration.</description>
+    <jobString>Making farmhouse cheese.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <recipeUsers>
+      <li>EI_CentralHearth</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>0.60</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Milk</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EI_FarmhouseCheese>1</EI_FarmhouseCheese>
+    </products>
+    <workSkill>Cooking</workSkill>
+    <displayPriority>103</displayPriority>
+  </RecipeDef>
+
+</Defs>

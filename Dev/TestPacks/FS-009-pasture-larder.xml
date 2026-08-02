@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DeveloperTestPack>
+  <defName>FS009_PastureLarder</defName>
+  <label>FS-009 Pasture and Larder</label>
+  <resources>
+    <li defName="Milk" count="250" />
+  </resources>
+</DeveloperTestPack>
