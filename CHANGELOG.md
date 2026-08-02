@@ -4,6 +4,8 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.3.1] - 2026-08-01
+
 ### Balance
 
 - Flax now yields 9 raw flax per harvest instead of 8, giving its shorter
@@ -144,6 +146,7 @@ All notable project changes are documented here.
 - Froze the nine foundation authorities under ADR-based change control.
 
 [Unreleased]: docs/roadmap.md
+[0.3.1]: docs/release/v0.3.1.md
 [0.3.0]: docs/release/v0.3.0.md
 [0.2.0]: docs/release/v0.2.0.md
 [0.1.0]: docs/release/v0.1.0.md
