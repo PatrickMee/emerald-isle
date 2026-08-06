@@ -17,8 +17,10 @@ pixels or backgrounds were copied or composited. The corrected east-facing
 prototype anchored the living directions, and the living set plus the first
 desiccated direction anchored the remaining skeletal directions. The approved
 Kerry-cattle sprite supplied only project-level guidance for top-down projection,
-detail economy, and hidden-limb treatment. No Core, DLC, Kerry-cattle, or
-third-party art pixels were copied or composited into the exports.
+detail economy, and hidden-limb treatment. A later maintainer-supplied RimWorld
+screenshot established the required lateral east/west camera treatment. No Core,
+DLC, Kerry-cattle, screenshot, or third-party art pixels were copied or
+composited into the exports.
 
 The generated sources are local production intermediates and are not runtime
 dependencies or committed source-art files. Codex removed a flat magenta chroma
@@ -41,7 +43,7 @@ or modern pedigree breed.
 
 | Asset | Runtime path | Dimensions | SHA-256 |
 |---|---|---:|---|
-| Wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_east` | 256x256 RGBA | `e549ff01e3a44ea68737ff117f5bc64fd9d866ec8356401a7ba9124c7e9345a0` |
+| Wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_east` | 256x256 RGBA | `95ea6365810a6dfb964c4c14eea92d7db436b06231d4633b3e93451583a19285` |
 | Wolfhound north | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_north` | 256x256 RGBA | `511a077e151b3b4086278c78097fe2720e15d29846b3876456943a31c26da607` |
 | Wolfhound south | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_south` | 256x256 RGBA | `5c119f9ea6cf2940270d34d46d996c901459c0b124242b3cd27d1d10f661454e` |
 | Desiccated wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_WolfhoundDessicated_east` | 256x256 RGBA | `a0bd67a70f8a1da5e30f719e6e0d3059c810ce1dbe95e8d41e311ab9be55a2db` |
@@ -62,12 +64,17 @@ narrower bearded muzzle, smaller folded ears, leaner continuous torso, subtle
 chest-to-waist taper, and a long low tail. It deliberately does not expose full
 long legs, which would break the established top-down animal-token language.
 
-All replacement living prompts required a torso-dominant elongated lozenge,
-bold near-black contour, four or five broad matte iron-gray coat tones, sparse
-rough-coat tufts, heavily foreshortened or occluded legs, and no standing side
-elevation, photorealistic anatomy, armor, collar, ornament, scenery, shadow, or
-text. Directional prompts preserved the corrected east identity while changing
-only the facing and necessary perspective.
+A second maintainer review identified that the first replacement east sprite
+still used the north/south overhead camera. The final east sprite therefore uses
+a strict lateral profile: one visible eye, one dominant folded ear, side-on
+muzzle, raised neck, lean back, tucked lower belly, and low tail. RimWorld mirrors
+that export for west. North and south retain their appropriate overhead views.
+
+All replacement living prompts required a bold near-black contour, four or five
+broad matte iron-gray coat tones, sparse rough-coat tufts, heavily foreshortened
+or occluded legs, and no photorealistic anatomy, armor, collar, ornament,
+scenery, shadow, or text. Each direction preserves identity while using its
+vanilla camera convention rather than rotating one projection mechanically.
 
 The desiccated prompts kept the same compact silhouette and used broad skull,
 rib, spine, pelvis, and folded-limb cues. They prohibited blood, flesh, gore,
@@ -76,7 +83,8 @@ subordinates the source detail to a normal map-scale carcass read.
 
 ## Review Checklist
 
-- [x] corrected east prototype is readable at 64x64 and keeps full legs hidden;
+- [x] corrected east prototype is a readable lateral profile at 64x64 and keeps
+  full legs hidden;
 - [x] all required directional, life-stage, and desiccated runtime paths resolve;
 - [x] transparent corners, alpha channel, dimensions, and hashes are verified;
 - [ ] adult scale and silhouette read correctly beside Labrador, husky, timber
