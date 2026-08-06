@@ -11,36 +11,42 @@
 ## Provenance and License
 
 The source images were generated with OpenAI's built-in image-generation tool
-under project art direction. The approved east-facing prototype was used only as
-a design, palette, projection, and identity reference for the other directions.
-The living directional images and the desiccated east image then anchored the
-remaining desiccated directions. No Core, DLC, Kerry-cattle, or third-party art
-pixels were copied or composited into the exports.
+under project art direction. A maintainer-supplied modern-breed image-search
+screenshot was used only to identify high-level anatomical traits; no reference
+pixels or backgrounds were copied or composited. The corrected east-facing
+prototype anchored the living directions, and the living set plus the first
+desiccated direction anchored the remaining skeletal directions. The approved
+Kerry-cattle sprite supplied only project-level guidance for top-down projection,
+detail economy, and hidden-limb treatment. No Core, DLC, Kerry-cattle, or
+third-party art pixels were copied or composited into the exports.
 
 The generated sources are local production intermediates and are not runtime
 dependencies or committed source-art files. Codex removed a flat magenta chroma
-key with the installed ImageGen helper, used a one-pixel matte contraction and
-despill, cropped the resulting alpha bounds, fit each subject within a 216x216
-area using Lanczos resampling, and centered it on a transparent 256x256 canvas.
-The exports are creative assets governed by
+key with the installed ImageGen helper and a one-pixel matte contraction. A
+targeted cleanup neutralized a small number of unintended complementary-green
+and magenta edge pixels before the alpha images were resampled to transparent
+256x256 runtime canvases. The exports are creative assets governed by
 [`CREATIVE_ASSETS_LICENSE.md`](../../../CREATIVE_ASSETS_LICENSE.md).
 
 The subject uses descriptive traits associated with a large rough-coated
-coursing hound: an elongated body, narrow muzzle, folded ears, deep chest, long
-tail, and restrained gray-tawny coat. Those traits provide development
-provenance only; the player-facing animal is original RimWorld fiction and does
-not claim to reproduce a historical or modern pedigree breed.
+coursing hound: a lean continuous torso with subtle chest-to-waist taper, slim
+neck, narrow bearded muzzle, folded ears, long low tail, and restrained iron-gray
+coat. Long-legged stature is implied through massing rather than literal standing
+legs, which remain strongly foreshortened beneath the torso in RimWorld's pawn
+projection. Those traits provide development provenance only; the player-facing
+animal is original RimWorld fiction and does not claim to reproduce a historical
+or modern pedigree breed.
 
 ## Runtime Exports
 
 | Asset | Runtime path | Dimensions | SHA-256 |
 |---|---|---:|---|
-| Wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_east` | 256x256 RGBA | `a4c229c83f53f549afed8dbf45b0fece82413de1296c68c295b46536721a2114` |
-| Wolfhound north | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_north` | 256x256 RGBA | `0e70635192d9fe7289ae0ceee1142ecbcb6b48c3ccb3dda4633f02b88e658a69` |
-| Wolfhound south | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_south` | 256x256 RGBA | `6a236102726548e50bb78c142d370ef4ef0112005263582b0e7b63f2aaf91f03` |
-| Desiccated wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_WolfhoundDessicated_east` | 256x256 RGBA | `03a36dec5fb9182b60e1d32c27cfd20192f1a8ab25a78fb9c990c3656d9c4ed8` |
-| Desiccated wolfhound north | `Things/Pawn/Animal/Wolfhound/EI_WolfhoundDessicated_north` | 256x256 RGBA | `b08d5e8ba5b9a2585c4162e9633c39e44c7c061b7348e07720becbeec615e667` |
-| Desiccated wolfhound south | `Things/Pawn/Animal/Wolfhound/EI_WolfhoundDessicated_south` | 256x256 RGBA | `a10c310bb59b4319f488c415f605f930c7de48ecd9114f432b52ea27bcff2267` |
+| Wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_east` | 256x256 RGBA | `e549ff01e3a44ea68737ff117f5bc64fd9d866ec8356401a7ba9124c7e9345a0` |
+| Wolfhound north | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_north` | 256x256 RGBA | `511a077e151b3b4086278c78097fe2720e15d29846b3876456943a31c26da607` |
+| Wolfhound south | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_south` | 256x256 RGBA | `5c119f9ea6cf2940270d34d46d996c901459c0b124242b3cd27d1d10f661454e` |
+| Desiccated wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_WolfhoundDessicated_east` | 256x256 RGBA | `a0bd67a70f8a1da5e30f719e6e0d3059c810ce1dbe95e8d41e311ab9be55a2db` |
+| Desiccated wolfhound north | `Things/Pawn/Animal/Wolfhound/EI_WolfhoundDessicated_north` | 256x256 RGBA | `b7617225f99f9ef3be7c5686ee69cba6539fb1e163f817f7d3701f45b9b76b2f` |
+| Desiccated wolfhound south | `Things/Pawn/Animal/Wolfhound/EI_WolfhoundDessicated_south` | 256x256 RGBA | `3def5612ead116ab106b2820d98e1937c448a5988708a191131285929dacce49` |
 
 West-facing sprites use RimWorld's normal mirroring of the east exports. Puppy,
 juvenile, and adult stages reuse the same directional set at definition-controlled
@@ -48,18 +54,20 @@ draw sizes, matching the installed Core canine pattern.
 
 ## Production Controls
 
-The first east-facing prototype had clean alpha and remained readable at 64x64,
-but its rounded coat mass read as a compact terrier rather than a coursing hound.
-A single targeted revision lengthened and narrowed the torso, reduced coat bulk,
-and emphasized the muzzle while preserving the compact top-down animal-token
-projection.
+The first committed runtime set was rejected by the maintainer because its tan,
+rounded mass and short head read as a compact terrier rather than an Irish
+wolfhound-inspired hound. The replacement set changes the identifying cues that
+remain visible in RimWorld's projection: iron-gray rough coat, substantially
+narrower bearded muzzle, smaller folded ears, leaner continuous torso, subtle
+chest-to-waist taper, and a long low tail. It deliberately does not expose full
+long legs, which would break the established top-down animal-token language.
 
-All living prompts required a torso-dominant bean or lozenge silhouette, bold
-near-black contour, three to four broad matte coat tones, sparse rough-coat tufts,
-heavily foreshortened or occluded legs, and no standing side elevation,
-photorealistic anatomy, armor, collar, ornament, scenery, shadow, or text.
-Directional prompts preserved the accepted east identity while changing only
-the facing and necessary perspective.
+All replacement living prompts required a torso-dominant elongated lozenge,
+bold near-black contour, four or five broad matte iron-gray coat tones, sparse
+rough-coat tufts, heavily foreshortened or occluded legs, and no standing side
+elevation, photorealistic anatomy, armor, collar, ornament, scenery, shadow, or
+text. Directional prompts preserved the corrected east identity while changing
+only the facing and necessary perspective.
 
 The desiccated prompts kept the same compact silhouette and used broad skull,
 rib, spine, pelvis, and folded-limb cues. They prohibited blood, flesh, gore,
@@ -68,7 +76,7 @@ subordinates the source detail to a normal map-scale carcass read.
 
 ## Review Checklist
 
-- [x] east prototype is readable at 64x64 and uses compact top-down token anatomy;
+- [x] corrected east prototype is readable at 64x64 and keeps full legs hidden;
 - [x] all required directional, life-stage, and desiccated runtime paths resolve;
 - [x] transparent corners, alpha channel, dimensions, and hashes are verified;
 - [ ] adult scale and silhouette read correctly beside Labrador, husky, timber
