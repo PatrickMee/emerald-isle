@@ -43,7 +43,7 @@ or modern pedigree breed.
 
 | Asset | Runtime path | Dimensions | SHA-256 |
 |---|---|---:|---|
-| Wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_east` | 256x256 RGBA | `71e42ac545ddb06ad2a3e5f1ef623b930de8f480ce81b23d241b967cd23908f6` |
+| Wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_east` | 256x256 RGBA | `cd39d6811d54cda080837875f2ea0f58e2b09a82caf8e0b65d63eb68139eb3bb` |
 | Wolfhound north | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_north` | 256x256 RGBA | `511a077e151b3b4086278c78097fe2720e15d29846b3876456943a31c26da607` |
 | Wolfhound south | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_south` | 256x256 RGBA | `5c119f9ea6cf2940270d34d46d996c901459c0b124242b3cd27d1d10f661454e` |
 | Desiccated wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_WolfhoundDessicated_east` | 256x256 RGBA | `a0bd67a70f8a1da5e30f719e6e0d3059c810ce1dbe95e8d41e311ab9be55a2db` |
@@ -74,6 +74,15 @@ A third maintainer review found that the lateral muzzle's separate pointed hair
 strands read as otter whiskers. The final east export replaces them with one
 compact, connected rough beard beneath the lower muzzle and chin, using a short
 blunt edge and broad tufts while preserving the lean profile.
+
+A fourth maintainer review requested a more immediately recognizable wolfhound
+silhouette without exposing anatomically long legs. The revised east export
+raises the torso modestly on short simplified paw stubs, shortens and lightens
+the body, lifts the shoulder line, lengthens the neck, and strengthens the deep
+chest-to-tucked-waist transition. The head retains the connected beard while
+using a longer rectangular muzzle and stronger brow. Broad value groups and a
+cleaner outer contour preserve the rough coat with less edge noise at gameplay
+zoom; the sprite canvas and draw scale are unchanged.
 
 All replacement living prompts required a bold near-black contour, four or five
 broad matte iron-gray coat tones, sparse rough-coat tufts, heavily foreshortened
