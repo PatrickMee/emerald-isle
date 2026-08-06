@@ -43,7 +43,7 @@ or modern pedigree breed.
 
 | Asset | Runtime path | Dimensions | SHA-256 |
 |---|---|---:|---|
-| Wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_east` | 256x256 RGBA | `74da7b91c913ab29ab44e77d4bcee81b9a3d97a8e96b2bde1cf274e14e6b6343` |
+| Wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_east` | 256x256 RGBA | `20132cc7e6cbc0fb4a4910ec70ccf5285b1f4cb538043345bae2805042706c20` |
 | Wolfhound north | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_north` | 256x256 RGBA | `511a077e151b3b4086278c78097fe2720e15d29846b3876456943a31c26da607` |
 | Wolfhound south | `Things/Pawn/Animal/Wolfhound/EI_Wolfhound_south` | 256x256 RGBA | `5c119f9ea6cf2940270d34d46d996c901459c0b124242b3cd27d1d10f661454e` |
 | Desiccated wolfhound east | `Things/Pawn/Animal/Wolfhound/EI_WolfhoundDessicated_east` | 256x256 RGBA | `a0bd67a70f8a1da5e30f719e6e0d3059c810ce1dbe95e8d41e311ab9be55a2db` |
@@ -84,12 +84,19 @@ using a longer rectangular muzzle and stronger brow. Broad value groups and a
 cleaner outer contour preserve the rough coat with less edge noise at gameplay
 zoom; the sprite canvas and draw scale are unchanged.
 
-The final polish pass treats that design as approved and changes only four small
-silhouette cues: a slightly higher withers line, a subtly stronger forward chest,
-a firmer transition into the visible rear leg, and a thinner tail with a cleaner
-taper. Head, beard, muzzle, ears, neck, coat palette, body proportions, lateral
-camera, canvas, and draw scale remain materially unchanged. The resulting export
-is the production candidate unless in-game review identifies a readability issue.
+An initial production-polish pass treats that design as approved and changes only
+four small silhouette cues: a slightly higher withers line, a subtly stronger
+forward chest, a firmer transition into the visible rear leg, and a thinner tail
+with a cleaner taper. Head, beard, muzzle, ears, neck, coat palette, body
+proportions, lateral camera, canvas, and draw scale remain materially unchanged.
+
+The maintainer then approved that sprite as the baseline for the freeze candidate.
+The last export raises the smooth shoulder contour by approximately two pixels at
+runtime scale, deepens the chest slightly, extends and separates the short paw
+stubs by roughly two pixels, adds restrained underside contrast for terrain
+readability, and lightens the tail tip through a finer taper. It preserves the
+approved identity, scale, and low-frequency coat treatment. This is the production
+candidate unless in-game comparison exposes a gameplay-readability regression.
 
 All replacement living prompts required a bold near-black contour, four or five
 broad matte iron-gray coat tones, sparse rough-coat tufts, heavily foreshortened
@@ -105,7 +112,7 @@ subordinates the source detail to a normal map-scale carcass read.
 ## Review Checklist
 
 - [x] corrected east prototype is a readable lateral profile at 64x64 and keeps
-  full legs hidden;
+  the visible legs short and simplified;
 - [x] all required directional, life-stage, and desiccated runtime paths resolve;
 - [x] transparent corners, alpha channel, dimensions, and hashes are verified;
 - [ ] adult scale and silhouette read correctly beside Labrador, husky, timber
