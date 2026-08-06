@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_Wolfhound.label>wolfhound</EI_Wolfhound.label>
+  <EI_Wolfhound.labelPlural>wolfhounds</EI_Wolfhound.labelPlural>
+  <EI_Wolfhound.lifeStages.0.label>wolfhound puppy</EI_Wolfhound.lifeStages.0.label>
+  <EI_Wolfhound.lifeStages.0.labelPlural>wolfhound puppies</EI_Wolfhound.lifeStages.0.labelPlural>
+
+</LanguageData>
