@@ -4,12 +4,11 @@
   <ThingDef ParentName="AnimalThingBase">
     <defName>EI_Wolfhound</defName>
     <label>wolfhound</label>
-    <description>A large domestic coursing hound bred for speed and close combat. Wolfhounds run down threats quickly and can be trained to guard and attack, but they cannot rescue or haul. They are costly to feed, dirty indoors, slow to mature, short-lived, and valuable enough to add significant colony wealth. They follow orders; they do not patrol or protect livestock on their own.</description>
+    <description>A large domestic coursing hound bred for speed and close combat. Wolfhounds run down threats quickly and can be trained to guard and attack, but they cannot rescue or haul. They are costly to feed, slow to mature, short-lived, and valuable enough to add significant colony wealth. They follow orders; they do not patrol or protect livestock on their own.</description>
     <statBases>
       <MoveSpeed>5.4</MoveSpeed>
       <MarketValue>380</MarketValue>
       <ComfyTemperatureMin>-30</ComfyTemperatureMin>
-      <FilthRate>6</FilthRate>
       <Wildness>0</Wildness>
     </statBases>
     <uiIconScale>1.15</uiIconScale>

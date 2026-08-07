@@ -75,7 +75,6 @@ def validate_wolfhound_contracts(
         "statBases/MoveSpeed": "5.4",
         "statBases/MarketValue": "380",
         "statBases/ComfyTemperatureMin": "-30",
-        "statBases/FilthRate": "6",
         "statBases/Wildness": "0",
         "race/baseBodySize": "1.05",
         "race/baseHungerRate": "0.60",
@@ -91,6 +90,11 @@ def validate_wolfhound_contracts(
             errors.append(
                 f"EI_Wolfhound/{path}: expected {expected}, found {actual!r}"
             )
+
+    if thing.find("statBases/FilthRate") is not None:
+        errors.append(
+            "EI_Wolfhound must inherit Core domestic-animal filth rate"
+        )
 
     special_trainables = thing.findall("race/specialTrainables/li")
     if len(special_trainables) != 1:
