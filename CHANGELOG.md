@@ -4,6 +4,19 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.5.0] - 2026-08-06
+
+### The Wolfhound
+
+- Added a fast domestic wolfhound specialized for Guard and Attack training,
+  with no Rescue, Haul, pack-animal, autonomous hunting, or livestock-guardian
+  role.
+- Added uncommon fighter-animal trader availability without wild-biome or
+  common starting-pet spawning.
+- Added original rough-coated directional, life-stage, and desiccated artwork.
+- Odyssey conditionally adds Attack Target through the vanilla combat-canine
+  pattern; Core remains fully supported and no DLC is required.
+
 ## [0.4.1] - 2026-08-01
 
 ### Pasture and Larder
@@ -156,6 +169,7 @@ All notable project changes are documented here.
 - Froze the nine foundation authorities under ADR-based change control.
 
 [Unreleased]: docs/roadmap.md
+[0.5.0]: docs/release/v0.5.0.md
 [0.4.1]: docs/release/v0.4.1.md
 [0.3.1]: docs/release/v0.3.1.md
 [0.3.0]: docs/release/v0.3.0.md
