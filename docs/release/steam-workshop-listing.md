@@ -1,13 +1,13 @@
 # Steam Workshop Listing
 
-**Status:** Version 0.5.0 release-candidate listing input<br>
+**Status:** Version 0.5.1 release-candidate listing input<br>
 **Workshop item:** [Emerald Isle 3763433723](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)<br>
-**Current release:** `v0.5.0` - The Wolfhound<br>
+**Current release:** `v0.5.1` - Wolfhound Presentation Update<br>
 **Publication owner:** Patrick Mee
 
 Steam listing text is managed separately from `About/About.xml`. The description
 below is the approved Version 0.5 replacement input. Publish it only with the
-exact staged v0.5.0 GitHub release artifact.
+exact staged v0.5.1 GitHub release artifact and approved Version 0.5 preview.
 
 ## Description
 
@@ -38,18 +38,22 @@ Version 0.5 adds the wolfhound, a fast domestic coursing and combat companion. I
 
 Existing saves can add the Version 0.5 content without custom migration or serialized state. Back up important saves before changing any mod list.
 
-[url=https://github.com/PatrickMee/emerald-isle/blob/main/docs/release/v0.5.0.md]Version 0.5.0 release notes[/url]
+[url=https://github.com/PatrickMee/emerald-isle/blob/main/docs/release/v0.5.1.md]Version 0.5.1 release notes[/url]
 ```
 
-## Detailed Version 0.5.0 Change Note
+## Detailed Version 0.5.1 Change Note
 
 ```text
-Version 0.5.0 - The Wolfhound
+Version 0.5.1 - Wolfhound Presentation Update
 
 Added:
 - A fast domestic wolfhound specialized for Guard and Attack training.
 - Original rough-coated directional, life-stage, and desiccated artwork.
 - Uncommon fighter-animal trader availability without wild or common-start spawning.
+
+Updated:
+- The Workshop preview now features the Version 0.5 wolfhound banner.
+- Local release staging no longer leaves a duplicate Emerald Isle package inside RimWorld's Mods directory.
 
 Role and balance:
 - Cannot Rescue, Haul, carry caravan cargo, or guard livestock autonomously.
@@ -61,11 +65,11 @@ Compatibility:
 - Existing saves can add this content without custom migration.
 
 Full release notes:
-https://github.com/PatrickMee/emerald-isle/blob/main/docs/release/v0.5.0.md
+https://github.com/PatrickMee/emerald-isle/blob/main/docs/release/v0.5.1.md
 ```
 
 ## Verification
 
 After publication, record the public Steam manifest, update time, byte total,
-and independent subscriber verification against the exact v0.5.0 GitHub
+and independent subscriber verification against the exact v0.5.1 GitHub
 artifact here or on the merged release PR.

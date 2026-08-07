@@ -4,6 +4,16 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.5.1] - 2026-08-06
+
+### Workshop Presentation and Tooling
+
+- Replaced the Pasture and Larder Workshop preview with the approved Version
+  0.5 wolfhound banner.
+- Moved the release-staging rollback copy outside RimWorld's scanned `Mods`
+  directory so it cannot create a duplicate-package warning or select the wrong
+  local package.
+
 ## [0.5.0] - 2026-08-06
 
 ### The Wolfhound
@@ -169,6 +179,7 @@ All notable project changes are documented here.
 - Froze the nine foundation authorities under ADR-based change control.
 
 [Unreleased]: docs/roadmap.md
+[0.5.1]: docs/release/v0.5.1.md
 [0.5.0]: docs/release/v0.5.0.md
 [0.4.1]: docs/release/v0.4.1.md
 [0.3.1]: docs/release/v0.3.1.md
