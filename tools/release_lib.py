@@ -70,20 +70,25 @@ def extract_archive(archive_path: Path, destination: Path) -> Path:
 
 
 def replace_directory(source: Path, destination: Path) -> None:
-    """Replace one explicitly named EmeraldIsle directory, retaining one backup."""
+    """Replace one explicitly named EmeraldIsle directory, retaining one unscanned backup."""
     if destination.name != "EmeraldIsle":
         raise ValueError(f"refusing unexpected destination: {destination}")
     destination.parent.mkdir(parents=True, exist_ok=True)
     incoming = destination.with_name("EmeraldIsle.incoming")
-    previous = destination.with_name("EmeraldIsle.previous")
-    for path in (destination, incoming, previous):
+    legacy_previous = destination.with_name("EmeraldIsle.previous")
+    backup_root = destination.parent.parent / "ModStagingBackups"
+    previous = backup_root / "EmeraldIsle.previous"
+    for path in (destination, incoming, legacy_previous, backup_root, previous):
         if path.is_symlink():
             raise ValueError(f"refusing symbolic-link staging path: {path}")
     if incoming.exists():
         shutil.rmtree(incoming)
     shutil.copytree(source, incoming)
+    backup_root.mkdir(parents=True, exist_ok=True)
     if previous.exists():
         shutil.rmtree(previous)
+    if legacy_previous.exists():
+        shutil.rmtree(legacy_previous)
     if destination.exists():
         os.replace(destination, previous)
     os.replace(incoming, destination)
