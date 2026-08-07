@@ -13,7 +13,7 @@ REPO = Path(__file__).resolve().parents[2]
 TOOLS = REPO / "tools"
 sys.path.insert(0, str(TOOLS))
 
-from release_lib import extract_archive  # noqa: E402
+from release_lib import extract_archive, replace_directory  # noqa: E402
 
 
 class RuntimeContractTests(unittest.TestCase):
@@ -96,6 +96,33 @@ class ArchiveSafetyTests(unittest.TestCase):
                 archive.writestr("EmeraldIsle/../outside.txt", "unsafe")
             with self.assertRaisesRegex(ValueError, "unsafe archive path"):
                 extract_archive(archive_path, Path(temporary) / "extract")
+
+
+class WorkshopStagingTests(unittest.TestCase):
+    def test_backup_is_kept_outside_scanned_mods_directory(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            mods = root / "RimWorld" / "Mods"
+            destination = mods / "EmeraldIsle"
+            legacy_previous = mods / "EmeraldIsle.previous"
+            source = root / "release" / "EmeraldIsle"
+            destination.mkdir(parents=True)
+            legacy_previous.mkdir()
+            source.mkdir(parents=True)
+            (destination / "version.txt").write_text("old")
+            (legacy_previous / "version.txt").write_text("older")
+            (source / "version.txt").write_text("new")
+
+            replace_directory(source, destination)
+
+            backup = root / "RimWorld" / "ModStagingBackups" / "EmeraldIsle.previous"
+            self.assertEqual((destination / "version.txt").read_text(), "new")
+            self.assertEqual((backup / "version.txt").read_text(), "old")
+            self.assertFalse(legacy_previous.exists())
+            self.assertEqual(
+                [path.name for path in mods.iterdir() if path.is_dir()],
+                ["EmeraldIsle"],
+            )
 
 
 if __name__ == "__main__":
