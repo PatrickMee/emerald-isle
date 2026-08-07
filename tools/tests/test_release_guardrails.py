@@ -55,6 +55,38 @@ class RuntimeContractTests(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("expected 9", result.stderr)
 
+    def test_advanced_wolfhound_trainability_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            wolfhound = package / "Defs/ThingDefs_Races/EI_Wolfhound.xml"
+            wolfhound.write_text(
+                wolfhound.read_text().replace(
+                    "<trainability>Intermediate</trainability>",
+                    "<trainability>Advanced</trainability>",
+                    1,
+                )
+            )
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("race/trainability", result.stderr)
+
+    def test_explicit_wolfhound_filth_rate_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            wolfhound = package / "Defs/ThingDefs_Races/EI_Wolfhound.xml"
+            wolfhound.write_text(
+                wolfhound.read_text().replace(
+                    "<Wildness>0</Wildness>",
+                    "<FilthRate>6</FilthRate>\n      <Wildness>0</Wildness>",
+                    1,
+                )
+            )
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("inherit Core domestic-animal filth rate", result.stderr)
+
 
 class ArchiveSafetyTests(unittest.TestCase):
     def test_parent_path_is_rejected(self) -> None:
