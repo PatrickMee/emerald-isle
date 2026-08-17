@@ -111,4 +111,78 @@
     <displayPriority>102</displayPriority>
   </RecipeDef>
 
+  <RecipeDef>
+    <defName>EI_CookOatPorridgeBulk</defName>
+    <label>cook oat porridge x4</label>
+    <description>Cook 4 fresh oat porridges from milled oats.</description>
+    <jobString>Cooking 4 oat porridges.</jobString>
+    <workAmount>480</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workSkill>Cooking</workSkill>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EI_MilledOats</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EI_MilledOats</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EI_OatPorridge>4</EI_OatPorridge>
+    </products>
+    <displayPriority>111</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>EI_CookOatFlatbreadBulk</defName>
+    <label>cook oat flatbread x4</label>
+    <description>Cook 4 plain oat flatbreads from milled oats.</description>
+    <jobString>Cooking 4 oat flatbreads.</jobString>
+    <workAmount>1680</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <workSkill>Cooking</workSkill>
+    <recipeUsers>
+      <li>Campfire</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EI_MilledOats</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EI_MilledOats</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EI_OatFlatbread>4</EI_OatFlatbread>
+    </products>
+    <displayPriority>112</displayPriority>
+  </RecipeDef>
+
 </Defs>
