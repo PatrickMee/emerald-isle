@@ -4,6 +4,15 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.6.0] - 2026-08-17
+
+### Oat Bulk Cooking
+
+- Added vanilla-style x4 bills for oat porridge and oat flatbread at the
+  Campfire, central hearth, Fueled Stove, and Electric Stove.
+- Bulk bills scale ingredients, cooking work, and output exactly linearly with
+  no efficiency bonus.
+
 ## [0.5.1] - 2026-08-06
 
 ### Workshop Presentation and Tooling
@@ -179,6 +188,7 @@ All notable project changes are documented here.
 - Froze the nine foundation authorities under ADR-based change control.
 
 [Unreleased]: docs/roadmap.md
+[0.6.0]: docs/release/v0.6.0.md
 [0.5.1]: docs/release/v0.5.1.md
 [0.5.0]: docs/release/v0.5.0.md
 [0.4.1]: docs/release/v0.4.1.md
