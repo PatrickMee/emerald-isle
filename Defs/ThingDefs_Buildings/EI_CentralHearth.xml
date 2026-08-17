@@ -91,6 +91,8 @@
       <li>Make_PemmicanBulk</li>
       <li>EI_CookOatPorridge</li>
       <li>EI_CookOatFlatbread</li>
+      <li>EI_CookOatPorridgeBulk</li>
+      <li>EI_CookOatFlatbreadBulk</li>
       <li>BurnApparel</li>
       <li>BurnWeapon</li>
       <li>BurnDrugs</li>

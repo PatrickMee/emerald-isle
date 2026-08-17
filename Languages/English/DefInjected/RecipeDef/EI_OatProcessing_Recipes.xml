@@ -13,4 +13,12 @@
   <EI_CookOatFlatbread.description>Cook milled oats into plain oat flatbread.</EI_CookOatFlatbread.description>
   <EI_CookOatFlatbread.jobString>Cooking oat flatbread.</EI_CookOatFlatbread.jobString>
 
+  <EI_CookOatPorridgeBulk.label>cook oat porridge x4</EI_CookOatPorridgeBulk.label>
+  <EI_CookOatPorridgeBulk.description>Cook 4 fresh oat porridges from milled oats.</EI_CookOatPorridgeBulk.description>
+  <EI_CookOatPorridgeBulk.jobString>Cooking 4 oat porridges.</EI_CookOatPorridgeBulk.jobString>
+
+  <EI_CookOatFlatbreadBulk.label>cook oat flatbread x4</EI_CookOatFlatbreadBulk.label>
+  <EI_CookOatFlatbreadBulk.description>Cook 4 plain oat flatbreads from milled oats.</EI_CookOatFlatbreadBulk.description>
+  <EI_CookOatFlatbreadBulk.jobString>Cooking 4 oat flatbreads.</EI_CookOatFlatbreadBulk.jobString>
+
 </LanguageData>
