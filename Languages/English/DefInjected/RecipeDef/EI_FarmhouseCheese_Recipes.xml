@@ -4,5 +4,8 @@
   <EI_MakeFarmhouseCheese.label>make farmhouse cheese</EI_MakeFarmhouseCheese.label>
   <EI_MakeFarmhouseCheese.description>Heat and press ordinary milk into a firm cheese that keeps well without refrigeration.</EI_MakeFarmhouseCheese.description>
   <EI_MakeFarmhouseCheese.jobString>Making farmhouse cheese.</EI_MakeFarmhouseCheese.jobString>
+  <EI_MakeFarmhouseCheeseBulk.label>make farmhouse cheese x4</EI_MakeFarmhouseCheeseBulk.label>
+  <EI_MakeFarmhouseCheeseBulk.description>Make 4 farmhouse cheeses from ordinary milk.</EI_MakeFarmhouseCheeseBulk.description>
+  <EI_MakeFarmhouseCheeseBulk.jobString>Making 4 farmhouse cheeses.</EI_MakeFarmhouseCheeseBulk.jobString>
 
 </LanguageData>
