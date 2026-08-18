@@ -39,4 +39,42 @@
     <displayPriority>103</displayPriority>
   </RecipeDef>
 
+  <RecipeDef>
+    <defName>EI_MakeFarmhouseCheeseBulk</defName>
+    <label>make farmhouse cheese x4</label>
+    <description>Make 4 farmhouse cheeses from ordinary milk.</description>
+    <jobString>Making 4 farmhouse cheeses.</jobString>
+    <workAmount>2400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <recipeUsers>
+      <li>EI_CentralHearth</li>
+      <li>FueledStove</li>
+      <li>ElectricStove</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>Milk</li>
+          </thingDefs>
+        </filter>
+        <count>2.40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>Milk</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EI_FarmhouseCheese>4</EI_FarmhouseCheese>
+    </products>
+    <workSkill>Cooking</workSkill>
+    <displayPriority>113</displayPriority>
+  </RecipeDef>
+
 </Defs>
