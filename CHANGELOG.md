@@ -4,6 +4,15 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.6.1] - 2026-08-17
+
+### Farmhouse Cheese Bulk Cooking
+
+- Added a vanilla-style x4 farmhouse cheese bill at the central hearth, Fueled
+  Stove, and Electric Stove.
+- The bulk bill uses 2.40 Milk, 2400 cooking work, and produces 4 farmhouse
+  cheeses with no efficiency bonus.
+
 ## [0.6.0] - 2026-08-17
 
 ### Oat Bulk Cooking
