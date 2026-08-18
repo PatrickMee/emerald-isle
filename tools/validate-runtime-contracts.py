@@ -13,7 +13,9 @@ REQUIRED_DEF_NAMES = {
     "EI_BratCloak",
     "EI_CentralHearth",
     "EI_CookOatFlatbread",
+    "EI_CookOatFlatbreadBulk",
     "EI_CookOatPorridge",
+    "EI_CookOatPorridgeBulk",
     "EI_DoBillsCookCentralHearth",
     "EI_DoBillsMillOats",
     "EI_DryStoneWall",
@@ -161,6 +163,79 @@ def validate_wolfhound_contracts(
     return errors
 
 
+def validate_oat_bulk_recipe_contracts(
+    definitions: dict[tuple[str, str], ET.Element],
+) -> list[str]:
+    errors: list[str] = []
+    expected = {
+        "EI_CookOatPorridgeBulk": {
+            "workAmount": "480",
+            "product": ("EI_OatPorridge", "4"),
+            "displayPriority": "111",
+        },
+        "EI_CookOatFlatbreadBulk": {
+            "workAmount": "1680",
+            "product": ("EI_OatFlatbread", "4"),
+            "displayPriority": "112",
+        },
+    }
+
+    for def_name, values in expected.items():
+        recipe = definitions.get(("RecipeDef", def_name))
+        if recipe is None:
+            errors.append(f"missing RecipeDef {def_name}")
+            continue
+
+        for path, expected_value in {
+            "workAmount": values["workAmount"],
+            "workSpeedStat": "CookSpeed",
+            "requiredGiverWorkType": "Cooking",
+            "effectWorking": "Cook",
+            "soundWorking": "Recipe_CookMeal",
+            "workSkill": "Cooking",
+            "ingredients/li/count": "40",
+            "ingredients/li/filter/thingDefs/li": "EI_MilledOats",
+            "fixedIngredientFilter/thingDefs/li": "EI_MilledOats",
+            "displayPriority": values["displayPriority"],
+        }.items():
+            actual = recipe.findtext(path)
+            if actual != expected_value:
+                errors.append(f"{def_name}/{path}: expected {expected_value}, found {actual!r}")
+
+        product_def, product_count = values["product"]
+        product = recipe.find(f"products/{product_def}")
+        if product is None or (product.text or "").strip() != product_count:
+            actual = None if product is None else (product.text or "").strip()
+            errors.append(
+                f"{def_name}/products/{product_def}: expected {product_count}, found {actual!r}"
+            )
+
+        users = [
+            (element.text or "").strip()
+            for element in recipe.findall("recipeUsers/li")
+        ]
+        if users != ["Campfire", "FueledStove", "ElectricStove"]:
+            errors.append(
+                f"{def_name}/recipeUsers: expected Campfire, FueledStove, ElectricStove, found {users!r}"
+            )
+        if recipe.find("targetCountAdjustment") is not None:
+            errors.append(f"{def_name} must not use targetCountAdjustment")
+
+    central_hearth = definitions.get(("ThingDef", "EI_CentralHearth"))
+    if central_hearth is not None:
+        hearth_recipes = [
+            (element.text or "").strip()
+            for element in central_hearth.findall("recipes/li")
+        ]
+        for def_name in expected:
+            if hearth_recipes.count(def_name) != 1:
+                errors.append(
+                    f"EI_CentralHearth/recipes/{def_name}: expected exactly once, found {hearth_recipes.count(def_name)}"
+                )
+
+    return errors
+
+
 def validate(package: Path) -> list[str]:
     errors: list[str] = []
     definitions = load_defs(package)
@@ -180,6 +255,7 @@ def validate(package: Path) -> list[str]:
             errors.append(f"{def_name}/{path}: expected {expected}, found {actual!r}")
 
     errors.extend(validate_wolfhound_contracts(typed_definitions))
+    errors.extend(validate_oat_bulk_recipe_contracts(typed_definitions))
 
     about_path = package / "About" / "About.xml"
     if not about_path.is_file():
