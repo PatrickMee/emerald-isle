@@ -1,20 +1,24 @@
 # Steam Workshop Listing
 
-**Status:** Version 0.6.0 release-candidate listing input<br>
+**Status:** Version 0.6.2 release listing input<br>
 **Workshop item:** [Emerald Isle 3763433723](https://steamcommunity.com/sharedfiles/filedetails/?id=3763433723)<br>
-**Current release:** `v0.6.0` - Oat Bulk Cooking<br>
+**Current release:** `v0.6.2` - Linen Core Recipe Compatibility<br>
 **Publication owner:** Patrick Mee
 
 Steam listing text is managed separately from `About/About.xml`. The description
-below is the approved Version 0.6 replacement input. Publish it only with the
-exact staged v0.6.0 GitHub release artifact.
+below is the approved Version 0.6.2 replacement input. Publish it only with the
+exact staged v0.6.2 GitHub release artifact.
 
 ## Description
 
 ```text
 Emerald Isle is a lore-friendly RimWorld expansion inspired by Irish history, archaeology, material culture, language, and mythology.
 
-[h1]Version 0.6 - Oat Bulk Cooking[/h1]
+[h1]Version 0.6.2 - Linen Core Recipe Compatibility[/h1]
+
+Version 0.6.2 adds linen alternatives for the vanilla flak vest, flak pants,
+flak jacket, industrial medicine, and Molotov cocktail recipes. The original
+Cloth bills and normal vanilla item stats remain unchanged.
 
 Version 0.6 adds vanilla-style x4 cooking bills for oat porridge and oat
 flatbread. The bills reduce repetitive setup while preserving exact per-unit
@@ -43,33 +47,33 @@ Version 0.5 adds the wolfhound, a fast domestic coursing and combat companion. I
 
 Existing saves can add the Version 0.6 content without custom migration or serialized state. Back up important saves before changing any mod list.
 
-[url=https://github.com/PatrickMee/emerald-isle/blob/main/docs/release/v0.6.0.md]Version 0.6.0 release notes[/url]
+[url=https://github.com/PatrickMee/emerald-isle/blob/main/docs/release/v0.6.2.md]Version 0.6.2 release notes[/url]
 ```
 
 ## Detailed Version 0.6.0 Change Note
 
 ```text
-Version 0.6.0 - Oat Bulk Cooking
+Version 0.6.2 - Linen Core Recipe Compatibility
 
 Added:
-- Optional x4 oat porridge and oat flatbread cooking bills.
-- Complete English localization for both bulk bills.
+- Linen alternatives for flak vest, flak pants, flak jacket, industrial
+  medicine, and Molotov cocktails.
 
 Role and balance:
-- Each bulk bill uses four times the existing ingredient, work, and product
-  quantities with no efficiency discount.
-- Existing single recipes and oat-food item stats are unchanged.
+- Each alternative replaces only the vanilla Cloth quantity with the approved
+  one-for-one linen quantity.
+- Existing vanilla Cloth recipes and all vanilla output stats are unchanged.
 
 Compatibility:
 - Requires RimWorld 1.6 Core; no DLC or other mod is required.
 - Existing saves can add this content without custom migration.
 
 Full release notes:
-https://github.com/PatrickMee/emerald-isle/blob/main/docs/release/v0.6.0.md
+https://github.com/PatrickMee/emerald-isle/blob/main/docs/release/v0.6.2.md
 ```
 
 ## Verification
 
 After publication, record the public Steam manifest, update time, byte total,
-and independent subscriber verification against the exact v0.6.0 GitHub
+and independent subscriber verification against the exact v0.6.2 GitHub
 artifact here or on the merged release PR.
