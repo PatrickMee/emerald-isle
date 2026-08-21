@@ -25,6 +25,11 @@ REQUIRED_DEF_NAMES = {
     "EI_Linen",
     "EI_LinenFabric",
     "EI_LinenTunic",
+    "EI_MakeFlakJacketWithLinen",
+    "EI_MakeFlakPantsWithLinen",
+    "EI_MakeFlakVestWithLinen",
+    "EI_MakeIndustrialMedicineWithLinen",
+    "EI_MakeMolotovCocktailsWithLinen",
     "EI_MakeFarmhouseCheese",
     "EI_MilledOats",
     "EI_MillOats",
@@ -236,6 +241,178 @@ def validate_oat_bulk_recipe_contracts(
     return errors
 
 
+def validate_linen_compatibility_recipe_contracts(
+    definitions: dict[tuple[str, str], ET.Element],
+) -> list[str]:
+    errors: list[str] = []
+    expected = {
+        "EI_MakeFlakVestWithLinen": {
+            "product": ("Apparel_FlakVest", "1"),
+            "workAmount": "9000",
+            "workSpeedStat": "GeneralLaborSpeed",
+            "effectWorking": "Smith",
+            "soundWorking": "Recipe_Machining",
+            "workSkill": "Crafting",
+            "unfinishedThingDef": "UnfinishedTechArmor",
+            "recipeUsers": ["TableMachining"],
+            "researchPrerequisite": "FlakArmor",
+            "skillRequirements": [("Crafting", "4")],
+            "ingredients": [
+                ("EI_Linen", "30"),
+                ("Steel", "60"),
+                ("ComponentIndustrial", "1"),
+            ],
+        },
+        "EI_MakeFlakPantsWithLinen": {
+            "product": ("Apparel_FlakPants", "1"),
+            "workAmount": "9000",
+            "workSpeedStat": "GeneralLaborSpeed",
+            "effectWorking": "Smith",
+            "soundWorking": "Recipe_Machining",
+            "workSkill": "Crafting",
+            "unfinishedThingDef": "UnfinishedTechArmor",
+            "recipeUsers": ["TableMachining"],
+            "researchPrerequisite": "FlakArmor",
+            "skillRequirements": [("Crafting", "4")],
+            "ingredients": [
+                ("EI_Linen", "30"),
+                ("Steel", "60"),
+                ("ComponentIndustrial", "1"),
+            ],
+        },
+        "EI_MakeFlakJacketWithLinen": {
+            "product": ("Apparel_FlakJacket", "1"),
+            "workAmount": "14000",
+            "workSpeedStat": "GeneralLaborSpeed",
+            "effectWorking": "Smith",
+            "soundWorking": "Recipe_Machining",
+            "workSkill": "Crafting",
+            "unfinishedThingDef": "UnfinishedTechArmor",
+            "recipeUsers": ["TableMachining"],
+            "researchPrerequisite": "FlakArmor",
+            "skillRequirements": [("Crafting", "4")],
+            "ingredients": [
+                ("EI_Linen", "50"),
+                ("Steel", "70"),
+                ("ComponentIndustrial", "1"),
+            ],
+        },
+        "EI_MakeIndustrialMedicineWithLinen": {
+            "product": ("MedicineIndustrial", "1"),
+            "workAmount": "700",
+            "workSpeedStat": "DrugSynthesisSpeed",
+            "effectWorking": "Cook",
+            "soundWorking": "Recipe_CookMeal",
+            "workSkill": "Intellectual",
+            "recipeUsers": ["DrugLab"],
+            "researchPrerequisite": "MedicineProduction",
+            "skillRequirements": [("Crafting", "4"), ("Intellectual", "4")],
+            "ingredients": [
+                ("MedicineHerbal", "1"),
+                ("Neutroamine", "1"),
+                ("EI_Linen", "3"),
+            ],
+        },
+        "EI_MakeMolotovCocktailsWithLinen": {
+            "product": ("Weapon_GrenadeMolotov", "1"),
+            "workAmount": "6000",
+            "workSpeedStat": "GeneralLaborSpeed",
+            "effectWorking": "Smith",
+            "soundWorking": "Recipe_Smith",
+            "workSkill": "Crafting",
+            "unfinishedThingDef": "UnfinishedGun",
+            "recipeUsers": ["TableMachining"],
+            "researchPrerequisite": "Machining",
+            "skillRequirements": [],
+            "ingredients": [("EI_Linen", "25"), ("Chemfuel", "80")],
+        },
+    }
+
+    for def_name, values in expected.items():
+        recipe = definitions.get(("RecipeDef", def_name))
+        if recipe is None:
+            errors.append(f"missing RecipeDef {def_name}")
+            continue
+
+        for path in (
+            "workAmount",
+            "workSpeedStat",
+            "effectWorking",
+            "soundWorking",
+            "workSkill",
+            "researchPrerequisite",
+        ):
+            expected_value = values[path]
+            actual = recipe.findtext(path)
+            if actual != expected_value:
+                errors.append(
+                    f"{def_name}/{path}: expected {expected_value}, found {actual!r}"
+                )
+
+        expected_unfinished = values.get("unfinishedThingDef")
+        actual_unfinished = recipe.findtext("unfinishedThingDef")
+        if actual_unfinished != expected_unfinished:
+            errors.append(
+                f"{def_name}/unfinishedThingDef: expected {expected_unfinished}, found {actual_unfinished!r}"
+            )
+
+        users = [
+            (element.text or "").strip()
+            for element in recipe.findall("recipeUsers/li")
+        ]
+        if users != values["recipeUsers"]:
+            errors.append(
+                f"{def_name}/recipeUsers: expected {values['recipeUsers']}, found {users}"
+            )
+
+        skill_requirements = [
+            (element.tag, (element.text or "").strip())
+            for element in recipe.find("skillRequirements") or []
+        ]
+        if skill_requirements != values["skillRequirements"]:
+            errors.append(
+                f"{def_name}/skillRequirements: expected {values['skillRequirements']}, found {skill_requirements}"
+            )
+
+        ingredients = []
+        for ingredient in recipe.findall("ingredients/li"):
+            ingredient_def = ingredient.findtext("filter/thingDefs/li")
+            ingredients.append((ingredient_def, ingredient.findtext("count")))
+        if ingredients != values["ingredients"]:
+            errors.append(
+                f"{def_name}/ingredients: expected {values['ingredients']}, found {ingredients}"
+            )
+
+        fixed_ingredients = [
+            (element.text or "").strip()
+            for element in recipe.findall("fixedIngredientFilter/thingDefs/li")
+        ]
+        expected_fixed = [ingredient[0] for ingredient in values["ingredients"]]
+        if fixed_ingredients != expected_fixed:
+            errors.append(
+                f"{def_name}/fixedIngredientFilter: expected {expected_fixed}, found {fixed_ingredients}"
+            )
+
+        product_def, product_count = values["product"]
+        product = recipe.find(f"products/{product_def}")
+        actual_product = None if product is None else (product.text or "").strip()
+        if actual_product != product_count:
+            errors.append(
+                f"{def_name}/products/{product_def}: expected {product_count}, found {actual_product!r}"
+            )
+
+        if recipe.find("targetCountAdjustment") is not None:
+            errors.append(
+                f"{def_name} must not use targetCountAdjustment; one bill produces one vanilla item"
+            )
+        if recipe.find("bulkRecipeCount") is not None:
+            errors.append(
+                f"{def_name} must not use bulkRecipeCount; duplicate-output behavior is not approved"
+            )
+
+    return errors
+
+
 def validate(package: Path) -> list[str]:
     errors: list[str] = []
     definitions = load_defs(package)
@@ -256,6 +433,7 @@ def validate(package: Path) -> list[str]:
 
     errors.extend(validate_wolfhound_contracts(typed_definitions))
     errors.extend(validate_oat_bulk_recipe_contracts(typed_definitions))
+    errors.extend(validate_linen_compatibility_recipe_contracts(typed_definitions))
 
     about_path = package / "About" / "About.xml"
     if not about_path.is_file():

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_MakeFlakVestWithLinen.label>make flak vest (linen)</EI_MakeFlakVestWithLinen.label>
+  <EI_MakeFlakVestWithLinen.description>Make a flak vest using linen instead of cloth.</EI_MakeFlakVestWithLinen.description>
+  <EI_MakeFlakVestWithLinen.jobString>Making flak vest.</EI_MakeFlakVestWithLinen.jobString>
+
+  <EI_MakeFlakPantsWithLinen.label>make flak pants (linen)</EI_MakeFlakPantsWithLinen.label>
+  <EI_MakeFlakPantsWithLinen.description>Make flak pants using linen instead of cloth.</EI_MakeFlakPantsWithLinen.description>
+  <EI_MakeFlakPantsWithLinen.jobString>Making flak pants.</EI_MakeFlakPantsWithLinen.jobString>
+
+  <EI_MakeFlakJacketWithLinen.label>make flak jacket (linen)</EI_MakeFlakJacketWithLinen.label>
+  <EI_MakeFlakJacketWithLinen.description>Make a flak jacket using linen instead of cloth.</EI_MakeFlakJacketWithLinen.description>
+  <EI_MakeFlakJacketWithLinen.jobString>Making flak jacket.</EI_MakeFlakJacketWithLinen.jobString>
+
+  <EI_MakeIndustrialMedicineWithLinen.label>make medicine (linen)</EI_MakeIndustrialMedicineWithLinen.label>
+  <EI_MakeIndustrialMedicineWithLinen.description>Make industrial medicine using linen instead of cloth.</EI_MakeIndustrialMedicineWithLinen.description>
+  <EI_MakeIndustrialMedicineWithLinen.jobString>Making medicine.</EI_MakeIndustrialMedicineWithLinen.jobString>
+
+  <EI_MakeMolotovCocktailsWithLinen.label>make molotov cocktails (linen)</EI_MakeMolotovCocktailsWithLinen.label>
+  <EI_MakeMolotovCocktailsWithLinen.description>Make molotov cocktails using linen instead of cloth.</EI_MakeMolotovCocktailsWithLinen.description>
+  <EI_MakeMolotovCocktailsWithLinen.jobString>Making molotov cocktails.</EI_MakeMolotovCocktailsWithLinen.jobString>
+
+</LanguageData>
