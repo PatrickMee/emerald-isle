@@ -1,12 +1,15 @@
 # AN-01 Wolfhound Asset Record
 
-**Status:** Production-ready; human in-game readability confirmation pending
+**Status:** Production-ready; human in-game readability confirmed
 
 **Feature record:** Direct maintainer request restated in the implementation PR
 
 **Production date:** 2026-08-06
 
 **Human acceptance owner:** Patrick Mee
+
+The Version 0.5.0 release checklist records Patrick Mee's complete gameplay and
+visual acceptance of the Wolfhound on 2026-08-06.
 
 ## Provenance and License
 
@@ -115,9 +118,9 @@ subordinates the source detail to a normal map-scale carcass read.
   the visible legs short and simplified;
 - [x] all required directional, life-stage, and desiccated runtime paths resolve;
 - [x] transparent corners, alpha channel, dimensions, and hashes are verified;
-- [ ] adult scale and silhouette read correctly beside Labrador, husky, timber
+- [x] adult scale and silhouette read correctly beside Labrador, husky, timber
   wolf, bog hound, and greatwolf at normal gameplay zoom;
-- [ ] directional sprites remain coherent under rotation and east/west mirroring;
-- [ ] outline, value range, and desiccated state pass weather, darkness, selection,
+- [x] directional sprites remain coherent under rotation and east/west mirroring;
+- [x] outline, value range, and desiccated state pass weather, darkness, selection,
   and corpse review in-game;
-- [ ] human maintainer accepts the final visual set.
+- [x] human maintainer accepts the final visual set.
