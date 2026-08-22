@@ -33,6 +33,7 @@ REQUIRED_DEF_NAMES = {
     "EI_MakeFarmhouseCheese",
     "EI_MilledOats",
     "EI_MillOats",
+    "EI_MillOatsBulk",
     "EI_OatFlatbread",
     "EI_OatPorridge",
     "EI_Plant_Flax",
@@ -241,6 +242,57 @@ def validate_oat_bulk_recipe_contracts(
     return errors
 
 
+def validate_oat_bulk_milling_recipe_contract(
+    definitions: dict[tuple[str, str], ET.Element],
+) -> list[str]:
+    errors: list[str] = []
+    def_name = "EI_MillOatsBulk"
+    recipe = definitions.get(("RecipeDef", def_name))
+    if recipe is None:
+        return [f"missing RecipeDef {def_name}"]
+
+    expected_values = {
+        "workAmount": "720",
+        "workSpeedStat": "GeneralLaborSpeed",
+        "requiredGiverWorkType": "Crafting",
+        "effectWorking": "CutStone",
+        "soundWorking": "Recipe_MakeStoneBlocks",
+        "workSkill": "Crafting",
+        "workSkillLearnFactor": "0.5",
+        "ingredients/li/count": "40",
+        "ingredients/li/filter/thingDefs/li": "EI_RawOats",
+        "fixedIngredientFilter/thingDefs/li": "EI_RawOats",
+        "displayPriority": "110",
+    }
+    for path, expected in expected_values.items():
+        actual = recipe.findtext(path)
+        if actual != expected:
+            errors.append(f"{def_name}/{path}: expected {expected}, found {actual!r}")
+
+    product = recipe.find("products/EI_MilledOats")
+    actual_product = None if product is None else (product.text or "").strip()
+    if actual_product != "40":
+        errors.append(
+            f"{def_name}/products/EI_MilledOats: expected 40, found {actual_product!r}"
+        )
+
+    users = [
+        (element.text or "").strip()
+        for element in recipe.findall("recipeUsers/li")
+    ]
+    if users != ["EI_HandQuern"]:
+        errors.append(
+            f"{def_name}/recipeUsers: expected EI_HandQuern, found {users!r}"
+        )
+
+    if recipe.find("targetCountAdjustment") is not None:
+        errors.append(f"{def_name} must not use targetCountAdjustment")
+    if recipe.find("bulkRecipeCount") is not None:
+        errors.append(f"{def_name} must not use bulkRecipeCount")
+
+    return errors
+
+
 def validate_linen_compatibility_recipe_contracts(
     definitions: dict[tuple[str, str], ET.Element],
 ) -> list[str]:
@@ -433,6 +485,7 @@ def validate(package: Path) -> list[str]:
 
     errors.extend(validate_wolfhound_contracts(typed_definitions))
     errors.extend(validate_oat_bulk_recipe_contracts(typed_definitions))
+    errors.extend(validate_oat_bulk_milling_recipe_contract(typed_definitions))
     errors.extend(validate_linen_compatibility_recipe_contracts(typed_definitions))
 
     about_path = package / "About" / "About.xml"

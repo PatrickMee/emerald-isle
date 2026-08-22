@@ -38,6 +38,42 @@
   </RecipeDef>
 
   <RecipeDef>
+    <defName>EI_MillOatsBulk</defName>
+    <label>mill oats x4</label>
+    <description>Mill 40 raw oats into 40 milled oats.</description>
+    <jobString>Milling 40 oats.</jobString>
+    <workAmount>720</workAmount>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <requiredGiverWorkType>Crafting</requiredGiverWorkType>
+    <effectWorking>CutStone</effectWorking>
+    <soundWorking>Recipe_MakeStoneBlocks</soundWorking>
+    <workSkill>Crafting</workSkill>
+    <workSkillLearnFactor>0.5</workSkillLearnFactor>
+    <recipeUsers>
+      <li>EI_HandQuern</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EI_RawOats</li>
+          </thingDefs>
+        </filter>
+        <count>40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EI_RawOats</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <EI_MilledOats>40</EI_MilledOats>
+    </products>
+    <displayPriority>110</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
     <defName>EI_CookOatPorridge</defName>
     <label>cook oat porridge</label>
     <description>Cook milled oats into fresh oat porridge.</description>
