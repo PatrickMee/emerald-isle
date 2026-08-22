@@ -14,7 +14,7 @@ exact staged v0.6.3 GitHub release artifact.
 ```text
 Emerald Isle is a lore-friendly RimWorld expansion inspired by Irish history, archaeology, material culture, language, and mythology.
 
-[h1]Version 0.6.2 - Linen Core Recipe Compatibility[/h1]
+[h1]Version 0.6.3 - Bulk Oat Milling[/h1]
 
 Version 0.6.2 adds linen alternatives for the vanilla flak vest, flak pants,
 flak jacket, industrial medicine, and Molotov cocktail recipes. The original
