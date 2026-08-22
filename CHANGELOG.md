@@ -4,6 +4,15 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.6.3] - 2026-08-22
+
+### Bulk Oat Milling
+
+- Added a vanilla-style x4 hand-quern bill for milling 40 raw oats into 40
+  milled oats with exact linear labor and no efficiency bonus.
+- Preserved the existing single-batch milling bill and all existing oat-food
+  item stats and recipe behavior.
+
 ## [0.6.1] - 2026-08-17
 
 ### Farmhouse Cheese Bulk Cooking
