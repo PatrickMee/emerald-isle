@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef>
+    <defName>EI_SmokeMeat</defName>
+    <label>smoke meat</label>
+    <description>Smoke raw meat into a ready-to-eat simple meal that keeps for 30 days.</description>
+    <jobString>Smoking meat.</jobString>
+    <workAmount>600</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <recipeUsers>
+      <li>EI_CentralHearth</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>0.60</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <EI_SmokedMeat>1</EI_SmokedMeat>
+    </products>
+    <workSkill>Cooking</workSkill>
+    <displayPriority>104</displayPriority>
+  </RecipeDef>
+
+  <RecipeDef>
+    <defName>EI_SmokeMeatBulk</defName>
+    <label>smoke meat x4</label>
+    <description>Smoke 2.40 nutrition of raw meat into 4 smoked meats.</description>
+    <jobString>Smoking 4 meats.</jobString>
+    <workAmount>2400</workAmount>
+    <workSpeedStat>CookSpeed</workSpeedStat>
+    <requiredGiverWorkType>Cooking</requiredGiverWorkType>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_CookMeal</soundWorking>
+    <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
+    <recipeUsers>
+      <li>EI_CentralHearth</li>
+    </recipeUsers>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+          </categories>
+        </filter>
+        <count>2.40</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+    </fixedIngredientFilter>
+    <defaultIngredientFilter>
+      <categories>
+        <li>MeatRaw</li>
+      </categories>
+      <disallowedThingDefs>
+        <li>Meat_Human</li>
+        <li>Meat_Megaspider</li>
+        <li MayRequire="Ludeon.RimWorld.Anomaly">Meat_Twisted</li>
+      </disallowedThingDefs>
+    </defaultIngredientFilter>
+    <products>
+      <EI_SmokedMeat>4</EI_SmokedMeat>
+    </products>
+    <workSkill>Cooking</workSkill>
+    <displayPriority>114</displayPriority>
+  </RecipeDef>
+
+</Defs>

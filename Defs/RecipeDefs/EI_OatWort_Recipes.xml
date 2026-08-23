@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <RecipeDef>
+    <defName>EI_MakeOatWort</defName>
+    <label>make oat wort</label>
+    <description>Mix raw oats and hops into vanilla wort for fermentation in a vanilla fermenting barrel.</description>
+    <jobString>Making oat wort.</jobString>
+    <workSpeedStat>DrugCookingSpeed</workSpeedStat>
+    <workSkill>Cooking</workSkill>
+    <effectWorking>Cook</effectWorking>
+    <soundWorking>Recipe_Brewing</soundWorking>
+    <allowMixingIngredients>true</allowMixingIngredients>
+    <workAmount>900</workAmount>
+    <targetCountAdjustment>1</targetCountAdjustment>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>EI_RawOats</li>
+          </thingDefs>
+        </filter>
+        <count>20</count>
+      </li>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>RawHops</li>
+          </thingDefs>
+        </filter>
+        <count>5</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>EI_RawOats</li>
+        <li>RawHops</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <Wort>5</Wort>
+    </products>
+    <recipeUsers>
+      <li>EI_CentralHearth</li>
+    </recipeUsers>
+    <researchPrerequisite>Brewing</researchPrerequisite>
+    <displayPriority>105</displayPriority>
+  </RecipeDef>
+
+</Defs>

@@ -78,6 +78,54 @@ class RuntimeContractTests(unittest.TestCase):
                 result.stderr,
             )
 
+    def test_smoked_meat_nutrition_regression_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            smoked_meat = package / "Defs/ThingDefs_Items/EI_SmokedMeat.xml"
+            smoked_meat.write_text(
+                smoked_meat.read_text().replace(
+                    "<Nutrition>0.8</Nutrition>",
+                    "<Nutrition>0.9</Nutrition>",
+                    1,
+                )
+            )
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("EI_SmokedMeat/statBases/Nutrition: expected 0.8", result.stderr)
+
+    def test_oat_wort_balance_regression_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            wort = package / "Defs/RecipeDefs/EI_OatWort_Recipes.xml"
+            wort.write_text(
+                wort.read_text().replace(
+                    "<workAmount>900</workAmount>",
+                    "<workAmount>1000</workAmount>",
+                    1,
+                )
+            )
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("EI_MakeOatWort/workAmount: expected 900", result.stderr)
+
+    def test_hearth_flame_parity_regression_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            hearth = package / "Defs/ThingDefs_Buildings/EI_CentralHearth.xml"
+            hearth.write_text(
+                hearth.read_text().replace(
+                    "<radius>9.9</radius>",
+                    "<radius>9.8</radius>",
+                    1,
+                )
+            )
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("radius: expected 9.9", result.stderr)
+
     def test_old_flax_yield_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             package = Path(temporary) / "EmeraldIsle"
