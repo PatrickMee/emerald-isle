@@ -49,6 +49,7 @@
       <preferability>MealSimple</preferability>
       <ingestEffect>EatVegetarian</ingestEffect>
       <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
       <optimalityOffsetFeedingAnimals>-25</optimalityOffsetFeedingAnimals>
     </ingestible>
     <comps>

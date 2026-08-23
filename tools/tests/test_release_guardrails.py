@@ -59,6 +59,25 @@ class RuntimeContractTests(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("EI_MillOatsBulk/workAmount: expected 720", result.stderr)
 
+    def test_flatbread_fresh_food_priority_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            foods = package / "Defs/ThingDefs_Items/EI_OatFoods.xml"
+            foods.write_text(
+                foods.read_text().replace(
+                    "<optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>",
+                    "<optimalityOffsetHumanlikes>16</optimalityOffsetHumanlikes>",
+                    1,
+                )
+            )
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn(
+                "EI_OatFlatbread/ingestible/optimalityOffsetHumanlikes: expected 6",
+                result.stderr,
+            )
+
     def test_old_flax_yield_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             package = Path(temporary) / "EmeraldIsle"
