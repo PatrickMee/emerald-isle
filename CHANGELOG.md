@@ -4,6 +4,17 @@ All notable project changes are documented here.
 
 ## [Unreleased]
 
+## [0.6.4] - 2026-08-23
+
+### Oat Flatbread Food Priority
+
+- Set oat flatbread's humanlike food-priority offset to `6`, matching the
+  vanilla pemmican reserve-food pattern so fresh meals and oat porridge remain
+  preferred when both are suitable and accessible.
+- Preserved oat porridge's inherited fresh-food priority and all existing oat
+  food stats, recipes, bills, definitions, localization, art, and save-visible
+  contracts.
+
 ## [0.6.3] - 2026-08-22
 
 ### Bulk Oat Milling

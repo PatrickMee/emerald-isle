@@ -293,6 +293,68 @@ def validate_oat_bulk_milling_recipe_contract(
     return errors
 
 
+def validate_oat_food_contracts(
+    definitions: dict[tuple[str, str], ET.Element],
+) -> list[str]:
+    errors: list[str] = []
+    expected = {
+        "EI_OatPorridge": {
+            "marketValue": "11",
+            "mass": "0.44",
+            "workToMake": "120",
+            "nutrition": "0.9",
+            "daysToRotStart": "2",
+            "humanlikeOffset": None,
+        },
+        "EI_OatFlatbread": {
+            "marketValue": "11",
+            "mass": "0.44",
+            "workToMake": "420",
+            "nutrition": "0.8",
+            "daysToRotStart": "14",
+            "humanlikeOffset": "6",
+        },
+    }
+
+    for def_name, values in expected.items():
+        food = definitions.get(("ThingDef", def_name))
+        if food is None:
+            errors.append(f"missing ThingDef {def_name}")
+            continue
+
+        expected_stats = {
+            "statBases/MarketValue": values["marketValue"],
+            "statBases/Mass": values["mass"],
+            "statBases/WorkToMake": values["workToMake"],
+            "statBases/Nutrition": values["nutrition"],
+            "ingestible/preferability": "MealSimple",
+            "comps/li/daysToRotStart": values["daysToRotStart"],
+        }
+        for path, expected_value in expected_stats.items():
+            actual = food.findtext(path)
+            if actual != expected_value:
+                errors.append(
+                    f"{def_name}/{path}: expected {expected_value}, found {actual!r}"
+                )
+
+        offset = food.find("ingestible/optimalityOffsetHumanlikes")
+        actual_offset = None if offset is None else (offset.text or "").strip()
+        expected_offset = values["humanlikeOffset"]
+        if expected_offset is None:
+            if offset is not None:
+                errors.append(
+                    f"{def_name}/ingestible/optimalityOffsetHumanlikes: "
+                    "porridge must retain the inherited fresh-food path"
+                )
+        elif actual_offset != expected_offset:
+            errors.append(
+                f"{def_name}/ingestible/optimalityOffsetHumanlikes: expected "
+                f"{expected_offset}, found {actual_offset!r}"
+            )
+
+    return errors
+
+
 def validate_linen_compatibility_recipe_contracts(
     definitions: dict[tuple[str, str], ET.Element],
 ) -> list[str]:
@@ -484,6 +546,7 @@ def validate(package: Path) -> list[str]:
             errors.append(f"{def_name}/{path}: expected {expected}, found {actual!r}")
 
     errors.extend(validate_wolfhound_contracts(typed_definitions))
+    errors.extend(validate_oat_food_contracts(typed_definitions))
     errors.extend(validate_oat_bulk_recipe_contracts(typed_definitions))
     errors.extend(validate_oat_bulk_milling_recipe_contract(typed_definitions))
     errors.extend(validate_linen_compatibility_recipe_contracts(typed_definitions))
