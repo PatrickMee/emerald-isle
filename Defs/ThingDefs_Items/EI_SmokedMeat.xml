@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <ThingDef ParentName="MealBase">
+    <defName>EI_SmokedMeat</defName>
+    <label>smoked meat</label>
+    <description>Ready-to-eat meat smoked over the central hearth. It keeps longer than a fresh meal, but is less nourishing and less durable than pemmican or a packaged survival meal.</description>
+    <graphicData>
+      <texPath>Things/Item/Food/EI_SmokedMeat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <tradeability>Buyable</tradeability>
+    <statBases>
+      <MarketValue>15</MarketValue>
+      <Mass>0.44</Mass>
+      <WorkToMake>600</WorkToMake>
+      <Nutrition>0.8</Nutrition>
+    </statBases>
+    <ingestible>
+      <preferability>MealSimple</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+      <optimalityOffsetHumanlikes>6</optimalityOffsetHumanlikes>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>30</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

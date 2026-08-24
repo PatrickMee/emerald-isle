@@ -4,6 +4,7 @@
 from __future__ import annotations
 
 import argparse
+import math
 import sys
 import xml.etree.ElementTree as ET
 from pathlib import Path
@@ -41,6 +42,10 @@ REQUIRED_DEF_NAMES = {
     "EI_ProcessFlax",
     "EI_RawFlax",
     "EI_RawOats",
+    "EI_SmokeMeat",
+    "EI_SmokeMeatBulk",
+    "EI_SmokedMeat",
+    "EI_MakeOatWort",
     "EI_Wolfhound",
 }
 
@@ -527,6 +532,189 @@ def validate_linen_compatibility_recipe_contracts(
     return errors
 
 
+def validate_hearth_larder_contracts(
+    definitions: dict[tuple[str, str], ET.Element],
+) -> list[str]:
+    errors: list[str] = []
+    hearth = definitions.get(("ThingDef", "EI_CentralHearth"))
+    if hearth is None:
+        return ["missing ThingDef EI_CentralHearth"]
+
+    expected_hearth_values = {
+        "statBases/WorkTableWorkSpeedFactor": "0.65",
+        "statBases/MeditationFocusStrength": "0.0",
+        "comps/li[1]/fuelConsumptionRate": "6.0",
+        "comps/li[2]/glowRadius": "10",
+        "comps/li[3]/heatPerSecond": "16",
+        "comps/li[3]/heatPushMaxTemperature": "26",
+    }
+    for path, expected in expected_hearth_values.items():
+        actual = hearth.findtext(path)
+        if actual != expected:
+            errors.append(f"EI_CentralHearth/{path}: expected {expected}, found {actual!r}")
+
+    refuelable = hearth.find("comps/li[@Class='CompProperties_Refuelable']")
+    if refuelable is None or refuelable.findtext("canEjectFuel") != "true":
+        errors.append("EI_CentralHearth refuelable comp must allow fuel ejection")
+
+    meditation = hearth.find("comps/li[@Class='CompProperties_MeditationFocus']")
+    if meditation is None:
+        errors.append("EI_CentralHearth must use the verified Campfire Flame meditation component")
+    else:
+        expected_meditation = {
+            "statDef": "MeditationFocusStrength",
+            "focusTypes/li": "Flame",
+            "offsets/li[1]/offset": "0.12",
+            "offsets/li[2]/offsetPerBuilding": "0.02",
+            "offsets/li[2]/radius": "9.9",
+            "offsets/li[2]/maxBuildings": "8",
+            "offsets/li[2]/explanationKey": "MeditationFocusPerFlame",
+            "offsets/li[2]/explanationKeyAbstract": "MeditationFocusPerFlameAbstract",
+        }
+        for path, expected in expected_meditation.items():
+            actual = meditation.findtext(path)
+            if actual != expected:
+                errors.append(f"EI_CentralHearth/meditation/{path}: expected {expected}, found {actual!r}")
+
+    expected_recipe_order = [
+        "EI_SmokeMeat",
+        "EI_SmokeMeatBulk",
+        "EI_CookOatPorridge",
+        "EI_CookOatFlatbread",
+        "EI_CookOatPorridgeBulk",
+        "EI_CookOatFlatbreadBulk",
+        "EI_MakeFarmhouseCheese",
+        "EI_MakeFarmhouseCheeseBulk",
+        "EI_MakeOatWort",
+    ]
+    recipes = [(element.text or "").strip() for element in hearth.findall("recipes/li")]
+    positions = [recipes.index(def_name) if def_name in recipes else -1 for def_name in expected_recipe_order]
+    if any(position < 0 for position in positions) or positions != sorted(positions):
+        errors.append("EI_CentralHearth recipe visibility/order does not match the Hearth/Larder contract")
+
+    expected_central_hearth_recipe_users = {
+        "EI_SmokeMeat": [],
+        "EI_SmokeMeatBulk": [],
+        "EI_MakeFarmhouseCheese": ["FueledStove", "ElectricStove"],
+        "EI_MakeFarmhouseCheeseBulk": ["FueledStove", "ElectricStove"],
+        "EI_MakeOatWort": [],
+    }
+    for def_name in expected_recipe_order:
+        recipe = definitions.get(("RecipeDef", def_name))
+        if recipe is None:
+            continue
+        direct_count = recipes.count(def_name)
+        users = [(element.text or "").strip() for element in recipe.findall("recipeUsers/li")]
+        central_user_count = users.count("EI_CentralHearth")
+        effective_count = direct_count + central_user_count
+        if direct_count != 1:
+            errors.append(
+                f"EI_CentralHearth/recipes/{def_name}: expected exactly once, found {direct_count}"
+            )
+        if effective_count != 1:
+            errors.append(
+                f"{def_name}/effective central-hearth exposure: expected exactly once, found {effective_count}"
+            )
+        if def_name in expected_central_hearth_recipe_users:
+            expected_users = expected_central_hearth_recipe_users[def_name]
+            if users != expected_users:
+                errors.append(
+                    f"{def_name}/recipeUsers: expected {expected_users}, found {users}"
+                )
+
+    smoked_meat = definitions.get(("ThingDef", "EI_SmokedMeat"))
+    if smoked_meat is None:
+        errors.append("missing ThingDef EI_SmokedMeat")
+    else:
+        if smoked_meat.get("ParentName") != "MealBase":
+            errors.append("EI_SmokedMeat must inherit MealBase for vanilla meal ingestion and ingredient provenance")
+        expected_food_values = {
+            "statBases/MarketValue": "15",
+            "statBases/Mass": "0.44",
+            "statBases/WorkToMake": "600",
+            "statBases/Nutrition": "0.8",
+            "ingestible/preferability": "MealSimple",
+            "ingestible/optimalityOffsetHumanlikes": "6",
+            "comps/li/ daysToRotStart": "30",
+        }
+        for path, expected in expected_food_values.items():
+            normalized_path = path.replace("li/ ", "li/")
+            actual = smoked_meat.findtext(normalized_path)
+            if actual != expected:
+                errors.append(f"EI_SmokedMeat/{normalized_path}: expected {expected}, found {actual!r}")
+
+    for def_name, count, work_amount, priority in (
+        ("EI_SmokeMeat", "0.60", "600", "104"),
+        ("EI_SmokeMeatBulk", "2.40", "2400", "114"),
+    ):
+        recipe = definitions.get(("RecipeDef", def_name))
+        if recipe is None:
+            errors.append(f"missing RecipeDef {def_name}")
+            continue
+        expected_values = {
+            "workAmount": work_amount,
+            "workSpeedStat": "CookSpeed",
+            "requiredGiverWorkType": "Cooking",
+            "effectWorking": "Cook",
+            "soundWorking": "Recipe_CookMeal",
+            "ingredientValueGetterClass": "IngredientValueGetter_Nutrition",
+            "ingredients/li/count": count,
+            "ingredients/li/filter/categories/li": "MeatRaw",
+            "fixedIngredientFilter/categories/li": "MeatRaw",
+            "defaultIngredientFilter/categories/li": "MeatRaw",
+            "skillRequirements/Cooking": "4",
+            "displayPriority": priority,
+        }
+        for path, expected in expected_values.items():
+            actual = recipe.findtext(path)
+            if actual != expected:
+                errors.append(f"{def_name}/{path}: expected {expected}, found {actual!r}")
+        disallowed = [element.text.strip() for element in recipe.findall("defaultIngredientFilter/disallowedThingDefs/li")]
+        if disallowed != ["Meat_Human", "Meat_Megaspider", "Meat_Twisted"]:
+            errors.append(f"{def_name} default meat exclusions changed: {disallowed!r}")
+        product = recipe.find("products/EI_SmokedMeat")
+        expected_product = "1" if def_name == "EI_SmokeMeat" else "4"
+        if product is None or (product.text or "").strip() != expected_product:
+            errors.append(f"{def_name}/products/EI_SmokedMeat must be {expected_product}")
+        if recipe.find("researchPrerequisite") is not None:
+            errors.append(f"{def_name} must not require research")
+
+    wort = definitions.get(("RecipeDef", "EI_MakeOatWort"))
+    if wort is None:
+        errors.append("missing RecipeDef EI_MakeOatWort")
+    else:
+        expected_wort_values = {
+            "description": "Mix raw oats and hops into wort for fermentation in a fermenting barrel.",
+            "workAmount": "900",
+            "workSpeedStat": "DrugCookingSpeed",
+            "workSkill": "Cooking",
+            "effectWorking": "Cook",
+            "soundWorking": "Recipe_Brewing",
+            "targetCountAdjustment": "1",
+            "researchPrerequisite": "Brewing",
+            "ingredients/li[1]/filter/thingDefs/li": "EI_RawOats",
+            "ingredients/li[1]/count": "20",
+            "ingredients/li[2]/filter/thingDefs/li": "RawHops",
+            "ingredients/li[2]/count": "5",
+            "products/Wort": "5",
+            "displayPriority": "105",
+        }
+        for path, expected in expected_wort_values.items():
+            actual = wort.findtext(path)
+            if actual != expected:
+                errors.append(f"EI_MakeOatWort/{path}: expected {expected}, found {actual!r}")
+        if [element.text.strip() for element in wort.findall("fixedIngredientFilter/thingDefs/li")] != ["EI_RawOats", "RawHops"]:
+            errors.append("EI_MakeOatWort fixed ingredient filter must be EI_RawOats and RawHops")
+
+        effective_work = 5 * 900 / 0.65
+        if not math.isclose(effective_work, 6923.076923, rel_tol=0, abs_tol=0.001):
+            errors.append(f"oat wort effective full-barrel work changed: {effective_work}")
+        if not effective_work > 5 * 1000:
+            errors.append("oat wort full-barrel work must remain slower than vanilla brewery wort")
+
+    return errors
+
+
 def validate(package: Path) -> list[str]:
     errors: list[str] = []
     definitions = load_defs(package)
@@ -550,6 +738,7 @@ def validate(package: Path) -> list[str]:
     errors.extend(validate_oat_bulk_recipe_contracts(typed_definitions))
     errors.extend(validate_oat_bulk_milling_recipe_contract(typed_definitions))
     errors.extend(validate_linen_compatibility_recipe_contracts(typed_definitions))
+    errors.extend(validate_hearth_larder_contracts(typed_definitions))
 
     about_path = package / "About" / "About.xml"
     if not about_path.is_file():

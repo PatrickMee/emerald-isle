@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_MakeOatWort.label>make oat wort</EI_MakeOatWort.label>
+  <EI_MakeOatWort.description>Mix raw oats and hops into wort for fermentation in a fermenting barrel.</EI_MakeOatWort.description>
+  <EI_MakeOatWort.jobString>Making oat wort.</EI_MakeOatWort.jobString>
+
+</LanguageData>

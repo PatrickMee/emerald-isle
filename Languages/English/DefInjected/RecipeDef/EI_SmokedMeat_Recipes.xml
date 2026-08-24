@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+
+  <EI_SmokeMeat.label>smoke meat</EI_SmokeMeat.label>
+  <EI_SmokeMeat.description>Smoke raw meat into a ready-to-eat simple meal that keeps for 30 days.</EI_SmokeMeat.description>
+  <EI_SmokeMeat.jobString>Smoking meat.</EI_SmokeMeat.jobString>
+
+  <EI_SmokeMeatBulk.label>smoke meat x4</EI_SmokeMeatBulk.label>
+  <EI_SmokeMeatBulk.description>Smoke 2.40 nutrition of raw meat into 4 smoked meats.</EI_SmokeMeatBulk.description>
+  <EI_SmokeMeatBulk.jobString>Smoking 4 meats.</EI_SmokeMeatBulk.jobString>
+
+</LanguageData>
