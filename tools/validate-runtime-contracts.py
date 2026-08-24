@@ -662,6 +662,7 @@ def validate_hearth_larder_contracts(
             "ingredients/li/filter/categories/li": "MeatRaw",
             "fixedIngredientFilter/categories/li": "MeatRaw",
             "defaultIngredientFilter/categories/li": "MeatRaw",
+            "skillRequirements/Cooking": "4",
             "displayPriority": priority,
         }
         for path, expected in expected_values.items():

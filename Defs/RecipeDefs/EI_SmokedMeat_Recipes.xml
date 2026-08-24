@@ -41,6 +41,9 @@
       <EI_SmokedMeat>1</EI_SmokedMeat>
     </products>
     <workSkill>Cooking</workSkill>
+    <skillRequirements>
+      <Cooking>4</Cooking>
+    </skillRequirements>
     <displayPriority>104</displayPriority>
   </RecipeDef>
 
@@ -84,6 +87,9 @@
       <EI_SmokedMeat>4</EI_SmokedMeat>
     </products>
     <workSkill>Cooking</workSkill>
+    <skillRequirements>
+      <Cooking>4</Cooking>
+    </skillRequirements>
     <displayPriority>114</displayPriority>
   </RecipeDef>
 

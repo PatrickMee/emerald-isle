@@ -95,6 +95,22 @@ class RuntimeContractTests(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("EI_SmokedMeat/statBases/Nutrition: expected 0.8", result.stderr)
 
+    def test_smoked_meat_cooking_skill_requirement_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            smoked_meat = package / "Defs/RecipeDefs/EI_SmokedMeat_Recipes.xml"
+            smoked_meat.write_text(
+                smoked_meat.read_text().replace(
+                    "    <skillRequirements>\n      <Cooking>4</Cooking>\n    </skillRequirements>\n",
+                    "",
+                )
+            )
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("EI_SmokeMeat/skillRequirements/Cooking: expected 4, found None", result.stderr)
+            self.assertIn("EI_SmokeMeatBulk/skillRequirements/Cooking: expected 4, found None", result.stderr)
+
     def test_duplicate_central_hearth_recipe_registration_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             package = Path(temporary) / "EmeraldIsle"
