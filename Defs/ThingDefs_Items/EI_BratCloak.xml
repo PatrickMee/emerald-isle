@@ -4,7 +4,7 @@
   <ThingDef ParentName="ApparelMakeableBase">
     <defName>EI_BratCloak</defName>
     <label>brat cloak</label>
-    <description>A heavy rectangular cloak worn over everyday clothing, inspired by the early medieval Irish brat. Cheap and quick to make, it keeps the wearer warm in cold weather but offers little protection from weapons and does nothing against heat.</description>
+    <description>A heavy rectangular cloak worn over everyday clothing, inspired by the early medieval Irish brat. Cheap and quick to make, it provides strong cold-weather insulation when made from wool. Cloth is adequate, while linen sacrifices much of its warmth. It offers little protection from weapons or heat.</description>
     <graphicData>
       <texPath>Things/Pawn/Humanlike/Apparel/BratCloak/EI_BratCloak</texPath>
       <graphicClass>Graphic_Single</graphicClass>
