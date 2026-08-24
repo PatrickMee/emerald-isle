@@ -4,7 +4,7 @@
   <RecipeDef>
     <defName>EI_MakeOatWort</defName>
     <label>make oat wort</label>
-    <description>Mix raw oats and hops into vanilla wort for fermentation in a vanilla fermenting barrel.</description>
+    <description>Mix raw oats and hops into wort for fermentation in a fermenting barrel.</description>
     <jobString>Making oat wort.</jobString>
     <workSpeedStat>DrugCookingSpeed</workSpeedStat>
     <workSkill>Cooking</workSkill>

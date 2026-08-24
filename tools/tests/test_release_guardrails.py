@@ -155,6 +155,18 @@ class RuntimeContractTests(unittest.TestCase):
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("EI_MakeOatWort/researchPrerequisite: expected Brewing", result.stderr)
 
+    def test_oat_wort_description_is_consistent_in_fallback_and_localization(self) -> None:
+        package = REPO / "build" / "EmeraldIsle"
+        expected = "Mix raw oats and hops into wort for fermentation in a fermenting barrel."
+        recipe_text = (package / "Defs/RecipeDefs/EI_OatWort_Recipes.xml").read_text()
+        localization_text = (
+            package / "Languages/English/DefInjected/RecipeDef/EI_OatWort_Recipes.xml"
+        ).read_text()
+        self.assertIn(f"<description>{expected}</description>", recipe_text)
+        self.assertIn(f"<EI_MakeOatWort.description>{expected}</EI_MakeOatWort.description>", localization_text)
+        self.assertNotIn("vanilla", recipe_text)
+        self.assertNotIn("vanilla", localization_text)
+
     def test_oat_wort_balance_regression_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             package = Path(temporary) / "EmeraldIsle"

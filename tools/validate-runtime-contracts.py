@@ -684,6 +684,7 @@ def validate_hearth_larder_contracts(
         errors.append("missing RecipeDef EI_MakeOatWort")
     else:
         expected_wort_values = {
+            "description": "Mix raw oats and hops into wort for fermentation in a fermenting barrel.",
             "workAmount": "900",
             "workSpeedStat": "DrugCookingSpeed",
             "workSkill": "Cooking",
