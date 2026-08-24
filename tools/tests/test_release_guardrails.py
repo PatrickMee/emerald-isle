@@ -6,6 +6,7 @@ import sys
 import tempfile
 import unittest
 import zipfile
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 
@@ -93,6 +94,50 @@ class RuntimeContractTests(unittest.TestCase):
             result = self.run_validator(package)
             self.assertNotEqual(result.returncode, 0)
             self.assertIn("EI_SmokedMeat/statBases/Nutrition: expected 0.8", result.stderr)
+
+    def test_duplicate_central_hearth_recipe_registration_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            recipe_files = {
+                "EI_SmokeMeat": package / "Defs/RecipeDefs/EI_SmokedMeat_Recipes.xml",
+                "EI_SmokeMeatBulk": package / "Defs/RecipeDefs/EI_SmokedMeat_Recipes.xml",
+                "EI_MakeFarmhouseCheese": package / "Defs/RecipeDefs/EI_FarmhouseCheese_Recipes.xml",
+                "EI_MakeFarmhouseCheeseBulk": package / "Defs/RecipeDefs/EI_FarmhouseCheese_Recipes.xml",
+                "EI_MakeOatWort": package / "Defs/RecipeDefs/EI_OatWort_Recipes.xml",
+            }
+            trees: dict[Path, ET.ElementTree] = {}
+            for recipe_file in set(recipe_files.values()):
+                tree = ET.parse(recipe_file)
+                trees[recipe_file] = tree
+                for recipe in tree.getroot().findall("RecipeDef"):
+                    def_name = recipe.findtext("defName")
+                    if def_name not in recipe_files or recipe_files[def_name] != recipe_file:
+                        continue
+                    users = recipe.find("recipeUsers")
+                    if users is None:
+                        users = ET.SubElement(recipe, "recipeUsers")
+                    ET.SubElement(users, "li").text = "EI_CentralHearth"
+            for recipe_file, tree in trees.items():
+                tree.write(recipe_file, encoding="utf-8", xml_declaration=True)
+
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            for def_name in recipe_files:
+                self.assertIn(
+                    f"{def_name}/effective central-hearth exposure: expected exactly once, found 2",
+                    result.stderr,
+                )
+
+    def test_oat_wort_research_gate_is_rejected(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            wort = package / "Defs/RecipeDefs/EI_OatWort_Recipes.xml"
+            wort.write_text(wort.read_text().replace("<researchPrerequisite>Brewing</researchPrerequisite>", "", 1))
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("EI_MakeOatWort/researchPrerequisite: expected Brewing", result.stderr)
 
     def test_oat_wort_balance_regression_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:

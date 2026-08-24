@@ -40,9 +40,6 @@
     <products>
       <Wort>5</Wort>
     </products>
-    <recipeUsers>
-      <li>EI_CentralHearth</li>
-    </recipeUsers>
     <researchPrerequisite>Brewing</researchPrerequisite>
     <displayPriority>105</displayPriority>
   </RecipeDef>

@@ -592,6 +592,36 @@ def validate_hearth_larder_contracts(
     if any(position < 0 for position in positions) or positions != sorted(positions):
         errors.append("EI_CentralHearth recipe visibility/order does not match the Hearth/Larder contract")
 
+    expected_central_hearth_recipe_users = {
+        "EI_SmokeMeat": [],
+        "EI_SmokeMeatBulk": [],
+        "EI_MakeFarmhouseCheese": ["FueledStove", "ElectricStove"],
+        "EI_MakeFarmhouseCheeseBulk": ["FueledStove", "ElectricStove"],
+        "EI_MakeOatWort": [],
+    }
+    for def_name in expected_recipe_order:
+        recipe = definitions.get(("RecipeDef", def_name))
+        if recipe is None:
+            continue
+        direct_count = recipes.count(def_name)
+        users = [(element.text or "").strip() for element in recipe.findall("recipeUsers/li")]
+        central_user_count = users.count("EI_CentralHearth")
+        effective_count = direct_count + central_user_count
+        if direct_count != 1:
+            errors.append(
+                f"EI_CentralHearth/recipes/{def_name}: expected exactly once, found {direct_count}"
+            )
+        if effective_count != 1:
+            errors.append(
+                f"{def_name}/effective central-hearth exposure: expected exactly once, found {effective_count}"
+            )
+        if def_name in expected_central_hearth_recipe_users:
+            expected_users = expected_central_hearth_recipe_users[def_name]
+            if users != expected_users:
+                errors.append(
+                    f"{def_name}/recipeUsers: expected {expected_users}, found {users}"
+                )
+
     smoked_meat = definitions.get(("ThingDef", "EI_SmokedMeat"))
     if smoked_meat is None:
         errors.append("missing ThingDef EI_SmokedMeat")
@@ -638,8 +668,6 @@ def validate_hearth_larder_contracts(
             actual = recipe.findtext(path)
             if actual != expected:
                 errors.append(f"{def_name}/{path}: expected {expected}, found {actual!r}")
-        if [element.text.strip() for element in recipe.findall("recipeUsers/li")] != ["EI_CentralHearth"]:
-            errors.append(f"{def_name}/recipeUsers must contain only EI_CentralHearth")
         disallowed = [element.text.strip() for element in recipe.findall("defaultIngredientFilter/disallowedThingDefs/li")]
         if disallowed != ["Meat_Human", "Meat_Megaspider", "Meat_Twisted"]:
             errors.append(f"{def_name} default meat exclusions changed: {disallowed!r}")
@@ -673,8 +701,6 @@ def validate_hearth_larder_contracts(
             actual = wort.findtext(path)
             if actual != expected:
                 errors.append(f"EI_MakeOatWort/{path}: expected {expected}, found {actual!r}")
-        if [element.text.strip() for element in wort.findall("recipeUsers/li")] != ["EI_CentralHearth"]:
-            errors.append("EI_MakeOatWort/recipeUsers must contain only EI_CentralHearth")
         if [element.text.strip() for element in wort.findall("fixedIngredientFilter/thingDefs/li")] != ["EI_RawOats", "RawHops"]:
             errors.append("EI_MakeOatWort fixed ingredient filter must be EI_RawOats and RawHops")
 

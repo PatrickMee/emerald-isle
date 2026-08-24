@@ -12,9 +12,6 @@
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
     <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-    <recipeUsers>
-      <li>EI_CentralHearth</li>
-    </recipeUsers>
     <ingredients>
       <li>
         <filter>
@@ -58,9 +55,6 @@
     <effectWorking>Cook</effectWorking>
     <soundWorking>Recipe_CookMeal</soundWorking>
     <ingredientValueGetterClass>IngredientValueGetter_Nutrition</ingredientValueGetterClass>
-    <recipeUsers>
-      <li>EI_CentralHearth</li>
-    </recipeUsers>
     <ingredients>
       <li>
         <filter>
