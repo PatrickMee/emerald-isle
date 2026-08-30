@@ -1,6 +1,6 @@
 # Version 1.0 Delivery Plan: The Ringfort
 
-**Status:** Draft for maintainer review; not approved implementation scope<br>
+**Status:** Approved delivery plan; individual gameplay slices still require their own approval<br>
 **Owner:** Patrick Mee<br>
 **Planning baseline:** [`v0.6.3`](../release/v0.6.3.md)<br>
 **Target:** Version 1.0 — Emerald Isle<br>
@@ -10,7 +10,7 @@ scope, release sequence, marquee feature, or conditional round-tower decision
 
 ## Authority and Use
 
-This document proposes the delivery path from the published Version 0.6.3
+This document defines the approved delivery path from the published Version 0.6.3
 baseline to Version 1.0. It operates beneath the
 [Constitution](../../.specify/memory/constitution.md),
 [Design Bible](../design/design-bible.md),
@@ -335,10 +335,10 @@ work, and defensive use. The tower appears in public material only if it ships.
 | Feature accumulation obscures the headline | Freeze major gameplay at Version 0.9 and defer unrelated candidates |
 | Process consumes more effort than development | Keep one plan, one feature record per approved slice, and evidence in implementation/release PRs |
 
-## Decisions Required for Approval
+## Approved Decisions
 
-The maintainer should approve or revise these five decisions before this plan
-becomes authoritative:
+The maintainer approved these five decisions as the authoritative Version 1.0
+delivery direction:
 
 1. The ringfort is the required marquee feature for Version 1.0.
 2. One distinct provisioning/larder feature is required for Version 1.0.
@@ -351,6 +351,9 @@ becomes authoritative:
 
 ## Approval
 
-**Decision:** Drafted; maintainer review pending<br>
-**Approved by/date:** Pending<br>
-**Conditions:** Pending
+**Decision:** Approved as written<br>
+**Approved by/date:** Patrick Mee, 2026-08-29<br>
+**Conditions:** Each gameplay slice still requires its own proportionate feature
+record and maintainer approval. The round tower remains conditional, and failed
+ringfort discovery must narrow, revise, or reject implementation rather than
+creating a larger framework.
