@@ -14,6 +14,10 @@ Dist/
 TestResults/
 *.user
 
+# Python tool caches must not dirty release source checks
+__pycache__/
+*.py[cod]
+
 # RimWorld local development
 *.log
 *.rws
