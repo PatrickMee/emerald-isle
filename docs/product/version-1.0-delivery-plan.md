@@ -1,6 +1,6 @@
 # Version 1.0 Delivery Plan: The Ringfort
 
-**Status:** Approved delivery plan; individual gameplay slices still require their own approval<br>
+**Status:** Historical approved plan; ringfort marquee withdrawn 2026-10-17, replacement delivery plan pending<br>
 **Owner:** Patrick Mee<br>
 **Planning baseline:** [`v0.6.3`](../release/v0.6.3.md)<br>
 **Target:** Version 1.0 — Emerald Isle<br>
@@ -9,6 +9,16 @@
 scope, release sequence, marquee feature, or conditional round-tower decision
 
 ## Authority and Use
+
+**2026-10-17 maintainer decision:** Patrick Mee rejected Ringfort Foundations
+as the Version 1.0 marquee feature after the
+[discovery comparison](ringfort-foundations-discovery.md) failed Gate A. The
+ringfort requirement, Version 0.8 Ringfort Foundations checkpoint, and
+"Emerald Isle: The Ringfort" release promise below are historical, not current
+implementation commitments. The original 2026-08-29 approval is preserved below
+as decision history. No substitute marquee feature, revised sequence, or round-
+tower inclusion is approved by this decision. A successor Version 1.0 delivery
+plan needs Patrick's review before those commitments are made.
 
 This document defines the approved delivery path from the published Version 0.6.3
 baseline to Version 1.0. It operates beneath the
