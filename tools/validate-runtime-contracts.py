@@ -13,6 +13,8 @@ from pathlib import Path
 REQUIRED_DEF_NAMES = {
     "EI_BratCloak",
     "EI_CentralHearth",
+    "EI_HearthSocialRelaxJob",
+    "EI_HearthSocialRelaxJoy",
     "EI_CookOatFlatbread",
     "EI_CookOatFlatbreadBulk",
     "EI_CookOatPorridge",
@@ -543,7 +545,7 @@ def validate_hearth_larder_contracts(
     expected_hearth_values = {
         "statBases/WorkTableWorkSpeedFactor": "0.65",
         "statBases/MeditationFocusStrength": "0.0",
-        "comps/li[1]/fuelConsumptionRate": "6.0",
+        "comps/li[1]/fuelConsumptionRate": "3.0",
         "comps/li[2]/glowRadius": "10",
         "comps/li[3]/heatPerSecond": "16",
         "comps/li[3]/heatPushMaxTemperature": "26",
@@ -715,6 +717,48 @@ def validate_hearth_larder_contracts(
     return errors
 
 
+def validate_hearth_social_contracts(
+    package: Path, definitions: dict[tuple[str, str], ET.Element]
+) -> list[str]:
+    errors: list[str] = []
+    job = definitions.get(("JobDef", "EI_HearthSocialRelaxJob"))
+    giver = definitions.get(("JoyGiverDef", "EI_HearthSocialRelaxJoy"))
+    expected = (
+        (job, "EI_HearthSocialRelaxJob", {
+            "driverClass": "EmeraldIsle.EI_JobDriver_HearthSocialRelax",
+            "joyKind": "Social",
+            "joyDuration": "4000",
+        }),
+        (giver, "EI_HearthSocialRelaxJoy", {
+            "giverClass": "EmeraldIsle.EI_JoyGiver_HearthSocialRelax",
+            "jobDef": "EI_HearthSocialRelaxJob",
+            "joyKind": "Social",
+            "baseChance": "2",
+        }),
+    )
+    for definition, name, values in expected:
+        if definition is None:
+            errors.append(f"missing {name}")
+            continue
+        for path, value in values.items():
+            actual = definition.findtext(path)
+            if actual != value:
+                errors.append(f"{name}/{path}: expected {value}, found {actual!r}")
+
+    translation = package / "Languages/English/DefInjected/JobDef/EI_HearthSocialRelax.xml"
+    if not translation.is_file() or ET.parse(translation).getroot().findtext(
+        "EI_HearthSocialRelaxJob.reportString"
+    ) != (job.findtext("reportString") if job is not None else None):
+        errors.append("hearth social job reportString must match its English injection")
+
+    assemblies = list((package / "Assemblies").glob("*.dll"))
+    if [assembly.name for assembly in assemblies] != ["EmeraldIsle.dll"]:
+        errors.append("public package must contain exactly one EmeraldIsle.dll")
+    elif not assemblies[0].read_bytes().startswith(b"MZ"):
+        errors.append("EmeraldIsle.dll is not a compiled PE assembly")
+    return errors
+
+
 def validate(package: Path) -> list[str]:
     errors: list[str] = []
     definitions = load_defs(package)
@@ -739,6 +783,7 @@ def validate(package: Path) -> list[str]:
     errors.extend(validate_oat_bulk_milling_recipe_contract(typed_definitions))
     errors.extend(validate_linen_compatibility_recipe_contracts(typed_definitions))
     errors.extend(validate_hearth_larder_contracts(typed_definitions))
+    errors.extend(validate_hearth_social_contracts(package, typed_definitions))
 
     about_path = package / "About" / "About.xml"
     if not about_path.is_file():

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+  <JobDef>
+    <defName>EI_HearthSocialRelaxJob</defName>
+    <driverClass>EmeraldIsle.EI_JobDriver_HearthSocialRelax</driverClass>
+    <reportString>relaxing socially by the hearth.</reportString>
+    <joyDuration>4000</joyDuration>
+    <joyKind>Social</joyKind>
+  </JobDef>
+
+  <JoyGiverDef>
+    <defName>EI_HearthSocialRelaxJoy</defName>
+    <giverClass>EmeraldIsle.EI_JoyGiver_HearthSocialRelax</giverClass>
+    <baseChance>2</baseChance>
+    <jobDef>EI_HearthSocialRelaxJob</jobDef>
+    <joyKind>Social</joyKind>
+  </JoyGiverDef>
+
+</Defs>

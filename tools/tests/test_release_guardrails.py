@@ -29,6 +29,40 @@ class RuntimeContractTests(unittest.TestCase):
         result = self.run_validator(REPO / "build" / "EmeraldIsle")
         self.assertEqual(result.returncode, 0, result.stderr)
 
+    def test_hearth_social_fuel_rate_is_rejected_if_restored_to_six(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            hearth = package / "Defs/ThingDefs_Buildings/EI_CentralHearth.xml"
+            hearth.write_text(
+                hearth.read_text().replace(
+                    "<fuelConsumptionRate>3.0</fuelConsumptionRate>",
+                    "<fuelConsumptionRate>6.0</fuelConsumptionRate>",
+                )
+            )
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("fuelConsumptionRate: expected 3.0", result.stderr)
+
+    def test_hearth_social_job_must_use_social_joy(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            defs = package / "Defs/JobDefs/EI_HearthSocialRelax.xml"
+            defs.write_text(defs.read_text().replace("<joyKind>Social</joyKind>", "<joyKind>Meditative</joyKind>"))
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("joyKind: expected Social", result.stderr)
+
+    def test_hearth_social_assembly_is_required(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            package = Path(temporary) / "EmeraldIsle"
+            shutil.copytree(REPO / "build" / "EmeraldIsle", package)
+            (package / "Assemblies/EmeraldIsle.dll").unlink()
+            result = self.run_validator(package)
+            self.assertNotEqual(result.returncode, 0)
+            self.assertIn("exactly one EmeraldIsle.dll", result.stderr)
+
     def test_zero_quern_xp_is_rejected(self) -> None:
         with tempfile.TemporaryDirectory() as temporary:
             package = Path(temporary) / "EmeraldIsle"

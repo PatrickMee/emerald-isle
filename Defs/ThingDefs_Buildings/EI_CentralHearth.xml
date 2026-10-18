@@ -4,7 +4,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>EI_CentralHearth</defName>
     <label>central hearth</label>
-    <description>A stone-lined hearth for warmth, light, and simple cooking. It burns wood continuously and cooks more slowly than a stove. Its bills include smoked meat for storage and, after Brewing research, oat wort from raw oats and hops.</description>
+    <description>A stone-lined hearth for warmth, light, and simple cooking. It burns wood continuously and cooks more slowly than a stove. Its bills include smoked meat for storage and, after Brewing research, oat wort from raw oats and hops. Hearthside seating can provide 20% faster Social recreation while it burns.</description>
     <thingClass>Building_WorkTable</thingClass>
     <category>Building</category>
     <graphicData>
@@ -54,7 +54,7 @@
     <drawPlaceWorkersWhileSelected>true</drawPlaceWorkersWhileSelected>
     <comps>
       <li Class="CompProperties_Refuelable">
-        <fuelConsumptionRate>6.0</fuelConsumptionRate>
+        <fuelConsumptionRate>3.0</fuelConsumptionRate>
         <fuelCapacity>32.0</fuelCapacity>
         <fuelConsumptionPerTickInRain>0.0006</fuelConsumptionPerTickInRain>
         <fuelFilter>

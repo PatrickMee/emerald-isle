@@ -51,6 +51,21 @@ Steam package and a subscriber cache to that ZIP. CI runs the cumulative runtime
 contract validator so a feature branch cannot silently drop previously released
 balance values or definitions.
 
+## Hearth Social Prototype Assembly
+
+[ADR 0007](../adr/0007-first-gameplay-assembly-for-hearth-social-relaxation.md)
+records the first gameplay assembly decision. For the local prototype, set
+`RIMWORLD_MANAGED_DIR` to the installed RimWorld 1.6.4871 rev597 `Managed`
+directory and run `./tools/stage-mod.sh`. Staging invokes
+`tools/build-assembly.sh`, which verifies the exact game DLL and pinned Mono
+Roslyn compiler, then compiles the current `Source/EmeraldIsle` files into the
+staged `Assemblies/EmeraldIsle.dll`. No generated DLL belongs in Git or the
+source `Assemblies` directory. A missing or changed game reference stops staging
+before the previous package is replaced. A public CI runner without licensed
+RimWorld references cannot claim a complete package build; the prototype's full
+build and game-load evidence must be recorded from a configured local or private
+runner.
+
 ## Developer Testing Framework
 
 Developer-only test assets live under `Dev/` and are staged only by
