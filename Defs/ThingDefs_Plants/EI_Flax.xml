@@ -4,7 +4,7 @@
   <ThingDef ParentName="PlantBase">
     <defName>EI_Plant_Flax</defName>
     <label>flax plant</label>
-    <description>A fiber crop grown for linen. It matures sooner than cotton, but its harvest must be processed before it can be used as cloth.</description>
+    <description>A fiber crop grown for linen. It matures sooner than cotton; process harvested raw flax at a crafting spot or tailoring bench before use.</description>
     <statBases>
       <MaxHitPoints>85</MaxHitPoints>
       <Nutrition>0.2</Nutrition>

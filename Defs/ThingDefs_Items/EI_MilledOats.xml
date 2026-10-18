@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>EI_MilledOats</defName>
     <label>milled oats</label>
-    <description>Ground oats prepared for cooking. They are an ingredient, not a finished meal.</description>
+    <description>Oats ground at a hand quern. Cook them into porridge or flatbread at a campfire, central hearth, or stove; they are not a finished meal.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Processed/EI_MilledOats</texPath>
       <graphicClass>Graphic_Single</graphicClass>

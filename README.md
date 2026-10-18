@@ -23,6 +23,7 @@ records.
 
 Install from the Steam Workshop or download the immutable package from
 [GitHub releases](https://github.com/PatrickMee/emerald-isle/releases).
+For upgrades, removal, and bug reports, see [Support](SUPPORT.md).
 
 Start with:
 

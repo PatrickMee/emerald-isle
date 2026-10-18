@@ -4,7 +4,7 @@
   <ThingDef ParentName="ResourceBase">
     <defName>EI_RawFlax</defName>
     <label>raw flax</label>
-    <description>Harvested flax stems and fiber ready to be processed into linen.</description>
+    <description>Harvested flax stems and fiber. Process them into linen at a crafting spot or tailoring bench.</description>
     <graphicData>
       <texPath>Things/Item/Resource/Textile/EI_RawFlax</texPath>
       <graphicClass>Graphic_StackCount</graphicClass>

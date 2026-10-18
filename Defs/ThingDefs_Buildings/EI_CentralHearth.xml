@@ -4,7 +4,7 @@
   <ThingDef ParentName="BuildingBase">
     <defName>EI_CentralHearth</defName>
     <label>central hearth</label>
-    <description>A permanent stone-lined household hearth for simple cooking, warmth, and light. It burns wood continuously and cooks more slowly than a dedicated stove.</description>
+    <description>A stone-lined hearth for warmth, light, and simple cooking. It burns wood continuously and cooks more slowly than a stove. Its bills include smoked meat for storage and, after Brewing research, oat wort from raw oats and hops.</description>
     <thingClass>Building_WorkTable</thingClass>
     <category>Building</category>
     <graphicData>

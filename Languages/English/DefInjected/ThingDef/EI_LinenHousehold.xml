@@ -2,10 +2,10 @@
 <LanguageData>
 
   <EI_Plant_Flax.label>flax plant</EI_Plant_Flax.label>
-  <EI_Plant_Flax.description>A fiber crop grown for linen. It matures sooner than cotton, but its harvest must be processed before it can be used as cloth.</EI_Plant_Flax.description>
+  <EI_Plant_Flax.description>A fiber crop grown for linen. It matures sooner than cotton; process harvested raw flax at a crafting spot or tailoring bench before use.</EI_Plant_Flax.description>
 
   <EI_RawFlax.label>raw flax</EI_RawFlax.label>
-  <EI_RawFlax.description>Harvested flax stems and fiber ready to be processed into linen.</EI_RawFlax.description>
+  <EI_RawFlax.description>Harvested flax stems and fiber. Process them into linen at a crafting spot or tailoring bench.</EI_RawFlax.description>
 
   <EI_Linen.label>linen</EI_Linen.label>
   <EI_Linen.description>A light fabric processed from flax fiber. It handles warm weather well, but is less durable and less insulating in the cold than cloth.</EI_Linen.description>

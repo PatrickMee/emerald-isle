@@ -4,7 +4,7 @@
   <ThingDef ParentName="PlantFoodRawBase">
     <defName>EI_RawOats</defName>
     <label>oats</label>
-    <description>Harvested oat grain. It can be eaten raw, cooked, fed to animals, stored, traded, or processed into other foods.</description>
+    <description>Harvested oat grain. Mill it at a hand quern for porridge or flatbread, or use it raw for food, feed, trade, and storage.</description>
     <soundInteract>Grain_Drop</soundInteract>
     <soundDrop>Grain_Drop</soundDrop>
     <graphicData>
