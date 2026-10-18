@@ -1,9 +1,10 @@
 # Ringfort Foundations Discovery
 
-**Status:** Discovery recommendation — maintainer visual review and in-game checks required<br>
-**Recommendation:** Revise the candidate kit to one new gate beside the released wall; conditional go after the checks in this record pass<br>
+**Status:** Revision required — Gate A (Ringfort Worth Building) unmet<br>
+**Recommendation:** No go for a required circular or oval perimeter; retain the developer gate as a technical prototype while the settlement decision is revised<br>
 **Owner and gameplay approver:** Patrick Mee<br>
 **Prepared:** 2026-08-30<br>
+**Revised:** 2026-10-17 after maintainer gameplay challenge<br>
 **Milestone:** Version 0.8 — Ringfort Foundations<br>
 **Authority:** [Approved Version 1.0 delivery plan](version-1.0-delivery-plan.md)<br>
 **Discovery baseline:** RimWorld 1.6.4871 rev597, installed source and build<br>
@@ -11,8 +12,8 @@
 
 ## Decision
 
-**Revise.** Reject a separate ringfort wall family, bespoke curve or corner Defs,
-and a standalone entrance piece. The smallest coherent candidate is:
+**Revise before implementation.** Reject a separate ringfort wall family, bespoke
+curve or corner Defs, and a standalone entrance piece. The tested minimum kit is:
 
 1. the released `EI_DryStoneWall`, unchanged;
 2. stepped cardinal links for round, oval, and mildly irregular enclosure plans;
@@ -20,9 +21,14 @@ and a standalone entrance piece. The smallest coherent candidate is:
 4. one manual two-cell timber gate, implemented with RimWorld's native
    `Building_MultiTileDoor` behavior.
 
-This narrowed slice receives a **conditional go** only if Patrick accepts the
-normal-zoom reading and the in-game checks below pass. Discovery does not approve
-the gameplay slice, final balance, public Def name, text, or runtime art.
+This kit has **not** passed Gate A of the approved delivery plan. A player can use
+the same wall and two-cell gate in a rectangular enclosure with easier placement
+and more usable interior cells. RimWorld's wall, pen, room, and raid systems assign
+no benefit to roundness. The gate's access and breach tradeoff is real, but it is
+independent of the perimeter shape. Normal-zoom readability alone cannot turn an
+oval into a gameplay decision. Patrick's 2026-10-17 question exposed this gap;
+the earlier conditional-go recommendation was too strong. Discovery does not
+approve the gameplay slice, final balance, public Def name, text, or runtime art.
 
 The broader kit is disproved at this scale. It would duplicate the released wall's
 mechanics and compatibility contract, while special curve pieces would not remove
@@ -33,25 +39,34 @@ durability object opens a two-cell breach when it fails.
 
 ## Player Decision and Visible Tradeoffs
 
-The player can spend less stone but more construction labor on a broad holding
-perimeter that encloses an outdoor courtyard, crops, animals, work, and storage.
-The large plan protects daily life and gives pawns and roped animals a broad entrance,
-but it consumes perimeter length and interior space. Full walls block movement,
-sight, and shooting rather than acting as shoot-over cover. The timber gate is an
-obvious fire and breach focus.
+The player can spend less stone but more construction labor on a holding perimeter
+that encloses an outdoor courtyard, crops, animals, work, and storage. Full walls
+block movement, sight, and shooting rather than acting as shoot-over cover. The
+timber gate is an obvious fire and breach focus. These are choices between the
+released wall, vanilla pieces, and the prototype gate; none requires a ring shape.
+
+On RimWorld's cardinal grid, a rounded perimeter needs more planning and awkward
+steps to enclose comparably useful rectangular work and crop spaces. No verified
+native system compensates for that cost. Until a small, native, player-visible
+settlement benefit is demonstrated, a required oval would be an aesthetic tax.
 
 The choice is not an automatic upgrade:
 
-- choose the ringfort plan for material-efficient perimeter definition, a broad
-  shared entrance, and a protected open holding;
+- choose the dry-stone wall and prototype gate for material-efficient perimeter
+  definition, broad access, and a protected open holding in any suitable shape;
 - choose vanilla walls for greater segment durability and lower construction labor;
 - choose two vanilla doors for independent one-cell failures and greater combined
   hit points; or
 - choose barricades or a mixed defense when shoot-over cover and compact combat
   geometry matter more than a sealed settlement enclosure.
 
-No global defense modifier or special raid behavior supplies this distinction. It
-comes from normal material, work, footprint, access, cover, fire, and breach rules.
+No global defense modifier or special raid behavior supplies this distinction. The
+material, work, footprint, access, cover, fire, and breach tradeoffs support the
+pieces individually but do not yet support a distinct ringfort feature. One
+possible revision is a terrain-following, irregular fortified holding with the
+oval shown only as an example; that still needs a convincing reason to choose the
+settlement form over an ordinary rectangular base. Otherwise reject this candidate
+and revisit the approved marquee promise with Patrick.
 
 ## Research Finding
 
@@ -110,6 +125,10 @@ It is not staged by the public package, does not create an `EI_` runtime contrac
 and is not final balance or art. The public staging validator passes with the
 developer Def absent. The developer staging validator also passes.
 
+Patrick reported in-game on 2026-10-17 that the gate opens and closes in a straight
+wall with supports. The remaining placement, room, pen, raid, damage, persistence,
+and visual checks have not been reported as passed.
+
 No C# or Harmony is justified. Final implementation can remain XML plus original
 textures and localization. If native multi-cell door behavior fails any acceptance
 check, revise or reject this slice rather than adding a custom building framework.
@@ -148,7 +167,8 @@ The ringfort therefore saves material and expected wealth input while demanding
 substantially more wall labor, losing segment durability, and concentrating entrance
 failure. Its broad perimeter and courtyard also consume more map area than a compact
 vanilla defense. Actual construction wealth is an explicit in-game acceptance datum,
-not a static claim.
+not a static claim. These figures compare two material choices on the **same**
+outline. They do not show why that outline beats a simpler rectangular plan.
 
 ## Layout and Art Proof
 
@@ -171,7 +191,8 @@ The selected plan has a 113-cell perimeter: 111 walls and a two-cell south gate.
 The existing corner treatment remains legible when straight runs vary and direction
 changes are distributed. Bespoke arcs would add false smoothness to a cardinal grid;
 they are excluded. Acceptance is about the normal-zoom settlement silhouette, not
-pixel-perfect circularity.
+pixel-perfect circularity. This is an art and layout proof only; it does not prove
+that a player benefits from constructing the shape.
 
 ### Temporary Art Provenance
 
@@ -190,7 +211,7 @@ platform thumbnail renderer cropped the right comparison panel. If the slice pas
 all final mover, top, support, blueprint, and menu textures must be original,
 directionally complete, and reviewed through the normal art workflow.
 
-## Minimum Final Scope After Approval
+## Candidate Final Scope If Gate A Is Later Met
 
 1. Reuse `EI_DryStoneWall` without changing its Def, stats, localization, texture
    paths, or save contract.
@@ -219,7 +240,12 @@ the public package or included in a release.
 - no round tower work; and
 - no public compatibility contract until the discovery gate is approved.
 
-## Patrick's In-Game Decision Check
+## Optional In-Game Technical and Visual Check
+
+The gate's remaining technical checks can continue independently. Building the
+complete 35 x 24 oval is **not required** to decide that the present ringfort pitch
+fails Gate A. Use the larger setup below only if comparing settlement silhouettes
+would help evaluate a revised concept.
 
 ### Setup
 
@@ -274,7 +300,7 @@ the public package or included in a release.
 
 ### Acceptance Rule
 
-Choose **go** only if every behavior check passes and Patrick answers yes to all four
+Choose **go** only if every behavior check passes and Patrick answers yes to all five
 questions:
 
 1. Is the irregular plan recognizable as a lived-in ringfort holding at normal zoom?
@@ -284,11 +310,16 @@ questions:
    or a mixed plan instead?
 4. Can the final scope remain exactly one existing wall plus one XML gate without
    bespoke curves or code?
+5. When built for the same colony need, does the proposed settlement form offer a
+   visible advantage that a straightforward rectangular wall and the same gate do
+   not offer? If the answer is only appearance, Gate A remains unmet.
 
-Choose **revise** if the settlement reads but gate presentation, balance, or layout
-needs bounded changes. Choose **reject** if the plan remains only a visual theme, the
-native gate misbehaves, or coherent reading requires extra wall pieces, custom code,
-or excluded systems.
+The current answer to question 5 is **no**, so the present candidate remains
+**revise / no go** even if every technical check passes. Choose **revise** if a
+bounded, native settlement decision can be demonstrated. Choose **reject** if the
+plan remains only a visual theme, the native gate misbehaves, or coherent reading
+requires extra wall pieces, custom code, or excluded systems.
 
-Patrick's decision and the completed checklist are the remaining discovery gate.
-Permanent gameplay implementation must not begin before that explicit approval.
+A revised settlement decision, its direct comparison with a practical rectangular
+plan, and Patrick's explicit approval are the remaining discovery gate. Permanent
+gameplay implementation must not begin before that approval.
