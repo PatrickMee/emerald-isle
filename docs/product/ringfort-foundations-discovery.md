@@ -1,10 +1,10 @@
 # Ringfort Foundations Discovery
 
-**Status:** Revision required — Gate A (Ringfort Worth Building) unmet<br>
-**Recommendation:** No go for a required circular or oval perimeter; retain the developer gate as a technical prototype while the settlement decision is revised<br>
+**Status:** Research complete — reject recommendation; Patrick's Gate A and product decision pending<br>
+**Recommendation:** Reject the shape-driven Ringfort Foundations kit as the Version 1.0 marquee feature; retain the developer gate as a technical prototype only<br>
 **Owner and gameplay approver:** Patrick Mee<br>
 **Prepared:** 2026-08-30<br>
-**Revised:** 2026-10-17 after maintainer gameplay challenge<br>
+**Revised:** 2026-10-17 after maintainer gameplay challenge and equal-function layout audit<br>
 **Milestone:** Version 0.8 — Ringfort Foundations<br>
 **Authority:** [Approved Version 1.0 delivery plan](version-1.0-delivery-plan.md)<br>
 **Discovery baseline:** RimWorld 1.6.4871 rev597, installed source and build<br>
@@ -12,8 +12,9 @@
 
 ## Decision
 
-**Revise before implementation.** Reject a separate ringfort wall family, bespoke
-curve or corner Defs, and a standalone entrance piece. The tested minimum kit is:
+**Research verdict: reject the current kit as the marquee feature.** A separate ringfort wall family,
+bespoke curve or corner Defs, and a standalone entrance piece remain unjustified.
+The tested minimum kit is:
 
 1. the released `EI_DryStoneWall`, unchanged;
 2. stepped cardinal links for round, oval, and mildly irregular enclosure plans;
@@ -24,11 +25,12 @@ curve or corner Defs, and a standalone entrance piece. The tested minimum kit is
 This kit has **not** passed Gate A of the approved delivery plan. A player can use
 the same wall and two-cell gate in a rectangular enclosure with easier placement
 and more usable interior cells. RimWorld's wall, pen, room, and raid systems assign
-no benefit to roundness. The gate's access and breach tradeoff is real, but it is
-independent of the perimeter shape. Normal-zoom readability alone cannot turn an
-oval into a gameplay decision. Patrick's 2026-10-17 question exposed this gap;
-the earlier conditional-go recommendation was too strong. Discovery does not
-approve the gameplay slice, final balance, public Def name, text, or runtime art.
+no verified benefit to roundness. The gate's cost and breach tradeoff is real, but
+it is independent of the perimeter shape; its two-pawn throughput remains untested.
+Normal-zoom readability alone cannot turn an oval into a gameplay decision.
+Patrick's 2026-10-17 question exposed this gap; the earlier conditional-go
+recommendation was too strong. Discovery does not approve the gameplay slice,
+final balance, public Def name, text, or runtime art.
 
 The broader kit is disproved at this scale. It would duplicate the released wall's
 mechanics and compatibility contract, while special curve pieces would not remove
@@ -62,11 +64,88 @@ The choice is not an automatic upgrade:
 
 No global defense modifier or special raid behavior supplies this distinction. The
 material, work, footprint, access, cover, fire, and breach tradeoffs support the
-pieces individually but do not yet support a distinct ringfort feature. One
-possible revision is a terrain-following, irregular fortified holding with the
-oval shown only as an example; that still needs a convincing reason to choose the
-settlement form over an ordinary rectangular base. Otherwise reject this candidate
-and revisit the approved marquee promise with Patrick.
+pieces individually but do not support a distinct ringfort feature. A
+terrain-following, irregular fortified holding can remain an optional player layout,
+but it does not rescue the current marquee promise. The approved Version 1.0 plan
+requires Patrick's product review before that promise changes.
+
+## Gate A Investigation: Does the Shape Change Play?
+
+The [layout renderer](../art/prototypes/ringfort/render-layout.py) defines every
+occupied perimeter cell in the proposed 35 x 24 irregular oval. Flood-filling that
+closed outline gives 520 empty interior cells. For a rectangle with outer width
+`w` and height `h`, boundary cells are `2w + 2h - 4` and empty interior cells are
+`(w - 2)(h - 2)`. The same two-cell gate is included in both boundaries. Run
+`python3 docs/art/prototypes/ringfort/render-layout.py --metrics` to reproduce
+the perimeter and interior counts.
+
+| Same wall and gate kit | Oval proof | Compact rectangle | Same-bounds rectangle |
+|---|---:|---:|---:|
+| Outer dimensions | 35 x 24 | 26 x 24 | 35 x 24 |
+| Empty interior cells | 520 | 528 | 726 |
+| Perimeter cells, including gate | 113 | 96 | 114 |
+| `EI_DryStoneWall` cells | 111 | 94 | 112 |
+| Granite blocks for walls | 444 | 376 | 448 |
+| Granite wall construction work | 226,440 | 191,760 | 228,480 |
+
+The rectangle provides eight more empty cells with **17 fewer walls, 68 fewer
+granite blocks, and 34,680 less wall work**. Both use the same 40-wood gate.
+Alternatively, a rectangle covering the oval's full 35 x 24 bounds needs only
+one more wall and encloses 206 more empty cells. It can contain the same circular
+range of a central vanilla object without forcing the exterior into an oval.
+The grid count does not account for building footprints or crop rows; those straight
+shapes are generally easier to fit into the rectangle. Final runtime wealth and
+pawn travel still require in-game measurement, but neither can erase the wall and
+material cost difference in this exact comparison.
+
+The installed 1.6.4871 rev597 assembly and Core Defs provide no verified native
+reward for a round enclosure:
+
+| Native system checked | What matters to the game | Shape finding |
+|---|---|---|
+| Linked walls and placement | Cardinal neighbors, occupied cells, and door support walls | Stepped corners are possible; circular placement has no special rule. |
+| Rooms and roofs | Connected regions, cells, open roof count, and building barriers | The same enclosed cell count and roof state work in a rectangle. |
+| Pens and forage | Connected regions, passable doors, available terrain, and plant nutrition | A fertile or enclosed tile is useful because of its contents, not its position on a ring. |
+| Cover and shooting | Full-wall obstruction, cover givers, and lines of fire | The wall blocks shooting from inside as well as outside; rounded edges grant no stated cover bonus. |
+| Pawn paths, fire, repair, and breaching | Door state, traversable cells, individual buildings, and grid paths | The gate and walls keep their ordinary behavior in any outline; raid targeting cannot be promised from shape alone. |
+
+The assembly audit specifically checked `AnimalPenEnclosureCalculator` region and
+door visits, `PenFoodCalculator.ProcessCell` and `ProcessTerrain`, `Room.CellCount`
+and `OpenRoofCount`, `CoverUtility` block-chance methods, and
+`BreachingGrid.CreateBreachPath`. This supports the shape-neutral comparison;
+individual raid choices and gate throughput still require in-game observation.
+
+Four possible rescues were tested against the approved scope:
+
+1. **Follow rock, soil, or water with an irregular perimeter.** This can be a good
+   map-specific player plan, but vanilla walls and gates can follow the same line.
+   It supports an example layout, not a new Emerald Isle gameplay feature.
+2. **Enclose an outdoor work and animal yard.** Protecting crops, livestock, and
+   household work is historically coherent and useful in RimWorld. A practical
+   rectangle with the same pieces performs that job with less wall in the proof.
+3. **Make the two-cell gate the payoff.** It saves 10 wood and 190 work against two
+   wooden doors while concentrating failure into one 120-HP, flammable object.
+   That is a plausible standalone building choice, contingent on the remaining
+   in-game checks; it does not reward a ringfort layout.
+4. **Align the perimeter with a central circular range.** A sun lamp or other
+   radius-limited object can motivate a round *use area*, but the same-bounds
+   rectangle contains that area for one extra wall and offers usable corners.
+   A full-height wall also blocks a central turret's line of fire, so the ring
+   cannot claim a native firing advantage.
+
+An outer bank, ditch, low firing wall, shape detector, or raid modifier would be a
+new feature proposal with its own comparison and review. The current evidence does
+not justify expanding the failed minimum kit, and the approved discovery boundary
+excludes a custom placement or combat framework.
+
+**Finding:** Under the approved minimum and XML-first boundary, no distinct
+ringfort settlement decision has been demonstrated. Do not begin permanent
+Ringfort Foundations implementation. Keep the gate in the developer package for
+possible separate evaluation. The strongest product recommendation is to reopen
+the approved Version 1.0 plan, retire the required ring geometry as a marquee
+promise, and choose a new headline only after its own player decision is proven.
+A fort-inspired layout can remain optional presentation. This record proposes that
+change but does not approve or make it on Patrick's behalf.
 
 ## Research Finding
 
@@ -129,9 +208,10 @@ Patrick reported in-game on 2026-10-17 that the gate opens and closes in a strai
 wall with supports. The remaining placement, room, pen, raid, damage, persistence,
 and visual checks have not been reported as passed.
 
-No C# or Harmony is justified. Final implementation can remain XML plus original
-textures and localization. If native multi-cell door behavior fails any acceptance
-check, revise or reject this slice rather than adding a custom building framework.
+No C# or Harmony is justified by the prototype. A separately approved gate could
+remain XML plus original textures and localization. If native multi-cell door
+behavior fails any acceptance check, revise or reject that gate rather than adding
+a custom building framework.
 
 ## Comparison Against Vanilla and the Released Wall
 
@@ -211,7 +291,11 @@ platform thumbnail renderer cropped the right comparison panel. If the slice pas
 all final mover, top, support, blueprint, and menu textures must be original,
 directionally complete, and reviewed through the normal art workflow.
 
-## Candidate Final Scope If Gate A Is Later Met
+## Previously Considered Final Scope
+
+The list below is retained as the technical minimum that was investigated. It is
+**not approved** for permanent implementation and does not solve the product-value
+failure above.
 
 1. Reuse `EI_DryStoneWall` without changing its Def, stats, localization, texture
    paths, or save contract.
@@ -314,12 +398,13 @@ questions:
    visible advantage that a straightforward rectangular wall and the same gate do
    not offer? If the answer is only appearance, Gate A remains unmet.
 
-The current answer to question 5 is **no**, so the present candidate remains
-**revise / no go** even if every technical check passes. Choose **revise** if a
-bounded, native settlement decision can be demonstrated. Choose **reject** if the
-plan remains only a visual theme, the native gate misbehaves, or coherent reading
-requires extra wall pieces, custom code, or excluded systems.
+The current answer to question 5 is **no**, so the present shape-driven kit is
+**recommended for rejection as the marquee candidate** even if every technical check passes. A
+future proposal may be reconsidered if it demonstrates a bounded, native
+settlement decision. Reject it again if it remains only a visual theme, the native
+gate misbehaves, or coherent reading requires extra wall pieces, custom code, or
+excluded systems.
 
-A revised settlement decision, its direct comparison with a practical rectangular
-plan, and Patrick's explicit approval are the remaining discovery gate. Permanent
-gameplay implementation must not begin before that approval.
+A new settlement proposal, its direct comparison with a practical rectangular
+plan, and Patrick's explicit approval would be required to reopen this gate.
+Permanent Ringfort Foundations implementation must not begin on this record.

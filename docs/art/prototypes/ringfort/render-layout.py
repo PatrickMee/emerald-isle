@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import base64
 import math
+from collections import deque
 from pathlib import Path
 
 
@@ -103,6 +104,36 @@ def connected_outline(
         ):
             cells.add((x, y))
     return cells
+
+
+def interior_cell_count(boundary: set[tuple[int, int]]) -> int:
+    """Count enclosed grid cells by flooding the space outside the boundary."""
+
+    xs = [x for x, _ in boundary]
+    ys = [y for _, y in boundary]
+    min_x, max_x = min(xs), max(xs)
+    min_y, max_y = min(ys), max(ys)
+    outside: set[tuple[int, int]] = set()
+    queue = deque([(min_x - 1, min_y - 1)])
+
+    while queue:
+        x, y = queue.popleft()
+        cell = (x, y)
+        if (
+            cell in outside
+            or cell in boundary
+            or not (min_x - 1 <= x <= max_x + 1)
+            or not (min_y - 1 <= y <= max_y + 1)
+        ):
+            continue
+        outside.add(cell)
+        queue.extend(((x + 1, y), (x - 1, y), (x, y + 1), (x, y - 1)))
+
+    return sum(
+        (x, y) not in boundary and (x, y) not in outside
+        for x in range(min_x, max_x + 1)
+        for y in range(min_y, max_y + 1)
+    )
 
 
 def mask_for(cell: tuple[int, int], cells: set[tuple[int, int]]) -> int:
@@ -340,7 +371,20 @@ def render() -> str:
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--output", type=Path, default=DEFAULT_OUTPUT)
+    parser.add_argument("--metrics", action="store_true")
     args = parser.parse_args()
+    if args.metrics:
+        ring = irregular_outline()
+        print(f"Oval: {len(ring)} perimeter cells, {interior_cell_count(ring)} interior cells")
+        for label, width, height in (
+            ("Compact rectangle", 26, 24),
+            ("Same-bounds rectangle", 35, 24),
+        ):
+            print(
+                f"{label}: {2 * width + 2 * height - 4} perimeter cells, "
+                f"{(width - 2) * (height - 2)} interior cells"
+            )
+        return
     args.output.write_text(render(), encoding="utf-8")
     print(f"Rendered {args.output}")
 
