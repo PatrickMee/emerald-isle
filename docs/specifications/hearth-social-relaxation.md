@@ -33,3 +33,11 @@ XML carries the fuel value and new job/joy-giver definitions. The small C# assem
 ## Release integration limitation
 
 The existing public `validate-package.yml` workflow has no licensed game references or pinned Mono compiler. Its unconditional package-staging step cannot build this prototype yet. Before a PR can be considered merge-ready, configure a licensed build environment and connect its full-package verification to the release workflow. Do not bypass assembly validation or redistribute the game DLLs. This infrastructure work is outside the approved local playtest slice.
+
+## Local prototype verification — 2026-10-18
+
+- Implementation commit: `25fe554c6d45d45f6d677346095e502dfa1ff1ed`. Local build, all 24 regression checks, runtime contracts, texture references, developer-package staging, release-tool syntax, and release-safety validation passed. The assembly checks inspect compiled wiring; they do not simulate a seated pawn.
+- Two separate builds produced the same DLL SHA-256: `5571046eed53ac829e0f5056e56a5f40448c4a0fdb39e0a9f1de25b0d5028928`. The installed local package exactly matched all 122 staged files. Its manifest SHA-256 is `fdddb09e7e3929bf5f96d06574a0fc66e7d4165a4eb2e3ed6669fb1ca99e771c`.
+- The exact installed package reached new-game initialization in isolated batch-mode Core-only and Core-plus-all-five-DLC runs, each observed for 95 seconds. Logs had no mod-load/type/XML exceptions. Direct-launch Steam initialization and zero-resolution batch-mode notices also occur in the unchanged baseline; these checks do not establish Steam-launch or visible-UI behavior.
+- Prior local readiness package (119 files) was backed up and verified before replacement. The released v0.7.1 rollback ZIP remains unchanged. Ignored local manifests, startup logs, build identity, and backup are under `build/hearth-social-test/`; normal save/configuration folders were not used.
+- Review tightened multi-cell seat exclusion to keep every possible assigned sitting cell off the cooking position and preserved native optional-drink finalization. Human recreation-rate, cooking-concurrency, fuel/toggle, and save/reload acceptance remain pending. Nothing was pushed, merged, tagged, or published.
