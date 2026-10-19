@@ -82,6 +82,8 @@ runner or start a runner with default labels for this public repository. The
 operator reviews the workflow and source, registers an ephemeral runner with a
 fresh unpredictable label and `--no-default-labels`, dispatches that exact SHA
 with the label, checks the queued job, and starts the runner for that one job.
+Use a temporary runner installation/work path without spaces: the runner's shell
+script invocation failed before compilation when installed beneath `Emerald Isle`.
 The runner exits and deregisters after the job. No service is installed. Do not
 reuse its label. Checkout credentials are not persisted and job permissions are
 read-only. Game references stay on the Mac and are never uploaded as artifacts.

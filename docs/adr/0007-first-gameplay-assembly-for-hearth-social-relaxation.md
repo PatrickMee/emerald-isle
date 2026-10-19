@@ -1,8 +1,9 @@
 # ADR 0007: Compile a Small Core Assembly for Hearth Social Relaxation
 
-**Status:** Proposed implementation decision for approved local prototype; maintainer architecture review pending  
+**Status:** Accepted<br>
 **Date:** 2026-10-18  
-**Decision owner:** Patrick Mee approved the C# behavior; compiler and build details here remain a reviewable implementation proposal  
+**Decision owner:** Patrick Mee<br>
+**Accepted by/date:** Patrick Mee, 2026-10-18, explicitly selected “Approve the ADR 0007 design” after reviewing the small native-social assembly and local build approach in the implementation chat. This records human approval, not agent self-approval.<br>
 **Related:** [Hearth prototype record](../specifications/hearth-social-relaxation.md), [ADR 0002](0002-version-0.1-package-build-contract.md)
 
 ## Context and decision
@@ -20,7 +21,7 @@ The verified installed 1.6 assembly has one `SuperActive`/`Delay`/`joyDuration` 
 - Target the installed RimWorld 1.6.4871 rev597 `Assembly-CSharp.dll`, verified by SHA-256 `6d06b881d59cb54d05b674e8631fa2e8b1629dc8b8dd294a5bcc928f1e5d2148` and MVID `967DDB80-5594-49F0-A776-DAFA26A855D1`. Use only the game's Core, Unity Core, and bundled `netstandard.dll` assemblies as game compile references; never commit or package those references.
 - Pin the local compiler to Mono Roslyn `csc` 3.9.0-6.21124.20, target the .NET Framework 4.7.2 reference API, use C# 7.3 or older syntax, and treat compiler warnings as errors. The source has no NuGet/runtime dependency or analyzer package; focused package-contract tests and in-game smoke cover this prototype.
 - `tools/build-assembly.sh` requires an explicit `RIMWORLD_MANAGED_DIR` pointing to the installed game's managed assembly directory. Public staging compiles from source into an ignored temporary build directory and copies only the new DLL into `Assemblies/`; it fails before replacing the destination if references, compiler, or output are missing or stale. Generated DLLs remain ignored and are never edited or committed.
-- CI must provide the same verified game references through a licensed runner before it can compile the full package. Patrick authorized the manual local-runner setup on 2026-10-18. The proposed integration separates automatic public source checks from the complete manually dispatched package job on a one-job, uniquely labeled local runner, as described in [Build Strategy](../engineering/build-strategy.md#licensed-manual-ci). This infrastructure authorization does not self-approve this ADR. A public GitHub runner must not claim the assembly was built or staged. A successful licensed-package run for the exact reviewed source and exact-artifact verification remain required release evidence.
+- CI provides the same verified game references through a licensed runner before it can compile the full package. Patrick authorized the manual local-runner setup on 2026-10-18. The integration separates automatic public source checks from the complete manually dispatched package job on a one-job, uniquely labeled local runner, as described in [Build Strategy](../engineering/build-strategy.md#licensed-manual-ci). A public GitHub runner must not claim the assembly was built or staged. A successful licensed-package run for the exact reviewed source and exact-artifact verification remain required release evidence.
 
 ## Consequences and revisit
 

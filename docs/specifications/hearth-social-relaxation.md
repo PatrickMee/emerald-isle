@@ -30,9 +30,9 @@ XML carries the fuel value and new job/joy-giver definitions. The small C# assem
 3. Build from verified RimWorld 1.6 references, stage a clean package with exactly one current assembly, and load Core plus the all-supported-DLC configuration without errors.
 4. Have Patrick test the new behavior in a copied colony, save/reload, and accept or reject the prototype. Automated startup and static checks alone do not mark this feature Done or Released.
 
-## Release integration limitation
+## Release integration
 
-The existing public `validate-package.yml` workflow has no licensed game references or pinned Mono compiler. Its unconditional package-staging step cannot build this prototype yet. Before a PR can be considered merge-ready, configure a licensed build environment and connect its full-package verification to the release workflow. Do not bypass assembly validation or redistribute the game DLLs. This infrastructure work is outside the approved local playtest slice.
+Patrick authorized a manually triggered licensed local runner on 2026-10-18. The workflow now distinguishes automatic public source validation from the complete manually dispatched assembly/package build on the Mac. The exact reviewed commit must have a successful licensed package run before merge/release; a green source-only job is insufficient. See [Build Strategy](../engineering/build-strategy.md#licensed-manual-ci). Never redistribute proprietary references or route unreviewed PR code to the Mac.
 
 ## Local prototype verification — 2026-10-18
 
