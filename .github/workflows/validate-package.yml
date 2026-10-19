@@ -4,16 +4,63 @@ on:
   push:
     branches: [main]
   pull_request:
+  workflow_dispatch:
+    inputs:
+      reviewed_commit:
+        description: Exact reviewed 40-character commit (must match selected ref)
+        required: true
+        type: string
+      runner_label:
+        description: Unique label of the one-job licensed runner
+        required: true
+        type: string
+
+permissions:
+  contents: read
 
 jobs:
-  stage-and-validate:
+  source-validation:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          persist-credentials: false
 
       - name: Install xmllint
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends libxml2-utils
+
+      - name: Validate source XML and texture references (no assembly build)
+        run: |
+          find About Defs Languages -type f -name '*.xml' -print0 | xargs -0 -r xmllint --noout
+          python3 tools/validate-texture-paths.py .
+          bash -n tools/build-assembly.sh tools/stage-mod.sh tools/stage-dev-mod.sh
+          python3 -m py_compile tools/release_lib.py tools/build-release.py tools/stage-workshop-release.py tools/verify-workshop-release.py
+
+  licensed-package-validation:
+    # Never route push or pull_request code to the maintainer's computer.
+    # The operator registers a no-default-labels ephemeral runner only after
+    # reviewing this workflow, the exact commit, and the queued job.
+    if: >-
+      github.event_name == 'workflow_dispatch' &&
+      github.actor == 'PatrickMee' &&
+      inputs.reviewed_commit == github.sha
+    runs-on: ${{ inputs.runner_label }}
+    timeout-minutes: 15
+    env:
+      RIMWORLD_MANAGED_DIR: /Users/patrickmee/Library/Application Support/Steam/steamapps/common/RimWorld/RimWorldMac.app/Contents/Resources/Data/Managed
+      MONO_FRAMEWORK_REF_DIR: /opt/homebrew/lib/mono/4.7.2-api
+    steps:
+      - name: Check out exact reviewed commit
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Verify local compiler tools
+        run: |
+          echo /opt/homebrew/bin >> "$GITHUB_PATH"
+          command -v xmllint
 
       - name: Stage and validate package
         run: ./tools/stage-mod.sh

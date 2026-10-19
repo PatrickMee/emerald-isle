@@ -4,7 +4,7 @@
   <ThingDef ParentName="BenchBase">
     <defName>EI_HandQuern</defName>
     <label>hand quern</label>
-    <description>A compact, unpowered quern for milling oats into a prepared cooking ingredient.</description>
+    <description>Mill harvested oats into milled oats here. Cook the milled oats into porridge or flatbread at a campfire, central hearth, or stove.</description>
     <thingClass>Building_WorkTable</thingClass>
     <graphicData>
       <texPath>Things/Building/Production/HandQuern/EI_HandQuern</texPath>

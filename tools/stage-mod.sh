@@ -71,7 +71,7 @@ mkdir -p "$temporary/Defs"
 mkdir -p "$temporary/Textures"
 mkdir -p "$temporary/Languages/English/DefInjected/ThingDef"
 
-runtime_directories=(About Defs Languages Patches Textures Sounds Assemblies)
+runtime_directories=(About Defs Languages Patches Textures Sounds)
 
 for directory in "${runtime_directories[@]}"; do
   source_directory="$repo_root/$directory"
@@ -93,6 +93,11 @@ for directory in "${runtime_directories[@]}"; do
     cp -p "$source_file" "$destination_file"
   done < <(find "$source_directory" -type f -print0)
 done
+
+# The core DLL is always rebuilt from source. Never copy a potentially stale
+# or hand-placed assembly from the repository into a public package.
+mkdir -p "$temporary/Assemblies"
+"$repo_root/tools/build-assembly.sh" "$temporary/Assemblies/EmeraldIsle.dll"
 
 while IFS= read -r -d '' xml_file; do
   xmllint --noout "$xml_file"
